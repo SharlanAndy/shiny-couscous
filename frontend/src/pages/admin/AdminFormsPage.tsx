@@ -91,13 +91,14 @@ export function AdminFormsPage() {
 
               <div className="flex space-x-2">
                 <Link
-                  to={`/admin/forms/${form.formId}`}
+                  to={`/admin/forms/${form.formId}/schema`}
                   className="btn btn-secondary btn-sm flex-1 text-center"
                 >
-                  Edit
+                  Edit Schema
                 </Link>
                 <Link
                   to={`/forms/${form.formId}`}
+                  target="_blank"
                   className="btn btn-primary btn-sm flex-1 text-center"
                 >
                   Preview

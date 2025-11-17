@@ -1,7 +1,8 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import apiClient from '@/api/client'
 import { SubmissionResponse } from '@/types'
+import { StatusTracker, ApplicationStatus } from '@/components/labuan-fsa/StatusTracker'
 
 export function SubmissionDetailPage() {
   const { submissionId } = useParams<{ submissionId: string }>()
@@ -59,11 +60,51 @@ export function SubmissionDetailPage() {
     }
   }
 
+  // Map submission status to application status
+  const mapSubmissionStatusToApplicationStatus = (status: string): ApplicationStatus => {
+    switch (status) {
+      case 'reviewing':
+        return 'under-review'
+      case 'draft':
+        return 'draft'
+      case 'submitted':
+        return 'submitted'
+      case 'approved':
+        return 'approved'
+      case 'rejected':
+        return 'rejected'
+      case 'cancelled':
+        return 'rejected'
+      default:
+        return 'draft'
+    }
+  }
+
   return (
     <div className="space-y-6">
       <div>
+        <Link
+          to="/submissions"
+          className="text-sm text-gray-600 hover:text-gray-900 mb-4 inline-block"
+        >
+          ← Back to Submissions
+        </Link>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Submission Details</h1>
         <p className="text-gray-600">Submission ID: {submission.submissionId}</p>
+      </div>
+
+      {/* Status Tracker */}
+      <div className="bg-white rounded-lg shadow-sm p-6">
+        <StatusTracker
+          fieldId="status-tracker"
+          fieldName="status"
+          fieldType="status-tracker"
+          label="Application Status"
+          currentStatus={mapSubmissionStatusToApplicationStatus(submission.status)}
+          applicationId={submission.submissionId}
+          submittedDate={submission.submittedAt}
+          onChange={() => {}} // Read-only
+        />
       </div>
 
       <div className="bg-white rounded-lg shadow-sm p-6 space-y-6">
@@ -127,9 +168,31 @@ export function SubmissionDetailPage() {
         {submission.requestedInfo && (
           <div>
             <h3 className="text-md font-semibold mb-2">Requested Information</h3>
-            <p className="text-sm text-gray-700 bg-yellow-50 p-4 rounded-md">
+            <p className="text-sm text-gray-700 bg-yellow-50 p-4 rounded-md whitespace-pre-wrap">
               {submission.requestedInfo}
             </p>
+          </div>
+        )}
+
+        {/* Submission Data */}
+        <div>
+          <h3 className="text-md font-semibold mb-2">Submitted Data</h3>
+          <div className="bg-gray-50 p-4 rounded-md overflow-x-auto">
+            <pre className="text-sm text-gray-700">
+              {JSON.stringify(submission.submittedData, null, 2)}
+            </pre>
+          </div>
+        </div>
+
+        {/* Actions */}
+        {submission.status === 'rejected' && (
+          <div className="pt-4 border-t border-gray-200">
+            <Link
+              to={`/forms/${submission.formId}`}
+              className="btn btn-primary"
+            >
+              Resubmit Application
+            </Link>
           </div>
         )}
       </div>
