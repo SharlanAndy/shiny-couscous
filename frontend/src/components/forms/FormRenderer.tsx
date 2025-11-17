@@ -46,6 +46,12 @@ import { MapPickerField } from '@/components/base/MapPickerField'
 import { RepeaterField } from '@/components/base/RepeaterField'
 import { ObjectField } from '@/components/base/ObjectField'
 import { QuarterPickerField } from '@/components/base/QuarterPickerField'
+import { AsyncSelectField } from '@/components/base/AsyncSelectField'
+import { DataGridField } from '@/components/base/DataGridField'
+import { VideoDisplay } from '@/components/layout/VideoDisplay'
+import { HTMLBlock } from '@/components/layout/HTMLBlock'
+import { ProgressIndicator } from '@/components/layout/ProgressIndicator'
+import { MessageDisplay } from '@/components/layout/MessageDisplay'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -666,7 +672,127 @@ export function FormRenderer({
           />
         )
 
-      // TODO: Add more field types (async select, video display, HTML block, etc.)
+      case 'select-async':
+      case 'async-select':
+        return (
+          <AsyncSelectField
+            {...commonProps}
+            loadOptions={field.loadOptions}
+            defaultOptions={field.defaultOptions}
+            cacheOptions={field.cacheOptions}
+            debounce={field.debounce}
+            minInputLength={field.minInputLength}
+            multiple={field.multiple}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'data-grid':
+      case 'data-table-advanced':
+        return (
+          <DataGridField
+            {...commonProps}
+            columns={field.columns || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            pagination={field.pagination}
+            pageSize={field.pageSize}
+            sortable={field.sortable}
+            filterable={field.filterable}
+            allowAddRows={field.allowAddRows}
+            allowRemoveRows={field.allowRemoveRows}
+            allowEdit={field.allowEdit}
+          />
+        )
+
+      case 'video-display':
+        return (
+          <VideoDisplay
+            fieldId={field.fieldId}
+            label={field.label}
+            src={field.src || ''}
+            type={field.type}
+            poster={field.poster}
+            autoplay={field.autoplay}
+            controls={field.controls}
+            loop={field.loop}
+            muted={field.muted}
+            width={field.width}
+            height={field.height}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'html-block':
+        return (
+          <HTMLBlock
+            fieldId={field.fieldId}
+            label={field.label}
+            content={field.content || ''}
+            sanitize={field.sanitize}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'progress-indicator':
+        return (
+          <ProgressIndicator
+            fieldId={field.fieldId}
+            label={field.label}
+            steps={field.steps || []}
+            currentStep={field.currentStep}
+            orientation={field.orientation}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'error-display':
+        return (
+          <MessageDisplay
+            fieldId={field.fieldId}
+            type="error"
+            message={field.message || ''}
+            title={field.title}
+            dismissible={field.dismissible}
+            onDismiss={field.onDismiss}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'warning-display':
+        return (
+          <MessageDisplay
+            fieldId={field.fieldId}
+            type="warning"
+            message={field.message || ''}
+            title={field.title}
+            dismissible={field.dismissible}
+            onDismiss={field.onDismiss}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'success-display':
+        return (
+          <MessageDisplay
+            fieldId={field.fieldId}
+            type="success"
+            message={field.message || ''}
+            title={field.title}
+            dismissible={field.dismissible}
+            onDismiss={field.onDismiss}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      // TODO: Add more field types if needed
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
