@@ -58,6 +58,13 @@ import { SearchableSelectField } from '@/components/base/SearchableSelectField'
 import { PasswordStrengthField } from '@/components/base/PasswordStrengthField'
 import { HiddenField } from '@/components/base/HiddenField'
 import { ReadonlyField } from '@/components/base/ReadonlyField'
+import { ChunkedUploadField } from '@/components/base/ChunkedUploadField'
+import { CameraCaptureField } from '@/components/base/CameraCaptureField'
+import { LicenseTypeSelector } from '@/components/labuan-fsa/LicenseTypeSelector'
+import { FeeCalculator } from '@/components/labuan-fsa/FeeCalculator'
+import { DocumentChecklist } from '@/components/labuan-fsa/DocumentChecklist'
+import { ComplianceCheckbox } from '@/components/labuan-fsa/ComplianceCheckbox'
+import { StatusTracker } from '@/components/labuan-fsa/StatusTracker'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -882,7 +889,94 @@ export function FormRenderer({
           />
         )
 
-      // TODO: Add more field types if needed
+      case 'upload-chunked':
+      case 'chunked-upload':
+        return (
+          <ChunkedUploadField
+            {...commonProps}
+            chunkSize={field.chunkSize}
+            maxFileSize={field.maxFileSize}
+            allowedExtensions={field.allowedExtensions}
+            multiple={field.multiple}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'upload-camera':
+      case 'camera-capture':
+        return (
+          <CameraCaptureField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            maxFileSize={field.maxFileSize}
+            imageQuality={field.imageQuality}
+          />
+        )
+
+      case 'license-type-selector':
+      case 'labuan-license-type':
+        return (
+          <LicenseTypeSelector
+            {...commonProps}
+            licenseTypes={field.options || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'fee-calculator':
+      case 'labuan-fee-calculator':
+        return (
+          <FeeCalculator
+            {...commonProps}
+            licenseType={field.licenseType}
+            feeStructure={field.feeStructure}
+            currency={field.currency}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'document-checklist':
+      case 'labuan-document-checklist':
+        return (
+          <DocumentChecklist
+            {...commonProps}
+            documents={field.documents}
+            allowUpload={field.allowUpload}
+            onUpload={field.onUpload}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'compliance-checkbox':
+      case 'labuan-compliance-checkbox':
+        return (
+          <ComplianceCheckbox
+            {...commonProps}
+            complianceText={field.complianceText}
+            linkToPolicy={field.linkToPolicy}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'status-tracker':
+      case 'labuan-status-tracker':
+        return (
+          <StatusTracker
+            {...commonProps}
+            currentStatus={field.currentStatus}
+            statusHistory={field.statusHistory}
+            applicationId={field.applicationId}
+            submittedDate={field.submittedDate}
+          />
+        )
+
+      // All field types implemented!
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
