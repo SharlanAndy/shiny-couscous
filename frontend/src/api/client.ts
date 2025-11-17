@@ -12,10 +12,8 @@ import type {
  * API Client for Labuan FSA E-Submission System
  */
 class APIClient {
-  private client: AxiosInstance
-  private token: string | null = null
-
   public client: AxiosInstance
+  private token: string | null = null
 
   constructor(baseURL: string) {
     this.client = axios.create({
