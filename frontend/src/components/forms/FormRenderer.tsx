@@ -52,6 +52,12 @@ import { VideoDisplay } from '@/components/layout/VideoDisplay'
 import { HTMLBlock } from '@/components/layout/HTMLBlock'
 import { ProgressIndicator } from '@/components/layout/ProgressIndicator'
 import { MessageDisplay } from '@/components/layout/MessageDisplay'
+import { ListField } from '@/components/base/ListField'
+import { YearPickerField } from '@/components/base/YearPickerField'
+import { SearchableSelectField } from '@/components/base/SearchableSelectField'
+import { PasswordStrengthField } from '@/components/base/PasswordStrengthField'
+import { HiddenField } from '@/components/base/HiddenField'
+import { ReadonlyField } from '@/components/base/ReadonlyField'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -789,6 +795,90 @@ export function FormRenderer({
             onDismiss={field.onDismiss}
             style={field.style}
             hidden={field.hidden}
+          />
+        )
+
+      case 'list':
+      case 'list-field':
+        return (
+          <ListField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            minItems={field.minItems}
+            maxItems={field.maxItems}
+            allowDuplicates={field.allowDuplicates}
+            itemType={field.itemType}
+          />
+        )
+
+      case 'year':
+      case 'year-picker':
+        return (
+          <YearPickerField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            minYear={field.minYear}
+            maxYear={field.maxYear}
+            format={field.format}
+          />
+        )
+
+      case 'select-searchable':
+      case 'searchable-select':
+        return (
+          <SearchableSelectField
+            {...commonProps}
+            options={field.options || []}
+            multiple={field.multiple}
+            searchPlaceholder={field.searchPlaceholder}
+            minChars={field.minChars}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'password-strength':
+      case 'password-with-strength':
+        return (
+          <PasswordStrengthField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            showStrengthIndicator={field.showStrengthIndicator}
+            minLength={field.minLength}
+            requireUppercase={field.requireUppercase}
+            requireLowercase={field.requireLowercase}
+            requireNumbers={field.requireNumbers}
+            requireSpecialChars={field.requireSpecialChars}
+          />
+        )
+
+      case 'hidden':
+      case 'input-hidden':
+        return (
+          <HiddenField
+            fieldId={field.fieldId}
+            fieldName={field.fieldName}
+            fieldType={field.fieldType}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            onChange={onChange ? (val) => onChange(step.stepId, field.fieldName, val) : undefined}
+            required={field.required}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'readonly':
+      case 'readonly-field':
+        return (
+          <ReadonlyField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            format={field.format}
+            displayComponent={field.displayComponent}
           />
         )
 
