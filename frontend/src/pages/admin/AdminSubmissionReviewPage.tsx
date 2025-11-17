@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import apiClient from '@/api/client'
 import type { SubmissionResponse } from '@/types'
 import { cn } from '@/lib/utils'
-import { StatusTracker } from '@/components/labuan-fsa/StatusTracker'
+import { StatusTracker, ApplicationStatus } from '@/components/labuan-fsa/StatusTracker'
 
 export function AdminSubmissionReviewPage() {
   const { submissionId } = useParams<{ submissionId: string }>()
@@ -60,12 +60,33 @@ export function AdminSubmissionReviewPage() {
     }
   }
 
+  // Map submission status to application status
+  const mapSubmissionStatusToApplicationStatus = (status: string): ApplicationStatus => {
+    switch (status) {
+      case 'reviewing':
+        return 'under-review'
+      case 'draft':
+        return 'draft'
+      case 'submitted':
+        return 'submitted'
+      case 'approved':
+        return 'approved'
+      case 'rejected':
+        return 'rejected'
+      case 'cancelled':
+        return 'rejected'
+      default:
+        return 'draft'
+    }
+  }
+
   const getStatusColor = (status: string): string => {
     switch (status) {
       case 'approved':
         return 'bg-green-100 text-green-800'
       case 'rejected':
         return 'bg-red-100 text-red-800'
+      case 'reviewing':
       case 'under-review':
         return 'bg-yellow-100 text-yellow-800'
       case 'submitted':
@@ -111,10 +132,12 @@ export function AdminSubmissionReviewPage() {
         <StatusTracker
           fieldId="status-tracker"
           fieldName="status"
+          fieldType="status-tracker"
           label="Application Status"
-          currentStatus={submission.status as any}
+          currentStatus={mapSubmissionStatusToApplicationStatus(submission.status)}
           applicationId={submission.submissionId}
           submittedDate={submission.submittedAt}
+          onChange={() => {}} // Status tracker is read-only in review page
         />
       </div>
 

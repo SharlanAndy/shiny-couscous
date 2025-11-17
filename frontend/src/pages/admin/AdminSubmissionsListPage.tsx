@@ -65,6 +65,7 @@ export function AdminSubmissionsListPage() {
         return 'bg-green-100 text-green-800'
       case 'rejected':
         return 'bg-red-100 text-red-800'
+      case 'reviewing':
       case 'under-review':
         return 'bg-yellow-100 text-yellow-800'
       case 'submitted':
@@ -135,6 +136,7 @@ export function AdminSubmissionsListPage() {
               <option value="">All Statuses</option>
               <option value="draft">Draft</option>
               <option value="submitted">Submitted</option>
+              <option value="reviewing">Reviewing</option>
               <option value="under-review">Under Review</option>
               <option value="approved">Approved</option>
               <option value="rejected">Rejected</option>

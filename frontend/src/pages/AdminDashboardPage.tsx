@@ -43,7 +43,7 @@ export function AdminDashboardPage() {
 
         const stats = {
           totalSubmissions: submissions.length,
-          pendingSubmissions: submissions.filter((s) => s.status === 'under-review').length,
+          pendingSubmissions: submissions.filter((s) => s.status === 'reviewing' || s.status === 'under-review').length,
           approvedSubmissions: submissions.filter((s) => s.status === 'approved').length,
           rejectedSubmissions: submissions.filter((s) => s.status === 'rejected').length,
           totalForms: forms.length,
