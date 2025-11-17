@@ -21,6 +21,11 @@ import { MarkdownField } from '@/components/base/MarkdownField'
 import { ArrayField } from '@/components/base/ArrayField'
 import { TableField } from '@/components/base/TableField'
 import { JSONField } from '@/components/base/JSONField'
+import { CodeField } from '@/components/base/CodeField'
+import { AutocompleteField } from '@/components/base/AutocompleteField'
+import { TabsField } from '@/components/layout/TabsField'
+import { AccordionField } from '@/components/layout/AccordionField'
+import { NestedFormField } from '@/components/layout/NestedFormField'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -328,7 +333,90 @@ export function FormRenderer({
           />
         )
 
-      // TODO: Add more field types (code editor, map picker, etc.)
+      case 'code':
+      case 'code-editor':
+        return (
+          <CodeField
+            {...commonProps}
+            language={field.language}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            height={field.height}
+            theme={field.theme}
+          />
+        )
+
+      case 'autocomplete':
+      case 'input-autocomplete':
+        return (
+          <AutocompleteField
+            {...commonProps}
+            options={field.options || []}
+            asyncOptions={field.asyncOptions}
+            minChars={field.minChars}
+            debounce={field.debounce}
+            multiple={field.multiple}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'tabs':
+      case 'tabs-field':
+        return (
+          <TabsField
+            {...commonProps}
+            tabs={field.tabs || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            onChange={(tabId, fieldName, value) => {
+              // Handle nested tab field change
+              if (onChange) {
+                const stepId = `tab-${tabId}`
+                onChange(stepId, fieldName, value)
+              }
+            }}
+            onTabChange={field.onTabChange}
+          />
+        )
+
+      case 'accordion':
+      case 'accordion-field':
+        return (
+          <AccordionField
+            {...commonProps}
+            sections={field.sections || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            multiple={field.multiple}
+            onChange={(sectionId, fieldName, value) => {
+              // Handle nested accordion field change
+              if (onChange) {
+                const stepId = `accordion-${sectionId}`
+                onChange(stepId, fieldName, value)
+              }
+            }}
+          />
+        )
+
+      case 'nested-form':
+      case 'form-nested':
+        return (
+          <NestedFormField
+            {...commonProps}
+            steps={field.steps || field.schema || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            onChange={(stepId, fieldName, value) => {
+              // Handle nested form field change
+              if (onChange) {
+                onChange(stepId, fieldName, value)
+              }
+            }}
+          />
+        )
+
+      // TODO: Add more field types (map picker, formula, etc.)
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
