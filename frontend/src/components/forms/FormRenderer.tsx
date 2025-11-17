@@ -26,6 +26,21 @@ import { AutocompleteField } from '@/components/base/AutocompleteField'
 import { TabsField } from '@/components/layout/TabsField'
 import { AccordionField } from '@/components/layout/AccordionField'
 import { NestedFormField } from '@/components/layout/NestedFormField'
+import {
+  Divider,
+  Spacer,
+  Heading,
+  TextBlock,
+  ImageDisplay,
+  ConditionalBlock,
+} from '@/components/layout/DisplayComponents'
+import { SegmentedControlField } from '@/components/base/SegmentedControlField'
+import { CascadingSelectField } from '@/components/base/CascadingSelectField'
+import { GroupedSelectField } from '@/components/base/GroupedSelectField'
+import { DateRangeField } from '@/components/base/DateRangeField'
+import { TimeRangeField } from '@/components/base/TimeRangeField'
+import { PercentageField } from '@/components/base/PercentageField'
+import { FormulaField } from '@/components/base/FormulaField'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -416,7 +431,167 @@ export function FormRenderer({
           />
         )
 
-      // TODO: Add more field types (map picker, formula, etc.)
+      case 'segmented-control':
+      case 'button-group':
+        return (
+          <SegmentedControlField
+            {...commonProps}
+            options={field.options || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'select-cascade':
+      case 'cascading-select':
+        return (
+          <CascadingSelectField
+            {...commonProps}
+            cascadeConfig={field.cascadeConfig || {}}
+            parentField={field.parentField}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'select-grouped':
+      case 'grouped-select':
+        return (
+          <GroupedSelectField
+            {...commonProps}
+            optionGroups={field.optionGroups || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'date-range':
+      case 'date-range-picker':
+        return (
+          <DateRangeField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            min={field.min}
+            max={field.max}
+          />
+        )
+
+      case 'time-range':
+      case 'time-range-picker':
+        return (
+          <TimeRangeField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            min={field.min}
+            max={field.max}
+          />
+        )
+
+      case 'percentage':
+      case 'input-percentage':
+        return (
+          <PercentageField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            min={field.min}
+            max={field.max}
+            step={field.step}
+            showSymbol={field.showSymbol}
+          />
+        )
+
+      case 'formula':
+      case 'calculated-field':
+        return (
+          <FormulaField
+            {...commonProps}
+            formula={field.formula}
+            dependencies={field.dependencies}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            readOnly={field.readOnly}
+            precision={field.precision}
+          />
+        )
+
+      case 'divider':
+        return (
+          <Divider
+            fieldId={field.fieldId}
+            label={field.label}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'spacer':
+        return (
+          <Spacer
+            fieldId={field.fieldId}
+            height={field.height}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'heading':
+        return (
+          <Heading
+            fieldId={field.fieldId}
+            label={field.label}
+            level={field.level}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'text-block':
+        return (
+          <TextBlock
+            fieldId={field.fieldId}
+            label={field.label}
+            content={field.content || ''}
+            html={field.html}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'image-display':
+        return (
+          <ImageDisplay
+            fieldId={field.fieldId}
+            label={field.label}
+            src={field.src || ''}
+            alt={field.alt}
+            width={field.width}
+            height={field.height}
+            style={field.style}
+            hidden={field.hidden}
+          />
+        )
+
+      case 'conditional-block':
+        return (
+          <ConditionalBlock
+            fieldId={field.fieldId}
+            condition={shouldDisplayField(field.conditionalDisplay, formData)}
+            style={field.style}
+            hidden={field.hidden}
+          >
+            {/* Render nested fields */}
+            {field.fields?.map((nestedField) => (
+              <div key={nestedField.fieldId}>
+                {renderField(nestedField, step.stepId)}
+              </div>
+            ))}
+          </ConditionalBlock>
+        )
+
+      // TODO: Add more field types (map picker, payment, etc.)
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
