@@ -10,6 +10,12 @@ import { FileUploadField } from '@/components/base/FileUploadField'
 import { ToggleField } from '@/components/base/ToggleField'
 import { RangeSliderField } from '@/components/base/RangeSliderField'
 import { RatingField } from '@/components/base/RatingField'
+import { PhoneField } from '@/components/base/PhoneField'
+import { CurrencyField } from '@/components/base/CurrencyField'
+import { AddressField } from '@/components/base/AddressField'
+import { ColorPickerField } from '@/components/base/ColorPickerField'
+import { SignatureField } from '@/components/base/SignatureField'
+import { TagsField } from '@/components/base/TagsField'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -181,7 +187,77 @@ export function FormRenderer({
           />
         )
 
-      // TODO: Add more field types (rich text, markdown, signature, color picker, etc.)
+      case 'phone':
+      case 'input-tel':
+        return (
+          <PhoneField
+            {...commonProps}
+            countryCode={field.countryCode}
+            international={field.international}
+          />
+        )
+
+      case 'currency':
+      case 'input-currency':
+        return (
+          <CurrencyField
+            {...commonProps}
+            currency={field.currency}
+            locale={field.locale}
+            showSymbol={field.showSymbol}
+          />
+        )
+
+      case 'address':
+      case 'address-complete':
+        return (
+          <AddressField
+            {...commonProps}
+            fields={field.fields}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'color-picker':
+      case 'color-palette':
+        return (
+          <ColorPickerField
+            {...commonProps}
+            palette={field.palette}
+            showInput={field.showInput}
+          />
+        )
+
+      case 'signature':
+      case 'signature-pad':
+        return (
+          <SignatureField
+            {...commonProps}
+            width={field.width}
+            height={field.height}
+            backgroundColor={field.backgroundColor}
+            penColor={field.penColor}
+            showClear={field.showClear}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'tags':
+      case 'tags-input':
+        return (
+          <TagsField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            placeholder={field.placeholder}
+            maxTags={field.maxTags}
+            suggestions={field.suggestions}
+          />
+        )
+
+      // TODO: Add more field types (rich text, markdown, etc.)
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
