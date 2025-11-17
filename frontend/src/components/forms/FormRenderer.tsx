@@ -41,6 +41,11 @@ import { DateRangeField } from '@/components/base/DateRangeField'
 import { TimeRangeField } from '@/components/base/TimeRangeField'
 import { PercentageField } from '@/components/base/PercentageField'
 import { FormulaField } from '@/components/base/FormulaField'
+import { PaymentField } from '@/components/base/PaymentField'
+import { MapPickerField } from '@/components/base/MapPickerField'
+import { RepeaterField } from '@/components/base/RepeaterField'
+import { ObjectField } from '@/components/base/ObjectField'
+import { QuarterPickerField } from '@/components/base/QuarterPickerField'
 import { shouldDisplayField } from '@/lib/utils'
 
 interface FormRendererProps {
@@ -591,7 +596,77 @@ export function FormRenderer({
           </ConditionalBlock>
         )
 
-      // TODO: Add more field types (map picker, payment, etc.)
+      case 'payment-stripe':
+      case 'payment-paypal':
+      case 'payment-card':
+      case 'payment-button':
+        return (
+          <PaymentField
+            {...commonProps}
+            provider={field.provider}
+            amount={field.amount}
+            currency={field.currency}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+          />
+        )
+
+      case 'map-picker':
+      case 'location-picker':
+        return (
+          <MapPickerField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            defaultCenter={field.defaultCenter}
+            zoom={field.zoom}
+            height={field.height}
+          />
+        )
+
+      case 'repeater':
+      case 'repeater-field':
+        return (
+          <RepeaterField
+            {...commonProps}
+            itemSchema={field.itemSchema}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            minItems={field.minItems}
+            maxItems={field.maxItems}
+            addButtonLabel={field.addButtonLabel}
+            removeButtonLabel={field.removeButtonLabel}
+            cloneEnabled={field.cloneEnabled}
+          />
+        )
+
+      case 'object':
+      case 'object-field':
+      case 'field-group':
+        return (
+          <ObjectField
+            {...commonProps}
+            fields={field.fields || field.schema || []}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            collapsible={field.collapsible}
+            defaultCollapsed={field.defaultCollapsed}
+          />
+        )
+
+      case 'quarter':
+      case 'quarter-picker':
+        return (
+          <QuarterPickerField
+            {...commonProps}
+            value={fieldValue}
+            defaultValue={field.defaultValue}
+            minYear={field.minYear}
+            maxYear={field.maxYear}
+          />
+        )
+
+      // TODO: Add more field types (async select, video display, HTML block, etc.)
       default:
         console.warn(`Unsupported field type: ${field.fieldType}`)
         return (
