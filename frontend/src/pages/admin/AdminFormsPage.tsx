@@ -101,7 +101,6 @@ export function AdminFormsPage() {
                 </Link>
                 <Link
                   to={`/forms/${form.formId}`}
-                  target="_blank"
                   className="btn btn-primary btn-sm flex-1 text-center"
                 >
                   Preview

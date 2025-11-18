@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import apiClient from '@/api/client'
 import { StatisticsCards } from '@/components/admin/StatisticsCards'
 import { RecentActivity } from '@/components/admin/RecentActivity'
-import { AdminNavigation } from '@/components/admin/AdminNavigation'
 
 export function AdminDashboardPage() {
   const [statistics, setStatistics] = useState({
@@ -68,7 +67,6 @@ export function AdminDashboardPage() {
 
   return (
     <div>
-      <AdminNavigation />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-6">
           <div>

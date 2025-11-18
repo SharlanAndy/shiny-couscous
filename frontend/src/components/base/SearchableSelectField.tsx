@@ -127,19 +127,19 @@ export function SearchableSelectField({
 
       {/* Selected items (multiple mode) */}
       {multiple && selectedOptions.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2">
           {selectedOptions.map((option) => (
             <span
               key={option.value}
-              className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+              className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium break-words max-w-full"
             >
-              {option.label}
+              <span className="truncate">{option.label}</span>
               {!readonly && (
                 <button
                   type="button"
                   onClick={() => handleRemoveSelected(option.value)}
                   disabled={disabled}
-                  className="ml-2 text-primary hover:text-primary-dark"
+                  className="ml-1 sm:ml-2 text-primary hover:text-primary-dark flex-shrink-0 text-base sm:text-lg leading-none"
                   aria-label={`Remove ${option.label}`}
                 >
                   ×
@@ -174,7 +174,7 @@ export function SearchableSelectField({
           disabled={disabled}
           readOnly={readonly}
           className={cn(
-            'input',
+            'input text-xs sm:text-sm',
             error && 'input-error',
             disabled && 'opacity-50 cursor-not-allowed',
             readonly && 'bg-gray-100 cursor-default',
@@ -190,8 +190,8 @@ export function SearchableSelectField({
 
         {/* Dropdown arrow */}
         {!readonly && (
-          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </div>
@@ -213,7 +213,7 @@ export function SearchableSelectField({
                 onClick={() => handleOptionSelect(option)}
                 disabled={option.disabled}
                 className={cn(
-                  'w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors',
+                  'w-full text-left px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm hover:bg-gray-50 transition-colors',
                   isSelected && 'bg-primary/10 text-primary font-medium',
                   option.disabled && 'opacity-50 cursor-not-allowed',
                   !option.disabled && 'cursor-pointer'
@@ -221,9 +221,9 @@ export function SearchableSelectField({
                 role="option"
                 aria-selected={isSelected}
               >
-                <div className="font-medium">{option.label}</div>
+                <div className="font-medium break-words">{option.label}</div>
                 {option.description && (
-                  <div className="text-xs text-gray-500 mt-1">{option.description}</div>
+                  <div className="text-[10px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1 break-words">{option.description}</div>
                 )}
               </button>
             )
@@ -233,7 +233,7 @@ export function SearchableSelectField({
 
       {/* No results */}
       {showOptions && searchQuery.length >= minChars && filteredOptions.length === 0 && (
-        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg p-4 text-sm text-gray-500">
+        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg p-3 sm:p-4 text-xs sm:text-sm text-gray-500">
           No options found
         </div>
       )}

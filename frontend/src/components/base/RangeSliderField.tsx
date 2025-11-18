@@ -71,11 +71,11 @@ export function RangeSliderField({
     <div className={containerClassName}>
       <label
         htmlFor={fieldId}
-        className={cn('label', required && 'label-required', style?.labelClassName)}
+        className={cn('label text-xs sm:text-sm', required && 'label-required', style?.labelClassName)}
       >
         {label}
         {showValue && (
-          <span className="ml-2 text-primary font-medium">
+          <span className="ml-1 sm:ml-2 text-primary font-medium text-xs sm:text-sm whitespace-nowrap">
             {fieldValue}
             {unit}
           </span>
@@ -107,9 +107,9 @@ export function RangeSliderField({
           aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}
         />
         {/* Value indicators */}
-        <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>{min}{unit}</span>
-          <span>{max}{unit}</span>
+        <div className="flex justify-between text-[10px] sm:text-xs text-gray-500 mt-1">
+          <span className="whitespace-nowrap">{min}{unit}</span>
+          <span className="whitespace-nowrap">{max}{unit}</span>
         </div>
       </div>
       {error && (

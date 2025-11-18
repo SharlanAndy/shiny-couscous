@@ -45,6 +45,13 @@ const DEFAULT_STATUSES: StatusStep[] = [
     current: false,
   },
   {
+    status: 'pending-payment',
+    label: 'Payment',
+    description: 'Payment processing required',
+    completed: false,
+    current: false,
+  },
+  {
     status: 'under-review',
     label: 'Under Review',
     description: 'Application is being reviewed by Labuan FSA',
@@ -99,6 +106,7 @@ export function StatusTracker({
     const statusOrder: ApplicationStatus[] = [
       'draft',
       'submitted',
+      'pending-payment',
       'under-review',
       'additional-info-required',
       'approved',
@@ -152,20 +160,20 @@ export function StatusTracker({
       )}
 
       {applicationId && (
-        <div className="mb-4 text-sm text-gray-600">
+        <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-gray-600 break-words">
           Application ID: <span className="font-medium text-gray-900">{applicationId}</span>
         </div>
       )}
 
       {submittedDate && (
-        <div className="mb-4 text-sm text-gray-600">
+        <div className="mb-3 sm:mb-4 text-xs sm:text-sm text-gray-600">
           Submitted: <span className="font-medium text-gray-900">{submittedDate}</span>
         </div>
       )}
 
-      <div className="relative">
+      <div className="relative overflow-x-auto -mx-2 sm:mx-0 px-2 sm:px-0">
         {/* Progress line */}
-        <div className="absolute top-4 left-0 right-0 h-0.5 bg-gray-300">
+        <div className="absolute top-3 sm:top-4 left-2 sm:left-0 right-2 sm:right-0 h-0.5 sm:h-1 bg-gray-300">
           {steps.some((s) => s.completed) && (
             <div
               className="h-full bg-primary transition-all duration-300"
@@ -177,38 +185,39 @@ export function StatusTracker({
         </div>
 
         {/* Status steps */}
-        <div className="relative flex justify-between">
+        <div className="relative flex justify-between min-w-[600px] sm:min-w-0">
           {steps.map((step, index) => (
-            <div key={step.status} className="flex flex-col items-center flex-1">
+            <div key={step.status} className="flex flex-col items-center flex-1 min-w-0 px-1 sm:px-0">
               {/* Step circle */}
               <div
                 className={cn(
-                  'relative z-10 flex items-center justify-center w-8 h-8 rounded-full border-2 transition-colors',
+                  'relative z-10 flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full border-2 transition-colors flex-shrink-0',
                   getStatusColor(step)
                 )}
               >
                 {step.completed ? (
-                  <span className="text-sm font-bold">✓</span>
+                  <span className="text-xs sm:text-sm font-bold">✓</span>
                 ) : (
-                  <span className="text-sm font-bold">{index + 1}</span>
+                  <span className="text-xs sm:text-sm font-bold">{index + 1}</span>
                 )}
               </div>
 
               {/* Step label */}
-              <div className="mt-2 text-center max-w-[120px]">
+              <div className="mt-1.5 sm:mt-2 text-center max-w-[80px] sm:max-w-[120px] min-w-0">
                 <div
                   className={cn(
-                    'text-xs font-medium',
+                    'text-[10px] sm:text-xs font-medium truncate w-full',
                     step.current ? 'text-primary' : step.completed ? 'text-gray-900' : 'text-gray-500'
                   )}
+                  title={step.label}
                 >
                   {step.label}
                 </div>
                 {step.description && (
-                  <div className="mt-1 text-xs text-gray-500">{step.description}</div>
+                  <div className="mt-0.5 sm:mt-1 text-[9px] sm:text-xs text-gray-500 line-clamp-2 hidden sm:block">{step.description}</div>
                 )}
                 {step.date && (
-                  <div className="mt-1 text-xs text-gray-400">{step.date}</div>
+                  <div className="mt-0.5 sm:mt-1 text-[9px] sm:text-xs text-gray-400 hidden sm:block">{step.date}</div>
                 )}
               </div>
             </div>

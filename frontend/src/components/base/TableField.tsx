@@ -101,64 +101,66 @@ export function TableField({
       </label>
 
       {/* Table */}
-      <div className="overflow-x-auto border border-gray-300 rounded-md">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              {columns.map((column, colIndex) => (
-                <th
-                  key={colIndex}
-                  className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                >
-                  {column.label}
-                  {column.required && <span className="text-error"> *</span>}
-                </th>
-              ))}
-              {allowRemoveRows && !readonly && (
-                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">
-                  Actions
-                </th>
-              )}
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {tableValue.map((row, rowIndex) => (
-              <tr key={rowIndex} className="hover:bg-gray-50">
+      <div className="overflow-x-auto border border-gray-300 rounded-md -mx-2 sm:mx-0">
+        <div className="inline-block min-w-full align-middle">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
                 {columns.map((column, colIndex) => (
-                  <td key={colIndex} className="px-4 py-3 whitespace-nowrap">
-                    <input
-                      type={column.type || 'text'}
-                      value={row[colIndex] ?? ''}
-                      onChange={(e) => handleCellChange(rowIndex, colIndex, e.target.value)}
-                      onBlur={onBlur}
-                      onFocus={onFocus}
-                      required={column.required}
-                      disabled={disabled}
-                      readOnly={readonly}
-                      placeholder={column.label}
-                      className="input w-full min-w-[120px]"
-                    />
-                  </td>
+                  <th
+                    key={colIndex}
+                    className="px-2 sm:px-3 lg:px-4 py-2 sm:py-3 text-left text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    <span className="truncate block">{column.label}</span>
+                    {column.required && <span className="text-error"> *</span>}
+                  </th>
                 ))}
                 {allowRemoveRows && !readonly && (
-                  <td className="px-4 py-3 whitespace-nowrap">
-                    <button
-                      type="button"
-                      onClick={() => handleRemoveRow(rowIndex)}
-                      disabled={disabled || (minRows ? tableValue.length <= minRows : false)}
-                      className={cn(
-                        'text-sm text-error hover:text-red-700 font-medium',
-                        disabled && 'opacity-50 cursor-not-allowed'
-                      )}
-                    >
-                      Remove
-                    </button>
-                  </td>
+                  <th className="px-2 sm:px-3 lg:px-4 py-2 sm:py-3 text-left text-[10px] sm:text-xs font-medium text-gray-500 uppercase tracking-wider w-16 sm:w-20">
+                    Actions
+                  </th>
                 )}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {tableValue.map((row, rowIndex) => (
+                <tr key={rowIndex} className="hover:bg-gray-50">
+                  {columns.map((column, colIndex) => (
+                    <td key={colIndex} className="px-2 sm:px-3 lg:px-4 py-2 sm:py-3">
+                      <input
+                        type={column.type || 'text'}
+                        value={row[colIndex] ?? ''}
+                        onChange={(e) => handleCellChange(rowIndex, colIndex, e.target.value)}
+                        onBlur={onBlur}
+                        onFocus={onFocus}
+                        required={column.required}
+                        disabled={disabled}
+                        readOnly={readonly}
+                        placeholder={column.label}
+                        className="input w-full min-w-[100px] sm:min-w-[120px] text-xs sm:text-sm"
+                      />
+                    </td>
+                  ))}
+                  {allowRemoveRows && !readonly && (
+                    <td className="px-2 sm:px-3 lg:px-4 py-2 sm:py-3">
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveRow(rowIndex)}
+                        disabled={disabled || (minRows ? tableValue.length <= minRows : false)}
+                        className={cn(
+                          'text-xs sm:text-sm text-error hover:text-red-700 font-medium whitespace-nowrap',
+                          disabled && 'opacity-50 cursor-not-allowed'
+                        )}
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Add row button */}

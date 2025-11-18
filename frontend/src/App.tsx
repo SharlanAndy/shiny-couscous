@@ -16,6 +16,7 @@ import { AdminSubmissionReviewPage } from './pages/admin/AdminSubmissionReviewPa
 import { AdminFormsPage } from './pages/admin/AdminFormsPage'
 import { AdminAnalyticsPage } from './pages/admin/AdminAnalyticsPage'
 import { AdminSettingsPage } from './pages/admin/AdminSettingsPage'
+import { NotFoundPage } from './pages/NotFoundPage'
 import { Layout } from './components/layout/Layout'
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
       <Route path="/admin/forms/:formId/schema" element={<Layout><AdminFormSchemaEditorPage /></Layout>} />
       <Route path="/admin/analytics" element={<Layout><AdminAnalyticsPage /></Layout>} />
       <Route path="/admin/settings" element={<Layout><AdminSettingsPage /></Layout>} />
+      {/* Catch-all route for 404 - must be last */}
+      <Route path="*" element={<Layout><NotFoundPage /></Layout>} />
     </Routes>
   )
 }

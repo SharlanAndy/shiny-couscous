@@ -94,3 +94,9 @@ temp/
 .DS_Store
 Thumbs.db
 
+# Vercel
+.vercel
+
+# Local development
+local/
+*.local

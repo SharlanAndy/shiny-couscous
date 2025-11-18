@@ -49,47 +49,113 @@ A comprehensive e-online submission system for Labuan FSA application forms that
 ### Prerequisites
 
 - Python 3.11+
+- [uv](https://github.com/astral-sh/uv) (recommended) or pip/venv
 - Node.js 18+
-- PostgreSQL 14+
+- PostgreSQL 14+ (or SQLite for local dev)
 - Git
 
-### Quick Start
-
-**Backend Setup:**
+**Install uv (if not installed):**
 ```bash
-# Create virtual environment
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or via pip
+pip install uv
+```
+
+### Quick Start - Run Both Servers
+
+**Option 1: Start Both Servers at Once (Recommended)**
+
+```bash
+# Make script executable (first time only)
+chmod +x scripts/start-servers.sh
+
+# Start both backend and frontend
+./scripts/start-servers.sh
+```
+
+**Option 2: Start Servers Separately**
+
+**Terminal 1 - Backend (using uv):**
+```bash
+cd backend
+
+# Install dependencies (first time only)
+uv sync
+
+# Set up local configuration (first time only)
+cp config.example.toml config.local.toml
+# Edit config.local.toml if needed
+
+# Initialize database and seed mock users (first time only)
+uv run python scripts/seed_mock_users.py
+
+# Run backend server
+uv run uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+**Terminal 1 - Backend (using pip/venv - alternative):**
+```bash
+cd backend
+
+# Create virtual environment (first time only)
 python3.11 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install backend dependencies
-cd backend
+# Install dependencies (first time only)
 pip install -e .
 
-# Set up local configuration
-cp config.local.toml.example config.local.toml
-# Edit config.local.toml with your local PostgreSQL credentials
+# Set up local configuration (first time only)
+cp config.example.toml config.local.toml
+# Edit config.local.toml if needed
 
-# Run database migrations
-alembic upgrade head
+# Initialize database and seed mock users (first time only)
+python3 scripts/seed_mock_users.py
 
 # Run backend server
-uvicorn labuan_fsa.main:app --reload --host 0.0.0.0 --port 8000
+python3 -m uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-**Frontend Setup:**
+**Terminal 2 - Frontend:**
 ```bash
-# Navigate to frontend directory
 cd frontend
 
-# Install dependencies
+# Install dependencies (first time only)
 npm install
-
-# Create environment configuration
-echo "VITE_API_BASE_URL=http://localhost:8000" > .env.local
 
 # Run development server
 npm run dev
 ```
+
+### Access URLs
+
+Once both servers are running:
+
+- **Frontend (User Interface)**: http://localhost:3000
+- **Admin Dashboard**: http://localhost:3000/admin
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
+- **Alternative API Docs**: http://localhost:8000/redoc
+
+### Mock User Credentials
+
+**Admin User:**
+- Email: `admin@labuanfsa.gov.my`
+- Password: `admin123`
+- Access: Can create forms, review submissions, view analytics
+
+**Regular User:**
+- Email: `user@example.com`
+- Password: `user123`
+- Access: Can browse forms and submit applications
+
+### First-Time Setup (Detailed)
+
+See `README-DEV.md` for detailed setup instructions including:
+- Database setup
+- Configuration files
+- Troubleshooting tips
 
 ---
 
@@ -125,16 +191,16 @@ npm run dev
 
 ## 📊 PROJECT STATUS
 
-**Current Phase**: Init Complete ✅ → Product Agent Next
+**Current Phase**: Develop In Progress (75% Complete) → Core System Functional
 
 **Agent Progress**:
 - ✅ Init Agent - Complete
-- ⏳ Product Agent - Next
-- ⏳ Plan Agent - Pending
-- ⏳ UX Agent - Pending
-- ⏳ Design Agent - Pending
-- ⏳ Data Agent - Pending
-- ⏳ Develop Agent - Pending
+- ⏳ Product Agent - Pending
+- ✅ Plan Agent - Complete
+- ✅ UX Agent - Complete
+- ✅ Design Agent - Complete
+- ✅ Data Agent - Complete
+- 🔄 Develop Agent - In Progress (75% Complete)
 - ⏳ DevOps Agent - Pending
 - ⏳ Security Agent - Pending
 - ⏳ Compliance Agent - Pending
@@ -142,6 +208,13 @@ npm run dev
 - ⏳ Debug Agent - Pending
 - ⏳ Audit Agent - Pending
 - ⏳ Deploy Agent - Pending
+
+**System Status**:
+- ✅ Core system functional and ready for use
+- ✅ Admins can create forms using visual builder
+- ✅ Users can submit forms with full validation
+- ✅ All form field types (85+) implemented
+- ✅ Responsive design (mobile + web)
 
 ---
 

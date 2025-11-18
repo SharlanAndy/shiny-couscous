@@ -57,7 +57,11 @@ export function HelpTextField({
       {label && position === 'above' && (
         <label
           htmlFor={fieldId}
-          className={cn('label', style?.labelClassName)}
+          className={cn(
+            'label font-bold text-lg mb-3',
+            label === 'IMPORTANT NOTES' && 'text-red-600',
+            style?.labelClassName
+          )}
         >
           {label}
           {tooltip && (
@@ -68,13 +72,17 @@ export function HelpTextField({
         </label>
       )}
       <div className={helpClassName} id={fieldId}>
-        <span className="text-gray-400 flex-shrink-0">{icon}</span>
+        {icon && <span className="text-gray-400 flex-shrink-0">{icon}</span>}
         <div className="flex-1">{renderContent()}</div>
       </div>
       {label && position === 'below' && (
         <label
           htmlFor={fieldId}
-          className={cn('label mt-2', style?.labelClassName)}
+          className={cn(
+            'label mt-2 font-bold',
+            label === 'IMPORTANT NOTES' && 'text-red-600',
+            style?.labelClassName
+          )}
         >
           {label}
         </label>

@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useMutation } from '@tanstack/react-query'
 import apiClient from '@/api/client'
 import { cn } from '@/lib/utils'
+import { useToast } from '@/components/ui/ToastProvider'
+import { VisualFormBuilder } from '@/components/admin/VisualFormBuilder'
+import type { FormSchemaResponse } from '@/types'
 
 interface FormCreateData {
   form_id: string
@@ -18,6 +21,7 @@ interface FormCreateData {
 
 export function AdminFormCreatePage() {
   const navigate = useNavigate()
+  const { showError, showSuccess } = useToast()
   const [step, setStep] = useState<'basic' | 'schema'>('basic')
   const [formData, setFormData] = useState<FormCreateData>({
     form_id: '',
@@ -37,6 +41,7 @@ export function AdminFormCreatePage() {
   })
   const [schemaJson, setSchemaJson] = useState<string>('')
   const [schemaError, setSchemaError] = useState('')
+  const [schemaMode, setSchemaMode] = useState<'visual' | 'json'>('visual')
 
   // Create form mutation
   const createMutation = useMutation({
@@ -44,7 +49,14 @@ export function AdminFormCreatePage() {
       return await apiClient.createForm(data)
     },
     onSuccess: (response) => {
+      showSuccess('Form created successfully. You can now edit the schema.', 'Form Created')
       navigate(`/admin/forms/${response.formId}/schema`)
+    },
+    onError: (error: any) => {
+      showError(
+        error.response?.data?.detail || error.message || 'Failed to create form',
+        'Creation Failed'
+      )
     },
   })
 
@@ -63,6 +75,16 @@ export function AdminFormCreatePage() {
         },
       }))
     }
+  }
+
+  // Handle visual builder schema change
+  const handleVisualSchemaChange = (schema: FormSchemaResponse) => {
+    setFormData((prev) => ({
+      ...prev,
+      schema_data: schema,
+    }))
+    setSchemaJson(JSON.stringify(schema, null, 2))
+    setSchemaError('')
   }
 
   // Validate and parse schema JSON
@@ -115,17 +137,17 @@ export function AdminFormCreatePage() {
   // Handle save (create form)
   const handleSave = () => {
     if (!formData.form_id || !formData.name) {
-      alert('Please fill in Form ID and Name')
+      showError('Please fill in Form ID and Name', 'Validation Error')
       return
     }
 
     if (!formData.schema_data || !formData.schema_data.steps || formData.schema_data.steps.length === 0) {
-      alert('Please provide a valid form schema with at least one step')
+      showError('Please provide a valid form schema with at least one step', 'Validation Error')
       return
     }
 
     if (schemaError) {
-      alert('Please fix schema JSON errors before saving')
+      showError('Please fix schema JSON errors before saving', 'Validation Error')
       return
     }
 
@@ -314,32 +336,85 @@ export function AdminFormCreatePage() {
         <div className="bg-white shadow rounded-lg p-6 space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-medium text-gray-900">Form Schema</h2>
-            <button onClick={generateDefaultSchema} className="btn btn-secondary btn-sm">
-              Generate Default Schema
-            </button>
+            <div className="flex items-center gap-2">
+              <div className="border border-gray-200 rounded-md flex">
+                <button
+                  onClick={() => setSchemaMode('visual')}
+                  className={cn(
+                    'px-4 py-2 text-sm font-medium rounded-l-md',
+                    schemaMode === 'visual'
+                      ? 'bg-primary text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  )}
+                >
+                  Visual Builder
+                </button>
+                <button
+                  onClick={() => setSchemaMode('json')}
+                  className={cn(
+                    'px-4 py-2 text-sm font-medium rounded-r-md',
+                    schemaMode === 'json'
+                      ? 'bg-primary text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  )}
+                >
+                  JSON Editor
+                </button>
+              </div>
+              {schemaMode === 'json' && (
+                <button onClick={generateDefaultSchema} className="btn btn-secondary btn-sm">
+                  Generate Default
+                </button>
+              )}
+            </div>
           </div>
 
-          <div>
-            <div className="mb-2 flex items-center justify-between">
-              <label className="block text-sm font-medium text-gray-700">
-                Schema JSON <span className="text-red-500">*</span>
-              </label>
-              {schemaError && <span className="text-sm text-red-600">{schemaError}</span>}
+          {schemaMode === 'visual' ? (
+            <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <VisualFormBuilder
+                initialSchema={
+                  formData.schema_data?.steps?.length > 0
+                    ? (formData.schema_data as FormSchemaResponse)
+                    : {
+                        formId: formData.form_id || 'new-form',
+                        formName: formData.name || 'New Form',
+                        version: formData.version,
+                        steps: [
+                          {
+                            stepId: 'step-1',
+                            stepName: 'Step 1',
+                            stepOrder: 0,
+                            fields: [],
+                          },
+                        ],
+                      }
+                }
+                onChange={handleVisualSchemaChange}
+              />
             </div>
-            <textarea
-              value={schemaJson || JSON.stringify(formData.schema_data, null, 2)}
-              onChange={(e) => handleSchemaChange(e.target.value)}
-              className={cn(
-                'w-full h-96 font-mono text-sm border rounded-md p-4',
-                schemaError ? 'border-red-300 bg-red-50' : 'border-gray-300'
-              )}
-              spellCheck={false}
-              placeholder='{"formId": "form-id", "formName": "Form Name", "steps": [...]}'
-            />
-            <p className="mt-2 text-sm text-gray-500">
-              Enter the complete form schema in JSON format. Use "Generate Default Schema" to get started.
-            </p>
-          </div>
+          ) : (
+            <div>
+              <div className="mb-2 flex items-center justify-between">
+                <label className="block text-sm font-medium text-gray-700">
+                  Schema JSON <span className="text-red-500">*</span>
+                </label>
+                {schemaError && <span className="text-sm text-red-600">{schemaError}</span>}
+              </div>
+              <textarea
+                value={schemaJson || JSON.stringify(formData.schema_data, null, 2)}
+                onChange={(e) => handleSchemaChange(e.target.value)}
+                className={cn(
+                  'w-full h-96 font-mono text-sm border rounded-md p-4',
+                  schemaError ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                )}
+                spellCheck={false}
+                placeholder='{"formId": "form-id", "formName": "Form Name", "steps": [...]}'
+              />
+              <p className="mt-2 text-sm text-gray-500">
+                Enter the complete form schema in JSON format. Use "Generate Default Schema" to get started.
+              </p>
+            </div>
+          )}
 
           <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
             <p className="text-sm text-blue-800">
@@ -354,10 +429,11 @@ export function AdminFormCreatePage() {
             </button>
             <button
               onClick={handleSave}
-              disabled={createMutation.isPending || !!schemaError || !schemaJson}
+              disabled={createMutation.isPending || !!schemaError || !formData.schema_data?.steps?.length}
               className={cn(
                 'btn btn-primary',
-                (createMutation.isPending || !!schemaError || !schemaJson) && 'opacity-50 cursor-not-allowed'
+                (createMutation.isPending || !!schemaError || !formData.schema_data?.steps?.length) &&
+                  'opacity-50 cursor-not-allowed'
               )}
             >
               {createMutation.isPending ? 'Creating...' : 'Create Form'}

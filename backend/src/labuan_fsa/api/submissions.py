@@ -176,6 +176,55 @@ async def save_draft(
     return SubmissionResponse.model_validate(submission)
 
 
+@router.put("/submissions/{submission_id}/draft", response_model=SubmissionResponse)
+async def update_draft(
+    submission_id: str,
+    request: SubmissionDraft,
+    db: AsyncSession = Depends(get_db),
+) -> SubmissionResponse:
+    """
+    Update existing draft submission.
+
+    Args:
+        submission_id: Submission identifier
+        request: Draft request with updated form data
+        db: Database session
+
+    Returns:
+        Updated draft submission response
+
+    Raises:
+        HTTPException: 404 if submission not found, 400 if submission is not a draft
+    """
+    # Get submission
+    result = await db.execute(
+        select(FormSubmission).where(FormSubmission.submission_id == submission_id)
+    )
+    submission = result.scalar_one_or_none()
+
+    if not submission:
+        raise HTTPException(status_code=404, detail=f"Submission not found: {submission_id}")
+
+    # Only allow updating drafts
+    if submission.status != "draft":
+        raise HTTPException(
+            status_code=400,
+            detail=f"Cannot update submission with status '{submission.status}'. Only drafts can be updated.",
+        )
+
+    # Update submission data
+    submission.submitted_data = request.data
+    submission.updated_at = datetime.now()
+
+    await db.commit()
+    await db.refresh(submission)
+
+    # TODO: Update file uploads if provided
+    # TODO: Create audit log entry
+
+    return SubmissionResponse.model_validate(submission)
+
+
 @router.get("/submissions", response_model=list[SubmissionResponse])
 async def list_submissions(
     form_id: Optional[str] = None,

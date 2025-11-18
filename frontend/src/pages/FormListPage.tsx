@@ -29,31 +29,31 @@ export function FormListPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Available Forms</h1>
-        <p className="text-gray-600">Select a form to begin your submission</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">Available Forms</h1>
+        <p className="text-sm sm:text-base text-gray-600">Select a form to begin your submission</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {forms && forms.length > 0 ? (
           forms.map((form) => (
             <Link
               key={form.id}
               to={`/forms/${form.formId}`}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white p-4 sm:p-5 lg:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
             >
-              <h3 className="text-lg font-semibold mb-2">{form.name}</h3>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 line-clamp-2">{form.name}</h3>
               {form.description && (
-                <p className="text-gray-600 text-sm mb-4">{form.description}</p>
+                <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">{form.description}</p>
               )}
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2">
                 {form.estimatedTime && (
-                  <span className="text-gray-500 text-xs">
+                  <span className="text-gray-500 text-xs whitespace-nowrap">
                     ⏱️ {form.estimatedTime}
                   </span>
                 )}
-                <span className="text-primary text-sm font-medium">Start Form →</span>
+                <span className="text-primary text-xs sm:text-sm font-medium whitespace-nowrap">Start Form →</span>
               </div>
             </Link>
           ))

@@ -130,9 +130,9 @@ async def get_form_schema(
     # Extract schema data
     schema_data = form.schema_data
 
-    # Build response
+    # Build response (use form_id as alias for construction, serializes as formId)
     response = FormSchemaResponse(
-        form_id=form.form_id,
+        form_id=form.form_id,  # Use alias (form_id) for construction, will serialize as formId
         form_name=form.name,
         version=form.version,
         steps=schema_data.get("steps", []),

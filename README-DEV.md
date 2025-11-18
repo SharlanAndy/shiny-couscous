@@ -4,8 +4,18 @@
 
 ### Prerequisites
 - Python 3.11+ 
+- [uv](https://github.com/astral-sh/uv) (recommended) or pip/venv
 - Node.js 18+
 - PostgreSQL 14+ (running locally or via Docker)
+
+**Install uv (if not installed):**
+```bash
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or via pip
+pip install uv
+```
 
 ### 1. Database Setup
 
@@ -24,6 +34,21 @@ CREATE DATABASE labuan_fsa;
 
 ### 2. Backend Setup
 
+**Using uv (recommended):**
+```bash
+cd backend
+
+# Install dependencies
+uv sync
+
+# Create local config (if not exists)
+cp config.example.toml config.local.toml
+
+# Initialize database and create mock users
+uv run python scripts/seed_mock_users.py
+```
+
+**Using pip/venv (alternative):**
 ```bash
 cd backend
 
@@ -57,9 +82,16 @@ npm run dev
 
 **Option A: Start separately**
 
-Terminal 1 - Backend:
+Terminal 1 - Backend (using uv):
 ```bash
 cd backend
+uv run uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+Terminal 1 - Backend (using pip/venv):
+```bash
+cd backend
+source venv/bin/activate  # Activate virtual environment first
 python3 -m uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
@@ -121,7 +153,10 @@ npm run dev
 - Change port in `backend/config.local.toml` under `[server]` section
 - Or kill process using port 8000: `lsof -ti:8000 | xargs kill`
 
-**Import errors**:
+**Import errors (using uv)**:
+- Reinstall: `uv sync`
+
+**Import errors (using pip/venv)**:
 - Make sure you're in a virtual environment
 - Reinstall: `pip install -e .`
 

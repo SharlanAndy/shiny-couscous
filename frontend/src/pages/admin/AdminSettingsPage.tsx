@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { useToast } from '@/components/ui/ToastProvider'
 
 export function AdminSettingsPage() {
+  const { showSuccess, showError } = useToast()
   const [activeTab, setActiveTab] = useState<'general' | 'users' | 'integrations' | 'security'>('general')
   const [settings, setSettings] = useState({
     siteName: 'Labuan FSA E-Submission System',
@@ -19,7 +21,7 @@ export function AdminSettingsPage() {
 
   const handleSave = () => {
     // TODO: Implement API call to save settings
-    alert('Settings saved successfully')
+    showSuccess('Settings have been saved successfully.', 'Settings Saved')
   }
 
   return (

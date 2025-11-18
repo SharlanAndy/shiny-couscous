@@ -27,9 +27,12 @@ dependencies = [
     "uvicorn[standard]>=0.24.0",
     "pydantic>=2.5.0",
     "pydantic-settings>=2.1.0",
+    "email-validator>=2.1.0",  # Required for Pydantic email validation
     "sqlalchemy>=2.0.23",
+    "greenlet>=3.0.0",  # Required for SQLAlchemy async operations
     "alembic>=1.12.1",
     "asyncpg>=0.29.0",
+    "aiosqlite>=0.19.0",  # Async SQLite driver for local development
     "psycopg2-binary>=2.9.9",
     "python-jose[cryptography]>=3.3.0",
     "passlib[bcrypt]>=1.7.4",
@@ -66,7 +69,7 @@ Documentation = "https://docs.labuanfsa.gov.my"
 Repository = "https://github.com/labuan-fsa/e-submission-system"
 
 [tool.setuptools]
-packages = ["labuan_fsa"]
+packages = { find = { where = ["src"] } }
 
 [tool.setuptools.package-data]
 labuan_fsa = ["py.typed"]

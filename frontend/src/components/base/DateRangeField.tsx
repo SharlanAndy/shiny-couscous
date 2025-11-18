@@ -75,9 +75,9 @@ export function DateRangeField({
       </label>
 
       {/* Date range inputs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         <div>
-          <label htmlFor={`${fieldId}-start`} className="label text-sm">
+          <label htmlFor={`${fieldId}-start`} className="label text-xs sm:text-sm">
             Start Date
             {required && <span className="text-error"> *</span>}
           </label>
@@ -95,7 +95,7 @@ export function DateRangeField({
             min={min}
             max={max || rangeValue.end}
             className={cn(
-              'input',
+              'input text-xs sm:text-sm',
               error && 'input-error',
               disabled && 'opacity-50 cursor-not-allowed',
               readonly && 'bg-gray-100 cursor-default',
@@ -105,7 +105,7 @@ export function DateRangeField({
           />
         </div>
         <div>
-          <label htmlFor={`${fieldId}-end`} className="label text-sm">
+          <label htmlFor={`${fieldId}-end`} className="label text-xs sm:text-sm">
             End Date
             {required && <span className="text-error"> *</span>}
           </label>
@@ -123,7 +123,7 @@ export function DateRangeField({
             min={endMin}
             max={endMax}
             className={cn(
-              'input',
+              'input text-xs sm:text-sm',
               error && 'input-error',
               disabled && 'opacity-50 cursor-not-allowed',
               readonly && 'bg-gray-100 cursor-default',

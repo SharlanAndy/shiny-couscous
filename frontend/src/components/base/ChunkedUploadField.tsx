@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { BaseFieldProps } from '@/types'
 import { cn } from '@/lib/utils'
+import { useToast } from '@/components/ui/ToastProvider'
 
 export interface ChunkedUploadFieldProps extends BaseFieldProps {
   fieldType: 'upload-chunked' | 'chunked-upload'
@@ -42,6 +43,7 @@ export function ChunkedUploadField({
   const [uploadProgress, setUploadProgress] = useState<Record<string, number>>({})
   const [uploadedFiles, setUploadedFiles] = useState<string[]>(value ?? defaultValue ?? [])
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const { showError } = useToast()
 
   // Handle file selection
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,14 +55,14 @@ export function ChunkedUploadField({
     for (const file of fileArray) {
       // Validate file size
       if (file.size > maxFileSize) {
-        alert(`File ${file.name} exceeds maximum size of ${(maxFileSize / 1024 / 1024).toFixed(0)}MB`)
+        showError(`File ${file.name} exceeds maximum size of ${(maxFileSize / 1024 / 1024).toFixed(0)}MB`, 'File Too Large')
         continue
       }
 
       // Validate extension
       const extension = '.' + file.name.split('.').pop()?.toLowerCase()
       if (allowedExtensions.length > 0 && !allowedExtensions.includes(extension)) {
-        alert(`File ${file.name} has invalid extension. Allowed: ${allowedExtensions.join(', ')}`)
+        showError(`File ${file.name} has invalid extension. Allowed: ${allowedExtensions.join(', ')}`, 'Invalid File Extension')
         continue
       }
 
@@ -124,7 +126,8 @@ export function ChunkedUploadField({
       })
     } catch (error) {
       console.error('Error uploading file:', error)
-      alert(`Error uploading file ${file.name}`)
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+      showError(`Error uploading file ${file.name}: ${errorMessage}`, 'Upload Failed')
     } finally {
       setUploading(false)
     }

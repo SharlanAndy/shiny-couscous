@@ -58,69 +58,69 @@ export function UserDashboardPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">My Dashboard</h1>
-        <p className="text-gray-600">Welcome back! Here's an overview of your submissions</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">My Dashboard</h1>
+        <p className="text-sm sm:text-base text-gray-600">Welcome back! Here's an overview of your submissions</p>
       </div>
 
       {/* Statistics Cards */}
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         <div className="bg-white overflow-hidden shadow rounded-lg">
-          <div className="p-5">
+          <div className="p-4 sm:p-5">
             <div className="flex items-center">
-              <div className="flex-shrink-0 bg-blue-100 rounded-md p-3">
-                <span className="text-2xl">📊</span>
+              <div className="flex-shrink-0 bg-blue-100 rounded-md p-2 sm:p-3">
+                <span className="text-xl sm:text-2xl">📊</span>
               </div>
-              <div className="ml-5 w-0 flex-1">
+              <div className="ml-3 sm:ml-5 w-0 flex-1 min-w-0">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Total Submissions</dt>
-                  <dd className="text-lg font-medium text-gray-900">{statistics.totalSubmissions}</dd>
+                  <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">Total Submissions</dt>
+                  <dd className="text-base sm:text-lg font-medium text-gray-900">{statistics.totalSubmissions}</dd>
                 </dl>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-white overflow-hidden shadow rounded-lg">
-          <div className="p-5">
+          <div className="p-4 sm:p-5">
             <div className="flex items-center">
-              <div className="flex-shrink-0 bg-yellow-100 rounded-md p-3">
-                <span className="text-2xl">⏳</span>
+              <div className="flex-shrink-0 bg-yellow-100 rounded-md p-2 sm:p-3">
+                <span className="text-xl sm:text-2xl">⏳</span>
               </div>
-              <div className="ml-5 w-0 flex-1">
+              <div className="ml-3 sm:ml-5 w-0 flex-1 min-w-0">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Pending Review</dt>
-                  <dd className="text-lg font-medium text-gray-900">{statistics.pendingSubmissions}</dd>
+                  <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">Pending Review</dt>
+                  <dd className="text-base sm:text-lg font-medium text-gray-900">{statistics.pendingSubmissions}</dd>
                 </dl>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-white overflow-hidden shadow rounded-lg">
-          <div className="p-5">
+          <div className="p-4 sm:p-5">
             <div className="flex items-center">
-              <div className="flex-shrink-0 bg-green-100 rounded-md p-3">
-                <span className="text-2xl">✅</span>
+              <div className="flex-shrink-0 bg-green-100 rounded-md p-2 sm:p-3">
+                <span className="text-xl sm:text-2xl">✅</span>
               </div>
-              <div className="ml-5 w-0 flex-1">
+              <div className="ml-3 sm:ml-5 w-0 flex-1 min-w-0">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Approved</dt>
-                  <dd className="text-lg font-medium text-gray-900">{statistics.approvedSubmissions}</dd>
+                  <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">Approved</dt>
+                  <dd className="text-base sm:text-lg font-medium text-gray-900">{statistics.approvedSubmissions}</dd>
                 </dl>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-white overflow-hidden shadow rounded-lg">
-          <div className="p-5">
+          <div className="p-4 sm:p-5">
             <div className="flex items-center">
-              <div className="flex-shrink-0 bg-red-100 rounded-md p-3">
-                <span className="text-2xl">❌</span>
+              <div className="flex-shrink-0 bg-red-100 rounded-md p-2 sm:p-3">
+                <span className="text-xl sm:text-2xl">❌</span>
               </div>
-              <div className="ml-5 w-0 flex-1">
+              <div className="ml-3 sm:ml-5 w-0 flex-1 min-w-0">
                 <dl>
-                  <dt className="text-sm font-medium text-gray-500 truncate">Rejected</dt>
-                  <dd className="text-lg font-medium text-gray-900">{statistics.rejectedSubmissions}</dd>
+                  <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">Rejected</dt>
+                  <dd className="text-base sm:text-lg font-medium text-gray-900">{statistics.rejectedSubmissions}</dd>
                 </dl>
               </div>
             </div>
@@ -129,31 +129,31 @@ export function UserDashboardPage() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         <Link
           to="/forms"
-          className="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-shadow"
+          className="bg-white shadow rounded-lg p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-shadow"
         >
           <div className="flex items-center">
-            <div className="flex-shrink-0 bg-primary rounded-md p-3">
-              <span className="text-2xl text-white">📝</span>
+            <div className="flex-shrink-0 bg-primary rounded-md p-2 sm:p-3">
+              <span className="text-xl sm:text-2xl text-white">📝</span>
             </div>
-            <div className="ml-4">
-              <h3 className="text-sm font-medium text-gray-900">Start New Application</h3>
+            <div className="ml-3 sm:ml-4 min-w-0 flex-1">
+              <h3 className="text-sm sm:text-base font-medium text-gray-900">Start New Application</h3>
               <p className="text-xs text-gray-500">Submit a new form</p>
             </div>
           </div>
         </Link>
         <Link
           to="/submissions"
-          className="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-shadow"
+          className="bg-white shadow rounded-lg p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-shadow"
         >
           <div className="flex items-center">
-            <div className="flex-shrink-0 bg-blue-100 rounded-md p-3">
-              <span className="text-2xl">📋</span>
+            <div className="flex-shrink-0 bg-blue-100 rounded-md p-2 sm:p-3">
+              <span className="text-xl sm:text-2xl">📋</span>
             </div>
-            <div className="ml-4">
-              <h3 className="text-sm font-medium text-gray-900">View All Submissions</h3>
+            <div className="ml-3 sm:ml-4 min-w-0 flex-1">
+              <h3 className="text-sm sm:text-base font-medium text-gray-900">View All Submissions</h3>
               <p className="text-xs text-gray-500">See all your submissions</p>
             </div>
           </div>
@@ -161,15 +161,15 @@ export function UserDashboardPage() {
         {forms && forms.length > 0 && (
           <Link
             to={`/forms/${forms[0].formId}`}
-            className="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-shadow"
+            className="bg-white shadow rounded-lg p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-shadow"
           >
             <div className="flex items-center">
-              <div className="flex-shrink-0 bg-green-100 rounded-md p-3">
-                <span className="text-2xl">⚡</span>
+              <div className="flex-shrink-0 bg-green-100 rounded-md p-2 sm:p-3">
+                <span className="text-xl sm:text-2xl">⚡</span>
               </div>
-              <div className="ml-4">
-                <h3 className="text-sm font-medium text-gray-900">Quick Start</h3>
-                <p className="text-xs text-gray-500">{forms[0].name}</p>
+              <div className="ml-3 sm:ml-4 min-w-0 flex-1">
+                <h3 className="text-sm sm:text-base font-medium text-gray-900">Quick Start</h3>
+                <p className="text-xs text-gray-500 truncate">{forms[0].name}</p>
               </div>
             </div>
           </Link>
@@ -177,16 +177,16 @@ export function UserDashboardPage() {
       </div>
 
       {/* Recent Submissions */}
-      <div className="bg-white shadow rounded-lg">
-        <div className="px-6 py-5 border-b border-gray-200">
-          <h2 className="text-lg font-medium text-gray-900">Recent Submissions</h2>
+      <div className="bg-white shadow rounded-lg overflow-hidden">
+        <div className="px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-200">
+          <h2 className="text-base sm:text-lg font-medium text-gray-900">Recent Submissions</h2>
         </div>
         {submissionsLoading ? (
-          <div className="p-6 text-center text-gray-500">Loading submissions...</div>
+          <div className="p-4 sm:p-6 text-center text-sm sm:text-base text-gray-500">Loading submissions...</div>
         ) : recentSubmissions.length === 0 ? (
-          <div className="p-6 text-center text-gray-500">
-            <p className="mb-4">No submissions yet</p>
-            <Link to="/forms" className="btn btn-primary">
+          <div className="p-4 sm:p-6 text-center text-sm sm:text-base text-gray-500">
+            <p className="mb-3 sm:mb-4">No submissions yet</p>
+            <Link to="/forms" className="btn btn-primary text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-2.5">
               Start Your First Application
             </Link>
           </div>
@@ -196,34 +196,34 @@ export function UserDashboardPage() {
               <Link
                 key={submission.id}
                 to={`/submissions/${submission.submissionId}`}
-                className="block px-6 py-4 hover:bg-gray-50 transition-colors"
+                className="block px-4 sm:px-6 py-3 sm:py-4 hover:bg-gray-50 transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3">
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-start sm:items-center space-x-2 sm:space-x-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-xs sm:text-sm font-medium text-gray-900 truncate">
                           {submission.submissionId}
                         </p>
-                        <p className="text-sm text-gray-500">Form: {submission.formId}</p>
+                        <p className="text-xs sm:text-sm text-gray-500 truncate">Form: {submission.formId}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-between sm:justify-end space-x-2 sm:space-x-4">
                     <span
                       className={cn(
-                        'px-2 inline-flex text-xs leading-5 font-semibold rounded-full',
+                        'px-2 py-1 inline-flex text-xs leading-4 sm:leading-5 font-semibold rounded-full whitespace-nowrap',
                         getStatusColor(submission.status)
                       )}
                     >
                       {submission.status}
                     </span>
-                    <span className="text-sm text-gray-500">
+                    <span className="hidden sm:inline text-xs sm:text-sm text-gray-500 whitespace-nowrap">
                       {submission.submittedAt
                         ? new Date(submission.submittedAt).toLocaleDateString()
                         : '-'}
                     </span>
-                    <span className="text-gray-400">→</span>
+                    <span className="hidden sm:inline text-gray-400">→</span>
                   </div>
                 </div>
               </Link>
@@ -231,10 +231,10 @@ export function UserDashboardPage() {
           </div>
         )}
         {recentSubmissions.length > 0 && (
-          <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-t border-gray-200">
             <Link
               to="/submissions"
-              className="text-sm font-medium text-primary hover:text-primary-dark"
+              className="text-xs sm:text-sm font-medium text-primary hover:text-primary-dark"
             >
               View all submissions →
             </Link>

@@ -166,6 +166,17 @@ class APIClient {
     return response.data
   }
 
+  async updateDraft(
+    submissionId: string,
+    request: SubmissionCreateRequest
+  ): Promise<SubmissionResponse> {
+    const response = await this.client.put<SubmissionResponse>(
+      `/api/submissions/${submissionId}/draft`,
+      request
+    )
+    return response.data
+  }
+
   async getSubmissions(params?: {
     formId?: string
     status?: string

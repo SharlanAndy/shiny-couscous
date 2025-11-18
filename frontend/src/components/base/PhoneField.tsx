@@ -98,7 +98,7 @@ export function PhoneField({
       </label>
       <div className="relative">
         {international && (
-          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm">
+          <div className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xs sm:text-sm">
             {countryCode}
           </div>
         )}
@@ -119,7 +119,7 @@ export function PhoneField({
           maxLength={validation?.maxLength}
           className={cn(
             inputClassName,
-            international && 'pl-16'
+            international && 'pl-12 sm:pl-16'
           )}
           style={style?.style}
           aria-invalid={!!error}

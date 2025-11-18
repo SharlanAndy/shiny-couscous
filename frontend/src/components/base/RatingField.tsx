@@ -86,7 +86,7 @@ export function RatingField({
       </label>
       <div
         className={cn(
-          'flex items-center space-x-1',
+          'flex items-center gap-1 sm:space-x-1',
           disabled && 'opacity-50 cursor-not-allowed',
           readonly && 'cursor-default'
         )}
@@ -108,7 +108,7 @@ export function RatingField({
               disabled={disabled || readonly}
               className={cn(
                 sizeClasses[size],
-                'transition-colors duration-150',
+                'transition-colors duration-150 flex-shrink-0',
                 !disabled && !readonly && 'cursor-pointer hover:scale-110',
                 disabled && 'cursor-not-allowed',
                 readonly && 'cursor-default'
@@ -127,7 +127,7 @@ export function RatingField({
           )
         })}
         {ratingValue > 0 && (
-          <span className="ml-2 text-sm text-gray-600">
+          <span className="ml-1 sm:ml-2 text-xs sm:text-sm text-gray-600 whitespace-nowrap">
             {ratingValue}/{max}
           </span>
         )}

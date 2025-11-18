@@ -54,24 +54,63 @@ export function SignatureField({
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Set canvas size
-    canvas.width = width
-    canvas.height = height
+    // Set canvas size (responsive)
+    const containerWidth = canvas.parentElement?.clientWidth || width
+    const responsiveWidth = Math.min(containerWidth - 32, width) // Account for padding
+    const responsiveHeight = Math.round((responsiveWidth / width) * height)
+    canvas.width = responsiveWidth
+    canvas.height = responsiveHeight
 
     // Set background
     ctx.fillStyle = backgroundColor
-    ctx.fillRect(0, 0, width, height)
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     // Load existing signature if present
     if (signatureValue) {
       const img = new Image()
       img.onload = () => {
-        ctx.drawImage(img, 0, 0, width, height)
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
         setHasSignature(true)
       }
       img.src = signatureValue
     }
   }, [signatureValue, width, height, backgroundColor])
+  
+  // Handle window resize for responsive canvas
+  useEffect(() => {
+    const handleResize = () => {
+      const canvas = canvasRef.current
+      if (!canvas) return
+
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
+
+      const containerWidth = canvas.parentElement?.clientWidth || width
+      const responsiveWidth = Math.min(containerWidth - 32, width)
+      const responsiveHeight = Math.round((responsiveWidth / width) * height)
+      
+      if (canvas.width !== responsiveWidth || canvas.height !== responsiveHeight) {
+        const currentImage = canvas.toDataURL('image/png')
+        canvas.width = responsiveWidth
+        canvas.height = responsiveHeight
+        
+        ctx.fillStyle = backgroundColor
+        ctx.fillRect(0, 0, responsiveWidth, responsiveHeight)
+        
+        if (currentImage && currentImage !== canvas.toDataURL('image/png')) {
+          const img = new Image()
+          img.onload = () => {
+            ctx.drawImage(img, 0, 0, responsiveWidth, responsiveHeight)
+          }
+          img.src = currentImage
+        }
+      }
+    }
+    
+    window.addEventListener('resize', handleResize)
+    handleResize() // Initial resize
+    return () => window.removeEventListener('resize', handleResize)
+  }, [width, height, backgroundColor])
 
   // Start drawing
   const startDrawing = (e: React.MouseEvent<HTMLCanvasElement> | React.TouchEvent<HTMLCanvasElement>) => {
@@ -140,7 +179,7 @@ export function SignatureField({
     if (!ctx) return
 
     ctx.fillStyle = backgroundColor
-    ctx.fillRect(0, 0, width, height)
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
 
     onChange('')
     setHasSignature(false)
@@ -166,12 +205,10 @@ export function SignatureField({
           </span>
         )}
       </label>
-      <div className="relative inline-block border-2 border-gray-300 rounded-md overflow-hidden">
+      <div className="relative inline-block w-full border-2 border-gray-300 rounded-md overflow-hidden">
         <canvas
           ref={canvasRef}
           id={fieldId}
-          width={width}
-          height={height}
           onMouseDown={startDrawing}
           onMouseMove={draw}
           onMouseUp={stopDrawing}
@@ -180,11 +217,18 @@ export function SignatureField({
           onTouchMove={draw}
           onTouchEnd={stopDrawing}
           className={cn(
-            'cursor-crosshair',
+            'block w-full cursor-crosshair touch-none',
             disabled && 'opacity-50 cursor-not-allowed',
             readonly && 'cursor-default'
           )}
-          style={{ backgroundColor, touchAction: 'none' }}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+            minHeight: '150px',
+            touchAction: 'none',
+            backgroundColor,
+            ...style?.style,
+          }}
           aria-label="Signature pad"
           aria-invalid={!!error}
         />
@@ -193,7 +237,7 @@ export function SignatureField({
             type="button"
             onClick={clearSignature}
             disabled={disabled}
-            className="absolute top-2 right-2 px-3 py-1 bg-white border border-gray-300 rounded-md text-sm hover:bg-gray-50 disabled:opacity-50"
+            className="absolute top-1.5 sm:top-2 right-1.5 sm:right-2 px-2 py-1 bg-white border border-gray-300 rounded-md text-[10px] sm:text-xs hover:bg-gray-50 disabled:opacity-50 whitespace-nowrap"
           >
             Clear
           </button>

@@ -42,7 +42,7 @@ class FormResponse(BaseModel):
     """Schema for form response."""
 
     id: UUID
-    form_id: str
+    formId: str = Field(alias="form_id", serialization_alias="formId")
     name: str
     description: Optional[str]
     category: Optional[str]
@@ -55,14 +55,13 @@ class FormResponse(BaseModel):
     created_by: Optional[str]
     updated_by: Optional[str]
 
-    class Config:
-        from_attributes = True
+    model_config = {"from_attributes": True, "populate_by_name": True}
 
 
 class FormSchemaResponse(BaseModel):
     """Schema for form schema response (used for dynamic rendering)."""
 
-    form_id: str
+    formId: str = Field(alias="form_id", serialization_alias="formId")
     form_name: str
     version: str
     steps: list[dict[str, Any]]  # Step definitions with fields
@@ -74,7 +73,7 @@ class FormVersionResponse(BaseModel):
     """Schema for form version response."""
 
     id: UUID
-    form_id: str
+    formId: str = Field(alias="form_id")
     version: str
     is_active: bool
     created_at: datetime

@@ -108,25 +108,25 @@ export function RepeaterField({
       </label>
 
       {/* Repeater items */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {repeaterValue.map((item, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded-md bg-gray-50 relative"
+            className="p-3 sm:p-4 border border-gray-300 rounded-md bg-gray-50 relative"
           >
             {/* Item header */}
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-sm font-medium text-gray-700">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-3 sm:mb-4">
+              <span className="text-xs sm:text-sm font-medium text-gray-700">
                 Item {index + 1}
               </span>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2 sm:gap-3 sm:space-x-2">
                 {cloneEnabled && !readonly && (
                   <button
                     type="button"
                     onClick={() => handleCloneItem(index)}
                     disabled={disabled || (maxItems ? repeaterValue.length >= maxItems : false)}
                     className={cn(
-                      'text-sm text-primary hover:text-primary-dark font-medium',
+                      'text-xs sm:text-sm text-primary hover:text-primary-dark font-medium whitespace-nowrap',
                       disabled && 'opacity-50 cursor-not-allowed'
                     )}
                     title="Clone this item"
@@ -140,7 +140,7 @@ export function RepeaterField({
                     onClick={() => handleRemoveItem(index)}
                     disabled={disabled || (minItems ? repeaterValue.length <= minItems : false)}
                     className={cn(
-                      'text-sm text-error hover:text-red-700 font-medium',
+                      'text-xs sm:text-sm text-error hover:text-red-700 font-medium whitespace-nowrap',
                       disabled && 'opacity-50 cursor-not-allowed'
                     )}
                   >
@@ -172,6 +172,7 @@ export function RepeaterField({
                 onChange={(stepId, fieldName, fieldValue) =>
                   handleItemChange(index, fieldName, fieldValue)
                 }
+                readonly={readonly || disabled} // Pass readonly prop to nested FormRenderer
               />
             )}
           </div>
@@ -194,7 +195,7 @@ export function RepeaterField({
 
         {/* Empty state */}
         {repeaterValue.length === 0 && (
-          <div className="text-center py-8 text-gray-500 text-sm border border-gray-300 rounded-md bg-gray-50">
+          <div className="text-center py-6 sm:py-8 text-gray-500 text-xs sm:text-sm border border-gray-300 rounded-md bg-gray-50 px-3 sm:px-4">
             No items. Click "{addButtonLabel}" to add one.
           </div>
         )}

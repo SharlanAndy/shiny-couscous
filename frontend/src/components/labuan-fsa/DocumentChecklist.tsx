@@ -179,16 +179,20 @@ export function DocumentChecklist({
       </div>
 
       {/* Document checklist */}
-      <div className="space-y-3">
+      <div className="space-y-2 sm:space-y-3">
         {documents.map((document) => {
           const isUploaded = checklistValue[document.id]?.uploaded === true
           const fileId = checklistValue[document.id]?.fileId
+          const isImage = fileId?.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)
+          const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+          const downloadUrl = fileId ? `${apiBaseUrl}/api/files/${fileId}/download` : null
+          const previewUrl = readonly && isImage && fileId ? downloadUrl : null
 
           return (
             <div
               key={document.id}
               className={cn(
-                'p-4 border rounded-md',
+                'p-3 sm:p-4 border rounded-md',
                 isUploaded
                   ? 'bg-green-50 border-green-200'
                   : document.required
@@ -196,64 +200,113 @@ export function DocumentChecklist({
                     : 'bg-gray-50 border-gray-200'
               )}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2">
-                    {isUploaded ? (
-                      <span className="text-green-600 text-lg">✓</span>
-                    ) : (
-                      <span className="text-gray-400 text-lg">○</span>
-                    )}
-                    <div>
-                      <div className="font-medium text-gray-900">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <div className="flex-shrink-0 mt-0.5 sm:mt-1">
+                      {isUploaded ? (
+                        <span className="text-green-600 text-base sm:text-lg">✓</span>
+                      ) : (
+                        <span className="text-gray-400 text-base sm:text-lg">○</span>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm sm:text-base font-medium text-gray-900 break-words">
                         {document.name}
                         {document.required && (
-                          <span className="ml-2 text-sm text-error">*</span>
+                          <span className="ml-1 sm:ml-2 text-xs sm:text-sm text-error">*</span>
                         )}
                       </div>
                       {document.description && (
-                        <div className="text-sm text-gray-600 mt-1">{document.description}</div>
+                        <div className="text-xs sm:text-sm text-gray-600 mt-1 break-words">{document.description}</div>
                       )}
                       {isUploaded && fileId && (
-                        <div className="text-xs text-green-600 mt-1">Uploaded: {fileId}</div>
+                        <div className="text-[10px] sm:text-xs text-green-600 mt-1 break-all">
+                          Uploaded: {fileId}
+                        </div>
+                      )}
+                      
+                      {/* Image preview for readonly mode */}
+                      {readonly && isUploaded && isImage && previewUrl && (
+                        <div className="mt-2 sm:mt-3">
+                          <img
+                            src={previewUrl}
+                            alt={document.name || 'Uploaded document'}
+                            className="max-w-full max-h-24 sm:max-h-32 rounded-md border border-gray-300 object-contain bg-white"
+                            onError={(e) => {
+                              // Hide image if it fails to load
+                              e.currentTarget.style.display = 'none'
+                            }}
+                          />
+                        </div>
                       )}
                     </div>
                   </div>
                 </div>
-                {allowUpload && !readonly && (
-                  <div className="ml-4 flex items-center space-x-2">
-                    {isUploaded ? (
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveDocument(document.id)}
+                
+                {/* Actions */}
+                <div className="flex items-center gap-2 sm:gap-3 sm:ml-4 flex-shrink-0 sm:flex-nowrap flex-wrap">
+                  {readonly && isUploaded && fileId ? (
+                    // Readonly mode: show preview and download links
+                    <>
+                      {isImage && previewUrl && (
+                        <a
+                          href={previewUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs sm:text-sm text-primary hover:text-primary-dark font-medium px-2 py-1 rounded hover:bg-primary/10 whitespace-nowrap"
+                          title="View document"
+                        >
+                          View
+                        </a>
+                      )}
+                      {downloadUrl && (
+                        <a
+                          href={downloadUrl}
+                          download={fileId}
+                          className="text-xs sm:text-sm text-primary hover:text-primary-dark font-medium px-2 py-1 rounded hover:bg-primary/10 whitespace-nowrap"
+                          title="Download document"
+                        >
+                          📥 Download
+                        </a>
+                      )}
+                    </>
+                  ) : allowUpload && !readonly ? (
+                    // Editable mode: show upload/remove buttons
+                    <>
+                      {isUploaded ? (
+                        <button
+                          type="button"
+                          onClick={() => handleRemoveDocument(document.id)}
+                          disabled={disabled}
+                          className="text-xs sm:text-sm text-error hover:text-red-700 font-medium whitespace-nowrap"
+                        >
+                          Remove
+                        </button>
+                      ) : (
+                        <label
+                          htmlFor={`${fieldId}-${document.id}`}
+                          className={cn(
+                            'btn btn-secondary btn-sm cursor-pointer text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 whitespace-nowrap',
+                            disabled && 'opacity-50 cursor-not-allowed'
+                          )}
+                        >
+                          Upload
+                        </label>
+                      )}
+                      <input
+                        id={`${fieldId}-${document.id}`}
+                        type="file"
+                        onChange={(e) => handleFileUpload(document.id, e)}
+                        onBlur={onBlur}
+                        onFocus={onFocus}
                         disabled={disabled}
-                        className="text-sm text-error hover:text-red-700 font-medium"
-                      >
-                        Remove
-                      </button>
-                    ) : (
-                      <label
-                        htmlFor={`${fieldId}-${document.id}`}
-                        className={cn(
-                          'btn btn-secondary btn-sm cursor-pointer',
-                          disabled && 'opacity-50 cursor-not-allowed'
-                        )}
-                      >
-                        Upload
-                      </label>
-                    )}
-                    <input
-                      id={`${fieldId}-${document.id}`}
-                      type="file"
-                      onChange={(e) => handleFileUpload(document.id, e)}
-                      onBlur={onBlur}
-                      onFocus={onFocus}
-                      disabled={disabled}
-                      className="hidden"
-                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-                    />
-                  </div>
-                )}
+                        className="hidden"
+                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      />
+                    </>
+                  ) : null}
+                </div>
               </div>
             </div>
           )

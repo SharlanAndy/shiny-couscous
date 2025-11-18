@@ -2,6 +2,7 @@ import React, { useState, useRef, useCallback } from 'react'
 import { BaseFieldProps } from '@/types'
 import { cn, formatFileSize } from '@/lib/utils'
 import apiClient from '@/api/client'
+import { useToast } from '@/components/ui/ToastProvider'
 
 export interface FileUploadFieldProps extends BaseFieldProps {
   fieldType: 'upload-document' | 'upload-image' | 'upload-file'
@@ -46,6 +47,7 @@ export function FileUploadField({
   const [uploadProgress, setUploadProgress] = useState<Record<string, number>>({})
   const [dragActive, setDragActive] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const { showError, showWarning, showSuccess } = useToast()
 
   // Get current files (from value or defaultValue)
   const currentFiles = value ?? defaultValue ?? (multiple ? [] : null)
@@ -59,12 +61,12 @@ export function FileUploadField({
 
     // Validate number of files
     if (!multiple && fileArray.length > 1) {
-      alert(`Please select only one file`)
+      showError('Please select only one file', 'File Selection Error')
       return
     }
 
     if (fileArray.length + fileList.length > maxFiles) {
-      alert(`Maximum ${maxFiles} file(s) allowed`)
+      showError(`Maximum ${maxFiles} file(s) allowed`, 'File Limit Exceeded')
       return
     }
 
@@ -75,14 +77,14 @@ export function FileUploadField({
       if (accept.length > 0) {
         const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase()
         if (!accept.includes(fileExtension)) {
-          alert(`File ${file.name} type not allowed. Allowed types: ${accept.join(', ')}`)
+          showError(`File type not allowed for ${file.name}. Allowed types: ${accept.join(', ')}`, 'Invalid File Type')
           continue
         }
       }
 
       // Check file size
       if (file.size > maxSize) {
-        alert(`File ${file.name} is too large. Maximum size: ${formatFileSize(maxSize)}`)
+        showError(`File ${file.name} is too large. Maximum size: ${formatFileSize(maxSize)}`, 'File Too Large')
         continue
       }
 
@@ -122,7 +124,8 @@ export function FileUploadField({
         })
       } catch (error) {
         console.error('File upload error:', error)
-        alert(`Failed to upload ${file.name}`)
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+        showError(`Failed to upload ${file.name}: ${errorMessage}`, 'Upload Failed')
       }
     }
 
@@ -188,7 +191,7 @@ export function FileUploadField({
   // Merge styles
   const containerClassName = cn('mb-4', style?.containerClassName)
   const uploadAreaClassName = cn(
-    'border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors',
+    'border-2 border-dashed rounded-lg p-4 sm:p-5 lg:p-6 text-center cursor-pointer transition-colors',
     dragActive ? 'border-primary bg-primary/5' : 'border-gray-300 hover:border-primary hover:bg-gray-50',
     disabled && 'opacity-50 cursor-not-allowed',
     readonly && 'bg-gray-100 cursor-default'
@@ -230,40 +233,49 @@ export function FileUploadField({
         aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}
       />
 
-      {/* Upload area */}
-      {dragDrop ? (
-        <div
-          className={uploadAreaClassName}
-          onDragEnter={handleDrag}
-          onDragLeave={handleDrag}
-          onDragOver={handleDrag}
-          onDrop={handleDrop}
-          onClick={handleClick}
-        >
-          <div className="space-y-2">
-            <div className="text-4xl">📎</div>
-            <div>
-              <span className="text-primary font-medium">Click to upload</span> or drag and drop
-            </div>
-            <div className="text-sm text-gray-500">
-              {accept.length > 0 && `Allowed types: ${accept.join(', ')}`}
-              {maxSize && ` • Max size: ${formatFileSize(maxSize)}`}
-              {multiple && maxFiles > 1 && ` • Max files: ${maxFiles}`}
+      {/* Upload area - only show if not readonly or no files */}
+      {!readonly && (fileList.length === 0 || (multiple && fileList.length < maxFiles)) && (
+        dragDrop ? (
+          <div
+            className={uploadAreaClassName}
+            onDragEnter={handleDrag}
+            onDragLeave={handleDrag}
+            onDragOver={handleDrag}
+            onDrop={handleDrop}
+            onClick={handleClick}
+          >
+            <div className="space-y-2">
+              <div className="text-2xl sm:text-3xl lg:text-4xl">📎</div>
+              <div>
+                <span className="text-primary font-medium">Click to upload</span> or drag and drop
+              </div>
+              <div className="text-sm text-gray-500">
+                {accept.length > 0 && `Allowed types: ${accept.join(', ')}`}
+                {maxSize && ` • Max size: ${formatFileSize(maxSize)}`}
+                {multiple && maxFiles > 1 && ` • Max files: ${maxFiles}`}
+              </div>
             </div>
           </div>
+        ) : (
+          <button
+            type="button"
+            onClick={handleClick}
+            disabled={disabled || readonly}
+            className={cn(
+              'btn btn-secondary',
+              disabled && 'opacity-50 cursor-not-allowed'
+            )}
+          >
+            Choose File{multiple ? 's' : ''}
+          </button>
+        )
+      )}
+
+      {/* Readonly message if no files */}
+      {readonly && fileList.length === 0 && (
+        <div className="p-4 bg-gray-50 border border-gray-200 rounded-md text-center text-sm text-gray-500">
+          No files uploaded
         </div>
-      ) : (
-        <button
-          type="button"
-          onClick={handleClick}
-          disabled={disabled || readonly}
-          className={cn(
-            'btn btn-secondary',
-            disabled && 'opacity-50 cursor-not-allowed'
-          )}
-        >
-          Choose File{multiple ? 's' : ''}
-        </button>
       )}
 
       {/* Upload progress */}
@@ -288,37 +300,119 @@ export function FileUploadField({
 
       {/* File list with preview */}
       {fileList.length > 0 && (
-        <div className="mt-4 space-y-2">
-          {fileList.map((file: any, index: number) => (
-            <div
-              key={file.fileId || index}
-              className="flex items-center justify-between p-3 bg-gray-50 rounded-md"
-            >
-              <div className="flex items-center space-x-3">
-                {preview && file.fileName && (
-                  <div className="text-2xl">
-                    {file.fileName.match(/\.(jpg|jpeg|png|gif|webp)$/i) ? '🖼️' : '📄'}
+        <div className="mt-4 space-y-3">
+          {fileList.map((file: any, index: number) => {
+            const isImage = file.fileName?.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)
+            const isBase64 = typeof file === 'string' && file.startsWith('data:image')
+            // Get API base URL for file download/preview
+            const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+            
+            // Handle different file data structures
+            let fileUrl: string | null = null
+            let downloadUrl: string | null = null
+            let fileName = file.fileName || file.name || file.fileId || `File ${index + 1}`
+            let fileSize = file.fileSize || file.size
+            
+            // If file is a base64 string (for images)
+            if (isBase64) {
+              fileUrl = file
+              downloadUrl = file // Can download base64 as data URL
+            } else if (typeof file === 'object') {
+              // Normalize file object structure
+              fileUrl = file.fileUrl || file.url || (file.fileId ? `${apiBaseUrl}/api/files/${file.fileId}/download` : null)
+              downloadUrl = file.fileId ? `${apiBaseUrl}/api/files/${file.fileId}/download` : fileUrl || file.fileUrl
+            } else if (typeof file === 'string') {
+              // If file is just a fileId string
+              fileUrl = `${apiBaseUrl}/api/files/${file}/download`
+              downloadUrl = fileUrl
+              fileName = file
+            }
+
+            return (
+              <div
+                key={file.fileId || index}
+                className="p-4 bg-gray-50 border border-gray-200 rounded-md"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1 min-w-0">
+                    {/* Image preview for readonly mode */}
+                    {(readonly || preview) && isImage && (fileUrl || isBase64) && (
+                      <div className="mb-3">
+                        <img
+                          src={fileUrl || (typeof file === 'string' ? file : '')}
+                          alt={fileName || 'Uploaded image'}
+                          className="max-w-full max-h-48 rounded-md border border-gray-300 object-contain bg-white"
+                          onError={(e) => {
+                            // Fallback: hide image if it fails to load
+                            e.currentTarget.style.display = 'none'
+                          }}
+                        />
+                      </div>
+                    )}
+                    
+                    <div className="flex items-center space-x-3">
+                      {preview && fileName && (
+                        <div className="text-2xl flex-shrink-0">
+                          {isImage ? '🖼️' : '📄'}
+                        </div>
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <div className="text-sm font-medium text-gray-900 truncate" title={fileName}>
+                          {fileName}
+                        </div>
+                        {fileSize && (
+                          <div className="text-xs text-gray-500">{formatFileSize(fileSize)}</div>
+                        )}
+                        {file.fileId && !readonly && (
+                          <div className="text-xs text-gray-400 mt-1">ID: {file.fileId}</div>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                )}
-                <div>
-                  <div className="text-sm font-medium text-gray-900">{file.fileName}</div>
-                  {file.fileSize && (
-                    <div className="text-xs text-gray-500">{formatFileSize(file.fileSize)}</div>
-                  )}
+                  
+                  {/* Actions */}
+                  <div className="flex items-center space-x-2 flex-shrink-0">
+                    {readonly ? (
+                      // Readonly mode: show preview and download
+                      <>
+                        {isImage && (fileUrl || isBase64) && (
+                          <a
+                            href={fileUrl || (typeof file === 'string' ? file : '#')}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-primary hover:text-primary-dark font-medium px-2 py-1 rounded hover:bg-primary/10"
+                            title="View full size"
+                          >
+                            View
+                          </a>
+                        )}
+                        {downloadUrl && (
+                          <a
+                            href={downloadUrl}
+                            download={fileName || 'download'}
+                            className="text-sm text-primary hover:text-primary-dark font-medium px-2 py-1 rounded hover:bg-primary/10"
+                            title="Download file"
+                          >
+                            📥 Download
+                          </a>
+                        )}
+                      </>
+                    ) : (
+                      // Editable mode: show remove button
+                      <button
+                        type="button"
+                        onClick={() => handleRemoveFile(index)}
+                        disabled={disabled}
+                        className="text-error hover:text-red-700 text-sm font-medium"
+                      >
+                        Remove
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
-              {!readonly && (
-                <button
-                  type="button"
-                  onClick={() => handleRemoveFile(index)}
-                  disabled={disabled}
-                  className="text-error hover:text-red-700 text-sm font-medium"
-                >
-                  Remove
-                </button>
-              )}
-            </div>
-          ))}
+            )
+          })}
         </div>
       )}
 

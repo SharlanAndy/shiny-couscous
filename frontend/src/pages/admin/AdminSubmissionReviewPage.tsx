@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
 import apiClient from '@/api/client'
-import type { SubmissionResponse } from '@/types'
+import type { SubmissionResponse, FormSchemaResponse } from '@/types'
 import { cn } from '@/lib/utils'
 import { StatusTracker, ApplicationStatus } from '@/components/labuan-fsa/StatusTracker'
+import { useToast } from '@/components/ui/ToastProvider'
+import { FormRenderer } from '@/components/forms/FormRenderer'
 
 export function AdminSubmissionReviewPage() {
   const { submissionId } = useParams<{ submissionId: string }>()
   const navigate = useNavigate()
+  const { showSuccess, showError } = useToast()
   const [submission, setSubmission] = useState<SubmissionResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [reviewing, setReviewing] = useState(false)
@@ -41,20 +45,33 @@ export function AdminSubmissionReviewPage() {
     }
   }
 
+  // Fetch form schema to render fields properly
+  const { data: formSchema, isLoading: isLoadingSchema } = useQuery<FormSchemaResponse>({
+    queryKey: ['form-schema', submission?.formId],
+    queryFn: () => {
+      if (!submission?.formId) throw new Error('Form ID is required')
+      return apiClient.getFormSchema(submission.formId)
+    },
+    enabled: !!submission?.formId,
+  })
+
   const handleReview = async () => {
     if (!submissionId || !reviewData.status) {
-      alert('Please select a status')
+      showError('Please select a status', 'Validation Error')
       return
     }
 
     setReviewing(true)
     try {
       await apiClient.reviewSubmission(submissionId, reviewData)
-      alert('Submission reviewed successfully')
-      navigate('/admin/submissions')
-    } catch (error) {
+      showSuccess('Submission has been reviewed successfully.', 'Review Complete')
+      setTimeout(() => navigate('/admin/submissions'), 1500)
+    } catch (error: any) {
       console.error('Error reviewing submission:', error)
-      alert('Error reviewing submission')
+      showError(
+        error.response?.data?.detail || error.message || 'Failed to review submission',
+        'Review Failed'
+      )
     } finally {
       setReviewing(false)
     }
@@ -178,10 +195,43 @@ export function AdminSubmissionReviewPage() {
 
         {/* Submission Data */}
         <div className="mt-6">
-          <label className="text-sm font-medium text-gray-700 mb-2 block">Submitted Data</label>
-          <pre className="bg-gray-50 p-4 rounded-md overflow-x-auto text-sm">
-            {JSON.stringify(submission.submittedData, null, 2)}
-          </pre>
+          <label className="text-sm font-medium text-gray-700 mb-4 block">Submitted Data</label>
+          {isLoadingSchema ? (
+            <div className="flex items-center justify-center py-8">
+              <div className="text-center">
+                <div className="inline-block animate-spin rounded-full h-6 w-6 border-b-2 border-primary"></div>
+                <p className="mt-2 text-sm text-gray-500">Loading form schema...</p>
+              </div>
+            </div>
+          ) : formSchema && submission.submittedData ? (
+            <div className="space-y-6">
+              {formSchema.steps.map((step) => (
+                <div key={step.stepId} className="bg-gray-50 rounded-lg p-4 sm:p-6 border border-gray-200">
+                  <h4 className="text-base font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+                    {step.stepName || step.stepId}
+                  </h4>
+                  {step.stepDescription && (
+                    <p className="text-sm text-gray-600 mb-4">{step.stepDescription}</p>
+                  )}
+                  <FormRenderer
+                    steps={[step]}
+                    formData={submission.submittedData || {}}
+                    errors={{}}
+                    onChange={() => {}} // Read-only - no-op
+                    onBlur={() => {}} // Read-only - no-op
+                    readonly={true} // Make all fields readonly/disabled
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="bg-gray-50 p-4 rounded-md overflow-x-auto">
+              <pre className="text-sm text-gray-700 whitespace-pre-wrap">
+                {JSON.stringify(submission.submittedData, null, 2)}
+              </pre>
+              <p className="mt-2 text-xs text-gray-500">Note: Form schema not available. Showing raw data.</p>
+            </div>
+          )}
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BaseFieldProps } from '@/types'
 import { cn } from '@/lib/utils'
+import { useToast } from '@/components/ui/ToastProvider'
 
 export interface CertificateUploadFieldProps extends BaseFieldProps {
   fieldType: 'upload-certificate' | 'certificate-upload'
@@ -40,6 +41,7 @@ export function CertificateUploadField({
 }: CertificateUploadFieldProps) {
   const [uploadedFiles, setUploadedFiles] = useState<string[]>(value ?? defaultValue ?? [])
   const [uploading, setUploading] = useState(false)
+  const { showError } = useToast()
 
   // Handle file selection
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,13 +55,13 @@ export function CertificateUploadField({
       // Validate file type
       const extension = file.name.split('.').pop()?.toLowerCase() || ''
       if (!allowedFormats.includes(extension)) {
-        alert(`File ${file.name} has invalid format. Allowed formats: ${allowedFormats.join(', ')}`)
+        showError(`File ${file.name} has invalid format. Allowed formats: ${allowedFormats.join(', ')}`, 'Invalid File Format')
         continue
       }
 
       // Validate file size
       if (file.size > maxFileSize) {
-        alert(`File ${file.name} exceeds maximum size of ${(maxFileSize / 1024 / 1024).toFixed(0)}MB`)
+        showError(`File ${file.name} exceeds maximum size of ${(maxFileSize / 1024 / 1024).toFixed(0)}MB`, 'File Too Large')
         continue
       }
 
@@ -72,7 +74,8 @@ export function CertificateUploadField({
         newFiles.push(fileId)
       } catch (error) {
         console.error('Error uploading file:', error)
-        alert(`Error uploading file ${file.name}`)
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred'
+        showError(`Error uploading file ${file.name}: ${errorMessage}`, 'Upload Failed')
       } finally {
         setUploading(false)
       }

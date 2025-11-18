@@ -112,7 +112,7 @@ export function TagsField({
       {/* Tags container */}
       <div
         className={cn(
-          'flex flex-wrap items-center gap-2 p-2 border border-gray-300 rounded-md min-h-[42px]',
+          'flex flex-wrap items-center gap-1.5 sm:gap-2 p-2 sm:p-2.5 border border-gray-300 rounded-md min-h-[42px] sm:min-h-[44px]',
           'focus-within:ring-2 focus-within:ring-primary focus-within:border-transparent',
           error && 'border-error',
           disabled && 'opacity-50 cursor-not-allowed bg-gray-50',
@@ -126,9 +126,9 @@ export function TagsField({
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+            className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium break-words max-w-full"
           >
-            {tag}
+            <span className="truncate">{tag}</span>
             {!readonly && (
               <button
                 type="button"
@@ -137,7 +137,7 @@ export function TagsField({
                   removeTag(tag)
                 }}
                 disabled={disabled}
-                className="ml-2 text-primary hover:text-primary-dark"
+                className="ml-1 sm:ml-2 text-primary hover:text-primary-dark flex-shrink-0 text-base sm:text-lg leading-none"
                 aria-label={`Remove ${tag}`}
               >
                 ×
@@ -165,7 +165,7 @@ export function TagsField({
           placeholder={tags.length === 0 ? placeholder : ''}
           disabled={disabled}
           readOnly={readonly}
-          className="flex-1 min-w-[120px] outline-none bg-transparent"
+          className="flex-1 min-w-[100px] sm:min-w-[120px] outline-none bg-transparent text-xs sm:text-sm"
           aria-invalid={!!error}
           aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}
         />
@@ -179,7 +179,7 @@ export function TagsField({
               key={index}
               type="button"
               onClick={() => handleSuggestionClick(suggestion)}
-              className="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm"
+              className="w-full text-left px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-gray-50 text-xs sm:text-sm"
             >
               {suggestion}
             </button>

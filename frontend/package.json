@@ -3,24 +3,29 @@
   "version": "1.0.0",
   "description": "Labuan FSA E-Submission System Frontend",
   "type": "module",
+  "homepage": "https://clkhoo5211.github.io/shiny-couscous/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:github": "VITE_BASE_PATH=/shiny-couscous/ tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@hookform/resolvers": "^3.3.2",
     "@tanstack/react-query": "^5.14.2",
     "axios": "^1.6.2",
-    "react-hook-form": "^7.48.2",
-    "zod": "^3.22.4",
-    "@hookform/resolvers": "^3.3.2",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^2.1.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-router-dom": "^6.20.0",
+    "tailwind-merge": "^2.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -38,4 +43,3 @@
     "vite": "^5.0.8"
   }
 }
-

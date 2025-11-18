@@ -4,6 +4,7 @@ Labuan FSA E-Submission System - FastAPI Application
 Main application entry point for the backend API.
 """
 
+import os
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
@@ -25,10 +26,20 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     Handles startup and shutdown events.
     """
     # Startup
-    await init_db()
+    try:
+        await init_db()
+        print("✅ Database initialized successfully")
+    except Exception as e:
+        print(f"⚠️  Database initialization failed (this is OK for testing): {e}")
+        print("   The API will work but database-dependent endpoints may fail.")
+    
     yield
+    
     # Shutdown
-    await close_db()
+    try:
+        await close_db()
+    except Exception:
+        pass  # Ignore errors on shutdown
 
 
 # Create FastAPI app
@@ -43,9 +54,24 @@ app = FastAPI(
 )
 
 # CORS middleware
+# Allow GitHub Pages domain and local development
+cors_origins = [
+    "https://clkhoo5211.github.io",  # GitHub Pages production
+    "http://localhost:3000",  # Local development
+    "http://127.0.0.1:3000",  # Local development alternative
+]
+
+# Add additional origins from environment variable (comma-separated)
+if settings.app.environment == "production":
+    additional_origins = os.getenv("CORS_ORIGINS", "").split(",")
+    cors_origins.extend([origin.strip() for origin in additional_origins if origin.strip()])
+elif settings.app.debug:
+    # In debug mode, allow all origins for development
+    cors_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure in production
+    allow_origins=cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -76,13 +102,14 @@ async def health_check() -> dict[str, str]:
 
 
 # Include routers
-from labuan_fsa.api import forms, submissions, files, admin, auth
+from labuan_fsa.api import forms, submissions, files, admin, auth, payments
 
 app.include_router(forms.router)
 app.include_router(submissions.router)
 app.include_router(files.router)
 app.include_router(admin.router)
 app.include_router(auth.router)
+app.include_router(payments.router)
 
 
 if __name__ == "__main__":

@@ -89,7 +89,7 @@ export function AddressField({
     <div className={containerClassName}>
       <fieldset>
         <legend
-          className={cn('label mb-2', required && 'label-required', style?.labelClassName)}
+          className={cn('label mb-2 sm:mb-3', required && 'label-required', style?.labelClassName)}
         >
           {label}
           {tooltip && (
@@ -98,7 +98,7 @@ export function AddressField({
             </span>
           )}
         </legend>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {fields.line1 && (
             <div>
               <label htmlFor={`${fieldId}-line1`} className="label">
@@ -143,7 +143,7 @@ export function AddressField({
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {fields.city && (
               <div>
                 <label htmlFor={`${fieldId}-city`} className="label">
@@ -191,7 +191,7 @@ export function AddressField({
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {fields.postalCode && (
               <div>
                 <label htmlFor={`${fieldId}-postalCode`} className="label">

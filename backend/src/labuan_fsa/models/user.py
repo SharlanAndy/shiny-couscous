@@ -9,7 +9,11 @@ from typing import Optional
 from uuid import UUID, uuid4
 
 from sqlalchemy import Boolean, String, func
-from sqlalchemy.dialects.postgresql import UUID as PGUUID
+from labuan_fsa.config import get_settings
+from labuan_fsa.models.types import UUIDType
+
+settings = get_settings()
+is_sqlite = "sqlite" in settings.database.url.lower()
 from sqlalchemy.orm import Mapped, mapped_column
 
 from labuan_fsa.database import Base
@@ -21,10 +25,10 @@ class User(Base):
     __tablename__ = "users"
 
     id: Mapped[UUID] = mapped_column(
-        PGUUID(as_uuid=True),
+        UUIDType(as_uuid=True) if not is_sqlite else UUIDType(),  # type: ignore
         primary_key=True,
         default=uuid4,
-        server_default=func.gen_random_uuid(),
+        server_default=func.gen_random_uuid() if not is_sqlite else None,  # type: ignore
     )
     email: Mapped[str] = mapped_column(String(255), unique=True, nullable=False, index=True)
     password_hash: Mapped[str] = mapped_column(String(255), nullable=False)

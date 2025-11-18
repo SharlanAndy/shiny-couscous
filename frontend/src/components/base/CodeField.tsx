@@ -80,10 +80,10 @@ export function CodeField({
 
   return (
     <div className={containerClassName}>
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 mb-2 sm:mb-3">
         <label
           htmlFor={fieldId}
-          className={cn('label', required && 'label-required', style?.labelClassName)}
+          className={cn('label text-xs sm:text-sm', required && 'label-required', style?.labelClassName)}
         >
           {label}
           {tooltip && (
@@ -93,7 +93,7 @@ export function CodeField({
           )}
         </label>
         {language && language !== 'text' && (
-          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+          <span className="text-[10px] sm:text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded whitespace-nowrap self-start sm:self-auto">
             {language}
           </span>
         )}
@@ -111,8 +111,8 @@ export function CodeField({
         disabled={disabled}
         readOnly={readonly}
         rows={Math.ceil(height / 24)}
-        className={textareaClassName}
-        style={{ minHeight: `${height}px`, ...style?.style }}
+        className={cn(textareaClassName, 'text-xs sm:text-sm')}
+        style={{ minHeight: `${Math.max(height, 150)}px`, ...style?.style }}
         spellCheck={false}
         aria-invalid={!!error}
         aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}

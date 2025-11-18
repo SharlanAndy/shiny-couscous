@@ -43,8 +43,46 @@ def validate_form_data(form_schema: dict[str, Any], data: dict[str, Any]) -> tup
             # Get field value
             field_value = step_data.get(field_name)
 
+            # Special handling for supportingDocuments: skip validation if document-checklist is complete
+            should_skip_validation = False
+            if field_name == "supportingDocuments" and (field_type == "file-upload" or field_type == "upload"):
+                # Check if there's a document-checklist field in the same step that is complete
+                checklist_field = next(
+                    (f for f in fields if f.get("fieldType") in ("document-checklist", "labuan-document-checklist")),
+                    None
+                )
+                if checklist_field:
+                    checklist_value = step_data.get(checklist_field.get("fieldName"))
+                    if checklist_value and isinstance(checklist_value, dict):
+                        documents = checklist_field.get("documents", [])
+                        required_documents = [doc for doc in documents if doc.get("required", False)]
+                        if required_documents:
+                            # Check if all required documents are uploaded
+                            all_required_uploaded = all(
+                                checklist_value.get(doc.get("id"), {}).get("uploaded", False)
+                                for doc in required_documents
+                            )
+                            if all_required_uploaded:
+                                should_skip_validation = True
+
+            # Check if field is empty (handles None, empty string, empty list, empty dict, False for checkboxes)
+            is_empty = False
+            if should_skip_validation:
+                # Skip validation for supportingDocuments when checklist is complete
+                is_empty = False
+            elif field_value is None:
+                is_empty = True
+            elif field_value == "":
+                is_empty = True
+            elif isinstance(field_value, list) and len(field_value) == 0:
+                is_empty = True
+            elif isinstance(field_value, dict) and len(field_value) == 0:
+                is_empty = True
+            elif field_type == "checkbox" and field_value is False:
+                is_empty = True
+
             # Check required
-            if required and (field_value is None or field_value == ""):
+            if required and is_empty:
                 errors.append(
                     ValidationError(
                         field_id=field_id,
@@ -57,7 +95,7 @@ def validate_form_data(form_schema: dict[str, Any], data: dict[str, Any]) -> tup
                 continue
 
             # Skip validation if field is empty and not required
-            if field_value is None or field_value == "":
+            if is_empty:
                 continue
 
             # Validate based on field type

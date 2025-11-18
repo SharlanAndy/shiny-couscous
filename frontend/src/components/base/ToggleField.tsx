@@ -54,8 +54,8 @@ export function ToggleField({
           style?.labelClassName
         )}
       >
-        <div className="flex items-center space-x-2">
-          <span className={cn('label', required && 'label-required')}>
+        <div className="flex items-center gap-2 sm:space-x-2">
+          <span className={cn('label text-xs sm:text-sm', required && 'label-required')}>
             {label}
             {tooltip && (
               <span className="ml-1 text-gray-400" title={tooltip}>

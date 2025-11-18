@@ -164,13 +164,13 @@ export function CheckboxField({
             </span>
           )}
         </legend>
-        <div className="space-y-2">
+        <div className="space-y-2 sm:space-y-3">
           {options.map((option) => (
             <label
               key={option.value}
               htmlFor={`${fieldId}-${option.value}`}
               className={cn(
-                'flex items-center space-x-2 cursor-pointer',
+                'flex items-start sm:items-center gap-2 sm:space-x-2 cursor-pointer',
                 disabled && 'opacity-50 cursor-not-allowed',
                 option.disabled && 'opacity-50 cursor-not-allowed'
               )}
@@ -186,10 +186,10 @@ export function CheckboxField({
                 onFocus={onFocus}
                 disabled={disabled || option.disabled}
                 readOnly={readonly}
-                className={cn('h-4 w-4 text-primary focus:ring-primary', className)}
+                className={cn('h-4 w-4 text-primary focus:ring-primary flex-shrink-0 mt-0.5 sm:mt-0', className)}
                 aria-invalid={!!error}
               />
-              <span className="text-sm text-gray-700">
+              <span className="text-xs sm:text-sm text-gray-700 break-words">
                 {option.label}
                 {option.description && (
                   <span className="ml-1 text-gray-500">({option.description})</span>
@@ -202,7 +202,7 @@ export function CheckboxField({
               <label
                 htmlFor={`${fieldId}-other`}
                 className={cn(
-                  'flex items-center space-x-2 cursor-pointer',
+                  'flex items-start sm:items-center gap-2 sm:space-x-2 cursor-pointer',
                   disabled && 'opacity-50 cursor-not-allowed'
                 )}
               >
@@ -217,9 +217,9 @@ export function CheckboxField({
                   onFocus={onFocus}
                   disabled={disabled}
                   readOnly={readonly}
-                  className={cn('h-4 w-4 text-primary focus:ring-primary', className)}
+                  className={cn('h-4 w-4 text-primary focus:ring-primary flex-shrink-0 mt-0.5 sm:mt-0', className)}
                 />
-                <span className="text-sm text-gray-700">{otherOptionLabel}</span>
+                <span className="text-xs sm:text-sm text-gray-700 break-words">{otherOptionLabel}</span>
               </label>
               {showOtherInput && (
                 <input
@@ -227,7 +227,7 @@ export function CheckboxField({
                   value={otherValue}
                   onChange={handleOtherChange}
                   placeholder={otherInputPlaceholder}
-                  className="input mt-2 ml-6"
+                  className="input mt-2 ml-4 sm:ml-6 text-xs sm:text-sm"
                   required={required && showOtherInput}
                   disabled={disabled}
                 />

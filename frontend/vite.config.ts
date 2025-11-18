@@ -4,6 +4,9 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Base path for GitHub Pages (set via environment variable or default to '/')
+  base: process.env.VITE_BASE_PATH || '/',
+  
   plugins: [react()],
   resolve: {
     alias: {
@@ -16,6 +19,20 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:8000',
         changeOrigin: true,
+      },
+    },
+  },
+  // Build configuration
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'query-vendor': ['@tanstack/react-query'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+        },
       },
     },
   },

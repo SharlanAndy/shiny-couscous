@@ -160,17 +160,36 @@ class Settings(BaseSettings):
         """
         # Determine config file path
         if config_path is None:
-            base_dir = Path(__file__).parent.parent.parent.parent
-            local_config = base_dir / "config.local.toml"
-            shared_config = base_dir / "config.toml"
+            # Try multiple possible base directories
+            possible_bases = [
+                Path(__file__).parent.parent.parent.parent,  # backend/
+                Path(__file__).parent.parent.parent,  # src/
+                Path.cwd(),  # Current working directory
+            ]
+            
+            local_config = None
+            shared_config = None
+            
+            for base_dir in possible_bases:
+                test_local = base_dir / "config.local.toml"
+                test_shared = base_dir / "config.toml"
+                if test_local.exists() and local_config is None:
+                    local_config = test_local
+                if test_shared.exists() and shared_config is None:
+                    shared_config = test_shared
+                if local_config and shared_config:
+                    break
 
             # Prefer local config over shared config
-            if local_config.exists():
+            if local_config and local_config.exists():
                 config_path = local_config
-            elif shared_config.exists():
+                print(f"📁 Loading config from: {config_path}")
+            elif shared_config and shared_config.exists():
                 config_path = shared_config
+                print(f"📁 Loading config from: {config_path}")
             else:
                 # No config file found, use defaults + environment variables
+                print("⚠️  No config file found, using defaults + environment variables")
                 return cls()
 
         # Load TOML file

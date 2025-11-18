@@ -65,29 +65,35 @@ class SubmissionResponse(BaseModel):
     """Schema for submission response."""
 
     id: UUID
-    form_id: str
-    submission_id: str
+    form_id: str = Field(..., serialization_alias="formId")
+    submission_id: str = Field(..., serialization_alias="submissionId")
     status: str
-    submitted_by: Optional[str]
-    submitted_at: Optional[datetime]
-    reviewed_by: Optional[str]
-    reviewed_at: Optional[datetime]
-    review_notes: Optional[str]
-    requested_info: Optional[str]
-    created_at: datetime
-    updated_at: datetime
+    submitted_data: dict[str, Any] = Field(..., serialization_alias="submittedData")
+    submitted_by: Optional[str] = Field(None, serialization_alias="submittedBy")
+    submitted_at: Optional[datetime] = Field(None, serialization_alias="submittedAt")
+    reviewed_by: Optional[str] = Field(None, serialization_alias="reviewedBy")
+    reviewed_at: Optional[datetime] = Field(None, serialization_alias="reviewedAt")
+    review_notes: Optional[str] = Field(None, serialization_alias="reviewNotes")
+    requested_info: Optional[str] = Field(None, serialization_alias="requestedInfo")
+    created_at: datetime = Field(..., serialization_alias="createdAt")
+    updated_at: datetime = Field(..., serialization_alias="updatedAt")
 
     class Config:
         from_attributes = True
+        populate_by_name = True
 
 
 class SubmissionCreateResponse(BaseModel):
     """Schema for submission creation response."""
 
-    form_id: str
-    submission_id: str
+    form_id: str = Field(..., serialization_alias="formId")
+    submission_id: str = Field(..., serialization_alias="submissionId")
     status: str
     message: str
-    submitted_at: datetime
-    estimated_review_time: Optional[str] = None
+    submitted_at: datetime = Field(..., serialization_alias="submittedAt")
+    estimated_review_time: Optional[str] = Field(None, serialization_alias="estimatedReviewTime")
+
+    class Config:
+        from_attributes = True
+        populate_by_name = True
 

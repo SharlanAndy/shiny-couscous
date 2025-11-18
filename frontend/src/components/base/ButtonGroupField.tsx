@@ -65,7 +65,7 @@ export function ButtonGroupField({
   // Merge styles
   const containerClassName = cn('mb-4', style?.containerClassName)
   const buttonGroupClassName = cn(
-    'flex gap-2',
+    'flex gap-1.5 sm:gap-2',
     orientation === 'horizontal' ? 'flex-row flex-wrap' : 'flex-col',
     style?.className,
     className
@@ -79,7 +79,7 @@ export function ButtonGroupField({
     <div className={containerClassName}>
       <label
         htmlFor={fieldId}
-        className={cn('label', required && 'label-required', style?.labelClassName)}
+        className={cn('label text-xs sm:text-sm', required && 'label-required', style?.labelClassName)}
       >
         {label}
         {tooltip && (
@@ -98,7 +98,7 @@ export function ButtonGroupField({
             onFocus={onFocus}
             disabled={disabled || option.disabled}
             className={cn(
-              'px-4 py-2 rounded-md font-medium text-sm transition-colors',
+              'px-3 sm:px-4 py-1.5 sm:py-2 rounded-md font-medium text-xs sm:text-sm transition-colors whitespace-nowrap',
               isSelected(option.value)
                 ? 'bg-primary text-white hover:bg-primary-dark'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200',

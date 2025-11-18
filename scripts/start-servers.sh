@@ -10,6 +10,7 @@ echo ""
 
 # Check prerequisites
 command -v python3 >/dev/null 2>&1 || { echo "❌ Python 3 not found. Please install Python 3.11+"; exit 1; }
+command -v uv >/dev/null 2>&1 || { echo "❌ uv not found. Please install uv: curl -LsSf https://astral.sh/uv/install.sh | sh"; exit 1; }
 command -v node >/dev/null 2>&1 || { echo "❌ Node.js not found. Please install Node.js 18+"; exit 1; }
 
 # Function to kill processes on exit
@@ -25,17 +26,27 @@ trap cleanup INT TERM
 echo "🔧 Starting backend server..."
 cd "$PROJECT_ROOT/backend" || exit 1
 
-# Install backend dependencies if needed
-python3 -c "import fastapi" 2>/dev/null || {
-    echo "📦 Installing backend dependencies..."
-    pip install -e . > /dev/null 2>&1
-}
+# Install backend dependencies if needed (uv sync will check and install if needed)
+if [ ! -f "uv.lock" ]; then
+    echo "📦 Installing backend dependencies with uv..."
+    uv sync > /dev/null 2>&1
+else
+    echo "📦 Syncing backend dependencies with uv..."
+    uv sync > /dev/null 2>&1
+fi
 
 # Create uploads directory
 mkdir -p uploads
 
-# Start backend in background
-python3 -m uvicorn labuan_fsa.main:app \
+# Create config.local.toml if it doesn't exist
+if [ ! -f "config.local.toml" ]; then
+    echo "⚠️  config.local.toml not found. Creating from example..."
+    cp config.example.toml config.local.toml 2>/dev/null || echo "   ℹ️  You may need to create config.local.toml manually"
+fi
+
+# Start backend in background using uv
+echo "   Starting backend with uv..."
+uv run uvicorn labuan_fsa.main:app \
     --host 127.0.0.1 \
     --port 8000 \
     --reload \

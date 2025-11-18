@@ -42,19 +42,38 @@
 5. Review submissions: Admin → Submissions
 6. View analytics: Admin → Analytics
 
-## 🔧 Manual Server Start (if needed)
+## 🔧 Start Servers
 
-### Backend
+### Quick Start (Both Servers at Once)
+```bash
+# From project root
+chmod +x scripts/start-servers.sh  # First time only
+./scripts/start-servers.sh
+```
+
+### Manual Start (Separate Terminals)
+
+**Terminal 1 - Backend (using uv - recommended):**
 ```bash
 cd backend
+uv sync  # First time only - install dependencies
+uv run uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+**Terminal 1 - Backend (using pip/venv - alternative):**
+```bash
+cd backend
+source venv/bin/activate  # Activate virtual environment
 python3 -m uvicorn labuan_fsa.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### Frontend
+**Terminal 2 - Frontend:**
 ```bash
 cd frontend
 npm run dev
 ```
+
+> 💡 **Tip**: See `START-SERVERS.md` or `README-DEV.md` for detailed setup instructions.
 
 ## 🗄️ Database Setup (if not done)
 
@@ -70,9 +89,13 @@ CREATE DATABASE labuan_fsa;
 # Exit
 \q
 
-# Seed mock users
+# Seed mock users (using uv)
 cd backend
-python3 scripts/seed_mock_users.py
+uv run python scripts/seed_mock_users.py
+
+# Or using pip/venv
+# source venv/bin/activate
+# python3 scripts/seed_mock_users.py
 ```
 
 ## 📋 Next Steps

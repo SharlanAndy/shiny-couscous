@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BaseFieldProps, SelectOption } from '@/types'
 import { cn } from '@/lib/utils'
 
@@ -45,7 +45,13 @@ export function SelectField({
   const [otherValue, setOtherValue] = useState('')
 
   // Get field value
-  const fieldValue = value ?? defaultValue ?? (multiple ? [] : '')
+  let fieldValue = value ?? defaultValue ?? (multiple ? [] : '')
+  
+  // If no value/defaultValue and not multiple, initialize with first option's value
+  // This ensures the field has a value even if user doesn't explicitly select
+  if (!multiple && !fieldValue && options.length > 0 && !placeholder) {
+    fieldValue = options[0].value
+  }
 
   // Filter options based on search
   const filteredOptions = searchable
@@ -53,6 +59,18 @@ export function SelectField({
         opt.label.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : options
+  
+  // Initialize field value on mount if it has a value but onChange hasn't been called
+  useEffect(() => {
+    if (!multiple && fieldValue && (!value && !defaultValue) && options.length > 0 && !placeholder) {
+      // If we have a fieldValue (first option) but it's not in formData yet, trigger onChange
+      // Use a small timeout to avoid calling onChange during render
+      const timer = setTimeout(() => {
+        onChange(fieldValue)
+      }, 0)
+      return () => clearTimeout(timer)
+    }
+  }, []) // Only on mount - eslint-disable-line react-hooks/exhaustive-deps
 
   // Handle change
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -111,7 +129,7 @@ export function SelectField({
           placeholder="Search options..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="input mb-2"
+          className="input mb-2 text-xs sm:text-sm"
         />
       )}
       <select
@@ -124,7 +142,7 @@ export function SelectField({
         required={required}
         disabled={disabled}
         multiple={multiple}
-        className={selectClassName}
+        className={cn(selectClassName, 'text-xs sm:text-sm')}
         style={style?.style}
         aria-invalid={!!error}
         aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}
@@ -151,7 +169,7 @@ export function SelectField({
           value={otherValue}
           onChange={handleOtherChange}
           placeholder={otherInputPlaceholder}
-          className="input mt-2"
+          className="input mt-2 text-xs sm:text-sm"
           required={required}
         />
       )}

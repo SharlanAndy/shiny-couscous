@@ -99,7 +99,6 @@ export function CurrencyField({
     error && 'input-error',
     disabled && 'opacity-50 cursor-not-allowed',
     readonly && 'bg-gray-100 cursor-default',
-    showSymbol && 'pl-8',
     style?.className,
     className
   )
@@ -123,7 +122,7 @@ export function CurrencyField({
       </label>
       <div className="relative">
         {showSymbol && !focused && (
-          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm font-medium">
+          <div className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xs sm:text-sm font-medium">
             {currency === 'MYR' ? 'RM' : currency}
           </div>
         )}
@@ -142,7 +141,10 @@ export function CurrencyField({
           readOnly={readonly}
           min={validation?.min}
           max={validation?.max}
-          className={inputClassName}
+          className={cn(
+            inputClassName,
+            showSymbol && 'pl-8 sm:pl-10'
+          )}
           style={style?.style}
           aria-invalid={!!error}
           aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}

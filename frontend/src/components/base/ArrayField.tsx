@@ -90,15 +90,15 @@ export function ArrayField({
       </label>
 
       {/* Array items */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {arrayValue.map((item, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded-md bg-gray-50 relative"
+            className="p-3 sm:p-4 border border-gray-300 rounded-md bg-gray-50 relative"
           >
             {/* Item index */}
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-medium text-gray-700">
+            <div className="flex items-center justify-between mb-2 sm:mb-3">
+              <span className="text-xs sm:text-sm font-medium text-gray-700">
                 Item {index + 1}
               </span>
               {!readonly && (
@@ -107,7 +107,7 @@ export function ArrayField({
                   onClick={() => handleRemoveItem(index)}
                   disabled={disabled || (minItems ? arrayValue.length <= minItems : false)}
                   className={cn(
-                    'text-sm text-error hover:text-red-700 font-medium',
+                    'text-xs sm:text-sm text-error hover:text-red-700 font-medium whitespace-nowrap',
                     disabled && 'opacity-50 cursor-not-allowed'
                   )}
                 >
@@ -127,6 +127,7 @@ export function ArrayField({
                     fields: [{ ...itemSchema, fieldId: `${itemSchema.fieldId}-${index}`, fieldName: `${itemSchema.fieldName}-${index}` }],
                   },
                 ]}
+                readonly={readonly || disabled} // Pass readonly prop to nested FormRenderer
                 formData={{
                   [`array-${fieldId}-${index}`]: { [itemSchema.fieldName]: item },
                 }}
@@ -166,7 +167,7 @@ export function ArrayField({
 
         {/* Empty state */}
         {arrayValue.length === 0 && (
-          <div className="text-center py-8 text-gray-500 text-sm border border-gray-300 rounded-md bg-gray-50">
+          <div className="text-center py-6 sm:py-8 text-gray-500 text-xs sm:text-sm border border-gray-300 rounded-md bg-gray-50 px-3 sm:px-4">
             No items. Click "{addButtonLabel}" to add one.
           </div>
         )}

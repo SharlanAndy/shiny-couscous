@@ -86,6 +86,7 @@ interface FormRendererProps {
   errors: Record<string, string>
   onChange: (stepId: string, fieldName: string, value: any) => void
   onBlur?: (stepId: string, fieldName: string) => void
+  readonly?: boolean // If true, all fields will be rendered as readonly/disabled
 }
 
 /**
@@ -97,6 +98,7 @@ export function FormRenderer({
   errors,
   onChange,
   onBlur,
+  readonly = false,
 }: FormRendererProps) {
   const handleFieldChange = (stepId: string, fieldName: string, value: any) => {
     onChange(stepId, fieldName, value)
@@ -129,8 +131,8 @@ export function FormRenderer({
       onChange: (value: any) => handleFieldChange(stepId, field.fieldName, value),
       onBlur: () => handleFieldBlur(stepId, field.fieldName),
       required: field.required,
-      disabled: field.disabled,
-      readonly: field.readonly,
+      disabled: readonly || field.disabled, // If readonly mode, disable all fields
+      readonly: readonly || field.readonly, // If readonly mode, make all fields readonly
       hidden: field.hidden,
       placeholder: field.placeholder,
       helpText: field.helpText,
@@ -142,19 +144,26 @@ export function FormRenderer({
 
     // Render based on field type
     switch (field.fieldType) {
+      // Standard input types
+      case 'text-input':
       case 'input-text':
       case 'input-number':
-      case 'input-email':
       case 'input-password':
       case 'input-tel':
       case 'input-url':
       case 'input-search':
       case 'input-color':
-        return <InputField {...commonProps} inputType={field.inputType} />
+        return <InputField {...commonProps} inputType={field.inputType || 'text'} />
+      
+      // Email input (special case)
+      case 'email':
+      case 'input-email':
+        return <InputField {...commonProps} inputType="email" />
 
       case 'textarea':
         return <TextAreaField {...commonProps} />
 
+      case 'select':
       case 'select-single':
       case 'select-multi':
       case 'select-other':
@@ -206,6 +215,8 @@ export function FormRenderer({
           />
         )
 
+      case 'file-upload':
+      case 'upload':
       case 'upload-document':
       case 'upload-image':
       case 'upload-file':
@@ -622,7 +633,7 @@ export function FormRenderer({
             {/* Render nested fields */}
             {field.fields?.map((nestedField) => (
               <div key={nestedField.fieldId}>
-                {renderField(nestedField, step.stepId)}
+                {renderField(nestedField, stepId)}
               </div>
             ))}
           </ConditionalBlock>
@@ -661,7 +672,7 @@ export function FormRenderer({
         return (
           <RepeaterField
             {...commonProps}
-            itemSchema={field.itemSchema}
+            itemSchema={field.itemSchema || field.fields || []}
             value={fieldValue}
             defaultValue={field.defaultValue}
             minItems={field.minItems}
@@ -884,7 +895,7 @@ export function FormRenderer({
             fieldType={field.fieldType}
             value={fieldValue}
             defaultValue={field.defaultValue}
-            onChange={onChange ? (val) => onChange(step.stepId, field.fieldName, val) : undefined}
+            onChange={onChange ? (val) => onChange(stepId, field.fieldName, val) : undefined}
             required={field.required}
             hidden={field.hidden}
           />
@@ -1173,16 +1184,16 @@ export function FormRenderer({
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {steps.map((step) => (
         <div key={step.stepId} className="form-step">
-          <div className="mb-6">
-            <h2 className="text-2xl font-semibold text-gray-900">{step.stepName}</h2>
+          <div className="mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">{step.stepName}</h2>
             {step.stepDescription && (
-              <p className="mt-1 text-sm text-gray-500">{step.stepDescription}</p>
+              <p className="mt-1 text-xs sm:text-sm text-gray-500">{step.stepDescription}</p>
             )}
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {step.fields.map((field) => (
               <div key={field.fieldId}>{renderField(field, step.stepId)}</div>
             ))}

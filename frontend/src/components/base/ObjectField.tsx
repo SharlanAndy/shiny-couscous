@@ -64,7 +64,7 @@ export function ObjectField({
   return (
     <div className={containerClassName}>
       {/* Object header */}
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-2 sm:mb-3">
         <label
           htmlFor={fieldId}
           className={cn('label', required && 'label-required', style?.labelClassName)}
@@ -80,7 +80,7 @@ export function ObjectField({
           <button
             type="button"
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="text-sm text-gray-500 hover:text-gray-700"
+            className="text-xs sm:text-sm text-gray-500 hover:text-gray-700 flex-shrink-0 ml-2"
             aria-label={isCollapsed ? 'Expand' : 'Collapse'}
           >
             {isCollapsed ? '▼' : '▲'}
@@ -90,7 +90,7 @@ export function ObjectField({
 
       {/* Object content */}
       {!isCollapsed && objectFields.length > 0 && (
-        <div className="p-4 border border-gray-300 rounded-md bg-gray-50 space-y-4">
+        <div className="p-3 sm:p-4 lg:p-6 border border-gray-300 rounded-md bg-gray-50 space-y-3 sm:space-y-4">
           <FormRenderer
             steps={[
               {
@@ -108,6 +108,7 @@ export function ObjectField({
               handleFieldChange(fieldName, fieldValue)
             }
             onBlur={onBlur}
+            readonly={readonly || disabled} // Pass readonly prop to nested FormRenderer
           />
         </div>
       )}

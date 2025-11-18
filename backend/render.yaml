@@ -1,0 +1,26 @@
+# Render deployment configuration
+# Deploy at: https://render.com
+
+services:
+  - type: web
+    name: labuan-fsa-backend
+    env: python
+    region: singapore  # Adjust to your preference
+    plan: free
+    buildCommand: cd backend && uv sync
+    startCommand: cd backend && uv run uvicorn labuan_fsa.main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 8080
+    healthCheckPath: /health
+
+  # Uncomment to add PostgreSQL database
+  # - type: pspg
+  #   name: labuan-fsa-db
+  #   plan: free
+  #   databaseName: labuan_fsa
+  #   user: labuan_fsa
+

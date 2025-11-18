@@ -9,10 +9,14 @@ from typing import Optional
 from uuid import UUID, uuid4
 
 from sqlalchemy import ForeignKey, String, Text, func
-from sqlalchemy.dialects.postgresql import JSONB, UUID as PGUUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from labuan_fsa.config import get_settings
 from labuan_fsa.database import Base
+from labuan_fsa.models.types import JSONType, UUIDType
+
+settings = get_settings()
+is_sqlite = "sqlite" in settings.database.url.lower()
 
 
 class FormSubmission(Base):
@@ -21,10 +25,10 @@ class FormSubmission(Base):
     __tablename__ = "form_submissions"
 
     id: Mapped[UUID] = mapped_column(
-        PGUUID(as_uuid=True),
+        UUIDType(as_uuid=True) if not is_sqlite else UUIDType(),  # type: ignore
         primary_key=True,
         default=uuid4,
-        server_default=func.gen_random_uuid(),
+        server_default=func.gen_random_uuid() if not is_sqlite else None,  # type: ignore
     )
     form_id: Mapped[str] = mapped_column(
         String(100),
@@ -35,7 +39,7 @@ class FormSubmission(Base):
     submission_id: Mapped[str] = mapped_column(
         String(100), unique=True, nullable=False, index=True
     )
-    submitted_data: Mapped[dict] = mapped_column(JSONB, nullable=False)
+    submitted_data: Mapped[dict] = mapped_column(JSONType, nullable=False)
     status: Mapped[str] = mapped_column(
         String(50),
         nullable=False,
@@ -66,6 +70,13 @@ class FormSubmission(Base):
         cascade="all, delete-orphan",
         lazy="selectin",
     )
+    payment: Mapped[Optional["Payment"]] = relationship(
+        "Payment",
+        back_populates="submission",
+        uselist=False,
+        cascade="all, delete-orphan",
+        lazy="selectin",
+    )
 
     def __repr__(self) -> str:
         return f"<FormSubmission(id={self.id}, submission_id='{self.submission_id}', status='{self.status}')>"
@@ -77,13 +88,13 @@ class FileUpload(Base):
     __tablename__ = "file_uploads"
 
     id: Mapped[UUID] = mapped_column(
-        PGUUID(as_uuid=True),
+        UUIDType(as_uuid=True) if not is_sqlite else UUIDType(),  # type: ignore
         primary_key=True,
         default=uuid4,
-        server_default=func.gen_random_uuid(),
+        server_default=func.gen_random_uuid() if not is_sqlite else None,  # type: ignore
     )
     submission_id: Mapped[UUID] = mapped_column(
-        PGUUID(as_uuid=True),
+        UUIDType(as_uuid=True) if not is_sqlite else UUIDType(),  # type: ignore
         ForeignKey("form_submissions.id", ondelete="CASCADE"),
         nullable=False,
         index=True,
