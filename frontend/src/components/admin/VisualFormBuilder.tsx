@@ -315,6 +315,18 @@ export function VisualFormBuilder({ initialSchema, onChange }: VisualFormBuilder
   const currentStep = schema.steps[selectedStep]
   const selectedFieldData = selectedField ? schema.steps[selectedField.stepIndex]?.fields[selectedField.fieldIndex] : null
 
+  // Auto-select first step if none selected
+  useEffect(() => {
+    if (selectedStep < 0 && schema.steps.length > 0) {
+      setSelectedStep(0)
+    }
+    // Reset selection when steps change
+    if (selectedStep >= schema.steps.length) {
+      setSelectedStep(Math.max(0, schema.steps.length - 1))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [schema.steps.length, selectedStep])
+
   return (
     <DndContext
       sensors={sensors}
@@ -607,6 +619,7 @@ function SortableFieldItem({ id, field, isSelected, onClick, onDelete }: Sortabl
       const timer = setTimeout(() => setIsDraggingState(false), 100)
       return () => clearTimeout(timer)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDragging])
 
   return (

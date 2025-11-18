@@ -62,9 +62,9 @@ export function FieldPropertyEditor({ field, fieldTypes, onUpdate }: FieldProper
             onChange={(e) => updateField({ fieldType: e.target.value })}
             className="input w-full text-xs"
           >
-            {fieldTypes.map((ft) => (
-              <option key={ft.type} value={ft.type}>
-                {ft.icon} {ft.name}
+            {fieldTypes.map((fieldType) => (
+              <option key={fieldType.type} value={fieldType.type}>
+                {fieldType.icon} {fieldType.name}
               </option>
             ))}
           </select>
