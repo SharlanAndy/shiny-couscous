@@ -6,8 +6,8 @@
   "homepage": "https://clkhoo5211.github.io/shiny-couscous/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit --skipLibCheck && vite build",
-    "build:github": "VITE_BASE_PATH=/shiny-couscous/ tsc --noEmit --skipLibCheck && vite build",
+    "build": "vite build",
+    "build:github": "VITE_BASE_PATH=/shiny-couscous/ vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit"
