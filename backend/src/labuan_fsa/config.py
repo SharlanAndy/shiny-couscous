@@ -164,9 +164,9 @@ class Settings(BaseSettings):
         Load settings from TOML file.
 
         Priority:
-        1. config.local.toml (local development, gitignored)
-        2. config.toml (shared configuration)
-        3. Environment variables
+        1. Environment variables (highest priority in Vercel/serverless)
+        2. config.local.toml (local development, gitignored)
+        3. config.toml (shared configuration)
         4. Default values
 
         Args:
@@ -175,6 +175,22 @@ class Settings(BaseSettings):
         Returns:
             Settings instance with loaded configuration.
         """
+        # In Vercel/serverless, prioritize environment variables
+        import os
+        if os.getenv("DATABASE_URL") or os.getenv("DB_URL"):
+            print("🌐 Using environment variables (Vercel/serverless mode)")
+            # Create settings from environment variables only
+            settings = cls()
+            # Override database URL from environment if set
+            if os.getenv("DATABASE_URL") or os.getenv("DB_URL"):
+                db_url = os.getenv("DATABASE_URL") or os.getenv("DB_URL")
+                # Ensure asyncpg driver
+                if db_url.startswith("postgresql://") and "+asyncpg" not in db_url:
+                    db_url = db_url.replace("postgresql://", "postgresql+asyncpg://")
+                settings.database = DatabaseConfig(url=db_url)
+                print(f"✅ Database URL loaded from environment: {db_url[:30]}...")
+            return settings
+        
         # Determine config file path
         if config_path is None:
             # Try multiple possible base directories
@@ -266,12 +282,33 @@ def get_settings() -> Settings:
     """Get global settings instance."""
     global _settings
     if _settings is None:
+        import os
         try:
             _settings = Settings.load_from_toml()
         except Exception as e:
             # If TOML loading fails (e.g., in Vercel), use environment variables directly
             print(f"⚠️  Failed to load TOML config: {e}, using environment variables")
             _settings = Settings()
+        
+        # CRITICAL: Always check environment variables and override if set
+        # This ensures Vercel environment variables always work
+        db_url = os.getenv("DATABASE_URL") or os.getenv("DB_URL")
+        if db_url:
+            # Ensure asyncpg driver
+            if db_url.startswith("postgresql://") and "+asyncpg" not in db_url:
+                db_url = db_url.replace("postgresql://", "postgresql+asyncpg://")
+            _settings.database.url = db_url
+            print(f"✅ Database URL set from environment: {db_url[:50]}...")
+        
+        # Check other critical environment variables
+        if os.getenv("SECRET_KEY"):
+            _settings.security.secret_key = os.getenv("SECRET_KEY")
+        
+        if os.getenv("APP_ENVIRONMENT"):
+            _settings.app.environment = os.getenv("APP_ENVIRONMENT")
+        
+        print(f"🔧 Final settings - Environment: {_settings.app.environment}, DB URL: {_settings.database.url[:50] if len(_settings.database.url) > 50 else _settings.database.url}...")
+    
     return _settings
 
 
