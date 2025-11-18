@@ -4,19 +4,21 @@
 
 ### 1. DATABASE_URL (MOST IMPORTANT)
 - **Key:** `DATABASE_URL`
-- **Value Option 1 (Direct Connection - port 5432):** 
+- **Value Option 1 (Direct Connection - port 5432) - RECOMMENDED WORKAROUND:**
   ```
   postgresql://postgres:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
   ```
-- **Value Option 2 (Connection Pooler - Recommended - port 6543):**
+  **Note:** Get direct connection URL from Supabase Dashboard → Database → "Connect to your project" → Method: "Direct connection"
+  **Why:** Direct connection supports prepared statements (no pgbouncer limitation). Since we use NullPool in serverless, this is appropriate.
+- **Value Option 2 (Connection Pooler - port 6543) - NOT WORKING YET:**
   ```
   postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres
   ```
-  **Note:** Get pooler URL from Supabase Dashboard → Database → "Connect to your project" → Method: "Transaction pooler"
-  **Why:** Connection pooler is designed for serverless and prevents Errno 99 errors!
+  **Note:** Currently has prepared statement errors. `statement_cache_size=0` via `connect_args` isn't working with SQLAlchemy's asyncpg dialect.
+  **Status:** ⚠️ Issue being investigated
 - **Environments:** ✅ Production, ✅ Preview, ✅ Development
 - **Sensitive:** ✅ Enable (toggle ON)
-- **Recommended:** Use Connection Pooler (port 6543) for better serverless compatibility
+- **Recommended:** Use Direct Connection (port 5432) until pooler prepared statement issue is resolved
 
 ### 2. ENVIRONMENT (CRITICAL - Forces NullPool)
 - **Key:** `ENVIRONMENT`
