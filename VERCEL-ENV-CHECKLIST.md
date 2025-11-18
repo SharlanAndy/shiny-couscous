@@ -4,9 +4,19 @@
 
 ### 1. DATABASE_URL (MOST IMPORTANT)
 - **Key:** `DATABASE_URL`
-- **Value:** `postgresql://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres`
+- **Value Option 1 (Direct Connection - port 5432):** 
+  ```
+  postgresql://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres
+  ```
+- **Value Option 2 (Connection Pooler - Recommended - port 6543):**
+  ```
+  postgresql://postgres.mwvyldzcutztjenscbyr:1KJibOLhhk7e6t9D@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+  ```
+  **Note:** Get pooler URL from Supabase Dashboard → Settings → Database → Connection Pooler
+  **Why:** Connection pooler is designed for serverless and prevents Errno 99 errors!
 - **Environments:** ✅ Production, ✅ Preview, ✅ Development
 - **Sensitive:** ✅ Enable (toggle ON)
+- **Recommended:** Use Connection Pooler (port 6543) for better serverless compatibility
 
 ### 2. ENVIRONMENT (CRITICAL - Forces NullPool)
 - **Key:** `ENVIRONMENT`
