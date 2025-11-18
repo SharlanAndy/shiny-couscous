@@ -134,16 +134,39 @@ async def init_db() -> None:
     # Using models.__init__ to import all models at once
     import labuan_fsa.models  # This imports all models via __init__.py
     
+    print(f"🔧 Initializing database...")
+    print(f"   Database URL: {database_url[:50]}..." if len(database_url) > 50 else f"   Database URL: {database_url}")
+    print(f"   Is SQLite: {is_sqlite}")
+    print(f"   Is Serverless: {is_serverless}")
+    print(f"   Engine: {type(engine)}")
+    print(f"   Pool class: {engine.pool.__class__.__name__ if hasattr(engine, 'pool') else 'N/A'}")
+    
     try:
+        # Test connection first
+        print(f"🔄 Testing database connection...")
         async with engine.begin() as conn:
+            # Test basic query (PostgreSQL only)
+            if not is_sqlite:
+                result = await conn.execute("SELECT 1")
+                print(f"✅ Database connection successful")
+            
+            # Create tables
+            print(f"🔄 Creating/verifying database tables...")
             await conn.run_sync(Base.metadata.create_all)
+            
         print(f"✅ Database tables created/verified successfully")
         print(f"   Tables in metadata: {list(Base.metadata.tables.keys())}")
     except Exception as e:
-        # Re-raise to be handled by caller
+        # Always log full error details
         import traceback
-        print(f"❌ Database initialization error: {e}")
-        traceback.print_exc()
+        error_msg = f"❌ Database initialization error: {e}"
+        print(error_msg)
+        print(f"   Error type: {type(e).__name__}")
+        print(f"   Full traceback:")
+        for line in traceback.format_exc().split('\n'):
+            print(f"   {line}")
+        
+        # Re-raise to be handled by caller
         raise ConnectionError(f"Database connection failed: {e}") from e
 
 
