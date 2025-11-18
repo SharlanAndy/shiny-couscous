@@ -2,6 +2,7 @@
 Configuration management using TOML files and cloud secrets managers.
 
 Avoids .env file exposure by using TOML configuration files and cloud secrets managers.
+Supports .env.local for local development (gitignored).
 """
 
 import os
@@ -9,8 +10,15 @@ from pathlib import Path
 from typing import Optional
 
 import toml
+from dotenv import load_dotenv  # Load .env.local for local development
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# Load .env.local if it exists (for local development)
+env_local_path = Path(__file__).parent.parent.parent.parent / ".env.local"
+if env_local_path.exists():
+    load_dotenv(env_local_path)
+    print(f"✅ Loaded environment variables from: {env_local_path}")
 
 
 class AppConfig(BaseSettings):
