@@ -11,11 +11,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@/lib/utils': path.resolve(__dirname, './src/lib/utils.ts'),
-      '@/components': path.resolve(__dirname, './src/components'),
-      '@/types': path.resolve(__dirname, './src/types'),
-      '@/api': path.resolve(__dirname, './src/api'),
     },
+    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json'],
   },
   server: {
     port: 3000,
