@@ -1,0 +1,1515 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        117,
+                        124,
+                        466,
+                        137
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                117,
+                                124,
+                                466,
+                                137
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        117,
+                                        124,
+                                        466,
+                                        137
+                                    ],
+                                    "type": "text",
+                                    "content": "APPLICATION FOR CESSATION OF LABUAN LEASING COMPANY"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "line_avg_height": 15,
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        65,
+                        156,
+                        235,
+                        169
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                156,
+                                235,
+                                169
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        156,
+                                        235,
+                                        169
+                                    ],
+                                    "type": "text",
+                                    "content": "Name of Labuan Company :"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "line_avg_height": 18,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        65,
+                        194,
+                        529,
+                        218
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                194,
+                                529,
+                                218
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        194,
+                                        529,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5,
+                    "line_avg_height": 14,
+                    "level": 3
+                },
+                {
+                    "bbox": [
+                        65,
+                        218,
+                        444,
+                        231
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                218,
+                                444,
+                                231
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        218,
+                                        444,
+                                        231
+                                    ],
+                                    "type": "text",
+                                    "content": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        71,
+                        235,
+                        542,
+                        416
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                71,
+                                235,
+                                542,
+                                416
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        71,
+                                        235,
+                                        542,
+                                        416
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                71,
+                                                235,
+                                                542,
+                                                416
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>No.</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>1.</td><td>Certified true copy of the board resolution or extract of minutes of board meeting on their intention to surrender the licence.</td><td></td><td></td></tr><tr><td>2.</td><td>Letter of Guarantee/Undertaking from the shareholder/head office to undertake all outstanding liabilities (as per Appendix I).</td><td></td><td></td></tr><tr><td>3.</td><td>Latest audited financial statements.</td><td></td><td></td></tr><tr><td>4.</td><td>Latest management account signed and duly verified by the Director of the leasing company.</td><td></td><td></td></tr></table>",
+                                            "image_path": "39664f8b72bb81a18ac7b4b95bf68653260f2e2295fed505c9ce9a79fe0a4594.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7,
+                            "angle": 0,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        66,
+                        428,
+                        102,
+                        441
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                66,
+                                428,
+                                102,
+                                441
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        428,
+                                        102,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "Notes:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8,
+                    "line_avg_height": 15,
+                    "level": 3
+                },
+                {
+                    "bbox": [
+                        64,
+                        447,
+                        535,
+                        548
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 12,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                65,
+                                447,
+                                535,
+                                471
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        447,
+                                        535,
+                                        471
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                65,
+                                                447,
+                                                535,
+                                                471
+                                            ],
+                                            "type": "text",
+                                            "content": "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 9
+                        },
+                        {
+                            "bbox": [
+                                64,
+                                472,
+                                535,
+                                509
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        64,
+                                        472,
+                                        535,
+                                        509
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                64,
+                                                472,
+                                                535,
+                                                509
+                                            ],
+                                            "type": "text",
+                                            "content": "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                510,
+                                535,
+                                548
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        510,
+                                        535,
+                                        548
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                65,
+                                                510,
+                                                535,
+                                                548
+                                            ],
+                                            "type": "text",
+                                            "content": "3) The checklist serves as general requirement of the application. However, pursuant to Section 91 of the Labuan Financial Services and Securities Act 2010, Labuan FSA reserves the right to request for additional information to support the application."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        65,
+                        572,
+                        294,
+                        586
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                572,
+                                294,
+                                586
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        572,
+                                        294,
+                                        586
+                                    ],
+                                    "type": "text",
+                                    "content": "Officer responsible for information submission:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                },
+                {
+                    "bbox": [
+                        67,
+                        609,
+                        533,
+                        624
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                609,
+                                533,
+                                624
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        609,
+                                        533,
+                                        624
+                                    ],
+                                    "type": "text",
+                                    "content": "Signature : Company :"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14
+                },
+                {
+                    "bbox": [
+                        67,
+                        640,
+                        533,
+                        654
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                640,
+                                533,
+                                654
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        640,
+                                        533,
+                                        654
+                                    ],
+                                    "type": "text",
+                                    "content": "Name : Contact No. :"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        67,
+                        666,
+                        533,
+                        681
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                666,
+                                533,
+                                681
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        666,
+                                        533,
+                                        681
+                                    ],
+                                    "type": "text",
+                                    "content": "Designation : Email: :"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        237,
+                        68,
+                        326,
+                        91
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                237,
+                                68,
+                                326,
+                                91
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        237,
+                                        68,
+                                        326,
+                                        91
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        327,
+                        48,
+                        382,
+                        107
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                327,
+                                48,
+                                382,
+                                107
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        327,
+                                        48,
+                                        382,
+                                        107
+                                    ],
+                                    "type": "text",
+                                    "content": "FSA"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        238,
+                        93,
+                        326,
+                        100
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                238,
+                                93,
+                                326,
+                                100
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        238,
+                                        93,
+                                        326,
+                                        100
+                                    ],
+                                    "type": "text",
+                                    "content": "Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        295,
+                        766,
+                        506,
+                        777
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                295,
+                                766,
+                                506,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        295,
+                                        766,
+                                        506,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "Application for Cessation of Labuan Leasing Company"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "bbox": [
+                        516,
+                        766,
+                        522,
+                        775
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                516,
+                                766,
+                                522,
+                                775
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        516,
+                                        766,
+                                        522,
+                                        775
+                                    ],
+                                    "type": "text",
+                                    "content": "1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 18
+                },
+                {
+                    "bbox": [
+                        60,
+                        789,
+                        113,
+                        809
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                60,
+                                789,
+                                113,
+                                809
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        789,
+                                        113,
+                                        809
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan FSA Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 19
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0
+        },
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        48,
+                        84,
+                        67,
+                        95
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                84,
+                                67,
+                                95
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        84,
+                                        67,
+                                        95
+                                    ],
+                                    "type": "text",
+                                    "content": "To:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        48,
+                        109,
+                        132,
+                        121
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                109,
+                                132,
+                                121
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        109,
+                                        132,
+                                        121
+                                    ],
+                                    "type": "text",
+                                    "content": "Director-General"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        49,
+                        123,
+                        226,
+                        135
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                123,
+                                226,
+                                135
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        123,
+                                        226,
+                                        135
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        49,
+                        136,
+                        188,
+                        147
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                136,
+                                188,
+                                147
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        136,
+                                        188,
+                                        147
+                                    ],
+                                    "type": "text",
+                                    "content": "Level 17, Main Office Tower"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        49,
+                        148,
+                        160,
+                        159
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                148,
+                                160,
+                                159
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        148,
+                                        160,
+                                        159
+                                    ],
+                                    "type": "text",
+                                    "content": "Financial Park Labuan"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        49,
+                        161,
+                        123,
+                        172
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                161,
+                                123,
+                                172
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        161,
+                                        123,
+                                        172
+                                    ],
+                                    "type": "text",
+                                    "content": "Jalan Merdeka"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6
+                },
+                {
+                    "bbox": [
+                        49,
+                        174,
+                        217,
+                        185
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                174,
+                                217,
+                                185
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        174,
+                                        217,
+                                        185
+                                    ],
+                                    "type": "text",
+                                    "content": "87000 Federal Territory of Labuan"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        49,
+                        186,
+                        105,
+                        197
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                186,
+                                105,
+                                197
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        186,
+                                        105,
+                                        197
+                                    ],
+                                    "type": "text",
+                                    "content": "MALAYSIA"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8
+                },
+                {
+                    "bbox": [
+                        48,
+                        211,
+                        71,
+                        222
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                211,
+                                71,
+                                222
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        211,
+                                        71,
+                                        222
+                                    ],
+                                    "type": "text",
+                                    "content": "And"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        48,
+                        236,
+                        181,
+                        249
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                236,
+                                181,
+                                249
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        236,
+                                        181,
+                                        249
+                                    ],
+                                    "type": "text",
+                                    "content": "Any Other Interested Party"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        47,
+                        273,
+                        536,
+                        312
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                47,
+                                273,
+                                536,
+                                312
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        47,
+                                        273,
+                                        536,
+                                        312
+                                    ],
+                                    "type": "text",
+                                    "content": "In consideration of [the name of Labuan company] to cease its leasing operations and request for Labuan Financial Services Authority (hereinafter referred to as \"Labuan FSA\") to revoke the approval granted for licence to carry on leasing business."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "bbox": [
+                        47,
+                        323,
+                        538,
+                        452
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                47,
+                                323,
+                                538,
+                                452
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        47,
+                                        323,
+                                        538,
+                                        452
+                                    ],
+                                    "type": "text",
+                                    "content": "I/We, [name of the Head Office/Shareholder], being the Head Office/Shareholder of [name of Labuan company], hereby irrevocably and unconditionally undertake and guarantee to Labuan FSA that if at any time after the approval for licence to carry on leasing business is revoked, [name of Labuan company] fails or unable to comply with any financial obligation or requirement imposed under the Labuan Financial Services and Securities Act 2010 on it or fail to meet its liabilities in respect of its Labuan leasing business, we shall when so demanded in writing by Labuan FSA or any other interested person, on first demand, make good, meet and honour all such financial obligations, requirements and liabilities by paying such sum of money, in any currency in satisfaction of such financial obligations, requirements and liabilities in such manner within such time as may be specified by Labuan FSA."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "bbox": [
+                        48,
+                        463,
+                        351,
+                        477
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                463,
+                                351,
+                                477
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        463,
+                                        351,
+                                        477
+                                    ],
+                                    "type": "text",
+                                    "content": "Dated this day of , 20"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                },
+                {
+                    "bbox": [
+                        48,
+                        501,
+                        270,
+                        513
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                501,
+                                270,
+                                513
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        501,
+                                        270,
+                                        513
+                                    ],
+                                    "type": "text",
+                                    "content": "The Common Seal"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14
+                },
+                {
+                    "bbox": [
+                        49,
+                        515,
+                        270,
+                        527
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                515,
+                                270,
+                                527
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        515,
+                                        270,
+                                        527
+                                    ],
+                                    "type": "text",
+                                    "content": "of [name of Head Office/Shareholder]"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        49,
+                        528,
+                        270,
+                        539
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                528,
+                                270,
+                                539
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        528,
+                                        270,
+                                        539
+                                    ],
+                                    "type": "text",
+                                    "content": "was hereunto affixed"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16
+                },
+                {
+                    "bbox": [
+                        49,
+                        540,
+                        270,
+                        552
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                540,
+                                270,
+                                552
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        540,
+                                        270,
+                                        552
+                                    ],
+                                    "type": "text",
+                                    "content": "in the presence of:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "bbox": [
+                        48,
+                        577,
+                        90,
+                        589
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                48,
+                                577,
+                                90,
+                                589
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        48,
+                                        577,
+                                        90,
+                                        589
+                                    ],
+                                    "type": "text",
+                                    "content": "Director"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 18
+                },
+                {
+                    "bbox": [
+                        49,
+                        591,
+                        160,
+                        602
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                49,
+                                591,
+                                160,
+                                602
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        49,
+                                        591,
+                                        160,
+                                        602
+                                    ],
+                                    "type": "text",
+                                    "content": "(Name in block letters)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 19
+                },
+                {
+                    "bbox": [
+                        300,
+                        577,
+                        349,
+                        590
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                300,
+                                577,
+                                349,
+                                590
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        300,
+                                        577,
+                                        349,
+                                        590
+                                    ],
+                                    "type": "text",
+                                    "content": "Secretary"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "bbox": [
+                        301,
+                        591,
+                        412,
+                        602
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                301,
+                                591,
+                                412,
+                                602
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        301,
+                                        591,
+                                        412,
+                                        602
+                                    ],
+                                    "type": "text",
+                                    "content": "(Name in block letters)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 21
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        463,
+                        58,
+                        528,
+                        70
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                463,
+                                58,
+                                528,
+                                70
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        463,
+                                        58,
+                                        528,
+                                        70
+                                    ],
+                                    "type": "text",
+                                    "content": "APPENDIX I"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        92,
+                        778,
+                        145,
+                        798
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                92,
+                                778,
+                                145,
+                                798
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        92,
+                                        778,
+                                        145,
+                                        798
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan FSA Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 22
+                },
+                {
+                    "bbox": [
+                        295,
+                        768,
+                        506,
+                        779
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                295,
+                                768,
+                                506,
+                                779
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        295,
+                                        768,
+                                        506,
+                                        779
+                                    ],
+                                    "type": "text",
+                                    "content": "Application for Cessation of Labuan Leasing Company"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 23
+                },
+                {
+                    "bbox": [
+                        514,
+                        767,
+                        522,
+                        777
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                514,
+                                767,
+                                522,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        514,
+                                        767,
+                                        522,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 24
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 1
+        }
+    ],
+    "_backend": "vlm",
+    "_version_name": "2.6.4"
+}

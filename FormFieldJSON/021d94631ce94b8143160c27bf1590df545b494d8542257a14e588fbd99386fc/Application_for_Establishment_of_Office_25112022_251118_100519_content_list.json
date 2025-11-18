@@ -1,0 +1,776 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR ESTABLISHMENT OF MARKETING OFFICE IN KUALA LUMPUR AND ISKANDAR MALAYSIA/CO-LOCATED OFFICE/REPRESENTATIVE OFFICE OUTSIDE LABUAN OR MALAYSIA/CONVERSION OF KUALA LUMPUR MARKETING OFFICE TO CO-LOCATED OFFICE",
+        "text_level": 1,
+        "bbox": [
+            110,
+            146,
+            909,
+            206
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name of Labuan Company :",
+        "bbox": [
+            109,
+            222,
+            396,
+            237
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Type of Licence",
+        "bbox": [
+            110,
+            237,
+            394,
+            253
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA",
+        "bbox": [
+            109,
+            269,
+            889,
+            299
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            109,
+            300,
+            744,
+            313
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/d5097c8af60785c628f0dad15ee4e213e8d4c1176f9892c501a14a0881a548ce.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>No</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>1.</td><td>Duly completed application form as per Appendix I</td><td></td><td></td></tr><tr><td>2.</td><td>Proposed organisation chart of proposed office</td><td></td><td></td></tr><tr><td>3.</td><td>Duly completed Statutory Declaration of true and correct information submitted - to be filled up by applicant (as per Appendix II)</td><td></td><td></td></tr><tr><td>4.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application (as per Appendix III) (not applicable for submission made directly by the Labuan Company)</td><td></td><td></td></tr><tr><td>5.</td><td>Processing fee of USD350</td><td></td><td></td></tr></table>",
+        "bbox": [
+            121,
+            319,
+            902,
+            560
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Notes:",
+        "text_level": 2,
+        "bbox": [
+            112,
+            565,
+            173,
+            581
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.",
+            "3) The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.",
+            "4) This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted"
+        ],
+        "bbox": [
+            109,
+            588,
+            900,
+            724
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Officer responsible for information submission:",
+        "bbox": [
+            109,
+            751,
+            494,
+            766
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Signature : Company :",
+        "bbox": [
+            119,
+            789,
+            927,
+            807
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name Contact No",
+        "bbox": [
+            119,
+            819,
+            927,
+            837
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Designation : Email :",
+        "bbox": [
+            119,
+            850,
+            927,
+            868
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan",
+        "bbox": [
+            398,
+            80,
+            547,
+            108
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Financial Services Authority",
+        "bbox": [
+            400,
+            109,
+            547,
+            118
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "FSA",
+        "bbox": [
+            549,
+            58,
+            643,
+            128
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            100,
+            917,
+            157,
+            932
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            157,
+            912,
+            189,
+            935
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "APPLICATION FOR ESTABLISHMENT OF MARKETING OFFICE IN KUALA LUMPUR AND ISKANDAR MALAYSIA/CO-LOCATED OFFICE/REPRESENTATIVE OFFICE OUTSIDE LABUAN/CONVERSION OF KUALA",
+        "bbox": [
+            174,
+            889,
+            855,
+            912
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "LUMPUR MARKETING OFFICE TO CO-LOCATED OFFICE",
+        "bbox": [
+            494,
+            913,
+            855,
+            923
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1",
+        "bbox": [
+            867,
+            890,
+            878,
+            901
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/404299d14ca6fa97fd2b9f48faeb539ac7c98a7eaa53cfcecc39712f09692198.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"5\">PARTICULARS OF APPLICATION</td></tr><tr><td colspan=\"5\">Section A: General Information</td></tr><tr><td colspan=\"2\">a. Type of office</td><td colspan=\"3\">Please tick (✓) the relevant boxes for type of application:\nCo-located Office/Conversion of KLMO to Co-located Office\nKuala Lumpur Marketing Office\nRepresentative Office Outside Labuan or Malaysia</td></tr><tr><td colspan=\"2\">b. Rationale or purpose of establishment/conversion of the office</td><td colspan=\"3\"></td></tr><tr><td colspan=\"2\">c. Location of the office</td><td colspan=\"3\"></td></tr><tr><td colspan=\"2\">d. Function of the office</td><td colspan=\"3\"></td></tr><tr><td rowspan=\"5\" colspan=\"2\">e. Key personal particulars of all staff to be stationed at the office</td><td>No.</td><td>Name</td><td>Position</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td colspan=\"2\">f. Any other information relevant for consideration of the application</td><td colspan=\"3\"></td></tr><tr><td colspan=\"5\">Section B: Three Years Financial Projection</td></tr><tr><td colspan=\"5\">Currency:</td></tr><tr><td>Statement of Comprehensive Income</td><td colspan=\"2\">Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>Revenue earned from the office (where applicable)</td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>Expenses incurred\n- Staff cost\n- Rental expenses\n- Other expenses</td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>Income / expenses derived / incurred from the office</td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"5\">Note:\n1. The projection must show the realistic view of the business in three years.\n2. Please provide the basis of assumption in deriving the projected figure.</td></tr></table>",
+        "bbox": [
+            80,
+            97,
+            932,
+            840
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX I",
+        "bbox": [
+            801,
+            68,
+            900,
+            82
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "APPLICATION FOR ESTABLISHMENT OF MARKETING OFFICE IN KUALA LUMPUR AND ISKANDAR MALAYSIA/CO-LOCATED OFFICE/REPRESENTATIVE OFFICE OUTSIDE LABUAN/ CONVERSION OF KUALA",
+        "bbox": [
+            174,
+            891,
+            857,
+            914
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "LUMPUR MARKETING OFFICE TO CO-LOCATED OFFICE",
+        "bbox": [
+            174,
+            914,
+            857,
+            926
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            100,
+            925,
+            191,
+            948
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            865,
+            892,
+            878,
+            902
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED",
+        "text_level": 1,
+        "bbox": [
+            218,
+            101,
+            779,
+            116
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 2,
+        "bbox": [
+            268,
+            117,
+            729,
+            130
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "I. NRIC/Passport No:",
+        "bbox": [
+            100,
+            178,
+            895,
+            195
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "the (position) of. (name of company),",
+        "bbox": [
+            99,
+            196,
+            894,
+            212
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            99,
+            214,
+            487,
+            229
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable.",
+            "2. I am aware that if I make any misrepresentation herein this application, it is an offence punishable pursuant to Section 192 of the LFSSA/Section 152 of the LIFSSA.",
+            "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        ],
+        "bbox": [
+            100,
+            237,
+            895,
+            390
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions.",
+        "bbox": [
+            99,
+            414,
+            895,
+            448
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above",
+        "bbox": [
+            100,
+            478,
+            500,
+            495
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "named",
+        "bbox": [
+            102,
+            502,
+            408,
+            518
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            102,
+            524,
+            406,
+            539
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            102,
+            546,
+            410,
+            563
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "This ....day of 20.",
+        "bbox": [
+            102,
+            569,
+            411,
+            586
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            102,
+            607,
+            196,
+            623
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            638,
+            546,
+            722,
+            564
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "··",
+        "bbox": [
+            102,
+            690,
+            302,
+            697
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            102,
+            697,
+            431,
+            713
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX II",
+        "bbox": [
+            796,
+            68,
+            900,
+            83
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "APPLICATION FOR ESTABLISHMENT OF MARKETING OFFICE IN KUALA LUMPUR AND ISKANDAR MALAYSIA/CO-LOCATED OFFICE/REPRESENTATIVE OFFICE OUTSIDE LABUAN/CONVERSION OF KUALA",
+        "bbox": [
+            174,
+            891,
+            855,
+            914
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "LUMPUR MARKETING OFFICE TO CO-LOCATED OFFICE",
+        "bbox": [
+            494,
+            915,
+            855,
+            926
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            100,
+            925,
+            191,
+            948
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3",
+        "bbox": [
+            865,
+            892,
+            878,
+            903
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION",
+        "text_level": 1,
+        "bbox": [
+            210,
+            104,
+            811,
+            133
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "bbox": [
+            280,
+            133,
+            741,
+            146
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "I, (name) of (address) NRIC/Passport",
+        "bbox": [
+            124,
+            205,
+            882,
+            221
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "No: the authorized officer of (name of trust company/insurance manager/underwriting manager/other service providers) being the",
+        "bbox": [
+            124,
+            223,
+            882,
+            256
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "party responsible for the submission of application for",
+        "bbox": [
+            124,
+            256,
+            882,
+            274
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "............(name of applicant) do solemnly and sincerely declare that in relation to the above application:",
+        "bbox": [
+            124,
+            275,
+            882,
+            309
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have conducted due diligence process on............ (name of applicant) and on its director(s) and shareholder(s) and other persons or companies that involved and related to the application and satisfied with the result thereof.",
+            "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person and Anti-Money Laundering and Anti-Terrorism Financing Act 2001 in respect of the above application have been complied with."
+        ],
+        "bbox": [
+            124,
+            326,
+            882,
+            463
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions.",
+        "bbox": [
+            124,
+            482,
+            882,
+            516
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared",
+        "bbox": [
+            134,
+            564,
+            438,
+            579
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "by the above named",
+        "bbox": [
+            134,
+            579,
+            438,
+            594
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            134,
+            609,
+            391,
+            624
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            134,
+            624,
+            418,
+            639
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "This...day of....20..",
+        "bbox": [
+            134,
+            639,
+            312,
+            655
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            603,
+            625,
+            687,
+            640
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            126,
+            699,
+            221,
+            714
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            126,
+            788,
+            458,
+            806
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX III",
+        "bbox": [
+            791,
+            68,
+            900,
+            83
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            99,
+            925,
+            191,
+            948
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "APPLICATION FOR ESTABLISHMENT OF MARKETING OFFICE IN KUALA LUMPUR AND ISKANDAR MALAYSIA/CO-LOCATED OFFICE/REPRESENTATIVE OFFICE OUTSIDE LABUAN/ CONVERSION OF KUALA",
+        "bbox": [
+            174,
+            891,
+            857,
+            914
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "LUMPUR MARKETING OFFICE TO CO-LOCATED OFFICE",
+        "bbox": [
+            494,
+            915,
+            857,
+            926
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4",
+        "bbox": [
+            865,
+            892,
+            878,
+            902
+        ],
+        "page_idx": 3
+    }
+]

@@ -1,0 +1,2085 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON",
+        "text_level": 1,
+        "bbox": [
+            281,
+            88,
+            738,
+            106
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "LABUAN SECURITIES LICENSEE AND CAPITAL MARKET BUSINESS",
+        "text_level": 1,
+        "bbox": [
+            156,
+            107,
+            864,
+            125
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "IMPORTANT NOTES",
+        "text_level": 2,
+        "bbox": [
+            426,
+            141,
+            594,
+            157
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. The completed application form and supporting documents should be submitted to:",
+        "bbox": [
+            158,
+            171,
+            813,
+            186
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Head of Authorisation and Licensing Unit",
+        "bbox": [
+            222,
+            200,
+            537,
+            217
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            223,
+            218,
+            496,
+            233
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Level 17, Main Office Tower",
+        "bbox": [
+            223,
+            233,
+            437,
+            246
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Complex",
+        "bbox": [
+            223,
+            247,
+            405,
+            262
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Jalan Merdeka",
+        "bbox": [
+            223,
+            263,
+            336,
+            276
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "87000 Labuan F.T.",
+        "bbox": [
+            223,
+            277,
+            367,
+            291
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Malaysia",
+        "bbox": [
+            223,
+            292,
+            294,
+            308
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "2. Applicant may also submit a soft copy of the completed application form and supporting documents via email to licensing@labuanfsa.gov.my for preliminary review by the officer.",
+            "3. Submission of application which does not comply with Labuan FSA's requirement or which are unsatisfactory may be returned.",
+            "4. The form and supporting documents serves as general requirement of the application, Labuan FSA reserves the right to request for additional information and/or documents to support the application.",
+            "5. Any information supplied pursuant to this form will be dealt with in confidence in accordance with Section 178 of the Labuan Financial Services and Securities Act 2010/Section 139 of the Labuan Islamic Financial Services and Securities Act 2010.",
+            "6. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Copy of bank statements must be certified by the bank. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "7. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.",
+            "8. Labuan FSA has a whistle blowing policy in place where suppliers, consultants or even members of the public can report to the Designated Officers in writing as per the Whistle Blowing Disclosure Form if there is any element of wrongdoings by any staff of Labuan FSA or its subsidiaries in relation to the application or licence being awarded.",
+            "9. For details of applicable legislations and guidelines pertaining to securities licensee and fund management business, please visit our website at www.labuanfsa.gov.my",
+            "10. Processing fee and client charter:"
+        ],
+        "bbox": [
+            158,
+            319,
+            864,
+            821
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/de530ed2a31671af9a3b02fe9c8f4425e9d68f219d85d7cdbc8497fa427d3684.jpg",
+        "table_caption": [],
+        "table_footnote": [
+            "*Client Charter will be calculated upon complete submission of documentation and information to Labuan FSA."
+        ],
+        "table_body": "<table><tr><td rowspan=\"2\">Type of Processing</td><td>Processing Fee</td><td rowspan=\"2\">Client Charter</td></tr><tr><td>USD</td></tr><tr><td>Normal</td><td>350.00</td><td>30 working days</td></tr><tr><td>Fast Track</td><td>1,550.00</td><td>15 working days</td></tr></table>",
+        "bbox": [
+            215,
+            827,
+            864,
+            891
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan",
+        "bbox": [
+            405,
+            35,
+            544,
+            63
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Financial Services Authority",
+        "bbox": [
+            408,
+            64,
+            544,
+            74
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "FSA",
+        "bbox": [
+            545,
+            13,
+            633,
+            83
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Terms and Conditions of fast track application",
+        "text_level": 3,
+        "bbox": [
+            143,
+            27,
+            519,
+            42
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(i) Labuan FSA reserved the right to accept or decline any fast track application submitted.",
+            "(ii) The fast track processing timeline will only commence upon compliance with the following:"
+        ],
+        "bbox": [
+            171,
+            50,
+            875,
+            89
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(a) Submission of complete documentation;",
+            "(b) Payment of fast track processing fee; and",
+            "(c) Acceptance of fast track application by Labuan FSA."
+        ],
+        "bbox": [
+            205,
+            95,
+            629,
+            141
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(iii) The fast track processing fee will be forfeited should the applicant decided to withdraw after the fast track application has been accepted by Labuan FSA.",
+            "(iv) Labuan FSA reserved the right to change the status of the application from fast track to normal processing. The applicant will be notified and the fast track processing fee paid will be refunded accordingly"
+        ],
+        "bbox": [
+            171,
+            147,
+            883,
+            229
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "GENERAL INFORMATION",
+        "text_level": 2,
+        "bbox": [
+            403,
+            243,
+            591,
+            256
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 3,
+        "bbox": [
+            289,
+            257,
+            707,
+            268
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "1. Party responsible for submission of application<sup>1</sup>:",
+        "bbox": [
+            117,
+            282,
+            488,
+            297
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/65a575d1e9fef6f4335658bcd2da554518ced5f40c9cd3089a2aa986d423c28f.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            310,
+            215,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Applicant's Shareholder/Head Office",
+        "bbox": [
+            225,
+            315,
+            475,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/80fd70f1cb62303ff7b48ce8544b485af098fc7e6067d5c7a6549328976f9a48.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            509,
+            311,
+            552,
+            332
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan Trust Company",
+        "bbox": [
+            563,
+            316,
+            725,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/5d691f1679c152a599f4a558d01102c63af856ca7067819673c8213293c070b4.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            354,
+            215,
+            375
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Others: (please specify)",
+        "bbox": [
+            227,
+            354,
+            483,
+            383
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Officer responsible for submission of application:",
+        "bbox": [
+            117,
+            405,
+            491,
+            420
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Name",
+        "bbox": [
+            161,
+            452,
+            470,
+            467
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Company",
+        "bbox": [
+            511,
+            452,
+            834,
+            468
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Designation :",
+        "bbox": [
+            161,
+            494,
+            475,
+            510
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Contact No.:",
+        "bbox": [
+            511,
+            494,
+            833,
+            510
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Email",
+        "bbox": [
+            161,
+            530,
+            475,
+            542
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Signature :",
+        "bbox": [
+            511,
+            530,
+            831,
+            545
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "3. How do you know about Labuan IBFC?",
+        "bbox": [
+            117,
+            560,
+            429,
+            575
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/010e727a00c3c02506bbfff188bc62edd4f28c6a84d70c3f6e483a3ebc9f3736.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            590,
+            215,
+            611
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Website",
+        "bbox": [
+            227,
+            593,
+            284,
+            606
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/5e2001ff166ad85d85532a696fa6a30cd403d343ac2802ac4aa6cdb2f523b546.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            509,
+            592,
+            552,
+            614
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Newspaper/Media",
+        "bbox": [
+            563,
+            594,
+            689,
+            607
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/13caafa270b63478c07cd1b3121b77466f76512190caa6e19e1c7706214c58e4.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            623,
+            215,
+            643
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Previous Experience",
+        "bbox": [
+            227,
+            625,
+            369,
+            638
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/e87def1147311cefbf2ca61bfff61a34a541c976a1977d37af91df42083523aa.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            509,
+            625,
+            552,
+            646
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Business Referral",
+        "bbox": [
+            563,
+            626,
+            686,
+            638
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/5c4dd8961c1c6b8dcebd42bc5ffbd915437df318af77ecc76d282323aaae3783.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            657,
+            215,
+            678
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan Trust Company",
+        "bbox": [
+            227,
+            657,
+            388,
+            672
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/f1fc811b2094a0451e95b632c678806a6d5c83dd8532ee9f4da49283cc4c07c6.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            509,
+            657,
+            552,
+            679
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan IBFC Inc. Sdn. Bhd.2",
+        "bbox": [
+            563,
+            657,
+            761,
+            671
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/c77935c4c3d9b1bcce8f862a6e8917e7f39c9a6f8b3a0b15688d1052b768ece1.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            171,
+            690,
+            215,
+            710
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Others: (please specify)",
+        "bbox": [
+            227,
+            696,
+            483,
+            723
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Consent for disclosure of information to be used for marketing/promotional purposes by Labuan FSA and Labuan IBFC Inc. Sdn. Bhd.:",
+        "bbox": [
+            117,
+            729,
+            866,
+            757
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/7198d03f3f78445cdc5335ab3e74401cf10e55c7714e903574661f674c177483.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            176,
+            772,
+            218,
+            792
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Yes",
+        "bbox": [
+            227,
+            777,
+            254,
+            787
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/a1e2ef7b31e4106374f59c52b2ad144a4ddb18eaff8bf2ca6f800b1340b34a9b.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            511,
+            773,
+            553,
+            795
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "No",
+        "bbox": [
+            563,
+            779,
+            586,
+            792
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "IMPORTANT NOTES",
+        "bbox": [
+            416,
+            6,
+            584,
+            21
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_footnote",
+        "text": "<sup>1</sup> With the exception of the applicant's shareholder/head office, party responsible for submission of application is required to submit the duly completed Statutory Declaration as attached in Appendix VI.",
+        "bbox": [
+            151,
+            819,
+            906,
+            844
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_footnote",
+        "text": "2 Labuan IBFC Inc. Sdn. Bhd. was incorporated in July 2008 as the sole official Malaysian agency authorised to promote, market and develop the benefits of Labuan IBFC as the premier international business and financial centre in Asia Pacific.",
+        "bbox": [
+            151,
+            845,
+            870,
+            881
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan PSA",
+        "bbox": [
+            161,
+            915,
+            236,
+            931
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            841,
+            914,
+            852,
+            924
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON LABUAN SECURITIES LICENSEE AND CAPITAL MARKET BUSINESS",
+        "text_level": 1,
+        "bbox": [
+            174,
+            71,
+            846,
+            101
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Sections 32, 42, 43 and 56, Labuan Financial Services and Securities Act 2010",
+        "bbox": [
+            240,
+            103,
+            781,
+            116
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Sections 32, 45 and 57, Labuan Islamic Financial Services and Securities Act 2010",
+        "bbox": [
+            228,
+            117,
+            792,
+            128
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/59d6c8761a134ab404d18858c09d8ccaec38325e3491bb6264ef10471b8219e0.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART I: PROFILE OF APPLICANT\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Applicant\n (refers to the proposed Labuan company)</td><td colspan=\"3\"></td></tr><tr><td>b. Type of Licence Applied\n (Please tick (✓) the appropriate box)</td><td colspan=\"3\">□ Conventional □ Islamic\nPlease tick (✓) the regulated activities to be undertaken: \n□ Labuan Fund Manager\n(please complete Form LSCM and LSCM/1)\n□ Labuan Fund Administrator\n(please complete Form LSCM and LSCM/2)\n□ Labuan Securities Licensee\n(please complete Form LSCM and LSCM/2)\n□ Labuan Public Fund/ Issuance of Securities Token Offering\n(please complete Form LSCM and LSCM/3)</td></tr><tr><td>c. Nature of Legal Entity\n (Please tick (✓) the appropriate box)</td><td colspan=\"3\">□ Labuan Company - Subsidiary\n□ Foreign Labuan Company - Branch\n□ Other: \n(please specify)</td></tr><tr><td>d. Marketing Office to be Established\n (Please tick (✓) the appropriate box)</td><td colspan=\"3\">□ Yes □ No</td></tr><tr><td>e. Place of Operational Office to be Established in Labuan</td><td colspan=\"3\"></td></tr><tr><td>f. Proposed Paid-up Capital/Working Fund (please specify currency used)</td><td colspan=\"3\"></td></tr><tr><td rowspan=\"2\">Proposed Shareholder(s)\n(each of shareholder is required to complete Part II and/or Part III)</td><td>Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">h. Proposed Director(s) (each of Director is required to complete Part IV)</td><td>Name of Director(s)</td><td>Nationality</td><td>Position to be Held</td></tr><tr><td></td><td></td><td colspan=\"1\"></td></tr><tr><td rowspan=\"2\">i. Proposed Shariah Advisor(s) (each of Shariah Advisor is required to complete Part IV)</td><td>Name of Advisor(s)</td><td>Nationality</td><td>Years of Experience in Islamic Financial Business</td></tr><tr><td></td><td></td><td colspan=\"1\"></td></tr><tr><td rowspan=\"2\">l. Credit Rating (if applicable)</td><td>Agency</td><td>Rating</td><td>Date</td></tr><tr><td></td><td></td><td colspan=\"1\"></td></tr><tr><td>m. Any Other Information Relevant For Consideration of the Application</td><td colspan=\"3\"></td></tr></table>",
+        "bbox": [
+            117,
+            143,
+            879,
+            883
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            912,
+            823,
+            926
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3",
+        "bbox": [
+            841,
+            912,
+            852,
+            924
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            117,
+            56,
+            879,
+            565
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            934
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            912,
+            823,
+            926
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4",
+        "bbox": [
+            841,
+            912,
+            852,
+            924
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/ca77a983b24a57a6b26bc7c758320de0d54c65a78111e950ccc4a2434f9b2701.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"5\">PART II: PROFILE OF CORPORATE SHAREHOLDER(S)</td></tr><tr><td colspan=\"5\">Important: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Company/Head Office</td><td colspan=\"4\"></td></tr><tr><td>b. Company Address</td><td colspan=\"4\"></td></tr><tr><td>c. Nature and Type of Business</td><td colspan=\"4\"></td></tr><tr><td>d. Incorporation/Registration Number</td><td colspan=\"4\"></td></tr><tr><td>e. Date and Place of Incorporation/Registration</td><td colspan=\"4\"></td></tr><tr><td>f. Date, Type of Licence and Licence Number (if applicable)</td><td colspan=\"4\"></td></tr><tr><td>g. Home Supervisory Authority (if applicable)</td><td colspan=\"4\"></td></tr><tr><td rowspan=\"4\">h. Shareholders' Fund (please specify currency and amount for the latest three(3) years)</td><td>Year</td><td>Paid-up Capital</td><td>Retained Profits/Accumulated Losses</td><td>Other Reserves</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">i. Financial Performance (please specify currency and amount for the latest three (3) years)</td><td>Year</td><td>Total Assets</td><td>Total Liabilities</td><td>Profit/(Loss) Before Tax</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">j. Shareholder(s)</td><td colspan=\"2\">Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"2\">k. Board of Director(s)</td><td colspan=\"2\">Name of Director(s)</td><td>Nationality</td><td>Nature of Appointment (executive or non-executive)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"5\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S)\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Salutation</td><td colspan=\"4\"></td></tr><tr><td>b. Name\n(as per NRIC/passport)</td><td colspan=\"4\">Please tick (✓) if the individual is a PEP</td></tr><tr><td>c. Date and Place of Birth</td><td colspan=\"4\"></td></tr><tr><td>d. Gender</td><td colspan=\"4\">Male     Female</td></tr><tr><td>e. Nationality</td><td colspan=\"4\"></td></tr><tr><td>f. NRIC Details\n(for Malaysian)</td><td colspan=\"4\">Old IC No.: \nNRIC No.:</td></tr><tr><td>g. Passport Details\n(for Non-Malaysian)</td><td colspan=\"4\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□No   Yes\n(please provide certified true copy of the work permit)</td></tr><tr><td rowspan=\"7\">Financial Net worth\n(latest three months bank statement duly certified by the Bank or net worth statement prepared and certified by Qualified Accountant)</td><td colspan=\"4\">a) Net Worth Statement Certified by Qualified Accountant; or</td></tr><tr><td></td><td colspan=\"3\">Currency and Amount</td></tr><tr><td>Total Assets</td><td colspan=\"3\"></td></tr><tr><td>Total Liabilities</td><td colspan=\"3\"></td></tr><tr><td colspan=\"4\">b) Bank Statement/Online Bank Statement Certified by the Bank</td></tr><tr><td>Name of Bank</td><td>Type of Account</td><td>Statement Date</td><td colspan=\"1\">Currency and Amount</td></tr><tr><td></td><td></td><td></td><td colspan=\"1\"></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            872,
+            808
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "5",
+        "bbox": [
+            841,
+            914,
+            852,
+            924
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            117,
+            71,
+            849,
+            890
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "page_number",
+        "text": "6",
+        "bbox": [
+            841,
+            914,
+            852,
+            924
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/85c8d7954483cc6179030440a1ce5719b7e1ebca7f590500b430605a3023b260.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"7\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"7\">i. Curriculum Vitae of Individual Shareholder</td></tr><tr><td colspan=\"7\">Section A: Tertiary / Highest Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td colspan=\"3\">Name of School/College/University/Others</td><td colspan=\"2\">YearQualificationObtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/Certification</td><td colspan=\"3\">Name of Institution</td><td colspan=\"2\">YearQualificationObtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"2\">Type and Details of Membership</td><td colspan=\"3\">Name of Institution</td><td colspan=\"2\">YearMembershipObtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"3\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date(dd/mm/yy)</td><td rowspan=\"2\">Name of Employer</td><td rowspan=\"2\" colspan=\"2\">Designation</td><td rowspan=\"2\" colspan=\"2\">Key Areas ofResponsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"2\">Name of Corporation</td><td>Place of Incorporation</td><td colspan=\"2\">Date ofAppointment(dd/mm/yy)</td><td colspan=\"2\">Nature ofAppointment( executive or non-executive)</td></tr><tr><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>",
+        "bbox": [
+            116,
+            71,
+            849,
+            906
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            909,
+            238,
+            930
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            910,
+            821,
+            922
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "page_number",
+        "text": "7",
+        "bbox": [
+            841,
+            910,
+            849,
+            920
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "table",
+        "img_path": "images/d38950fb47d677a6baf9394e99899e9314881aa85725fa1c0478a50776b52831.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART IV: PROFILE OF DIRECTOR(S)/SHARIAH ADVISER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be Held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name(as per NRIC/passport)</td><td colspan=\"3\">Please tick (✓) if the individual is a PEP</td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details(for Malaysian)</td><td colspan=\"3\">Old IC No.:NRIC No.:</td></tr><tr><td>h.Passport Details(for Non-Malaysian)</td><td colspan=\"3\">Passport No.:Expiry Date:Country of Issue:Issuing Authority:Length of residence in Malaysia:Any work permit applied prior to this application:No Yes(please provide certified true copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Shariah Advisor</td></tr><tr><td colspan=\"4\">Section A: Tertiary / Highest Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of College/University/Others</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>",
+        "bbox": [
+            117,
+            85,
+            848,
+            895
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_number",
+        "text": "8",
+        "bbox": [
+            841,
+            914,
+            852,
+            924
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "images/2454aa34e4deef4a35846fc05630e9d9bba01f41388234b2f9e2a646e9da0d35.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"7\">PART IV: PROFILE OF DIRECTOR(S)/SHARIAH ADVISOR(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"3\">Name of Institution</td><td>YearMembershipObtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer3</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\" colspan=\"2\">Key Areas ofResponsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"3\">Name of Corporation</td><td colspan=\"2\">Place of Incorporation</td><td>Date of Appointment(dd/mm/yy)</td><td>Nature ofAppointment( executive ornon-executive)</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td><td></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            848,
+            604
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "page_footnote",
+        "text": "If the position applied for requires approval from relevant authority, please give detail of the approving authority (applicable to current employment only).",
+        "bbox": [
+            147,
+            863,
+            834,
+            890
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            912,
+            823,
+            926
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "page_number",
+        "text": "9",
+        "bbox": [
+            841,
+            912,
+            852,
+            924
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON BUSINESS AS FUND MANAGER LICENCE",
+        "text_level": 1,
+        "bbox": [
+            96,
+            71,
+            857,
+            88
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "images/8387511851e3f6ee7a44c4d926d9fec9e8cf4193c7474c2ba9eb210866ac7ee0.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">PART V: PARTICULARS OF THE APPLICATION\nImportant: All fields are mandatory and should not be left blank</td><td></td></tr><tr><td colspan=\"6\">Section A: Business Plan (Please fill in the details, for additional information please provide copy of business, where applicable)</td><td></td></tr><tr><td>a.</td><td>Objective of Establishment</td><td colspan=\"4\"></td><td></td></tr><tr><td>b.</td><td>Type of Products/Services</td><td colspan=\"4\"></td><td></td></tr><tr><td rowspan=\"3\">c.</td><td rowspan=\"3\">Target Market\n(to specify whether it is individual and/or corporate client and the percentage)</td><td>Target Market</td><td>%</td><td rowspan=\"3\" colspan=\"2\"></td><td></td></tr><tr><td>Individual</td><td></td><td></td></tr><tr><td>Corporate Client</td><td></td><td></td></tr><tr><td rowspan=\"3\">d</td><td rowspan=\"3\">Territorial Scope\n(to specify the country and percentage)</td><td>Territorial Scope</td><td>%</td><td rowspan=\"3\" colspan=\"2\"></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>e.</td><td colspan=\"5\">Business Operational and Strategic Plan / Structure of Fund Management Services\n(included but not limited to the following) - best to be presented in schematic diagram</td><td></td></tr><tr><td>f.</td><td>Type of fund management</td><td colspan=\"4\"></td><td></td></tr><tr><td>g.</td><td>Investment advise</td><td colspan=\"4\"></td><td></td></tr><tr><td>h.</td><td>Management service</td><td colspan=\"4\"></td><td></td></tr><tr><td>i.</td><td>Administrative service</td><td colspan=\"4\"></td><td></td></tr><tr><td>j.</td><td>Dealing in securities</td><td colspan=\"4\"></td><td></td></tr><tr><td>k.</td><td>Marketing Strategy</td><td colspan=\"4\"></td><td></td></tr><tr><td rowspan=\"6\">l.</td><td rowspan=\"6\">Manpower Planning</td><td>Category</td><td>Malaysian</td><td>Non-Malaysian</td><td>Total</td><td>Expected Remuneration</td></tr><tr><td>(a) Managerial &amp; Professional</td><td></td><td></td><td></td><td></td></tr><tr><td>(b) Technical &amp; Supervisory</td><td></td><td></td><td></td><td></td></tr><tr><td>(c) Production / Operation Workers - Skilled - Unskilled</td><td></td><td></td><td></td><td></td></tr><tr><td>(d) Clerical &amp; General Workers</td><td></td><td></td><td></td><td></td></tr><tr><td>Total (a)+(b)+(c)+(d)</td><td></td><td></td><td></td><td></td></tr><tr><td>m.</td><td>Functional Structure of Management Office in Labuan</td><td colspan=\"5\"></td></tr><tr><td>n.</td><td>Functional Structure of MarketingOffice (if any)</td><td colspan=\"5\"></td></tr></table>",
+        "bbox": [
+            96,
+            104,
+            895,
+            858
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            862,
+            238,
+            882
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            862,
+            821,
+            875
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "page_number",
+        "text": "10",
+        "bbox": [
+            841,
+            863,
+            859,
+            875
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "images/8793e60ea04845c6ccedc61a496dda7777bd65ca9955e421b3a2ee07462709df.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">Section B: Three Years Financial Projection (*fill in where applicable)</td></tr><tr><td colspan=\"4\">Currency:</td></tr><tr><td>Statement of Comprehensive Income</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>Asset Under Management (AUM)</td><td></td><td></td><td></td></tr><tr><td>Revenue</td><td></td><td></td><td></td></tr><tr><td>- Management services</td><td></td><td></td><td></td></tr><tr><td>- Investment advices</td><td></td><td></td><td></td></tr><tr><td>- Administrative services</td><td></td><td></td><td></td></tr><tr><td>- Dealing in securities</td><td></td><td></td><td></td></tr><tr><td>Other Income</td><td></td><td></td><td></td></tr><tr><td>Gross Income</td><td></td><td></td><td></td></tr><tr><td>Realised Foreign ExchangeGain/(Loss)</td><td></td><td></td><td></td></tr><tr><td>Unrealised Foreign ExchangeGain/(Loss)</td><td></td><td></td><td></td></tr><tr><td>General and Administrative Expenses</td><td></td><td></td><td></td></tr><tr><td>Income/(Loss) Before Tax</td><td></td><td></td><td></td></tr><tr><td>Tax</td><td></td><td></td><td></td></tr><tr><td>Income/(Loss) After Tax</td><td></td><td></td><td></td></tr><tr><td>Statement of Financial Position</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td colspan=\"4\">ASSETS</td></tr><tr><td>Non-current assets</td><td></td><td></td><td></td></tr><tr><td>Current assets</td><td></td><td></td><td></td></tr><tr><td>Total Assets</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">LIABILITIES</td></tr><tr><td>Long term liabilities</td><td></td><td></td><td></td></tr><tr><td>Short term liabilities</td><td></td><td></td><td></td></tr><tr><td>Total Liabilities</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">SHAREHOLDERS&#x27; FUNDS / HEAD OFFICE ACCOUNT</td></tr><tr><td>Head office account / paid upcapital</td><td></td><td></td><td></td></tr><tr><td>Retained profits / accumulatedlosses</td><td></td><td></td><td></td></tr><tr><td>Other reserves</td><td></td><td></td><td></td></tr><tr><td>Total Shareholders&#x27; Funds/Head Office Account</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Note: \n1. Please ensure the three years projection is realistic and reasonable.\n2. Please provide basis of assumption in deriving to the projected figure.\n3. The above information is a guidance for the applicant to complete the financial projection.</td></tr></table>",
+        "bbox": [
+            84,
+            71,
+            906,
+            801
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "page_number",
+        "text": "11",
+        "bbox": [
+            841,
+            912,
+            857,
+            924
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "table",
+        "img_path": "images/f6fa5026c16d819897f56fc29f5e899600216e4755c9c3061442fff33783b2a8.jpg",
+        "table_caption": [
+            "APPLICATION FOR LICENCE TO CARRY ON BUSINESS AS SECURITIES LICENSEE/ FUND ADMINISTRATOR"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">PART VI:PARTICULARS OF THE APPLICATION\nImportant:All fields are mandatory and should not be left blank</td><td></td></tr><tr><td colspan=\"6\">Section A: Business Plan (Please fill in the details,where applicable)</td><td></td></tr><tr><td>a.</td><td>Objective of Establishment</td><td colspan=\"4\"></td><td></td></tr><tr><td>b.</td><td>Type of Products/Services</td><td colspan=\"4\"></td><td></td></tr><tr><td rowspan=\"3\">c.</td><td rowspan=\"3\">Target Market (to specify whether it is individual and/or corporate client and the percentage)</td><td colspan=\"2\">Territorial Scope</td><td>%</td><td rowspan=\"3\"></td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"3\">d.</td><td rowspan=\"3\">Territorial Scope (to specify the country and percentage)</td><td colspan=\"2\">Territorial Scope</td><td>%</td><td rowspan=\"3\"></td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>e.</td><td colspan=\"5\">Business Operational and Strategic Plan (included but not limited to the following) – best presented in schematic diagram</td><td></td></tr><tr><td>•</td><td>Investment services</td><td colspan=\"4\"></td><td></td></tr><tr><td>•</td><td>Dealing in Securities</td><td colspan=\"4\"></td><td></td></tr><tr><td>•</td><td>Administration Services</td><td colspan=\"4\"></td><td></td></tr><tr><td>f.</td><td>Marketing Strategy</td><td colspan=\"4\"></td><td></td></tr><tr><td rowspan=\"6\">g.</td><td rowspan=\"6\">Manpower Planning</td><td>Category</td><td>Malaysian</td><td>Non-Malaysian</td><td>Total</td><td>Expected Remuneration</td></tr><tr><td>(a)Managerial &amp; Professional</td><td></td><td></td><td></td><td></td></tr><tr><td>(b)Technical &amp; Supervisory</td><td></td><td></td><td></td><td></td></tr><tr><td>(d)Production / Operation Workers - Skilled - Unskilled</td><td></td><td></td><td></td><td></td></tr><tr><td>(d) Clerical &amp; General Workers</td><td></td><td></td><td></td><td></td></tr><tr><td>Total (a)+(b)+(c)+(d)</td><td></td><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            84,
+            145,
+            906,
+            863
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "page_number",
+        "text": "12",
+        "bbox": [
+            844,
+            912,
+            859,
+            922
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "table",
+        "img_path": "images/8a04106f95f6365d8e6282679fd3994ddd51750e69e244603d7a719cf3b8c043.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"2\">PART VI:PARTICULARS OF THE APPLICATION\nImportant:All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"2\">Section A:Business Plan (Please fill in the details,where applicable)</td></tr><tr><td>h. Functional Structure of\n  Management Office in\n  Labuan</td><td></td></tr><tr><td>i. Functional Structure of\n  MarketingOffice</td><td></td></tr></table>",
+        "bbox": [
+            86,
+            56,
+            906,
+            223
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            869,
+            56
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            911,
+            238,
+            931
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "page_number",
+        "text": "13",
+        "bbox": [
+            844,
+            914,
+            857,
+            922
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "table",
+        "img_path": "images/77c843be568bc77d4e198c69e9b2381512fb0afdf4a79e406fddbf40f685a549.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">Section B: Three Years Financial Projection (*fill in where applicable)</td></tr><tr><td colspan=\"4\">Currency:</td></tr><tr><td>Statement of Comprehensive Income</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>Revenue</td><td></td><td></td><td></td></tr><tr><td>- Investment advices</td><td></td><td></td><td></td></tr><tr><td>- Administrative services</td><td></td><td></td><td></td></tr><tr><td>- Dealing in securities</td><td></td><td></td><td></td></tr><tr><td>Other Income</td><td></td><td></td><td></td></tr><tr><td>Gross Income</td><td></td><td></td><td></td></tr><tr><td>Realised Foreign Exchange Gain/(Loss)</td><td></td><td></td><td></td></tr><tr><td>Unrealised Foreign ExchangeGain/(Loss)</td><td></td><td></td><td></td></tr><tr><td>General and Administrative Expenses</td><td></td><td></td><td></td></tr><tr><td>Income/(Loss) Before Tax</td><td></td><td></td><td></td></tr><tr><td>Tax</td><td></td><td></td><td></td></tr><tr><td>Income/(Loss) After Tax</td><td></td><td></td><td></td></tr><tr><td>Statement of Financial Position</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td colspan=\"4\">ASSETS</td></tr><tr><td>Non-current assets</td><td></td><td></td><td></td></tr><tr><td>Current assets</td><td></td><td></td><td></td></tr><tr><td>Total Assets</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">LIABILITIES</td></tr><tr><td>Long term liabilities</td><td></td><td></td><td></td></tr><tr><td>Short term liabilities</td><td></td><td></td><td></td></tr><tr><td>Total Liabilities</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">SHAREHOLDERS&#x27; FUNDS / HEAD OFFICE ACCOUNT</td></tr><tr><td>Head office account / paid upcapital</td><td></td><td></td><td></td></tr><tr><td>Retained profits / accumulatedlosses</td><td></td><td></td><td></td></tr><tr><td>Other reserves</td><td></td><td></td><td></td></tr><tr><td>Total Shareholders&#x27; Funds / HeadOffice Account</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Note:</td></tr><tr><td colspan=\"4\">1. Please ensure the three years projection is realistic and reasonable.2. Please provide basis of assumption in deriving to the projected figure.3. The above information is a guidance for the applicant to complete the financial projection.</td></tr></table>",
+        "bbox": [
+            84,
+            71,
+            906,
+            882
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            883,
+            238,
+            906
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Busines",
+        "bbox": [
+            254,
+            885,
+            815,
+            898
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "page_number",
+        "text": "13",
+        "bbox": [
+            841,
+            885,
+            859,
+            896
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "table",
+        "img_path": "images/129ce52bb973448a9dfc50dd4686eb6f0cbb9b96ffac3bde4f6600309e2bbcec.jpg",
+        "table_caption": [
+            "APPLICATION FOR REGISTRATION OF PUBLIC FUND/ISSUANCE OF SECURITIESTOKEN OFFERING"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"2\">PART VII: PARTICULARS OF THE APPLICATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"2\">Section A: Information on the fund/ Securities Token Offering</td></tr><tr><td>a. Name of Fund/issuer</td><td></td></tr><tr><td>b. Fund Category</td><td></td></tr><tr><td>c. Fund Type\n (To specify whether it is open-ended or close-ended fund)</td><td>Open-EndedClose-\nEnd</td></tr><tr><td>d. Size of Fund</td><td></td></tr><tr><td>e. Term of Fund</td><td></td></tr><tr><td>f. Unit Value</td><td></td></tr><tr><td>g. Minimum Subscription</td><td></td></tr><tr><td>h. Rate of Return</td><td></td></tr><tr><td>i. Launching Date</td><td></td></tr><tr><td>j. Trustee</td><td></td></tr><tr><td>k. Fund Manager</td><td></td></tr><tr><td>l. Fund Administrator</td><td></td></tr><tr><td>m. Custodian</td><td></td></tr><tr><td>n. Promoter/agent\n(each promoter is required to complete Section C and/or Section D)</td><td></td></tr><tr><td>o. Place of Business and Address for Service in Labuan</td><td></td></tr><tr><td>p. Place of Business and Address Outside Labuan</td><td></td></tr><tr><td colspan=\"2\">Section B: Business Plan</td></tr><tr><td>a. Target Market/Investor Profile</td><td></td></tr><tr><td>b. Territorial Scope\n(by country and percentage)</td><td></td></tr><tr><td>c. Investment Objective</td><td></td></tr></table>",
+        "bbox": [
+            96,
+            118,
+            906,
+            883
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "page_number",
+        "text": "15",
+        "bbox": [
+            844,
+            912,
+            857,
+            922
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "table",
+        "img_path": "images/e83abb538bd6de00ec8f65d2c909878749faa0b9967c5912433c6b5b23b20cfb.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">PART VII: PARTICULARS OF THE APPLICATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>d. Investment Policies and Restriction</td><td colspan=\"5\"></td></tr><tr><td>e. Income DistributionPolicies</td><td colspan=\"5\"></td></tr><tr><td colspan=\"6\">Section B: Business Plan</td></tr><tr><td>f. Underwriting Arrangement</td><td colspan=\"5\"></td></tr><tr><td>g. Fees and Charges</td><td colspan=\"5\"></td></tr><tr><td>h. Marketing Strategy</td><td colspan=\"5\"></td></tr><tr><td>i. Marketing Resources or Distribution Channel</td><td colspan=\"5\"></td></tr><tr><td colspan=\"6\">Section C: Information of the Promoter (Corporate Entity)</td></tr><tr><td>a. Name of Company</td><td colspan=\"5\"></td></tr><tr><td>b. Company Address</td><td colspan=\"5\"></td></tr><tr><td>c. Nature and Type of Business</td><td colspan=\"5\"></td></tr><tr><td>d. Incorporation/Registration Number</td><td colspan=\"5\"></td></tr><tr><td>e. Date and Place of Incorporation/Registration</td><td colspan=\"5\"></td></tr><tr><td>f. Date, Type of Licence andLicence Number (if applicable)</td><td colspan=\"5\"></td></tr><tr><td>g. Home Supervisory Authority (if applicable)</td><td colspan=\"5\"></td></tr><tr><td>h. Issued and Paid-up Capital/Working Fund (please specify currency used)</td><td colspan=\"5\"></td></tr><tr><td rowspan=\"4\">Financial Performance (please specify currency and amount for the latest three (3) years)</td><td>Years</td><td>Total asset</td><td>Total Liabilities</td><td>Total Equity</td><td>Profit/loss before Tax</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            96,
+            56,
+            906,
+            898
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            931
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "page_number",
+        "text": "16",
+        "bbox": [
+            844,
+            914,
+            857,
+            922
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "table",
+        "img_path": "images/a1b94cbe388f5715143971b89f1c35dbba4e7fe936d5fb902e153d5b73915f88.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART VII: PARTICULARS OF THE APPLICATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td rowspan=\"2\">j. Shareholder(s)</td><td>Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">k Board of Director(s)</td><td>Name of Director(s)</td><td>Nationality</td><td>Nature of Appointment (executive or non-executive)</td></tr><tr><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Section D: Information of the Promoter (Individual)</td></tr><tr><td>a. Salutation</td><td colspan=\"3\"></td></tr><tr><td>b. Name (as per NRIC/passport)</td><td colspan=\"3\">Please tick (✓) if the individual is a PEP</td></tr><tr><td>c. Date and Place of Birth</td><td>Male</td><td colspan=\"2\">Female</td></tr><tr><td>d. Gender</td><td colspan=\"3\"></td></tr><tr><td>e. Nationality</td><td colspan=\"3\"></td></tr><tr><td>f. NRIC Details (for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>g. Passport Details (for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority:</td></tr><tr><td>h. Curriculum Vitae</td><td colspan=\"3\">Please provide a comprehensive resume of the promoter, which includes:\na) Education background\nb) Professional qualification\nc) Membership of professional body(s)\nd) Past and current work experience</td></tr></table>",
+        "bbox": [
+            96,
+            58,
+            906,
+            743
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM/3",
+        "bbox": [
+            741,
+            42,
+            869,
+            56
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            236,
+            931
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            912,
+            821,
+            926
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "page_number",
+        "text": "17",
+        "bbox": [
+            844,
+            914,
+            857,
+            922
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "PART VII : SUPPORTING DOCUMENTS",
+        "bbox": [
+            367,
+            74,
+            651,
+            85
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            223,
+            87,
+            797,
+            101
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "No",
+        "bbox": [
+            104,
+            116,
+            130,
+            128
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Documents",
+        "bbox": [
+            147,
+            116,
+            233,
+            128
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "For Applicant",
+        "bbox": [
+            727,
+            109,
+            803,
+            136
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "For Labuan FSA",
+        "bbox": [
+            841,
+            102,
+            895,
+            141
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "table",
+        "img_path": "images/2bf22b5219623e14278c7587d2a958b63a1cb3763991467bee96f1a3fc89be6f.jpg",
+        "table_caption": [
+            "Part II: Corporate Shareholder(s)/Issuer"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td rowspan=\"7\">1.</td><td>Detailed information of applicant's shareholder(s) or head office: \na) Group corporate shareholding structure including the applicant</td><td></td><td></td></tr><tr><td>b) Certified true copy of certificate of incorporation</td><td></td><td></td></tr><tr><td>c) Certified true copy of certificate of licence granted by relevant authority(s) in its home country - (if applicable)</td><td></td><td></td></tr><tr><td>d) Letter of awareness or approvals of authorities from the home country, if applicable, which includes: \n  (i) Statement of no objection towards the establishment of a subsidiary or branch in Labuan. \n  (ii) Confirmation that the applicant's shareholder or head office is of good financial standing. \n  (iii) Agreement to co-operate in the supervision of the proposed subsidiary or branch in Labuan in terms applicable regulatory standards.</td><td></td><td></td></tr><tr><td>e) Certified true copy of board resolution or minutes of general meeting which approved the setting up of the applicant</td><td></td><td></td></tr><tr><td>f) Certified true copy of memorandum &amp; articles of association</td><td></td><td></td></tr><tr><td>g) Copy of two (2) years audited financial statements/annual reports</td><td></td><td></td></tr><tr><td>2.</td><td>Letter of guarantee or undertaking by: \n  a) applicant's shareholder, if applicant is a subsidiary (format as per AppendixI) \n  b) applicant's head office, if applicant is a branch (format as per Appendix II)</td><td></td><td></td></tr><tr><td colspan=\"4\">Part III: Individual Shareholder(s)</td></tr><tr><td>1.</td><td>Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>2.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>3.</td><td>Two (2) referral letters from corporations, institutions and/or professional bodies</td><td></td><td></td></tr><tr><td>4.</td><td>Net worth statement certified by qualified accountant or certified true copy of the latest three months of bank statements indicating the amount of funds available</td><td></td><td></td></tr><tr><td>5.</td><td>Letter of Guarantee by Individual Shareholder as per Appendix III</td><td></td><td></td></tr><tr><td>6.</td><td>Statutory Declaration by Shareholder/Director on Fit and Proper Person as per Appendix IV.</td><td></td><td></td></tr><tr><td>7.</td><td>Enhance Due Diligence report from the trust company / service provider, if applicable.</td><td></td><td></td></tr><tr><td colspan=\"4\">Part IV: Director(s)/Shariah Advisor</td></tr><tr><td>1.</td><td>Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>2.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>3.</td><td>Two (2) referral letters from corporation, institutions and/or professional bodies (not applicable for appointment within the group of companies)</td><td></td><td></td></tr><tr><td>4.</td><td>Statutory Declaration by Shareholder/Director on Fit and Proper Person as per Appendix IV.</td><td></td><td></td></tr><tr><td>5.</td><td>Enhance Due Diligence report from the trust company / service provider, if applicable.</td><td></td><td></td></tr><tr><td colspan=\"4\">PART VII: SUPPORTING DOCUMENTS\n(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)</td></tr><tr><td colspan=\"2\">No Documents</td><td>For Applicant</td><td>For Labuan FSA</td></tr><tr><td colspan=\"4\">Other Supporting Documents</td></tr><tr><td>1.</td><td>Proposed organisation chart of the applicant</td><td></td><td></td></tr><tr><td>2.</td><td>Declaration of True and Correct Information Submitted as per Appendix V.</td><td></td><td></td></tr><tr><td>3.</td><td>Statutory Declaration by Services Provider Responsible for Submission of Application as per Appendix VI.</td><td></td><td></td></tr><tr><td>4.</td><td>Framework on Know-Your-Customers' policy and compliance to the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001</td><td></td><td></td></tr><tr><td>5.</td><td>Risk Management and Internal Control Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>6.</td><td>Investment Management Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>7.</td><td>Draft services management agreement between the applicant and the service provider for function to be undertaken by other parties.</td><td></td><td></td></tr><tr><td>8.</td><td>Draft of prospectus/White Paper (only applicable to Public fund Securities Token Offering)</td><td></td><td></td></tr><tr><td>9.</td><td>Duly signed Secrecy Declaration by the director(s) (only applicable to public fund)</td><td></td><td></td></tr></table>",
+        "bbox": [
+            99,
+            172,
+            919,
+            901
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA",
+        "bbox": [
+            161,
+            915,
+            236,
+            931
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "page_number",
+        "text": "18",
+        "bbox": [
+            844,
+            914,
+            857,
+            922
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            96,
+            71,
+            859,
+            460
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            238,
+            933
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            256,
+            914,
+            821,
+            926
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "page_number",
+        "text": "19",
+        "bbox": [
+            844,
+            912,
+            857,
+            922
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Name and Address of Corporate Shareholder",
+        "bbox": [
+            338,
+            114,
+            679,
+            130
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "[Date]",
+        "bbox": [
+            147,
+            142,
+            197,
+            157
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "The Director General",
+        "bbox": [
+            148,
+            167,
+            308,
+            181
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority  \nLevel 17, Main Office Tower  \nFinancial Park Labuan, Jalan Merdeka  \n87000 Federal Territory of Labuan  \nMalaysia",
+        "bbox": [
+            147,
+            212,
+            441,
+            281
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Dear Sir,",
+        "bbox": [
+            147,
+            292,
+            218,
+            306
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "LETTER OF GUARANTEE",
+        "text_level": 2,
+        "bbox": [
+            147,
+            319,
+            357,
+            333
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "The application by [name of applicant], a subsidiary of [name of shareholder] to Labuan FSA dated [date] for a licence to carry on Labuan [type of licence] business under the provisions of theLabuan Financial Services and Securities Act 2010/Labuan Islamic Financial Services and Securities Act 2010 [delete whichever not applicable] (hereinafter referred to as \"the Act\") refers.",
+        "bbox": [
+            145,
+            347,
+            874,
+            404
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "We, being the shareholder, do hereby irrevocably and unconditionally guarantee and undertake in respect of [name of applicant]'s Labuan [type of licence] business, that during validity of [name of applicant]'s license and its operation in Labuan IBFC, it shall comply with the following:",
+        "bbox": [
+            145,
+            415,
+            874,
+            460
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "a. The financial obligations and requirements imposed under the Act on it and shall meet its liabilities in respect of its Labuan [type of licence] business.",
+            "b. The requirement to obtain a prior written approval from Labuan FSA for:"
+        ],
+        "bbox": [
+            174,
+            470,
+            870,
+            525
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "i. any change of [name of applicant's shareholder who holds ten per cent or more of its paid-up capital.",
+            "ii. any appointment of [name of applicant]'s director, whom shall be of a fit and proper person.",
+            "iii. any amendment or alteration to any of [name of applicant]'s constituent documents."
+        ],
+        "bbox": [
+            200,
+            535,
+            869,
+            640
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "c. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] business.",
+        "bbox": [
+            174,
+            651,
+            874,
+            694
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "We shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA, and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of applicant]and the Company.",
+        "bbox": [
+            145,
+            704,
+            874,
+            789
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Yours faithfully,",
+        "bbox": [
+            147,
+            799,
+            266,
+            815
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "For and on behalf of [Name of shareholder]",
+        "bbox": [
+            147,
+            825,
+            318,
+            854
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "FORM LSCM",
+        "bbox": [
+            756,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "Appendix I",
+        "bbox": [
+            781,
+            87,
+            870,
+            103
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Name",
+        "bbox": [
+            148,
+            893,
+            205,
+            906
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            161,
+            912,
+            236,
+            931
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Securities Licensee and Capital Market Business",
+        "bbox": [
+            254,
+            912,
+            823,
+            926
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "page_number",
+        "text": "20",
+        "bbox": [
+            841,
+            912,
+            857,
+            922
+        ],
+        "page_idx": 19
+    }
+]

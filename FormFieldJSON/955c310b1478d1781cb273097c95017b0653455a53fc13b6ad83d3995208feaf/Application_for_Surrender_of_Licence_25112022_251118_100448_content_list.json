@@ -1,0 +1,427 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR SURRENDER OF LICENCE",
+        "text_level": 1,
+        "bbox": [
+            284,
+            146,
+            697,
+            162
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name of Labuan Company :",
+        "bbox": [
+            109,
+            184,
+            396,
+            200
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Type of Licence",
+        "bbox": [
+            109,
+            214,
+            394,
+            231
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA",
+        "text_level": 2,
+        "bbox": [
+            109,
+            244,
+            889,
+            273
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            109,
+            275,
+            746,
+            288
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/7a8081c1abdf8a7a6ec797aaadd3651d7cfa6daf7e640b95016ead89d181ee84.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>No.</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>1.</td><td>Certified true copy of the board resolution or extract of minutes of board meeting on their intention to surrender the licence</td><td></td><td></td></tr><tr><td>2.</td><td>Latest audited financial statements</td><td></td><td></td></tr><tr><td>3.</td><td>Latest management account signed and duly verified by the Director/Principal Officer of the licensed entity</td><td></td><td></td></tr><tr><td>4.</td><td>Letter of Guarantee/Undertaking from the shareholder/head office to undertake all outstanding liabilities</td><td></td><td></td></tr><tr><td>5.</td><td>Original copy of the licence certificate</td><td></td><td></td></tr><tr><td>6.</td><td>Duly completed Statutory Declaration of True and Correct Information Submitted (as per Appendix I)</td><td></td><td></td></tr></table>",
+        "bbox": [
+            121,
+            293,
+            910,
+            565
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Notes:",
+        "text_level": 2,
+        "bbox": [
+            110,
+            571,
+            173,
+            588
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.",
+            "3) The checklist serves as a general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.",
+            "4) Management account must comply with section 169(3) of the Labuan Financial Services and Securities Act 2010"
+        ],
+        "bbox": [
+            109,
+            594,
+            900,
+            728
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Officer responsible for information submission:",
+        "bbox": [
+            109,
+            758,
+            494,
+            772
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Signature: ________ Company: ________",
+        "bbox": [
+            112,
+            776,
+            907,
+            797
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name: Contact No.:",
+        "bbox": [
+            112,
+            800,
+            907,
+            822
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Designation: Email:",
+        "bbox": [
+            112,
+            822,
+            907,
+            847
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan",
+        "bbox": [
+            398,
+            80,
+            547,
+            108
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "FSA",
+        "bbox": [
+            549,
+            57,
+            643,
+            128
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Financial Services Authority",
+        "bbox": [
+            400,
+            110,
+            547,
+            118
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            923,
+            243,
+            946
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Application for Surrender of Licence",
+        "bbox": [
+            605,
+            909,
+            850,
+            923
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1",
+        "bbox": [
+            862,
+            908,
+            878,
+            920
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED Important: All fields are mandatory and should not be left blank",
+        "text_level": 1,
+        "bbox": [
+            178,
+            101,
+            794,
+            133
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "I .NRIC/Passport No:",
+        "bbox": [
+            102,
+            179,
+            868,
+            195
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "the (position) of.. (name of",
+        "bbox": [
+            102,
+            198,
+            868,
+            212
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "company), do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            102,
+            215,
+            579,
+            231
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable.",
+            "2. I am aware that if I make any misrepresentation herein this application, it is an offence punishable pursuant to Section 192 of the LFSSA/Section 152 of the LIFSSA.",
+            "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        ],
+        "bbox": [
+            100,
+            237,
+            868,
+            390
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions.",
+        "bbox": [
+            100,
+            414,
+            868,
+            450
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above",
+        "bbox": [
+            100,
+            480,
+            500,
+            495
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "named",
+        "bbox": [
+            102,
+            502,
+            406,
+            519
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            102,
+            525,
+            406,
+            541
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            102,
+            546,
+            410,
+            563
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "This ....day of 20.",
+        "bbox": [
+            102,
+            570,
+            413,
+            587
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            102,
+            608,
+            196,
+            623
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            638,
+            548,
+            722,
+            564
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "···",
+        "bbox": [
+            102,
+            690,
+            300,
+            699
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            102,
+            699,
+            431,
+            714
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX I",
+        "bbox": [
+            778,
+            68,
+            887,
+            84
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Application for Surrender of Licence",
+        "bbox": [
+            606,
+            910,
+            850,
+            923
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            865,
+            910,
+            877,
+            922
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            923,
+            243,
+            948
+        ],
+        "page_idx": 1
+    }
+]

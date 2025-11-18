@@ -116,7 +116,7 @@ export function AdminFormCreatePage() {
           fields: [
             {
               fieldId: 'field-1',
-              fieldType: 'text',
+              fieldType: 'text-input',
               fieldName: 'example_field',
               label: 'Example Field',
               placeholder: 'Enter value',

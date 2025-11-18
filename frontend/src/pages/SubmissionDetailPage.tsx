@@ -320,7 +320,7 @@ export function SubmissionDetailPage() {
           )}
           {submission.status === 'rejected' && (
             <Link
-              to={`/forms/${submission.formId}`}
+              to={`/forms/${submission.formId}?resubmitId=${submission.submissionId}`}
               className="btn btn-primary text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 w-full sm:w-auto inline-block text-center"
             >
               Resubmit Application

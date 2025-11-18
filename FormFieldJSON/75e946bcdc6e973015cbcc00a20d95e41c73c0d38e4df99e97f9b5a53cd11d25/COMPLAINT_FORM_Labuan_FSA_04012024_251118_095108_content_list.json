@@ -1,0 +1,459 @@
+[
+    {
+        "type": "text",
+        "text": "COMPLAINT FORM",
+        "text_level": 1,
+        "bbox": [
+            368,
+            83,
+            897,
+            126
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Please ensure to complete all required information on this form in full.",
+        "bbox": [
+            50,
+            158,
+            527,
+            174
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. YOUR INFORMATION",
+        "text_level": 2,
+        "bbox": [
+            52,
+            200,
+            228,
+            215
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "□Mr. □Mrs. □Miss □Ms.",
+        "bbox": [
+            92,
+            227,
+            339,
+            243
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name",
+        "bbox": [
+            50,
+            254,
+            470,
+            269
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "NRIC/ID/Passport",
+        "bbox": [
+            50,
+            280,
+            470,
+            296
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Address",
+        "bbox": [
+            50,
+            306,
+            470,
+            322
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "City State",
+        "bbox": [
+            50,
+            332,
+            467,
+            348
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "ZIP Country",
+        "bbox": [
+            50,
+            357,
+            465,
+            373
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Age 18-29□30-39□40-49□50-59□60+",
+        "bbox": [
+            50,
+            382,
+            403,
+            399
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Phone",
+        "bbox": [
+            50,
+            407,
+            467,
+            424
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "E-mail",
+        "bbox": [
+            50,
+            434,
+            467,
+            450
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "2. PARTICULARS OF YOUR COMPLAINT",
+        "text_level": 2,
+        "bbox": [
+            505,
+            200,
+            805,
+            215
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name/Entity",
+        "bbox": [
+            507,
+            228,
+            931,
+            244
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Website",
+        "bbox": [
+            507,
+            254,
+            924,
+            269
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Address",
+        "bbox": [
+            507,
+            280,
+            924,
+            296
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "City State",
+        "bbox": [
+            507,
+            305,
+            931,
+            322
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "ZIP Country",
+        "bbox": [
+            507,
+            331,
+            929,
+            347
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Phone",
+        "bbox": [
+            507,
+            357,
+            929,
+            373
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "E-mail",
+        "bbox": [
+            507,
+            382,
+            929,
+            399
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Person you dealt with",
+        "bbox": [
+            507,
+            409,
+            929,
+            425
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "3. AMOUNT IN DISPUTE/ASSOCIATED WITH YOUR LOSS",
+        "text_level": 2,
+        "bbox": [
+            50,
+            470,
+            467,
+            487
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "$",
+        "bbox": [
+            490,
+            472,
+            907,
+            489
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "4. WHEN DID THE TRANSACTION/INCIDENT OCCURED?",
+        "text_level": 2,
+        "bbox": [
+            50,
+            502,
+            463,
+            519
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Date Time",
+        "bbox": [
+            531,
+            505,
+            800,
+            520
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "5. WHERE DID THE TRANSACTION/INCIDENT YOU ARE COMPLAINING ABOUT TOOK PLACE (Check the applicable box)",
+        "text_level": 2,
+        "bbox": [
+            50,
+            538,
+            915,
+            555
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "□At the entity place of business By mail",
+            "□ By internet/e-mail □ By telephone",
+            "□ Other"
+        ],
+        "bbox": [
+            50,
+            564,
+            586,
+            630
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "6. WHEN WAS THE VERY FIRST CONTACT BETWEEN YOU AND THE ENTITY?",
+        "text_level": 2,
+        "bbox": [
+            50,
+            648,
+            620,
+            664
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "□ I telephoned the entity □ I went to the entity place of business",
+            "□ I received a telephone call from the entity □ I responded to an offer on the Internet",
+            "□ I received information by e-mail □ A person came to my business premise",
+            "□ I received information in the mail □ Other"
+        ],
+        "bbox": [
+            50,
+            671,
+            764,
+            760
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "7. WHAT WAS THE TRANSACTION FOR?",
+        "text_level": 2,
+        "bbox": [
+            50,
+            778,
+            351,
+            795
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "□ Business purpose □ Investment □ Retirement plan",
+        "bbox": [
+            413,
+            778,
+            847,
+            796
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "8. HOW DID YOU REMITTED THE PAYMENT?",
+        "text_level": 2,
+        "bbox": [
+            50,
+            808,
+            379,
+            822
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "Cash Credit Card Cheque Instalment Loan Online Transfer",
+            "□ Retirement Fund □ Private Insurance □ Other",
+            "9. DID YOU SIGNED ANY WRITTEN AGREEMENT? IF YES, PLEASE ATTACH A COPY OF THE AGREEMENT  \\(\\square\\)  Yes  \\(\\square\\)  No"
+        ],
+        "bbox": [
+            50,
+            828,
+            947,
+            902
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "CONFIDENTIAL",
+        "bbox": [
+            858,
+            43,
+            976,
+            55
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            95,
+            73,
+            329,
+            141
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1",
+        "bbox": [
+            963,
+            927,
+            974,
+            938
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/e508e5c628d62d0fa1124446228ee72438bf05689d7115160008eec5a8784903.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>10. HAVE YOU COMPLAINED TO THE ENTITY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>When? \nAction Taken?</td></tr><tr><td>11. HAVE YOU LODGED COMPLAINT TO OTHER AGENCY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>Agency Name \nWhen? \nAction Taken?</td></tr><tr><td>12. HAVE YOU CONTACTED A PRIVATE ATTORNEY? □ Yes □ No</td></tr><tr><td>13. HAVE YOU STARTED A COURT ACTION? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>14. HAVE YOU BEEN SUED OVER THIS ISSUE? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>15. PLEASE DESCRIBE YOUR COMPLAINT IN DETAIL (ATTACH ADDITIONAL PAGES IF NECESSARY)</td></tr><tr><td>Please attach a copy of all papers involved (order bank, warranty, payment receipt, bank statement, invoice, contract or written agreement, advertisement, cancelled check/transfer, correspondence, and all other related documents). Please print clearly or type.</td></tr><tr><td>16. ACKNOWLEDGEMENT &amp; DECLARATION</td></tr><tr><td>I hereby confirm that the information and any documents submitted are current, accurate, reflective, and true. The information provided in this complaint form is based on my personal knowledge. By submitting this complaint, I understand that Labuan FSA cannot answer legal questions or give legal advice to me and cannot act as my personal lawyer. \nSignature          Date</td></tr><tr><td>Please Read Important Information: If your complaint submitted without the above acknowledgment and declaration signature, we will not be able to process but will keep on file in our complaint database record.</td></tr></table>",
+        "bbox": [
+            31,
+            71,
+            963,
+            909
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "CONFIDENTIAL",
+        "bbox": [
+            858,
+            43,
+            976,
+            55
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            963,
+            927,
+            974,
+            938
+        ],
+        "page_idx": 1
+    }
+]

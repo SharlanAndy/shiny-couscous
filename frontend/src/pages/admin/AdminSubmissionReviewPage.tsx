@@ -6,20 +6,30 @@ import type { SubmissionResponse, FormSchemaResponse } from '@/types'
 import { cn } from '@/lib/utils'
 import { StatusTracker, ApplicationStatus } from '@/components/labuan-fsa/StatusTracker'
 import { useToast } from '@/components/ui/ToastProvider'
+import { useConfirmDialog } from '@/components/ui/ConfirmDialog'
 import { FormRenderer } from '@/components/forms/FormRenderer'
 
 export function AdminSubmissionReviewPage() {
   const { submissionId } = useParams<{ submissionId: string }>()
   const navigate = useNavigate()
   const { showSuccess, showError } = useToast()
+  const { showConfirm } = useConfirmDialog()
   const [submission, setSubmission] = useState<SubmissionResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [reviewing, setReviewing] = useState(false)
+  const [deleting, setDeleting] = useState(false)
+  const [isSuperAdmin, setIsSuperAdmin] = useState(false)
   const [reviewData, setReviewData] = useState({
     status: '',
     reviewNotes: '',
     requestedInfo: '',
   })
+
+  // Check if current admin is superAdmin
+  useEffect(() => {
+    const userRole = localStorage.getItem('userRole')
+    setIsSuperAdmin(userRole === 'superAdmin')
+  }, [])
 
   // Load submission
   useEffect(() => {
@@ -75,6 +85,34 @@ export function AdminSubmissionReviewPage() {
     } finally {
       setReviewing(false)
     }
+  }
+
+  const handleDelete = async () => {
+    if (!submissionId) return
+    
+    showConfirm({
+      title: 'Delete Draft Submission',
+      message: 'Are you sure you want to delete this draft submission? This action cannot be undone.',
+      confirmText: 'Delete',
+      cancelText: 'Cancel',
+      confirmButtonClass: 'bg-red-600 hover:bg-red-700',
+      onConfirm: async () => {
+        setDeleting(true)
+        try {
+          await apiClient.deleteSubmission(submissionId)
+          showSuccess('Draft submission has been deleted successfully.', 'Deleted')
+          setTimeout(() => navigate('/admin/submissions'), 1500)
+        } catch (error: any) {
+          console.error('Error deleting submission:', error)
+          showError(
+            error.response?.data?.detail || error.message || 'Failed to delete submission',
+            'Delete Failed'
+          )
+        } finally {
+          setDeleting(false)
+        }
+      },
+    })
   }
 
   // Map submission status to application status
@@ -238,6 +276,13 @@ export function AdminSubmissionReviewPage() {
       {/* Review Form */}
       <div className="bg-white shadow rounded-lg p-6">
         <h2 className="text-lg font-medium text-gray-900 mb-4">Review Submission</h2>
+        {submission.status === 'approved' && !isSuperAdmin && (
+          <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+            <p className="text-sm text-yellow-800">
+              ⚠️ This submission is already approved. Only superAdmin can modify approved submissions.
+            </p>
+          </div>
+        )}
         <div className="space-y-4">
           <div>
             <label htmlFor="status" className="block text-sm font-medium text-gray-700 mb-1">
@@ -249,6 +294,7 @@ export function AdminSubmissionReviewPage() {
               onChange={(e) => setReviewData({ ...reviewData, status: e.target.value })}
               className="input w-full"
               required
+              disabled={submission.status === 'approved' && !isSuperAdmin}
             >
               <option value="">Select status...</option>
               <option value="under-review">Under Review</option>
@@ -269,6 +315,7 @@ export function AdminSubmissionReviewPage() {
               rows={4}
               className="input w-full"
               placeholder="Add review notes..."
+              disabled={submission.status === 'approved' && !isSuperAdmin}
             />
           </div>
 
@@ -283,20 +330,33 @@ export function AdminSubmissionReviewPage() {
               rows={4}
               className="input w-full"
               placeholder="List any additional information required..."
+              disabled={submission.status === 'approved' && !isSuperAdmin}
             />
           </div>
 
           <div className="flex space-x-3 pt-4">
             <button
               onClick={handleReview}
-              disabled={reviewing || !reviewData.status}
+              disabled={reviewing || !reviewData.status || (submission.status === 'approved' && !isSuperAdmin)}
               className={cn(
                 'btn btn-primary',
-                (reviewing || !reviewData.status) && 'opacity-50 cursor-not-allowed'
+                (reviewing || !reviewData.status || (submission.status === 'approved' && !isSuperAdmin)) && 'opacity-50 cursor-not-allowed'
               )}
             >
               {reviewing ? 'Processing...' : 'Submit Review'}
             </button>
+            {submission.status === 'draft' && (
+              <button
+                onClick={handleDelete}
+                disabled={deleting}
+                className={cn(
+                  'btn bg-red-600 hover:bg-red-700 text-white',
+                  deleting && 'opacity-50 cursor-not-allowed'
+                )}
+              >
+                {deleting ? 'Deleting...' : 'Delete Draft'}
+              </button>
+            )}
             <button
               onClick={() => navigate('/admin/submissions')}
               className="btn btn-secondary"

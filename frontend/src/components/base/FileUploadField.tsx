@@ -387,14 +387,56 @@ export function FileUploadField({
                           </a>
                         )}
                         {downloadUrl && (
-                          <a
-                            href={downloadUrl}
-                            download={fileName || 'download'}
+                          <button
+                            type="button"
+                            onClick={async () => {
+                              try {
+                                // Get auth token
+                                const token = localStorage.getItem('token')
+                                const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+                                
+                                // Extract fileId from downloadUrl or use the file object
+                                let fileIdToDownload = file.fileId || file.id || file
+                                if (typeof fileIdToDownload === 'string' && fileIdToDownload.includes('/api/files/')) {
+                                  // Extract fileId from URL
+                                  const match = fileIdToDownload.match(/\/api\/files\/([^/]+)\/download/)
+                                  fileIdToDownload = match ? match[1] : fileIdToDownload
+                                }
+                                
+                                // Create download URL with auth
+                                const url = `${apiBaseUrl}/api/files/${fileIdToDownload}/download`
+                                
+                                // Fetch with auth headers
+                                const response = await fetch(url, {
+                                  headers: {
+                                    'Authorization': `Bearer ${token}`,
+                                  },
+                                })
+                                
+                                if (!response.ok) {
+                                  throw new Error('Failed to download file')
+                                }
+                                
+                                // Get blob and create download link
+                                const blob = await response.blob()
+                                const blobUrl = window.URL.createObjectURL(blob)
+                                const link = document.createElement('a')
+                                link.href = blobUrl
+                                link.download = fileName || 'download'
+                                document.body.appendChild(link)
+                                link.click()
+                                document.body.removeChild(link)
+                                window.URL.revokeObjectURL(blobUrl)
+                              } catch (error) {
+                                console.error('Error downloading file:', error)
+                                alert('Failed to download file. Please try again.')
+                              }
+                            }}
                             className="text-sm text-primary hover:text-primary-dark font-medium px-2 py-1 rounded hover:bg-primary/10"
                             title="Download file"
                           >
                             📥 Download
-                          </a>
+                          </button>
                         )}
                       </>
                     ) : (

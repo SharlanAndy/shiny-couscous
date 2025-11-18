@@ -1,0 +1,1463 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        169,
+                        123,
+                        415,
+                        137
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                169,
+                                123,
+                                415,
+                                137
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        169,
+                                        123,
+                                        415,
+                                        137
+                                    ],
+                                    "type": "text",
+                                    "content": "APPLICATION FOR SURRENDER OF LICENCE"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3,
+                    "line_avg_height": 15,
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        65,
+                        155,
+                        236,
+                        169
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                155,
+                                236,
+                                169
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        155,
+                                        236,
+                                        169
+                                    ],
+                                    "type": "text",
+                                    "content": "Name of Labuan Company :"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        65,
+                        180,
+                        235,
+                        195
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                180,
+                                235,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        180,
+                                        235,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "Type of Licence"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        65,
+                        206,
+                        529,
+                        230
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                206,
+                                529,
+                                230
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        206,
+                                        529,
+                                        230
+                                    ],
+                                    "type": "text",
+                                    "content": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6,
+                    "line_avg_height": 14,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        65,
+                        232,
+                        444,
+                        243
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                232,
+                                444,
+                                243
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        232,
+                                        444,
+                                        243
+                                    ],
+                                    "type": "text",
+                                    "content": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "type": "table",
+                    "bbox": [
+                        72,
+                        247,
+                        542,
+                        476
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                72,
+                                247,
+                                542,
+                                476
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        72,
+                                        247,
+                                        542,
+                                        476
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                72,
+                                                247,
+                                                542,
+                                                476
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>No.</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>1.</td><td>Certified true copy of the board resolution or extract of minutes of board meeting on their intention to surrender the licence</td><td></td><td></td></tr><tr><td>2.</td><td>Latest audited financial statements</td><td></td><td></td></tr><tr><td>3.</td><td>Latest management account signed and duly verified by the Director/Principal Officer of the licensed entity</td><td></td><td></td></tr><tr><td>4.</td><td>Letter of Guarantee/Undertaking from the shareholder/head office to undertake all outstanding liabilities</td><td></td><td></td></tr><tr><td>5.</td><td>Original copy of the licence certificate</td><td></td><td></td></tr><tr><td>6.</td><td>Duly completed Statutory Declaration of True and Correct Information Submitted (as per Appendix I)</td><td></td><td></td></tr></table>",
+                                            "image_path": "7a8081c1abdf8a7a6ec797aaadd3651d7cfa6daf7e640b95016ead89d181ee84.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 8,
+                            "angle": 0,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 8
+                },
+                {
+                    "bbox": [
+                        66,
+                        481,
+                        103,
+                        495
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                66,
+                                481,
+                                103,
+                                495
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        481,
+                                        103,
+                                        495
+                                    ],
+                                    "type": "text",
+                                    "content": "Notes:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9,
+                    "line_avg_height": 15,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        65,
+                        500,
+                        536,
+                        613
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 14,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                66,
+                                500,
+                                535,
+                                523
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        66,
+                                        500,
+                                        535,
+                                        523
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                66,
+                                                500,
+                                                535,
+                                                523
+                                            ],
+                                            "type": "text",
+                                            "content": "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 10
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                526,
+                                536,
+                                563
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        526,
+                                        536,
+                                        563
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                65,
+                                                526,
+                                                536,
+                                                563
+                                            ],
+                                            "type": "text",
+                                            "content": "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 11
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                563,
+                                536,
+                                588
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        563,
+                                        536,
+                                        588
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                65,
+                                                563,
+                                                536,
+                                                588
+                                            ],
+                                            "type": "text",
+                                            "content": "3) The checklist serves as a general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 12
+                        },
+                        {
+                            "bbox": [
+                                65,
+                                588,
+                                536,
+                                613
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        588,
+                                        536,
+                                        613
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                65,
+                                                588,
+                                                536,
+                                                613
+                                            ],
+                                            "type": "text",
+                                            "content": "4) Management account must comply with section 169(3) of the Labuan Financial Services and Securities Act 2010"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 13
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        65,
+                        638,
+                        294,
+                        650
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                65,
+                                638,
+                                294,
+                                650
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        65,
+                                        638,
+                                        294,
+                                        650
+                                    ],
+                                    "type": "text",
+                                    "content": "Officer responsible for information submission:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        67,
+                        653,
+                        540,
+                        671
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                653,
+                                540,
+                                671
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        653,
+                                        540,
+                                        671
+                                    ],
+                                    "type": "text",
+                                    "content": "Signature: ________ Company: ________"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16
+                },
+                {
+                    "bbox": [
+                        67,
+                        673,
+                        540,
+                        692
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                673,
+                                540,
+                                692
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        673,
+                                        540,
+                                        692
+                                    ],
+                                    "type": "text",
+                                    "content": "Name: Contact No.:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "bbox": [
+                        67,
+                        692,
+                        540,
+                        713
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                67,
+                                692,
+                                540,
+                                713
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        67,
+                                        692,
+                                        540,
+                                        713
+                                    ],
+                                    "type": "text",
+                                    "content": "Designation: Email:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 18
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        237,
+                        68,
+                        326,
+                        91
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                237,
+                                68,
+                                326,
+                                91
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        237,
+                                        68,
+                                        326,
+                                        91
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        327,
+                        48,
+                        383,
+                        108
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                327,
+                                48,
+                                383,
+                                108
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        327,
+                                        48,
+                                        383,
+                                        108
+                                    ],
+                                    "type": "text",
+                                    "content": "FSA"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        238,
+                        93,
+                        326,
+                        100
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                238,
+                                93,
+                                326,
+                                100
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        238,
+                                        93,
+                                        326,
+                                        100
+                                    ],
+                                    "type": "text",
+                                    "content": "Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        92,
+                        777,
+                        145,
+                        796
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                92,
+                                777,
+                                145,
+                                796
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        92,
+                                        777,
+                                        145,
+                                        796
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan FSA Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 19
+                },
+                {
+                    "bbox": [
+                        360,
+                        765,
+                        506,
+                        777
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                360,
+                                765,
+                                506,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        360,
+                                        765,
+                                        506,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "Application for Surrender of Licence"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "bbox": [
+                        513,
+                        764,
+                        523,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                513,
+                                764,
+                                523,
+                                774
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        513,
+                                        764,
+                                        523,
+                                        774
+                                    ],
+                                    "type": "text",
+                                    "content": "1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 21
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0
+        },
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        106,
+                        85,
+                        473,
+                        112
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                106,
+                                85,
+                                473,
+                                112
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        106,
+                                        85,
+                                        473,
+                                        112
+                                    ],
+                                    "type": "text",
+                                    "content": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED Important: All fields are mandatory and should not be left blank"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1,
+                    "line_avg_height": 16,
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        61,
+                        151,
+                        517,
+                        164
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                151,
+                                517,
+                                164
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        151,
+                                        517,
+                                        164
+                                    ],
+                                    "type": "text",
+                                    "content": "I .NRIC/Passport No:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                },
+                {
+                    "bbox": [
+                        61,
+                        167,
+                        517,
+                        179
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                167,
+                                517,
+                                179
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        167,
+                                        517,
+                                        179
+                                    ],
+                                    "type": "text",
+                                    "content": "the (position) of.. (name of"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        61,
+                        181,
+                        345,
+                        195
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                181,
+                                345,
+                                195
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        181,
+                                        345,
+                                        195
+                                    ],
+                                    "type": "text",
+                                    "content": "company), do hereby solemnly and sincerely declare that:"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        60,
+                        200,
+                        517,
+                        328
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 8,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                61,
+                                200,
+                                517,
+                                243
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        200,
+                                        517,
+                                        243
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                61,
+                                                200,
+                                                517,
+                                                243
+                                            ],
+                                            "type": "text",
+                                            "content": "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 5
+                        },
+                        {
+                            "bbox": [
+                                60,
+                                250,
+                                517,
+                                279
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        250,
+                                        517,
+                                        279
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                60,
+                                                250,
+                                                517,
+                                                279
+                                            ],
+                                            "type": "text",
+                                            "content": "2. I am aware that if I make any misrepresentation herein this application, it is an offence punishable pursuant to Section 192 of the LFSSA/Section 152 of the LIFSSA."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 6
+                        },
+                        {
+                            "bbox": [
+                                60,
+                                285,
+                                517,
+                                328
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        285,
+                                        517,
+                                        328
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                60,
+                                                285,
+                                                517,
+                                                328
+                                            ],
+                                            "type": "text",
+                                            "content": "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 7
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        60,
+                        349,
+                        517,
+                        379
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                60,
+                                349,
+                                517,
+                                379
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        349,
+                                        517,
+                                        379
+                                    ],
+                                    "type": "text",
+                                    "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        60,
+                        404,
+                        298,
+                        417
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                60,
+                                404,
+                                298,
+                                417
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        60,
+                                        404,
+                                        298,
+                                        417
+                                    ],
+                                    "type": "text",
+                                    "content": "Subscribed and solemnly declared by the above"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        61,
+                        423,
+                        242,
+                        437
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                423,
+                                242,
+                                437
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        423,
+                                        242,
+                                        437
+                                    ],
+                                    "type": "text",
+                                    "content": "named"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "bbox": [
+                        61,
+                        442,
+                        242,
+                        455
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                442,
+                                242,
+                                455
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        442,
+                                        242,
+                                        455
+                                    ],
+                                    "type": "text",
+                                    "content": "At"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "bbox": [
+                        61,
+                        460,
+                        244,
+                        474
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                460,
+                                244,
+                                474
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        460,
+                                        244,
+                                        474
+                                    ],
+                                    "type": "text",
+                                    "content": "In the State of"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                },
+                {
+                    "bbox": [
+                        61,
+                        480,
+                        246,
+                        494
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                480,
+                                246,
+                                494
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        480,
+                                        246,
+                                        494
+                                    ],
+                                    "type": "text",
+                                    "content": "This ....day of 20."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14
+                },
+                {
+                    "bbox": [
+                        61,
+                        512,
+                        117,
+                        524
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                512,
+                                117,
+                                524
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        512,
+                                        117,
+                                        524
+                                    ],
+                                    "type": "text",
+                                    "content": "Before me,"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        380,
+                        461,
+                        430,
+                        475
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                380,
+                                461,
+                                430,
+                                475
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        380,
+                                        461,
+                                        430,
+                                        475
+                                    ],
+                                    "type": "text",
+                                    "content": "Signature"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16
+                },
+                {
+                    "bbox": [
+                        61,
+                        581,
+                        179,
+                        588
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                581,
+                                179,
+                                588
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        581,
+                                        179,
+                                        588
+                                    ],
+                                    "type": "text",
+                                    "content": "···"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "bbox": [
+                        61,
+                        588,
+                        257,
+                        601
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                61,
+                                588,
+                                257,
+                                601
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        61,
+                                        588,
+                                        257,
+                                        601
+                                    ],
+                                    "type": "text",
+                                    "content": "(Commissioner for Oaths/Notary Public)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 18
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        463,
+                        58,
+                        528,
+                        71
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                463,
+                                58,
+                                528,
+                                71
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        463,
+                                        58,
+                                        528,
+                                        71
+                                    ],
+                                    "type": "text",
+                                    "content": "APPENDIX I"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        361,
+                        766,
+                        506,
+                        777
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                361,
+                                766,
+                                506,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        361,
+                                        766,
+                                        506,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "Application for Surrender of Licence"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 19
+                },
+                {
+                    "bbox": [
+                        515,
+                        766,
+                        522,
+                        776
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                515,
+                                766,
+                                522,
+                                776
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        515,
+                                        766,
+                                        522,
+                                        776
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "bbox": [
+                        92,
+                        777,
+                        145,
+                        798
+                    ],
+                    "type": "footer",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                92,
+                                777,
+                                145,
+                                798
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        92,
+                                        777,
+                                        145,
+                                        798
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan FSA Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 21
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 1
+        }
+    ],
+    "_backend": "vlm",
+    "_version_name": "2.6.4"
+}

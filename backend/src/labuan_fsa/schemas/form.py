@@ -47,13 +47,13 @@ class FormResponse(BaseModel):
     description: Optional[str]
     category: Optional[str]
     version: str
-    is_active: bool
-    requires_auth: bool
-    estimated_time: Optional[str]
-    created_at: datetime
-    updated_at: datetime
-    created_by: Optional[str]
-    updated_by: Optional[str]
+    isActive: bool = Field(alias="is_active", serialization_alias="isActive")
+    requiresAuth: bool = Field(alias="requires_auth", serialization_alias="requiresAuth")
+    estimatedTime: Optional[str] = Field(alias="estimated_time", serialization_alias="estimatedTime")
+    createdAt: datetime = Field(alias="created_at", serialization_alias="createdAt")
+    updatedAt: datetime = Field(alias="updated_at", serialization_alias="updatedAt")
+    createdBy: Optional[str] = Field(alias="created_by", serialization_alias="createdBy")
+    updatedBy: Optional[str] = Field(alias="updated_by", serialization_alias="updatedBy")
 
     model_config = {"from_attributes": True, "populate_by_name": True}
 

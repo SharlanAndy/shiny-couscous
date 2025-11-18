@@ -1,0 +1,12 @@
+{
+  "siteName": "Labuan FSA E-Submission System",
+  "siteUrl": "https://submission.labuanfsa.gov.my",
+  "maintenanceMode": false,
+  "allowRegistration": true,
+  "requireEmailVerification": true,
+  "maxFileSize": 10,
+  "allowedFileTypes": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+  "sessionTimeout": 30,
+  "updatedAt": "2025-11-18T10:00:00Z"
+}
+

@@ -1,0 +1,413 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.399,
+                0.081,
+                0.55,
+                0.109
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.554,
+                0.057,
+                0.648,
+                0.129
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.401,
+                0.11,
+                0.55,
+                0.12
+            ],
+            "angle": 0,
+            "content": "Financial Services Authority"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.165,
+                0.144,
+                0.816,
+                0.161
+            ],
+            "angle": 0,
+            "content": "RE-ASSESSMENT OF THE APPOINTMENT OF PRINCIPAL OFFICER"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.187,
+                0.395,
+                0.204
+            ],
+            "angle": 0,
+            "content": "Name of Labuan Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.219,
+                0.395,
+                0.236
+            ],
+            "angle": 0,
+            "content": "Type of Licence"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.11,
+                0.252,
+                0.856,
+                0.283
+            ],
+            "angle": 0,
+            "content": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.285,
+                0.886,
+                0.302
+            ],
+            "angle": 0,
+            "content": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.122,
+                0.308,
+                0.911,
+                0.457
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>No.</td><td>Documents</td><td>To be completed by Applicant</td><td>For Labuan FSA use</td></tr><tr><td>1.</td><td>Latest Profile of Principal Officer (copy of curriculum vitae)</td><td></td><td></td></tr><tr><td>2.</td><td>Certified True Copy of Passport (only applicable for non-resident of Malaysia)</td><td></td><td></td></tr><tr><td>3.</td><td>Duly Completed Statutory Declaration by Principal Officer on Fit and Proper Person (as per Appendix I)</td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.112,
+                0.483,
+                0.172,
+                0.498
+            ],
+            "angle": 0,
+            "content": "Notes:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.504,
+                0.892,
+                0.531
+            ],
+            "angle": 0,
+            "content": "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.532,
+                0.9,
+                0.572
+            ],
+            "angle": 0,
+            "content": "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.573,
+                0.888,
+                0.601
+            ],
+            "angle": 0,
+            "content": "3) Labuan FSA reserves the right to request for additional information and/or documents to support the application."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.11,
+                0.504,
+                0.9,
+                0.601
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.629,
+                0.53,
+                0.646
+            ],
+            "angle": 0,
+            "content": "Officer responsible for information submission:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.119,
+                0.67,
+                0.928,
+                0.688
+            ],
+            "angle": 0,
+            "content": "Signature : Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.12,
+                0.704,
+                0.928,
+                0.722
+            ],
+            "angle": 0,
+            "content": "Name : Contact No :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.12,
+                0.737,
+                0.928,
+                0.755
+            ],
+            "angle": 0,
+            "content": "Designation : Email :"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.78,
+                0.113,
+                0.889,
+                0.128
+            ],
+            "angle": 0,
+            "content": "APPENDIX I"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.231,
+                0.148,
+                0.759,
+                0.177
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY DIRECTOR/PRINCIPAL OFFICER ON FIT AND PROPER PERSON"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.239,
+                0.178,
+                0.751,
+                0.191
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.106,
+                0.229,
+                0.879,
+                0.246
+            ],
+            "angle": 0,
+            "content": "I, NRIC/Passport No:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.107,
+                0.251,
+                0.876,
+                0.266
+            ],
+            "angle": 0,
+            "content": "a principal officer of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.106,
+                0.271,
+                0.7,
+                0.286
+            ],
+            "angle": 0,
+            "content": "(name of the Labuan company), do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.105,
+                0.305,
+                0.874,
+                0.349
+            ],
+            "angle": 0,
+            "content": "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.362,
+                0.873,
+                0.404
+            ],
+            "angle": 0,
+            "content": "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA /Section 4 of LIFSSA and the Guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.419,
+                0.873,
+                0.448
+            ],
+            "angle": 0,
+            "content": "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.462,
+                0.873,
+                0.505
+            ],
+            "angle": 0,
+            "content": "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.104,
+                0.305,
+                0.874,
+                0.505
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.53,
+                0.86,
+                0.56
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.114,
+                0.585,
+                0.478,
+                0.614
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.116,
+                0.616,
+                0.346,
+                0.629
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.116,
+                0.63,
+                0.371,
+                0.644
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.116,
+                0.645,
+                0.276,
+                0.659
+            ],
+            "angle": 0,
+            "content": "This ...day of .... 20.."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.647,
+                0.63,
+                0.722,
+                0.644
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.106,
+                0.687,
+                0.192,
+                0.701
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.106,
+                0.741,
+                0.408,
+                0.757
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ]
+]

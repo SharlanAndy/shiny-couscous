@@ -1,0 +1,3210 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON LABUAN TRUST COMPANY BUSINESS",
+        "text_level": 1,
+        "bbox": [
+            308,
+            94,
+            766,
+            132
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "IMPORTANT NOTES",
+        "text_level": 2,
+        "bbox": [
+            416,
+            150,
+            584,
+            166
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1. The completed application form and supporting documents should be submitted to:",
+        "bbox": [
+            124,
+            189,
+            784,
+            208
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Head of Authorisation and Licensing Unit",
+        "bbox": [
+            191,
+            215,
+            503,
+            231
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority Level",
+        "bbox": [
+            191,
+            232,
+            509,
+            247
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "17, Main Office Tower",
+        "bbox": [
+            192,
+            247,
+            362,
+            261
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Complex",
+        "bbox": [
+            192,
+            262,
+            372,
+            277
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Jalan Merdeka",
+        "bbox": [
+            192,
+            277,
+            307,
+            290
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "87000 Labuan F.T.",
+        "bbox": [
+            192,
+            292,
+            336,
+            305
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Malaysia",
+        "bbox": [
+            192,
+            306,
+            261,
+            321
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "2. Applicant may also submit a soft copy of the completed application form and supporting documents via email to licensing@labuanfsa.gov.my for preliminary review by the officer.",
+            "3. Submission of application which does not comply with Labuan FSA's requirement or which are unsatisfactory may be returned.",
+            "4. The form and supporting documents serves as general requirement of the application, Labuan FSA reserves the right to request for additional information and/or documents to support the application.",
+            "5. Any information supplied pursuant to this form will be dealt with in confidence in accordance with Section 178 of the Labuan Financial Services and Securities Act 2010/Section 139 of the Labuan Islamic Financial Services and Securities Act 2010.",
+            "6. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Copy of bank statements must be certified by the bank. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "7. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.",
+            "8. Labuan FSA has a whistle blowing policy in place where suppliers, consultants or even members of the public can report to the Designated Officers in writing as per the Whistle Blowing Disclosure Form if there is any element of wrongdoings by any staff of Labuan FSA or its subsidiaries in relation to the application or licence being awarded.",
+            "9. For details of applicable legislations and guidelines pertaining to trust company business, please visit our website at www.labuanfsa.gov.my.",
+            "10. Processing fee and client charter:"
+        ],
+        "bbox": [
+            122,
+            335,
+            867,
+            813
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/d38ce18dd8eb5b0e3fffde8961e9bc169882076b72153b8f9c09ace982280a36.jpg",
+        "table_caption": [],
+        "table_footnote": [
+            "*Client Charter will be calculated upon complete submission of documentation and information to Labuan FSA."
+        ],
+        "table_body": "<table><tr><td rowspan=\"2\">Type of Processing</td><td>Processing fee</td><td rowspan=\"2\">Client Charter*</td></tr><tr><td>USD</td></tr><tr><td>Normal</td><td>350.00</td><td>30 working days</td></tr><tr><td>Fast Track</td><td>1,550.00</td><td>15 working days</td></tr></table>",
+        "bbox": [
+            169,
+            814,
+            759,
+            878
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan",
+        "bbox": [
+            372,
+            22,
+            514,
+            49
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Financial Services Authority",
+        "bbox": [
+            375,
+            51,
+            511,
+            59
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "FSA",
+        "bbox": [
+            516,
+            0,
+            601,
+            68
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "IMPORTANT NOTES",
+        "text_level": 2,
+        "bbox": [
+            395,
+            5,
+            560,
+            21
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Terms and Conditions of fast track application",
+        "text_level": 3,
+        "bbox": [
+            122,
+            27,
+            496,
+            42
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(i) Labuan FSA reserved the right to accept or decline any fast track application submitted.",
+            "(ii) The fast track processing timeline will only commence upon compliance with the following:"
+        ],
+        "bbox": [
+            148,
+            50,
+            846,
+            89
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(a) Submission of complete documentation;",
+            "(b) Payment of fast track processing fee; and",
+            "(c) Acceptance of fast track application by Labuan FSA."
+        ],
+        "bbox": [
+            181,
+            95,
+            602,
+            141
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(iii) The fast track processing fee will be forfeited should the applicant decided to withdraw after the fast track application has been accepted by Labuan FSA.",
+            "(iv) Labuan FSA reserved the right to change the status of the application from fast track to normal processing. The applicant will be notified and the fast track processing fee paid will be refunded accordingly"
+        ],
+        "bbox": [
+            148,
+            146,
+            862,
+            229
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "GENERAL INFORMATION",
+        "text_level": 3,
+        "bbox": [
+            380,
+            242,
+            570,
+            255
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 4,
+        "bbox": [
+            267,
+            257,
+            684,
+            270
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "1. Party responsible for submission of application<sup>1</sup>:",
+        "bbox": [
+            94,
+            282,
+            462,
+            299
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/b518b269b64f64d154d792f8dd22662dff4ca2e8a937655435105388c245865b.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            148,
+            309,
+            192,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Applicant's Shareholder/Head Office",
+        "bbox": [
+            204,
+            314,
+            450,
+            329
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/7f21fe5cbcbcfc9954b69b47c4dc986865653c2f6ff056ce22039a43bd73d454.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            486,
+            310,
+            529,
+            332
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan Trust Company",
+        "bbox": [
+            540,
+            314,
+            702,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/38f84b2bd111dfde3307180ad4a80b81e2c0376f7927c02aba91f9d11cb50c68.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            148,
+            354,
+            192,
+            376
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Others: (please specify)",
+        "bbox": [
+            204,
+            354,
+            467,
+            383
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "2. Officer responsible for submission of application:",
+        "bbox": [
+            94,
+            404,
+            465,
+            420
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Name",
+        "bbox": [
+            138,
+            452,
+            181,
+            465
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Company",
+        "bbox": [
+            485,
+            452,
+            552,
+            467
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "#",
+        "bbox": [
+            573,
+            454,
+            816,
+            467
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Designa",
+        "bbox": [
+            138,
+            494,
+            192,
+            508
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Contact No.:",
+        "bbox": [
+            485,
+            494,
+            573,
+            508
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "__________",
+        "bbox": [
+            586,
+            494,
+            815,
+            508
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Email",
+        "bbox": [
+            138,
+            530,
+            179,
+            542
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            485,
+            530,
+            552,
+            544
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "__________",
+        "bbox": [
+            573,
+            530,
+            813,
+            544
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "3. How do you know about Labuan IBFC?",
+        "bbox": [
+            94,
+            560,
+            403,
+            575
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/6e1aa4caa22f52b30b89dca2e2733a93b14b546135c59532561296d9771829f8.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            148,
+            590,
+            192,
+            609
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Website",
+        "bbox": [
+            204,
+            593,
+            261,
+            606
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/c412cfeab48eea16605a8792a3e4fd14326a30c66a2a13f079626d5b3373c4e9.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            486,
+            592,
+            529,
+            613
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Newspaper/Media",
+        "bbox": [
+            540,
+            593,
+            665,
+            607
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/d9db21bd244ea042cae1c120f87aa2be35be18beb974467c3fd44d5d28b0bc78.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            150,
+            622,
+            194,
+            643
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Previous Experience",
+        "bbox": [
+            204,
+            625,
+            344,
+            640
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/93645a09e8ca8128a1e6c0371c54efa23c7e66ef63d146e015854cad6e02cd18.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            486,
+            625,
+            529,
+            645
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Business Referral",
+        "bbox": [
+            540,
+            626,
+            663,
+            638
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/c3f0ce59b1b36ba7183319d4944d55ee131c72b9e02f602056f18815b199a4b2.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            151,
+            657,
+            194,
+            678
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan Trust Company",
+        "bbox": [
+            204,
+            657,
+            364,
+            672
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/cd6c1471d17188f1a15770cf4876f2f47d906f25c6ab6e9c3b6897c063fa39ea.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            486,
+            657,
+            529,
+            678
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan IBFC Inc. Sdn. Bhd.2",
+        "bbox": [
+            540,
+            657,
+            738,
+            671
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/0784ce4f4776fe5f57cf357bde9382a639a722135a17bbfc8df19bc2fe5b8112.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            151,
+            690,
+            194,
+            710
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Others: (please specify)",
+        "bbox": [
+            204,
+            695,
+            465,
+            723
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "4. Consent for disclosure of information to be used for marketing/promotional purposes by Labuan FSA and Labuan IBFC Inc. Sdn. Bhd.:",
+        "bbox": [
+            94,
+            729,
+            841,
+            757
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/1530af128cbdacf61e584f664d84e2871c56bad7b4090a64e39fe22e127a8b64.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            153,
+            772,
+            196,
+            792
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Yes",
+        "bbox": [
+            204,
+            776,
+            233,
+            787
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/d0d52ab15dd5d3e9a78d34dd07b82b24706a4aecea3ec0376bf10fb4d2bcdbd5.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            488,
+            772,
+            532,
+            794
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "No",
+        "bbox": [
+            540,
+            777,
+            563,
+            791
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_footnote",
+        "text": "<sup>1</sup> With the exception of the applicant's shareholder/head office, party responsible for submission of application is required to submit the duly completed Statutory Declaration as attached in Appendix VI.",
+        "bbox": [
+            148,
+            837,
+            870,
+            864
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_footnote",
+        "text": "\\(^{2}\\)  Labuan IBFC Inc. Sdn. Bhd. was incorporated in July 2008 as the sole official Malaysian agency authorised to promote, market and develop the benefits of Labuan IBFC as the premier international business and financial centre in Asia Pacific.",
+        "bbox": [
+            148,
+            864,
+            872,
+            902
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            246,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            821,
+            936
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            841,
+            922,
+            852,
+            931
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON LABUAN TRUST COMPANY BUSINESS",
+        "text_level": 1,
+        "bbox": [
+            204,
+            70,
+            816,
+            84
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Sections 61, 71 and 74, Labuan Financial Services and Securities Act 2010",
+        "bbox": [
+            256,
+            85,
+            766,
+            99
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/86db0e5fdfd8797c787af77b047a6b8b92e087106cacb6bd3f45f93f47885684.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART I: PROFILE OF APPLICANT\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Applicant (refers to the proposed Labuan company)</td><td colspan=\"3\"></td></tr><tr><td>b. Type of Licence Applied (please (√) the appropriate box)</td><td colspan=\"3\">Please tick (√) the regulated activities to be undertaken:\nTrust Company (please complete Form LTC and TL)\nManaged Trust Company (please complete Form LTC and TL)\nPrivate Trust Company (please complete Form LTC and PTL)</td></tr><tr><td>Nature of Legal Entity (please tick (√) the appropriate box)</td><td colspan=\"3\">Labuan Company - Subsidiary\nForeign Labuan Company - Branch</td></tr><tr><td>d. Proposed Paid-up Capital/Working Fund (please specify currency used)</td><td colspan=\"3\"></td></tr><tr><td rowspan=\"2\">e. Proposed Shareholder(s) (each of shareholder is required to complete Part II and/or Part III)</td><td>Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">f. Proposed Directors and Trust Officers3 (each of director/trust officer is required to complete Part IV)</td><td>Name of Directors/Trust Officers</td><td>Nationality</td><td>Position to be Held</td></tr><tr><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            117,
+            112,
+            883,
+            824
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            872,
+            56
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_footnote",
+        "text": "<sup>3</sup> The proposed appointment of director and trust officer must be made in accordance with Regulation 102(d) of the Labuan Financial Services and Securities Act 2010.",
+        "bbox": [
+            147,
+            875,
+            854,
+            902
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Labuan PSA",
+        "bbox": [
+            197,
+            924,
+            272,
+            941
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3",
+        "bbox": [
+            841,
+            922,
+            852,
+            933
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/71d52d73d473ab716dfda1aa49a8c329d6779e7f0acae76c4f764adbb263e0fc.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"5\">PART II: PROFILE OF CORPORATE SHAREHOLDER(S) \nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Company / Head Office</td><td colspan=\"4\"></td></tr><tr><td>b. Company Address</td><td colspan=\"4\"></td></tr><tr><td>c. Nature and Type of Business</td><td colspan=\"4\"></td></tr><tr><td>d. Incorporation / Registration Number</td><td colspan=\"4\"></td></tr><tr><td>e. Date and Place of Incorporation / Registration</td><td colspan=\"4\"></td></tr><tr><td>f. Date, Type of Licence and Licence Number (if applicable)</td><td colspan=\"4\"></td></tr><tr><td>g. Home Supervisory Authority (if applicable)</td><td colspan=\"4\"></td></tr><tr><td rowspan=\"4\">h. Shareholders' Fund (please specify currency and amount for the latest three (3) years)</td><td>Year</td><td>Paid-up Capital</td><td>Retained Profit / Accumulated Losses</td><td>Other Reserves</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">i. Financial Performance (please specify currency and amount for the latest three (3) years)</td><td>Year</td><td>Total Assets</td><td>Total Liabilities</td><td>Profit/(Loss) Before Tax</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">j. Shareholder(s)</td><td colspan=\"2\">Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"2\">k. Board of Director(s)</td><td colspan=\"2\">Name of Director(s)</td><td>Nationality</td><td>Nature of Appointment (executive or non-executive)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>l. Any Other Information Relevant For Consideration of the Application</td><td colspan=\"4\"></td></tr><tr><td colspan=\"5\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S) \nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Salutation</td><td colspan=\"4\"></td></tr><tr><td>b. Name \n(as per NRIC/passport)</td><td colspan=\"4\">Please tick (✓) if the individual is a PEP</td></tr><tr><td>c. Date and Place of Birth</td><td colspan=\"4\"></td></tr><tr><td>d. Gender</td><td>Male</td><td colspan=\"3\">Female</td></tr><tr><td>e. Nationality</td><td colspan=\"4\"></td></tr><tr><td>f. NRIC Details \n(for Malaysian)</td><td colspan=\"4\">Old IC No.: \nNRIC No.:</td></tr><tr><td>g. Passport Details \n(for Non-Malaysian)</td><td colspan=\"4\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□No □Yes (please provide certified true copy of the work permit)</td></tr><tr><td rowspan=\"7\">Financial Net worth \n(latest three months bank statement duly certified by the Bank or net worth statement prepared and certified by Qualified Accountant)</td><td colspan=\"4\">a) Net Worth Statement by Qualified Accountant; or</td></tr><tr><td></td><td colspan=\"3\">Currency and Amount</td></tr><tr><td>Total Assets</td><td colspan=\"3\"></td></tr><tr><td>Total Liabilities</td><td colspan=\"3\"></td></tr><tr><td colspan=\"4\">b) Bank Statement</td></tr><tr><td>Name of Bank</td><td>Type of Account</td><td>Statement Date</td><td colspan=\"1\">Currency and Amount</td></tr><tr><td></td><td></td><td></td><td colspan=\"1\"></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            883,
+            897
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            246,
+            921,
+            272,
+            941
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            821,
+            936
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4",
+        "bbox": [
+            841,
+            922,
+            852,
+            933
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            117,
+            71,
+            893,
+            902
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            246,
+            920,
+            272,
+            941
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "5",
+        "bbox": [
+            841,
+            922,
+            852,
+            931
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/29999474455b14cab91e49143d9062f84e3a57cf77a3a53ed6dc7e3767244273.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"6\">i. Curriculum Vitae of Individual Shareholder</td></tr><tr><td colspan=\"6\">Section A: Education(s)</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of College/University/Others</td><td>Year \nQualification Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of Institution</td><td>Year \nQualification Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"2\">Name of Institution</td><td>Year \nMembership Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\">Key Areas of Responsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"6\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td>Name of Corporation</td><td>Place of Incorporation</td><td colspan=\"2\">Date of Appointment(dd/mm/yy)</td><td colspan=\"2\">Nature of Appointmentexecutive or non-executive)</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            893,
+            705
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            872,
+            56
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "page_number",
+        "text": "6",
+        "bbox": [
+            841,
+            922,
+            852,
+            933
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "table",
+        "img_path": "images/ebd6a1c64209a19abadcbdc08a1fd43fc196385159a1ae889f501c8ac2ea6938.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART IV: PROFILE OF DIRECTOR/TRUST OFFICER\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be Held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name\n(as per NRIC/passport)</td><td colspan=\"3\">Please tick (✓) if the individual is a PEP</td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male     Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details\n(for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>h. Passport Details\n(for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \nNo       Yes (please provide certified \ntrue copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Trust Officer</td></tr><tr><td colspan=\"4\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of College/University/Others</td><td>Year\nQualification\nObtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/Certification</td><td>Name of Institution</td><td>Year\nQualification\nObtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            890,
+            907
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            872,
+            56
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "page_number",
+        "text": "7",
+        "bbox": [
+            839,
+            922,
+            852,
+            931
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "table",
+        "img_path": "images/babb1f289586f8e9e1e1a3f830dbe830cb0bc78e46bf004080e96234c3f4e889.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"7\">PART IV: PROFILE OF DIRECTOR/TRUST OFFICER\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"2\"></td><td colspan=\"4\"></td><td></td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"2\">Type and Details of Membership</td><td colspan=\"4\">Name of Institution</td><td>Year\nMembership\nObtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"4\"></td><td></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date\n(dd/mm/yy)</td><td rowspan=\"2\">Name of Employer4</td><td colspan=\"2\" rowspan=\"2\">Designation</td><td colspan=\"2\" rowspan=\"2\">Key Areas of\nResponsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"2\">Name of Corporation</td><td>Place of Incorporation</td><td colspan=\"2\">Date of Appointment\n(dd/mm/yy)</td><td colspan=\"2\">Nature of\nAppointment\nexecutive or non-\nexecutive)</td></tr><tr><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">PART V:PARTICULARS OF THE APPLICATION\nImportant:All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"7\">Section A:Business Plan(Please fill in the details,where applicable)</td></tr><tr><td colspan=\"7\">i)General Business Plan</td></tr><tr><td>a.</td><td>Objective of Establishment</td><td colspan=\"5\"></td></tr><tr><td rowspan=\"5\">b.</td><td rowspan=\"5\">Type of Products / Services(Please tick (✓) at the appropriate box)</td><td></td><td colspan=\"3\">Trustee</td><td rowspan=\"5\"></td></tr><tr><td></td><td colspan=\"3\">Custodian</td></tr><tr><td></td><td colspan=\"3\">Administrator</td></tr><tr><td></td><td colspan=\"3\">Executor</td></tr><tr><td></td><td colspan=\"3\">Others, please specify</td></tr><tr><td>c.</td><td>Business Activities (brief explanation on the activities to be conducted by the trust company)</td><td colspan=\"5\"></td></tr><tr><td rowspan=\"4\">d.</td><td rowspan=\"4\">Target Market(to specify whether it is individual and/or corporate client and the percentage)</td><td colspan=\"5\"></td></tr><tr><td colspan=\"2\">Target Market</td><td>%</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">Individual</td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">Corporate Client</td><td></td><td colspan=\"2\"></td></tr><tr><td rowspan=\"4\">e.</td><td rowspan=\"4\">Territorial Scope(to specify the country and percentage)</td><td colspan=\"5\"></td></tr><tr><td colspan=\"2\">Territorial Scope</td><td>%</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td></tr><tr><td>f.</td><td>Business Operational(to explain the operation of Labuan trust company/managed trust company))</td><td colspan=\"5\"></td></tr><tr><td>g.</td><td>Marketing Strategy</td><td colspan=\"5\"></td></tr><tr><td>h.</td><td>Functional Structure at Management Office in Labuan</td><td colspan=\"5\"></td></tr><tr><td>i.</td><td>Functional Structure at Marketing Office(if any)</td><td colspan=\"5\"></td></tr><tr><td rowspan=\"7\">j..</td><td rowspan=\"7\">Manpower Planning</td><td colspan=\"5\"></td></tr><tr><td>Category</td><td>Malaysian</td><td>Non-Malaysian</td><td>Total</td><td colspan=\"1\">Expected Remuneration</td></tr><tr><td>(a)Managerial &amp; Professional</td><td></td><td></td><td></td><td colspan=\"1\"></td></tr><tr><td>(b)Technical &amp; Supervisory</td><td></td><td></td><td></td><td colspan=\"1\"></td></tr><tr><td>(c)Production /Operation Workers-Skilled-Unskilled</td><td></td><td></td><td></td><td colspan=\"1\"></td></tr><tr><td>(d) Clerical &amp;GeneralWorkers</td><td></td><td></td><td></td><td colspan=\"1\"></td></tr><tr><td>Total(a)+(b)+(c)+(d)</td><td></td><td></td><td></td><td colspan=\"1\"></td></tr><tr><td colspan=\"7\">ii) Additional Information for Applicant Licence as Labuan Managed Trust Company</td></tr><tr><td>a.</td><td>Proposed Trust Manager</td><td colspan=\"5\"></td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            890,
+            710
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            872,
+            56
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_footnote",
+        "text": "If the post require approval from relevant authority, please give detail of the approving authority (applicable to current employment only)",
+        "bbox": [
+            147,
+            876,
+            866,
+            902
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_number",
+        "text": "8",
+        "bbox": [
+            841,
+            922,
+            852,
+            933
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            116,
+            71,
+            950,
+            905
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "Form PL",
+        "bbox": [
+            794,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "page_number",
+        "text": "9",
+        "bbox": [
+            841,
+            922,
+            852,
+            931
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "table",
+        "img_path": "images/4abe27f9c1769e6c66922b4a67060e5b54fb9043b4253041e22aaae17d9417b7.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART V:PARTICULARS OF THE APPLICATION\nImportant:All fields are mandatory and should not be left blank</td></tr><tr><td>b. Proposed Trust Officer</td><td colspan=\"3\"></td></tr><tr><td>c. Operational Office outside Labuan</td><td colspan=\"3\"></td></tr><tr><td colspan=\"4\">Section B:Three Years Financial Projection (*fill in where applicable)</td></tr><tr><td colspan=\"4\">Currency:</td></tr><tr><td>Statement of Comprehensive Income</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td colspan=\"4\">INCOME</td></tr><tr><td>Number of Labuan company incorporated /registered</td><td></td><td></td><td></td></tr><tr><td>Income from trust company business</td><td></td><td></td><td></td></tr><tr><td>Other operating income</td><td></td><td></td><td></td></tr><tr><td>Total Income</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Expenses</td></tr><tr><td>General and administration expenses(please provide the breakdown of the expenses)</td><td></td><td></td><td></td></tr><tr><td>Sales and marketing expenses(please provide the breakdown of the expenses)</td><td></td><td></td><td></td></tr><tr><td>Other operating expenses(please provide the breakdown of the expenses)</td><td></td><td></td><td></td></tr><tr><td>Income / (Loss) Before Tax</td><td></td><td></td><td></td></tr><tr><td>Tax</td><td></td><td></td><td></td></tr><tr><td>Income / (Loss) After Tax</td><td></td><td></td><td></td></tr><tr><td>Statement of Financial Position</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>ASSETS</td><td></td><td></td><td></td></tr><tr><td>Non-current assets</td><td></td><td></td><td></td></tr><tr><td>Current assets</td><td></td><td></td><td></td></tr><tr><td>Total Assets</td><td></td><td></td><td></td></tr><tr><td>LIABILITIES</td><td></td><td></td><td></td></tr><tr><td>Long term liabilities</td><td></td><td></td><td></td></tr><tr><td>Short term liabilities</td><td></td><td></td><td></td></tr><tr><td>Total Liabilities</td><td></td><td></td><td></td></tr><tr><td>SHAREHOLDERS'FUNDS/HEADOFFICE ACCOUNT</td><td></td><td></td><td></td></tr><tr><td>Paid up capital</td><td></td><td></td><td></td></tr><tr><td>Retained profits / accumulated losses</td><td></td><td></td><td></td></tr><tr><td>Other reserves</td><td></td><td></td><td></td></tr><tr><td>Total Shareholders’ Funds / Head Office Account</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Note:\n1. Please ensure the three years projection is realistic and reasonable.\n2. Please provide basis of assumption in deriving to the projected figure.\n3. The above information is a guidance for the applicant to complete the financial projection.</td></tr></table>",
+        "bbox": [
+            117,
+            71,
+            950,
+            893
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "header",
+        "text": "Form PL",
+        "bbox": [
+            794,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            246,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "page_number",
+        "text": "10",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            117,
+            71,
+            950,
+            291
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "header",
+        "text": "Form PL",
+        "bbox": [
+            794,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "page_number",
+        "text": "11",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "APPLICATION FOR LICENCE TO CARRY ON LABUAN PRIVATE TRUST COMPANY BUSINESS",
+        "text_level": 1,
+        "bbox": [
+            196,
+            71,
+            821,
+            104
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "table",
+        "img_path": "images/b2acbf6025f7bed10d820ed5eda926874e5bcded0e64b73686750bd6b8a80f70.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"3\">PARTICULARS OF THE APPLICATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"3\">Section A: Information of the Settlor</td></tr><tr><td>a.</td><td>Name of Settlor</td><td></td></tr><tr><td>b.</td><td>NRIC Details\n(for Malaysian)</td><td>Old IC No.: \nNRIC No.:</td></tr><tr><td>c.</td><td>Passport Details\n(for Non-Malaysian)</td><td>Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority:</td></tr><tr><td colspan=\"3\">Section B: Information of the Connected Party(s)</td></tr><tr><td>a.</td><td>Name of beneficiary(s)</td><td></td></tr><tr><td>b.</td><td>Citizenship</td><td></td></tr><tr><td>c.</td><td>Family Tree\n(please attached the family tree of the settler and its relationship with beneficiaries)</td><td></td></tr><tr><td colspan=\"3\">Section C: Business Plan</td></tr><tr><td>a.</td><td>Objective of Establishment</td><td></td></tr><tr><td>b.</td><td>Name of Proposed Agent</td><td></td></tr><tr><td>c.</td><td>Type of Products / Services\n(whether it include acting as agent, executor or administrator) – to put as boxes</td><td></td></tr><tr><td>e.</td><td>Trust Assets</td><td></td></tr></table>",
+        "bbox": [
+            107,
+            119,
+            883,
+            748
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "header",
+        "text": "Form PL",
+        "bbox": [
+            794,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "page_number",
+        "text": "12",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "table",
+        "img_path": "images/954f2a1d378be4f41a4142a84ab4975816c0938d72989587368d0302534e2110.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PART VI: SUPPORTING DOCUMENTS\n(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)</td></tr><tr><td colspan=\"2\">No Documents</td><td>For Applicant</td><td>For Labuan FSA</td></tr><tr><td colspan=\"4\">Part II: Corporate Shareholder(s)</td></tr><tr><td rowspan=\"7\">1.</td><td>Detailed information of applicant's shareholder(s) or head office:\na) Group corporate shareholding structure including the applicant</td><td></td><td></td></tr><tr><td>b) Certified true copy of certificate of incorporation</td><td></td><td></td></tr><tr><td>c) Certified true copy of certificate of licence granted by relevant authority(s) in its home country - (if applicable)</td><td></td><td></td></tr><tr><td>d) Letter of awareness or approvals of authorities from the home country, if applicable, which includes:\n  - Statement of no objection towards the establishment of a subsidiary or branch in Labuan.\n  - Confirmation that the applicant's shareholder or head office is of good financial standing.\n  - Agreement to co-operate in the supervision of the proposed subsidiary or branch in Labuan in terms applicable regulatory standards.</td><td></td><td></td></tr><tr><td>e) Certified true copy of board resolution or minutes of general meeting which approved the setting up of the applicant</td><td></td><td></td></tr><tr><td>f) Certified true copy of memorandum &amp; articles of association</td><td></td><td></td></tr><tr><td>g) Copy of two (2) years audited financial statements/annual reports</td><td></td><td></td></tr><tr><td>2.</td><td>Letter of guarantee or undertaking by:\n  a) applicant's shareholder, if applicant is a subsidiary (format as per Appendix I)\n  b) applicant's head office, if applicant is a branch (format as per Appendix II)</td><td></td><td></td></tr><tr><td colspan=\"4\">Part III: Individual Shareholder(s)</td></tr><tr><td>1.</td><td>Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>2.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>3.</td><td>Two (2) referral letters from corporations, institutions and/or professional bodies</td><td></td><td></td></tr><tr><td>4.</td><td>Net worth statement by qualified accountant or certified true copy of the latest three months of bank statements indicating the amount of funds available</td><td></td><td></td></tr><tr><td>5.</td><td>Letter of Guarantee by Individual Shareholder as per Appendix III</td><td></td><td></td></tr><tr><td>6.</td><td>Statutory Declaration by Individual Shareholder/Director/Principal Officer on Fit and Proper Person as per Appendix IV.</td><td></td><td></td></tr><tr><td colspan=\"4\">Part IV: Director(s) / Trust Officer(s)</td></tr><tr><td>1.</td><td>Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>2.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>3.</td><td>Two (2) referral letters from corporations, institutions and/or professional bodies (not applicable for appointment within the group of companies)</td><td></td><td></td></tr><tr><td>4.</td><td>Statutory Declaration by Individual Shareholder/Director/Trust Officer on Fit and Proper Person as per Appendix IV.</td><td></td><td></td></tr><tr><td colspan=\"4\">Other Supporting Documents</td></tr><tr><td>1.</td><td>Proposed organisation chart of the applicant</td><td></td><td></td></tr><tr><td>2.</td><td>Framework on Know-Your-Customers' policy and compliance to the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001</td><td></td><td></td></tr><tr><td>3.</td><td>Risk Management and Internal Control Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>4.</td><td>Investment Management Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>5.</td><td>Declaration of True and Correct Information Submitted as per Appendix V.</td><td></td><td></td></tr><tr><td>6.</td><td>Statutory Declaration by Services Provider Responsible for Submission of Application as per Appendix VI.</td><td></td><td></td></tr><tr><td>7.</td><td>Draft trust instrument(s) for Labuan private trust company</td><td></td><td></td></tr></table>",
+        "bbox": [
+            75,
+            71,
+            919,
+            895
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            246,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "page_number",
+        "text": "13",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "table",
+        "img_path": "",
+        "table_caption": [],
+        "table_footnote": [],
+        "bbox": [
+            75,
+            71,
+            919,
+            121
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            781,
+            42,
+            870,
+            56
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            272,
+            941
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "page_number",
+        "text": "14",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Letterhead of Applicant's Corporate Shareholder",
+        "text_level": 2,
+        "bbox": [
+            326,
+            99,
+            689,
+            114
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "[Date]",
+        "bbox": [
+            148,
+            114,
+            197,
+            128
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The Director General",
+        "bbox": [
+            147,
+            142,
+            308,
+            157
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            148,
+            157,
+            419,
+            172
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Level 17, Main Office Tower",
+        "bbox": [
+            148,
+            172,
+            362,
+            186
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Labuan, Jalan Merdeka",
+        "bbox": [
+            148,
+            186,
+            439,
+            200
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "87000 Federal Territory of Labuan",
+        "bbox": [
+            148,
+            200,
+            408,
+            215
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Malaysia",
+        "bbox": [
+            148,
+            215,
+            218,
+            229
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Dear Sir,",
+        "bbox": [
+            148,
+            243,
+            217,
+            257
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "LETTER OF GUARANTEE",
+        "text_level": 2,
+        "bbox": [
+            148,
+            270,
+            356,
+            286
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "The application by [name of applicant], a subsidiary of [name of shareholder], to Labuan FSA dated [date] for a licence to carry on Labuan [type of licence] business under the provisions of the Labuan Financial Services and Securities Act 2010 (hereinafter referred to as \"the Act\") refers.",
+        "bbox": [
+            145,
+            299,
+            874,
+            345
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We, being the shareholder, do hereby irrevocably and unconditionally guarantee and undertake in respect of [name of applicant's Labuan [type of licence] business, that during validity of [name of applicant's licence and its operation in Labuan IBFC, it shall comply with the following:",
+        "bbox": [
+            145,
+            357,
+            874,
+            402
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "a. The financial obligations and requirements imposed under the Act on it and shall meet its liabilities in respect of its Labuan [type of licence] business.",
+            "b. The requirement to obtain a prior written approval from Labuan FSA for:"
+        ],
+        "bbox": [
+            189,
+            414,
+            872,
+            474
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "i. any change of [name of applicant]'s shareholder who holds ten percent centum or more of its paid up capital.",
+            "ii. any appointment of [name of applicant]'s director and trust officer, whom shall be of a fit and proper person.",
+            "iii. any amendment or alteration to any of [name of applicant]'s constituent documents."
+        ],
+        "bbox": [
+            233,
+            487,
+            866,
+            603
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "c. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] business.",
+        "bbox": [
+            189,
+            617,
+            874,
+            662
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "We shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA, and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of applicant].",
+        "bbox": [
+            145,
+            672,
+            875,
+            744
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Yours faithfully,",
+        "bbox": [
+            147,
+            755,
+            266,
+            771
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "For and on behalf of",
+        "bbox": [
+            147,
+            797,
+            303,
+            813
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "[Name of shareholder]",
+        "bbox": [
+            148,
+            813,
+            316,
+            829
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "[Name]",
+        "bbox": [
+            148,
+            869,
+            207,
+            883
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Director",
+        "bbox": [
+            148,
+            885,
+            210,
+            898
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            870,
+            56
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "header",
+        "text": "Appendix",
+        "bbox": [
+            777,
+            71,
+            859,
+            88
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "footer",
+        "text": "Labuan PSA",
+        "bbox": [
+            197,
+            924,
+            272,
+            941
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "page_number",
+        "text": "15",
+        "bbox": [
+            841,
+            921,
+            857,
+            933
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Letterhead of Head Office",
+        "text_level": 2,
+        "bbox": [
+            411,
+            95,
+            607,
+            109
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "[Date]",
+        "text_level": 3,
+        "bbox": [
+            148,
+            111,
+            197,
+            126
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The Director General",
+        "bbox": [
+            147,
+            137,
+            308,
+            150
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            148,
+            152,
+            419,
+            166
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Level 17, Main Office Tower",
+        "bbox": [
+            148,
+            167,
+            362,
+            179
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Labuan, Jalan Merdeka",
+        "bbox": [
+            148,
+            180,
+            439,
+            193
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "87000 Federal Territory of Labuan",
+        "bbox": [
+            148,
+            193,
+            408,
+            207
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Malaysia",
+        "bbox": [
+            148,
+            207,
+            218,
+            220
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Dear Sir,",
+        "bbox": [
+            148,
+            232,
+            217,
+            247
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "LETTER OF UNDERTAKING",
+        "text_level": 2,
+        "bbox": [
+            148,
+            258,
+            374,
+            273
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "The application by [name of applicant], a branch of [name of head office], to Labuan FSA dated [date] for a licence to carry on Labuan [type of licence] business under the provisions of the Labuan Financial Services and Securities Act 2010 (hereinafter referred to as \"the Act\") refers.",
+        "bbox": [
+            147,
+            286,
+            874,
+            329
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "We, being the head office, do hereby irrevocably and unconditionally undertake in respect of the [name of applicant]'s Labuan [type of licence] business, that during validity of [name of applicant]'s licence and its operation in Labuan IBFC, it shall comply with the following:",
+        "bbox": [
+            147,
+            340,
+            874,
+            383
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "a. The financial obligations and requirements imposed under the Act on it and shall meet its liabilities in respect of its Labuan [type of licence] business.",
+            "b. The requirement to obtain a prior written approval from Labuan FSA for any appointment of [name of applicant's trust officer whom shall be of a fit and proper person.",
+            "c. The requirement to notify Labuan FSA in writing within three months after the date of:"
+        ],
+        "bbox": [
+            174,
+            393,
+            870,
+            491
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "i. any change of [name of applicant]'s shareholder who holds ten per cent or more of its paid up capital.",
+            "ii. any appointment of [name of applicant]'s director, whom shall be of a fit and proper person.",
+            "iii. any amendment or alteration to any of [name of applicant]'s constituent documents."
+        ],
+        "bbox": [
+            200,
+            503,
+            866,
+            603
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "d. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] business.",
+        "bbox": [
+            174,
+            614,
+            874,
+            656
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "We shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA, and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of applicant]and the head office.",
+        "bbox": [
+            145,
+            667,
+            875,
+            750
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Yours faithfully,",
+        "bbox": [
+            148,
+            762,
+            266,
+            777
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "For and on behalf of",
+        "bbox": [
+            148,
+            803,
+            307,
+            816
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "[Name of head office]",
+        "bbox": [
+            148,
+            816,
+            310,
+            832
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "[Name]",
+        "bbox": [
+            148,
+            871,
+            207,
+            885
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Director",
+        "bbox": [
+            148,
+            885,
+            210,
+            898
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            870,
+            56
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "header",
+        "text": "Appendix",
+        "bbox": [
+            777,
+            71,
+            859,
+            88
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            197,
+            925,
+            243,
+            936
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            243,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "page_number",
+        "text": "16",
+        "bbox": [
+            841,
+            921,
+            857,
+            933
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Name and Address of Individual Shareholder",
+        "text_level": 3,
+        "bbox": [
+            339,
+            97,
+            676,
+            112
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "[Date]",
+        "text_level": 3,
+        "bbox": [
+            148,
+            112,
+            197,
+            128
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The Director General",
+        "bbox": [
+            147,
+            138,
+            308,
+            152
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            148,
+            154,
+            419,
+            167
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Level 17, Main Office Tower",
+        "bbox": [
+            148,
+            167,
+            362,
+            180
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Labuan, Jalan Merdeka",
+        "bbox": [
+            148,
+            181,
+            439,
+            194
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "87000 Federal Territory of Labuan",
+        "bbox": [
+            148,
+            195,
+            408,
+            208
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Malaysia",
+        "bbox": [
+            148,
+            209,
+            218,
+            222
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Dear Sir,",
+        "bbox": [
+            148,
+            233,
+            217,
+            248
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "LETTER OF GUARANTEE",
+        "text_level": 2,
+        "bbox": [
+            148,
+            260,
+            356,
+            273
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "The application by [name of applicant], to Labuan FSA dated [date] for a licence to carry on Labuan [type of licence] business under the provisions of the Labuan Financial Services and Securities Act 2010 (hereinafter referred to as \"the Act\") refers.",
+        "bbox": [
+            145,
+            287,
+            874,
+            330
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "I, being the [percentage of shareholding] shareholder of [name of applicant], do hereby irrevocably and unconditionally guarantee and undertake in respect of [name of applicant's Labuan [type of licence] business, that during validity of [name of applicant's licence and its operation in Labuan IBFC, it shall comply with the following:",
+        "bbox": [
+            145,
+            340,
+            875,
+            398
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "a. The financial obligations and requirements imposed under the Act on it and shall meet its liabilities in respect of its Labuan [type of licence] business.",
+            "b. The requirement to obtain a prior written approval from Labuan FSA for:"
+        ],
+        "bbox": [
+            174,
+            410,
+            872,
+            467
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "i. any change of the [name of applicant]'s shareholder who holds ten per cent or more of its paid-up capital.",
+            "ii. any appointment of [name of applicant]'s director and trust officer, whom shall be of a fit and proper person.",
+            "iii. any amendment or alteration to any of [name of applicant]'s constituent documents."
+        ],
+        "bbox": [
+            200,
+            479,
+            864,
+            579
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "c. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] business.",
+        "bbox": [
+            174,
+            589,
+            874,
+            633
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "I shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA, and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of applicant].",
+        "bbox": [
+            145,
+            643,
+            875,
+            714
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Yours faithfully,",
+        "bbox": [
+            148,
+            752,
+            264,
+            768
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "[Name of shareholder]",
+        "bbox": [
+            148,
+            820,
+            321,
+            835
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "[NRIC or Passport No.]",
+        "bbox": [
+            148,
+            835,
+            323,
+            849
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            870,
+            56
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "header",
+        "text": "Appendix 17",
+        "bbox": [
+            774,
+            73,
+            879,
+            89
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            197,
+            924,
+            243,
+            936
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            243,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "page_number",
+        "text": "17",
+        "bbox": [
+            841,
+            921,
+            857,
+            933
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY INDIVIDUAL SHAREHOLDER/DIRECTOR/TRUST OFFICER ON FIT AND PROPER PERSON",
+        "text_level": 2,
+        "bbox": [
+            183,
+            108,
+            846,
+            136
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 4,
+        "bbox": [
+            307,
+            137,
+            723,
+            150
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "I, . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ..\nNRIC/Passport No: , individual shareholder/director/trust officer of (name of the Labuan company), do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            169,
+            188,
+            857,
+            234
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines).",
+            "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA/Section 4 of LIFSSA and the Guidelines.",
+            "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete.",
+            "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        ],
+        "bbox": [
+            200,
+            252,
+            820,
+            472
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 /............ (please state any other relevant provisions).",
+        "bbox": [
+            169,
+            484,
+            857,
+            531
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above",
+        "bbox": [
+            179,
+            558,
+            504,
+            573
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "named",
+        "bbox": [
+            181,
+            574,
+            362,
+            585
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            181,
+            589,
+            390,
+            601
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            181,
+            603,
+            413,
+            616
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "This ...day of .... 20...",
+        "bbox": [
+            181,
+            617,
+            325,
+            630
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            666,
+            602,
+            735,
+            617
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            171,
+            660,
+            250,
+            674
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            171,
+            741,
+            442,
+            757
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            870,
+            56
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "header",
+        "text": "Appendix 18",
+        "bbox": [
+            774,
+            73,
+            879,
+            89
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            197,
+            924,
+            246,
+            936
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "page_number",
+        "text": "18",
+        "bbox": [
+            841,
+            921,
+            857,
+            933
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED Important: All fields are mandatory and should not be left blank",
+        "text_level": 2,
+        "bbox": [
+            267,
+            125,
+            774,
+            156
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "I. .NRIC/Passport No:",
+        "bbox": [
+            168,
+            199,
+            866,
+            214
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "the (position in the applicant's shareholder/head office)",
+        "bbox": [
+            168,
+            215,
+            867,
+            229
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "of. (name of the applicant's",
+        "bbox": [
+            168,
+            231,
+            867,
+            246
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "shareholder/head office), do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            168,
+            246,
+            656,
+            261
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable.",
+            "2. I am aware that if I make any misrepresentation herein in this application, it is an offence punishable pursuant to Section 192 of the LFSSA.",
+            "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        ],
+        "bbox": [
+            181,
+            268,
+            874,
+            393
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / . (please state any other relevant provisions).",
+        "bbox": [
+            166,
+            411,
+            867,
+            458
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above",
+        "bbox": [
+            168,
+            484,
+            521,
+            500
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "named",
+        "bbox": [
+            169,
+            506,
+            419,
+            520
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            169,
+            526,
+            419,
+            540
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            169,
+            546,
+            421,
+            560
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "This...day of 20",
+        "bbox": [
+            169,
+            564,
+            423,
+            579
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            168,
+            601,
+            245,
+            614
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            168,
+            681,
+            439,
+            698
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            663,
+            546,
+            730,
+            561
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            870,
+            56
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "header",
+        "text": "Appendix V",
+        "bbox": [
+            779,
+            83,
+            875,
+            99
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            199,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "page_number",
+        "text": "19",
+        "bbox": [
+            841,
+            921,
+            857,
+            933
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR",
+        "text_level": 3,
+        "bbox": [
+            246,
+            138,
+            792,
+            152
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "SUBMISSION OF APPLICATION",
+        "text_level": 3,
+        "bbox": [
+            401,
+            152,
+            638,
+            166
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 4,
+        "bbox": [
+            287,
+            167,
+            751,
+            181
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "I, .........(name) of .........(address) NRIC/Passport No: .........the authorized officer of .........(name of trust company/other service providers) being the party responsible for the submission of application for .........(name of applicant) do solemnly and sincerely declare that in relation to the above application:",
+        "bbox": [
+            166,
+            232,
+            859,
+            310
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have conducted due diligence process on............(name of applicant) and on its director(s) and shareholder(s) and other persons or companies that involved and related to the application and satisfied with the result thereof.",
+            "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person Requirements and Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 in respect of the above application have been complied with."
+        ],
+        "bbox": [
+            166,
+            325,
+            864,
+            452
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1960 / (please state any other relevant provisions).",
+        "bbox": [
+            166,
+            468,
+            870,
+            515
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above named",
+        "bbox": [
+            176,
+            573,
+            450,
+            599
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            178,
+            599,
+            387,
+            612
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            178,
+            613,
+            410,
+            626
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "This ...day of .... 20..",
+        "bbox": [
+            179,
+            627,
+            323,
+            640
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            611,
+            613,
+            678,
+            627
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            168,
+            683,
+            245,
+            696
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            168,
+            762,
+            441,
+            780
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "Form LTC",
+        "bbox": [
+            779,
+            41,
+            872,
+            56
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "Appendix VI",
+        "bbox": [
+            777,
+            108,
+            879,
+            125
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Labuan",
+        "bbox": [
+            197,
+            924,
+            245,
+            936
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "FSA",
+        "bbox": [
+            245,
+            920,
+            274,
+            941
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Application for Licence to Carry on Labuan Trust Company Business",
+        "bbox": [
+            403,
+            922,
+            823,
+            936
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "page_number",
+        "text": "20",
+        "bbox": [
+            841,
+            922,
+            857,
+            933
+        ],
+        "page_idx": 19
+    }
+]

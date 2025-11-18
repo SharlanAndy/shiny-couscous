@@ -1,0 +1,1871 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.356,
+                0.065,
+                0.514,
+                0.094
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.357,
+                0.095,
+                0.512,
+                0.104
+            ],
+            "angle": 0,
+            "content": "Financial Services Authority"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.515,
+                0.04,
+                0.613,
+                0.115
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.908,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.148,
+                0.123,
+                0.88,
+                0.161
+            ],
+            "angle": 0,
+            "content": "APPLICATION FOR LICENCE TO CARRY ON LABUAN BANKING/INVESTMENT BANKING/DIGITAL BANKING BUSINESS"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.427,
+                0.19,
+                0.61,
+                0.206
+            ],
+            "angle": 0,
+            "content": "IMPORTANT NOTES"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.133,
+                0.217,
+                0.898,
+                0.295
+            ],
+            "angle": 0,
+            "content": "1. Applicant must submit a softcopy (PDF format) of the completed application form and supporting documents together with official receipt issued by Labuan FSA on the payment of processing fee via email to bplicensing@labuanfsa.gov.my. Hardcopy of the application shall ONLY be submitted upon received notification (by email from Authorisation and Licensing Unit (ALU)) to the following address:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.201,
+                0.308,
+                0.542,
+                0.324
+            ],
+            "angle": 0,
+            "content": "Head of Authorisation and Licensing Unit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.202,
+                0.324,
+                0.502,
+                0.339
+            ],
+            "angle": 0,
+            "content": "Labuan Financial Services Authority"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.203,
+                0.339,
+                0.436,
+                0.353
+            ],
+            "angle": 0,
+            "content": "Level 17, Main Office Tower"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.203,
+                0.354,
+                0.401,
+                0.369
+            ],
+            "angle": 0,
+            "content": "Financial Park Complex"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.203,
+                0.37,
+                0.327,
+                0.383
+            ],
+            "angle": 0,
+            "content": "Jalan Merdeka"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.203,
+                0.384,
+                0.361,
+                0.398
+            ],
+            "angle": 0,
+            "content": "87000 Labuan F.T."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.203,
+                0.4,
+                0.278,
+                0.414
+            ],
+            "angle": 0,
+            "content": "Malaysia"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.427,
+                0.897,
+                0.503
+            ],
+            "angle": 0,
+            "content": "2. Processing fee must be made through Labuan FSA e-payment system (LEPAY: https://lepay.labuanfsa.gov.my). The application without payment of processing fee is not acceptable and will be returned immediately. However, for fast track application, the payment of processing and fast track fees shall be made upon acceptance of fast track application by Labuan FSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.517,
+                0.896,
+                0.549
+            ],
+            "angle": 0,
+            "content": "3. Application which is handwritten, incomplete without official payment receipt and not in accordance to the requirements of the form and checklist will not be accepted."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.562,
+                0.896,
+                0.593
+            ],
+            "angle": 0,
+            "content": "4. Upon acceptance of application, Labuan FSA reserves the right to return the application based on the following circumstances and the processing fee is forfeited:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.136,
+                0.427,
+                0.897,
+                0.593
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.594,
+                0.895,
+                0.625
+            ],
+            "angle": 0,
+            "content": "(a) Submission of application which does not comply with Labuan FSA's requirements including the legislation and guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.625,
+                0.847,
+                0.641
+            ],
+            "angle": 0,
+            "content": "(b) Unsatisfactory of documents and information upon reviewed by Labuan FSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.641,
+                0.79,
+                0.657
+            ],
+            "angle": 0,
+            "content": "(c) Any non-disclosure of information or submission of forged documents."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.167,
+                0.594,
+                0.895,
+                0.657
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.671,
+                0.896,
+                0.718
+            ],
+            "angle": 0,
+            "content": "5. Full and accurate disclosure of documents and information is essential to the due processing of the application. Failure to do so constitutes as a criminal offense and can lead to Labuan FSA reject an application or take necessary action against the applicant."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.731,
+                0.896,
+                0.777
+            ],
+            "angle": 0,
+            "content": "6. The form and supporting documents serve as general requirement of the application, Labuan FSA reserves the right to request for additional information and/or documents to support the application."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.79,
+                0.896,
+                0.837
+            ],
+            "angle": 0,
+            "content": "7. Any information supplied pursuant to this form will be dealt with in confidence in accordance with Section 178 of the Labuan Financial Services and Securities Act 2010/Section 139 of the Labuan Islamic Financial Services and Securities Act 2010."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.849,
+                0.896,
+                0.926
+            ],
+            "angle": 0,
+            "content": "8. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.136,
+                0.671,
+                0.896,
+                0.926
+            ],
+            "angle": 0,
+            "content": null
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.042,
+                0.91,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.427,
+                0.084,
+                0.612,
+                0.1
+            ],
+            "angle": 0,
+            "content": "IMPORTANT NOTES"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.135,
+                0.11,
+                0.897,
+                0.142
+            ],
+            "angle": 0,
+            "content": "9. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.155,
+                0.898,
+                0.217
+            ],
+            "angle": 0,
+            "content": "10. Labuan FSA has a whistle blowing policy in place where suppliers, consultants or even members of the public can report to the Designated Officers in writing as per the Whistle Blowing Disclosure Form if there is any element of wrongdoings by any staff of Labuan FSA or its subsidiaries in relation to the application or licence being awarded."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.23,
+                0.898,
+                0.262
+            ],
+            "angle": 0,
+            "content": "11. For details of applicable legislations and guidelines pertaining to banking business, please visit our website at www.labuanfsa.gov.my."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.275,
+                0.588,
+                0.291
+            ],
+            "angle": 0,
+            "content": "12. The processing fee and the client charter as below:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.135,
+                0.11,
+                0.898,
+                0.291
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.176,
+                0.293,
+                0.91,
+                0.429
+            ],
+            "angle": 0,
+            "content": "<table><tr><td rowspan=\"2\">Type of Processing</td><td>Processing fee</td><td rowspan=\"2\">Client Charter</td></tr><tr><td>USD</td></tr><tr><td>Normal</td><td>350</td><td>30 working days upon acceptance of complete information and documents</td></tr><tr><td>Fast Track</td><td>1,200 + 350 (subject to the terms and conditions of fast track as below)</td><td>15 working days upon acceptance of complete information and documents</td></tr></table>"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.165,
+                0.442,
+                0.895,
+                0.472
+            ],
+            "angle": 0,
+            "content": "Please note that the processing time may vary depending on the following factors such as:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.166,
+                0.473,
+                0.635,
+                0.488
+            ],
+            "angle": 0,
+            "content": "(a) The quality and completeness of the applications;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.489,
+                0.564,
+                0.503
+            ],
+            "angle": 0,
+            "content": "(b) The quality of the supporting documents;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.166,
+                0.504,
+                0.895,
+                0.533
+            ],
+            "angle": 0,
+            "content": "(c) Subsequent changes made to the application concerning, business plan, substantial shareholders, responsible officers and management in control;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.534,
+                0.897,
+                0.563
+            ],
+            "angle": 0,
+            "content": "(d) The time taken for other regulatory bodies to respond to ALU's vetting requests, if applicable;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.564,
+                0.895,
+                0.593
+            ],
+            "angle": 0,
+            "content": "(e) Applicant response time to provide any further information requested during the assessment process; and"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.167,
+                0.594,
+                0.787,
+                0.609
+            ],
+            "angle": 0,
+            "content": "(f) The number of applications ALU is processing at any particular time."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.166,
+                0.473,
+                0.897,
+                0.609
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.127,
+                0.622,
+                0.525,
+                0.639
+            ],
+            "angle": 0,
+            "content": "Terms and Conditions of Fast Track Request"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.653,
+                0.91,
+                0.715
+            ],
+            "angle": 0,
+            "content": "13. Any request for fast track processing shall be made during the submission of application through email to bplicensing@labuanfsa.gov.my. Labuan FSA will not consider any request for fast track processing upon complete submission and acceptance of application through normal processing."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.728,
+                0.909,
+                0.759
+            ],
+            "angle": 0,
+            "content": "14. Labuan FSA reserves the right to accept or decline any fast track request within seven (7) working days from the date of acknowledgement by Labuan FSA."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.137,
+                0.653,
+                0.91,
+                0.759
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.773,
+                0.908,
+                0.804
+            ],
+            "angle": 0,
+            "content": "15. The client charter for fast track processing shall only commence upon compliance with all of the following:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.166,
+                0.805,
+                0.511,
+                0.818
+            ],
+            "angle": 0,
+            "content": "(a) Submission of complete application;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.166,
+                0.819,
+                0.686,
+                0.833
+            ],
+            "angle": 0,
+            "content": "(b) Acceptance by Labuan FSA of the fast track request; and"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.166,
+                0.834,
+                0.815,
+                0.849
+            ],
+            "angle": 0,
+            "content": "(c) Submission of official receipt for the payment of fast track processing fee."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.166,
+                0.805,
+                0.815,
+                0.849
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.863,
+                0.908,
+                0.909
+            ],
+            "angle": 0,
+            "content": "16. Payment of fast track shall be made together with normal processing fee upon acceptance of fast track request. The fast track processing fee will be forfeited should the applicant decide to withdraw after the fast track request has been accepted by Labuan FSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.915,
+                0.908,
+                0.961
+            ],
+            "angle": 0,
+            "content": "17. Labuan FSA reserved the right to change the status of the application from fast track to normal processing. The applicant will be notified and the fast track fee paid will be refunded accordingly."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.137,
+                0.863,
+                0.908,
+                0.961
+            ],
+            "angle": 0,
+            "content": null
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.117,
+                0.09,
+                0.92,
+                0.766
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"3\">GENERAL INFORMATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>1.</td><td colspan=\"2\">Party responsible for submission of application1\n\n□ Applicant&#x27;s Shareholder/Head Office\n\n□ Labuan Trust Company\n\n□ Others service provider excluding individual: \n(please specify)</td></tr><tr><td>2.</td><td colspan=\"2\">Officer responsible for submission of application\n\nName: \nCompany: \nDesignation: \nContact No.: \nEmail: \nSignature: \nDate:</td></tr><tr><td>3.</td><td colspan=\"2\">How do you know about Labuan IBFC\n\n□ Website   □ Newspaper/Media\n\n□ Previous Experience   □ Business Referral\n\n□ Labuan Trust Company   □ Labuan IBFC Inc. Sdn. Bhd.2\n\n□ Others: \n(please specify)</td></tr><tr><td>4.</td><td colspan=\"2\">Consent for disclosure of information to be used for marketing/promotional purposes by Labuan FSA and Labuan IBFC Inc. Sdn. Bhd.\n\n□ Yes    □ No</td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.117,
+                0.889,
+                0.909,
+                0.916
+            ],
+            "angle": 0,
+            "content": "<sup>1</sup> With the exception of the applicant's shareholder/head office, the party responsible for submission of application is required to submit the duly completed Statutory Declaration as attached in Appendix IV."
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.117,
+                0.916,
+                0.909,
+                0.955
+            ],
+            "angle": 0,
+            "content": "2 Labuan IBFC Inc. Sdn. Bhd. was incorporated in July 2008 as the sole official Malaysian agency authorised to promote, market and develop the benefits of Labuan IBFC as the premier international business and financial centre in Asia Pacific."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.117,
+                0.889,
+                0.909,
+                0.955
+            ],
+            "angle": 0,
+            "content": null
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.225,
+                0.074,
+                0.802,
+                0.104
+            ],
+            "angle": 0,
+            "content": "APPLICATION FOR LICENCE TO CARRY ON LABUAN BANKING/INVESTMENT BANKING/DIGITAL BANKING BUSINESS"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.245,
+                0.106,
+                0.783,
+                0.119
+            ],
+            "angle": 0,
+            "content": "Sections 86 and 87, Labuan Financial Services and Securities Act 2010"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.217,
+                0.12,
+                0.812,
+                0.133
+            ],
+            "angle": 0,
+            "content": "Sections 63 and 64, Labuan Islamic Financial Services and Securities Act 2010"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.033,
+                0.144,
+                0.957,
+                0.909
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">APPLICATION CHECKLIST\n(Please tick at the appropriate box and provide reason(s)/justification(s) for any non-submission)</td></tr><tr><td colspan=\"2\">No Documents</td><td>For Applicant</td><td>For Labuan FSA</td></tr><tr><td colspan=\"4\">Processing Fee</td></tr><tr><td>1.</td><td>Processing fee of USD350 (normal processing) or USD1,550 (fast track processing upon acceptance by Labuan FSA). To provide official payment receipt generated from LEPAY as proof of payment.</td><td>□</td><td>□</td></tr><tr><td colspan=\"4\">Part II of the Form: Corporate Shareholder(s)</td></tr><tr><td rowspan=\"7\">1.</td><td>a) Detailed information of applicant&#x27;s shareholder(s) or head office:\nGroup corporate shareholding structure refers to subsidiaries/branches and other related companies. The information required may include the name of company, principal activities, country of origin, type of licence and the name of the regulator of each regulated entity (if any).\nb) Diagram of corporate group structure including the applicant.</td><td>□</td><td>□</td></tr><tr><td>c) Certified true copy of the certificate of incorporation</td><td>□</td><td>□</td></tr><tr><td>d) Certified true copy of the certificate of licence granted by the relevant authority(s) in its home country (if applicable)</td><td>□</td><td>□</td></tr><tr><td>e) Letter of awareness or approvals of authorities from the home country, which includes but is not limited to the following:\n(i) Statement of no objection towards the establishment of a subsidiary or branch in Labuan.\n(ii) Confirmation that the applicant&#x27;s shareholder or head office is in good financial standing.\n(iii) Agreement to co-operate in the supervision of the proposed subsidiary or branch in Labuan in terms of Insurance Core Principles issued by Basel core principal or other applicable regulatory standards.</td><td>□</td><td>□</td></tr><tr><td>f) Certified true copy of board resolution or minutes of general meeting which approved the setting up of the applicant</td><td>□</td><td>□</td></tr><tr><td>g) Certified true copy of memorandum &amp; articles of association on the objective</td><td>□</td><td>□</td></tr><tr><td>h) Copy of three (3) years of audited financial statements/annual reports</td><td>□</td><td>□</td></tr><tr><td></td><td>i) Statutory Declaration by Corporate Shareholder on Fit and Proper Person as per Appendix I</td><td>□</td><td>□</td></tr><tr><td colspan=\"4\">Part III of the Form: Director(s)/Principal Officer/Shariah Advisor</td></tr><tr><td>1.</td><td>Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)</td><td>□</td><td>□</td></tr><tr><td>2.</td><td>Certified true copy of relevant academic and professional certificates</td><td>□</td><td>□</td></tr><tr><td>3.</td><td>Two (2) original character reference letters from institutions and/or professional bodies duly addressed to Labuan Financial Services Authority dated not more than one (1) year from the date of application.\n(Not applicable for appointment within the group of companies for corporate shareholder)</td><td>□</td><td>□</td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.116,
+                0.953,
+                0.751,
+                0.97
+            ],
+            "angle": 0,
+            "content": "3 This is applicable for applicant who are regulated by its home supervisory authority"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.033,
+                0.073,
+                0.957,
+                0.721
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">APPLICATION CHECKLIST\n(Pleases tick at the appropriate box and provide reason(s)/justification(s) for any non-submission)</td></tr><tr><td>No</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>4.</td><td>Statutory Declaration by Director/Principal Officer on Fit and Proper Person as per \nAppendix II.</td><td>□</td><td>□</td></tr><tr><td>5.</td><td>Solvency Report from e-solvency of Malaysia Insolvency Department (https://e-\ninsolvensi.mdi.gov.my/) dated not more than three (3) months from the date of \napplication.</td><td>□</td><td>□</td></tr><tr><td>6.</td><td>Enhance Due Diligence report from the trust company or service provider, if applicable.\nFor director(s)/principal officer who is PEP/originate from high-risk jurisdiction or \njurisdiction with strategic deficiencies under Financial Action Task Force (FATF), to \nsubmit the following:\n(i) Enhance Due Diligence report as prescribed under Guidelines on Anti-Money \nLaundering, Countering Financing of Terrorism, Countering Proliferation Financing \nand Targeted Financial Sanctions for Labuan Key Reporting Institutions from the \ntrust company/service provider; and\n(ii) Letter/Statement of Good Conduct issued by relevant government agencies (for \nnon-Malaysian only).</td><td>□</td><td>□</td></tr><tr><td colspan=\"4\">Part IV: Particulars of the Application</td></tr><tr><td>1.</td><td>Proposed organisation chart of the applicant</td><td>□</td><td>□</td></tr><tr><td>2.</td><td>Declaration of True and Correct Information Submitted as per Appendix III.</td><td>□</td><td>□</td></tr><tr><td>3.</td><td>Statutory Declaration by Services Provider Responsible for Submission of Application \nas per Appendix IV.</td><td>□</td><td>□</td></tr><tr><td>4.</td><td>Comprehensive Business Plan</td><td>□</td><td>□</td></tr><tr><td colspan=\"4\">Part V: Additional Documents for Digital Banking Licence</td></tr><tr><td>1.</td><td>Draft framework or policies of the following:\ni) IT Governance;\nii) Cybersecurity; and \niii) Online onboarding processes and systems (e-KYC)</td><td>□</td><td>□</td></tr><tr><td>2.</td><td>Draft exit plan to ensure proper market exit without disrupting the customers and the \nfinancial system. The exit plan should cover at least matters relating to the circumstances \nwhich the plan will be triggered, the channels to be used to repay depositors and the \nsource of funding to make the payments.</td><td>□</td><td>□</td></tr><tr><td>3.</td><td>White Paper (only applicable for digital financial services)</td><td>□</td><td>□</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.891
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART I: PROFILE OF APPLICANT\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Applicant\n(Refers to the proposed Labuan company)</td><td colspan=\"3\"></td></tr><tr><td>b. Type of Licence Applied\n(Please tick the appropriate box)</td><td colspan=\"3\">□ Conventional □ Islamic\n□ Conventional with Islamic banking window\nPlease select the regulated activities to be undertaken:\n□ Labuan Bank\n□ Labuan Investment Bank\n□ Labuan Digital Bank</td></tr><tr><td>c. Nature of Legal Entity\n(Please tick the appropriate box)</td><td colspan=\"3\">□ Labuan Company\n□ Foreign Labuan Company - Branch\n□ Branch of Malaysian bank</td></tr><tr><td>d. Marketing Office to be Established</td><td colspan=\"3\">□ Yes □ No</td></tr><tr><td>e. Proposed Paid-up Capital/Working Fund\n(Please specify currency used)</td><td colspan=\"3\"></td></tr><tr><td>f. Proposed Seed Capital for Islamic Banking Window\n(Please specify currency used)</td><td colspan=\"3\"></td></tr><tr><td>g. Source of Funds to Capitalise the Company and Support the Operations\n(As defined under AML/CFT)</td><td colspan=\"3\"></td></tr><tr><td rowspan=\"4\">h. Proposed Shareholder(s)\n(Each of shareholder is required to complete Part II)</td><td>Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">i. Proposed Directors4/Principal Officer\n(Each of Director/Principal Officer is required to complete Part III)</td><td>Name of Directors/Resident Director</td><td>Nationality</td><td>Nature of Appointment (Executive or Non-Executive)</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.116,
+                0.929,
+                0.911,
+                0.97
+            ],
+            "angle": 0,
+            "content": "4 The number of proposed directors must be in accordance to the Guidelines on Corporate Governance for Labuan Banks and Labuan (Re) Insurers and Prudential Framework of Corporate Governance for Labuan Insurance and Insurance-Related Companies, where applicable."
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.91,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.264
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"5\">PART I: PROFILE OF APPLICANT\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td rowspan=\"4\"></td><td colspan=\"2\">Name of Principal Officer</td><td colspan=\"2\">Nationality</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td rowspan=\"4\">Proposed Shariah Advisor(s)\nj. (Each of Shariah Advisor is required to complete Part IV)(If applicable)</td><td>Name of Advisor(s)</td><td colspan=\"2\">Nationality</td><td>Years of Experience in Islamic Financial Business</td></tr><tr><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td></td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.046,
+                0.275,
+                0.946,
+                0.96
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART II: PROFILE OF CORPORATE SHAREHOLDER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Company/Head Office</td><td colspan=\"3\"></td></tr><tr><td>b. Company Address</td><td colspan=\"3\"></td></tr><tr><td>c. Nature and Type of Business</td><td colspan=\"3\"></td></tr><tr><td>d. Incorporation/Registration Number</td><td colspan=\"3\"></td></tr><tr><td>e. Date and Place of Incorporation/Registration</td><td colspan=\"3\"></td></tr><tr><td>f. Date, Type of Licence and Licence Number(if applicable)</td><td colspan=\"3\"></td></tr><tr><td>g. Home Supervisory Authority(if applicable)</td><td colspan=\"3\"></td></tr><tr><td>h. Contact Details of the HomeSupervisory Authority</td><td colspan=\"3\">Name of Contact Person:Designation:Email Address:</td></tr><tr><td rowspan=\"4\">Shareholder(s)(Please provide full name as perincorporation name/Identity card)Note:If the proposed shareholder(s) is publiclisted company, please provide top 10shareholder)</td><td>Name of Shareholder(s)</td><td>Country ofOrigin</td><td>Percentage ofShareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">Board of Director(s)(Please provide full name as perIdentity card/passport)</td><td>Name of Director(s)</td><td>Nationality</td><td>Nature ofAppointment(Executive or Non-Executive)</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">k. Credit Rating, if applicable(Please provide the latest credit rating)</td><td>Agency</td><td>Rating</td><td>Date</td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td>l. Other Information</td><td colspan=\"3\">Please confirm whether the corporate shareholder has ever applied, in themidst of applying or rejected by other authority(s) to transact bankingbusiness or other regulated business activity in any other jurisdiction☐ Yes ☐ NoIf yes, please provide direct and indirect shareholder until Ultimate BeneficialOwner in the form of diagram which include the name and percentage.</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.91,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.423
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">PART II: PROFILE OF CORPORATE SHAREHOLDER(S)\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td></td><td>Please confirm whether the corporate shareholder has ever been revoked any licence, membership, authorisation, registration or other permission granted by other authority(s) or government body(s) in Malaysia or overseas.\n□ Yes    □ No\nIf yes, please provide the details.\nPlease confirm whether the corporate shareholder(s) and its related companies has any adverse comment including breach of any regulation by respective home authority(s).\n□ Yes    □ No\nIf yes, please provide the details.</td></tr><tr><td>Any Other Information Relevant\nm. for Consideration of the\nApplication</td><td></td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.046,
+                0.431,
+                0.946,
+                0.951
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">PART III: PROFILE OF PROPOSED DIRECTOR(S)/PRINCIPAL OFFICER/SHARIAH ADVISOR(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be held</td><td></td></tr><tr><td>b. Salutation</td><td></td></tr><tr><td>c. Name(as per NRIC/passport)</td><td>Please tick if the individual is a PEP/originate from high-risk jurisdiction or jurisdiction with strategic deficiencies under FATF</td></tr><tr><td>d. Previous Name(If applicable)</td><td>Full Name:Date of Change: Click here to enter a date.Reason for Change:</td></tr><tr><td>e. Date and Place ofBirth</td><td>Date of Birth: Click here to enter a date/place of Birth:</td></tr><tr><td>f. Gender</td><td>Male Female</td></tr><tr><td>g. Nationality</td><td></td></tr><tr><td>h. NRIC Details(for Malaysian)</td><td>Old IC No.:NRIC No.:</td></tr><tr><td>i.Passport Details(for Non-Malaysian)</td><td>Passport No.:Expiry Date: Click here to enter a date.Country of Issue:Issuing Authority:Length of residence in Malaysia:</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.043,
+                0.908,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.921
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"7\">PART III: PROFILE OF PROPOSED DIRECTOR(S)/PRINCIPAL OFFICER/SHARIAH ADVISER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"2\"></td><td colspan=\"5\">Any work permit applied prior to this application:□ No □ Yes (please provide certified true copy of the work permit)</td></tr><tr><td colspan=\"7\">j. Curriculum Vitae of Director/Principal Officer/Shariah Advisor</td></tr><tr><td colspan=\"7\">Section A: Education(s)Note: Please add additional table for additional education(s)</td></tr><tr><td>No.</td><td colspan=\"2\">Type of Qualification/Certification</td><td colspan=\"3\">Name of College/University/Others</td><td>Year Qualification Obtained</td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\">Section B: Professional Qualification(s)Note: Please add additional table for additional qualification(s)</td></tr><tr><td>No.</td><td colspan=\"2\">Type of Qualification/Certification</td><td colspan=\"3\">Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)Note: Please add additional table for additional membership(s) and ensure the membership is still valid</td></tr><tr><td>No.</td><td colspan=\"2\">Type and Details of Membership</td><td colspan=\"3\">Name of Institution</td><td>Year Membership Obtained</td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)Note: Please add additional table for additional experience(s)</td></tr><tr><td rowspan=\"2\">No.</td><td>Date of Employment(dd/mm/yy)</td><td colspan=\"2\">Name of Employer5(Full Name)</td><td rowspan=\"2\">Employer&#x27;sPrincipalActivity</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\">Key Areas of Responsibilities/Achievements</td></tr><tr><td>From</td><td>To</td><td></td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)Note: Please add additional table for additional directorship(s)</td></tr><tr><td>No.</td><td colspan=\"2\">Name of Corporation</td><td colspan=\"2\">Place ofIncorporation</td><td>Date ofAppointment(dd/mm/yy)</td><td>Nature of Appointment(Executive or Non-Executive)</td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\">Section F: Equity Interest held in other company(s)(All entities including licensed and regulated entities)Note: Please add additional table if applicable</td></tr><tr><td>No.</td><td>Name ofCorporation</td><td>Place ofIncorporation</td><td colspan=\"2\">Equity InterestHeld (%)</td><td>Principal Activity</td><td>Home Authority(if applicable)</td></tr><tr><td></td><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.117,
+                0.941,
+                0.875,
+                0.97
+            ],
+            "angle": 0,
+            "content": "If the position applied for requires approval from relevant authority, please give detail of the approving authority (applicable to current employment only)."
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.158
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"6\">Section F: Equity Interest held in other company(s)\n(All entities including licensed and regulated entities)\nNote: Please add additional table if applicable</td></tr><tr><td>No.</td><td>Name of Corporation</td><td>Place of Incorporation</td><td>Equity Interest Held (%)</td><td>Principal Activity</td><td>Home Authority (if applicable)</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.046,
+                0.172,
+                0.945,
+                0.96
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">PART IV: PARTICULARS OF THE APPLICATION</td></tr><tr><td colspan=\"2\">Section A: Three (3) Years Business Plan</td></tr><tr><td colspan=\"2\">Notes:\nThe information of the proposed business plan must include all facts and circumstances that would facilitate a reasonable assessment by Labuan FSA and shall contain the following information</td></tr><tr><td>a.</td><td>Objective\n·Reason for the applicant to apply for a bank/investment bank licence in Labuan.\n·Advantage of setting up a bank/investment bank in Labuan.\n·Business strategies for long-term strategy and expansion plans.\n·The nature and scale of the business.\n·The value added of the licence to the group of companies.</td></tr><tr><td colspan=\"2\">Industry Overview</td></tr><tr><td>b.</td><td>Describe the proposed industry(s) to be served.\n·Economic characteristics of the industry including any anticipated changes in the economy or market.\n·Factors influencing such changes and probable positive or negative impact on the institution.</td></tr><tr><td>c.</td><td>Product and Services\n·Describe the type of product and services by the bank/investment bank.\n·Explain the type of account and service to be provided including the fee structure.\n·Any online and mobile banking facility to be offered.\n·Type of lending products to be offered (if any). Please explain each of the proposed of the products.</td></tr><tr><td>d.</td><td>Core Banking System\n·Briefly explain the core banking system and its features.\n·To indicate whether the system is to be developed in-house or leveraged on parent company/head office/third party.</td></tr><tr><td>e.</td><td>Target Market\n·Describe the categories of clients i.e. Retail clients, Institutional clients, High net worth clients or others (please specify).\n·List of the targeted country and its percentage.\n·Describe the rationale for targeting clients from the specific countries.\nNotes:\nFor proposed dealing with Malaysian resident, the applicant must indicate the list of activities that are allowed under the Capital Market and Services Act 2007 by the Securities Commission of Malaysia and Foreign Administration Rules issued by Central Bank of Malaysia)</td></tr><tr><td>f.</td><td>Marketing Strategy\n·Describe the methods of solicitation and sources of business i.e. website, social media, business referral, introducing broker.\n·Will the company set up its own website or leverage its group&#x27;s website for account opening and client trade. For group leverage, please explain.\n·Type of advertising/marketing materials to be used by the company.\n·Functional structure of marketing office (if applicable).</td></tr><tr><td>g.</td><td>Governance Structure\n·Please provide board and committee structure including proposed names of members.\n·Overview of the intended structure, resources, responsibilities and reporting lines for credit, risk and compliance and audit committees.\n·For application to be established as a branch, please provide the governance structure of head office level.</td></tr><tr><td>h.</td><td>Risk Management and Internal Control\n·Risk management framework including procedures relating to internal audit, internal controls, cyber-security etc.</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table_caption",
+            "bbox": [
+                0.302,
+                0.085,
+                0.688,
+                0.099
+            ],
+            "angle": 0,
+            "content": "PART IV: PARTICULARS OF THE APPLICATION"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.108,
+                0.945,
+                0.969
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"6\">Business risks and how the company intend to manage those risks.\nBusiness continuity plan and procedures, including details of any third-party involvement.</td></tr><tr><td colspan=\"6\">Operational Structure\n·Describe each of the proposed banking functions/activities to be carried the Labuan operational office.\n·If the applicant intends to outsource banking functions, please provide the following:\n➢List of outsourcing functions.\n➢Name of the service provider and indicate whether it is a related entity or external party.\n➢Include in the organisation structure on the proposed outsourcing functions.\n➢How the proposed outsourcing functions can support its banking/investment activities.</td></tr><tr><td colspan=\"6\">Notes:\nThe information provided in this section is part of documents and information for banking/investment banking licence. The applicant still required to apply for separate approval from Labuan FSA on the outsourcing arrangement. Please refer to the Guidelines on External Service Arrangements for Labuan Financial Institutions on the requirement of outsourcing arrangement.</td></tr><tr><td colspan=\"6\">Anti-Money Laundering and Counter-Terrorism Financing Framework\n·What are the KYC requirements for potential client.\n·Explain the verification process for on boarding of new client.\n·Describe the risk assessment of high risk client and PEP.\n·The processes for monitoring the client transaction.</td></tr><tr><td colspan=\"6\">Manpower planning and operational office\n·Organizational structure.\n·Proposed location of office in Labuan.\n·Information of key personnel.\n·Proposed three (3) Years Manpower Planning based on the following format:</td></tr><tr><td rowspan=\"2\">Category</td><td colspan=\"2\">Labuan</td><td colspan=\"2\">Marketing Office</td><td rowspan=\"2\">Total</td></tr><tr><td>Malaysian</td><td>Non-Malaysian</td><td>Malaysian</td><td>Non-Malaysian</td></tr><tr><td>(a) Managerial &amp; Professional</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(b) Technical &amp; Supervisory</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(c) Production / Operation Workers\n- Skilled\n-Unskilled</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(d) Clerical &amp; General Workers</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Total (a)+(b)+(c)+(d)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"6\">Additional Information for Applicant Who Undertake Digital Financial Services</td></tr><tr><td colspan=\"6\">a. Delivery Channel\nDescribe how the proposed digital bank intends to deliver or distribute its products or services to customers.</td></tr><tr><td colspan=\"6\">b. Information Technology (IT) and Cyber Risks\nExplain policies and controls on technology related, especially information security, system resilience and business continuity management including online client on boarding and electronic KYC modules.</td></tr><tr><td colspan=\"6\">c. Proposed IT personnel\nProvide an overview of the manpower planning for IT personnel including their brief profile and experience.</td></tr><tr><td colspan=\"6\">d. Outsourcing Arrangement for IT\nIf the digital bank intends to outsource the cloud Services to a third party, please explain the following:\n·Profile of cloud vendors that the proposed digital bank intend to engage.\n·Which delivery models intend to be used i.e. Software as a Service, Platform as a Service and Infrastructure as a Service.\n·What is the governance and oversight of cloud arrangements with third party.</td></tr><tr><td colspan=\"6\">e. Exit Plan Strategy\n·Ensure proper market exit without disrupt the customers and the financial system.\n·The exit plan should cover at least matters relating to the circumstances which the plan will be triggered.\n·The channels to be used to repay depositors and source of funding to make the payments.</td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.799,
+                0.042,
+                0.909,
+                0.057
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.047,
+                0.073,
+                0.945,
+                0.945
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART IV: PARTICULARS OF THE APPLICATION</td></tr><tr><td colspan=\"4\">Three (3) Years Financial Projection</td></tr><tr><td>Financial Resourcef.</td><td colspan=\"3\">Describe the amount and source of initial funds to capitalise the paid-up capital. \nDescribe plans for financing growth, internally or externally, over the first three (3) years of operation. \nDescribe what sources of additional funds are available should the need arise.</td></tr><tr><td>Financial Projectiong.</td><td colspan=\"3\">Please ensure the three (3) years projection is realistic and reasonable. \nPlease provide the basis of assumption in deriving the projected figure. \nThe below information is a guidance for the applicant to complete the financial projection and may add additional items if required. \nFor the Islamic banking window, please provide a separate financial projection. \nTo provide the proposed three (3) years financial projection using the following format:</td></tr><tr><td rowspan=\"2\">Statement of Comprehensive Income</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td colspan=\"3\">[Type of Currency]</td></tr><tr><td>Interest income</td><td></td><td></td><td></td></tr><tr><td>Interest expense</td><td></td><td></td><td></td></tr><tr><td>Net Interest Income</td><td></td><td></td><td></td></tr><tr><td>Other operating income (fee and commission from advisory services)</td><td></td><td></td><td></td></tr><tr><td>gain in investment</td><td></td><td></td><td></td></tr><tr><td>Net foreign exchange gain/loss</td><td></td><td></td><td></td></tr><tr><td>General, administration and operating expenses</td><td></td><td></td><td></td></tr><tr><td>Profit before taxation</td><td></td><td></td><td></td></tr><tr><td>Tax expenses</td><td></td><td></td><td></td></tr><tr><td>Net profit</td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">Statement of Financial Position</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td colspan=\"3\">[Type of Currency]</td></tr><tr><td>ASSETS</td><td></td><td></td><td></td></tr><tr><td>Non-current assets</td><td></td><td></td><td></td></tr><tr><td>Current assets</td><td></td><td></td><td></td></tr><tr><td>Total Assets</td><td></td><td></td><td></td></tr><tr><td>LIABILITIES</td><td></td><td></td><td></td></tr><tr><td>Long term liabilities</td><td></td><td></td><td></td></tr><tr><td>Short term liabilities</td><td></td><td></td><td></td></tr><tr><td>Total Liabilities</td><td></td><td></td><td></td></tr><tr><td>SHAREHOLDERS&#x27; FUNDSP/HEAD OFFICE ACCOUNT</td><td></td><td></td><td></td></tr><tr><td>Head office account / paid up capital</td><td></td><td></td><td></td></tr><tr><td>Retained profits / accumulated losses</td><td></td><td></td><td></td></tr><tr><td>Other reserves</td><td></td><td></td><td></td></tr><tr><td>Total Shareholders&#x27; Funds / Head Office Account</td><td></td><td></td><td></td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.042,
+                0.909,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.81,
+                0.075,
+                0.91,
+                0.092
+            ],
+            "angle": 0,
+            "content": "Appendix I"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.241,
+                0.11,
+                0.75,
+                0.124
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY CORPORATE SHAREHOLDER"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.369,
+                0.126,
+                0.621,
+                0.138
+            ],
+            "angle": 0,
+            "content": "ON FIT AND PROPER PERSON"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.266,
+                0.139,
+                0.726,
+                0.151
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.068,
+                0.186,
+                0.923,
+                0.266
+            ],
+            "angle": 0,
+            "content": "I, (name of authorised representative/on behalf of the shareholder company/head office), of NRIC/Passport No: , the (position in the company/head office. Consent should be given by the director/CEO who is responsible of the management of the company) of.. (name of the shareholder company/head office), do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.084,
+                0.281,
+                0.876,
+                0.325
+            ],
+            "angle": 0,
+            "content": "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.084,
+                0.336,
+                0.88,
+                0.392
+            ],
+            "angle": 0,
+            "content": "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that (name of the shareholder company/head office) is a fit and proper person based on the criteria stated under the said Section 4 of LFSSA/Section 4 of LIFSSA and the Guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.084,
+                0.404,
+                0.88,
+                0.433
+            ],
+            "angle": 0,
+            "content": "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.084,
+                0.445,
+                0.88,
+                0.487
+            ],
+            "angle": 0,
+            "content": "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.084,
+                0.281,
+                0.88,
+                0.487
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.068,
+                0.5,
+                0.923,
+                0.547
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960/. (please state any other relevant provisions)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.078,
+                0.574,
+                0.441,
+                0.602
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.08,
+                0.605,
+                0.311,
+                0.619
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.08,
+                0.62,
+                0.311,
+                0.634
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.08,
+                0.635,
+                0.311,
+                0.649
+            ],
+            "angle": 0,
+            "content": "This...day of 20"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.677,
+                0.157,
+                0.691
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.756,
+                0.372,
+                0.775
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.042,
+                0.909,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.805,
+                0.075,
+                0.91,
+                0.092
+            ],
+            "angle": 0,
+            "content": "Appendix II"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.23,
+                0.102,
+                0.761,
+                0.116
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY DIRECTOR/PRINCIPAL OFFICER"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.369,
+                0.117,
+                0.621,
+                0.129
+            ],
+            "angle": 0,
+            "content": "ON FIT AND PROPER PERSON"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.266,
+                0.13,
+                0.726,
+                0.143
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.172,
+                0.922,
+                0.188
+            ],
+            "angle": 0,
+            "content": "I, NRIC/Passport No: a proposed"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.189,
+                0.921,
+                0.219
+            ],
+            "angle": 0,
+            "content": "director/principal officer of .... (name of the Labuan company), do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.098,
+                0.236,
+                0.876,
+                0.279
+            ],
+            "angle": 0,
+            "content": "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.096,
+                0.29,
+                0.879,
+                0.333
+            ],
+            "angle": 0,
+            "content": "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am / a fit and proper person based on the criteria stated under the said Section 4 of LFSSA/Section 4 of LIFSSA and the Guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.096,
+                0.345,
+                0.878,
+                0.375
+            ],
+            "angle": 0,
+            "content": "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.096,
+                0.386,
+                0.878,
+                0.429
+            ],
+            "angle": 0,
+            "content": "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.096,
+                0.236,
+                0.879,
+                0.429
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.068,
+                0.44,
+                0.922,
+                0.488
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960/. (please state any other relevant provisions)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.079,
+                0.515,
+                0.441,
+                0.544
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.08,
+                0.546,
+                0.28,
+                0.559
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.081,
+                0.56,
+                0.282,
+                0.574
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.081,
+                0.576,
+                0.283,
+                0.59
+            ],
+            "angle": 0,
+            "content": "This...day of....20....."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.617,
+                0.157,
+                0.632
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.694,
+                0.254,
+                0.7
+            ],
+            "angle": 0,
+            "content": "··"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.7,
+                0.372,
+                0.715
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.042,
+                0.909,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.8,
+                0.075,
+                0.91,
+                0.091
+            ],
+            "angle": 0,
+            "content": "Appendix III"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.111,
+                0.119,
+                0.88,
+                0.134
+            ],
+            "angle": 0,
+            "content": "DECLARATION BY THE APPLICANT ON THE TRUE AND CORRECT INFORMATION SUBMITTED"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.266,
+                0.135,
+                0.726,
+                0.148
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.177,
+                0.854,
+                0.192
+            ],
+            "angle": 0,
+            "content": "I, NRIC/Passport No:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.193,
+                0.922,
+                0.24
+            ],
+            "angle": 0,
+            "content": "the (position in the shareholder company/head office) of (name of the shareholder company/head office), do hereby solemnly and sincerely declare that-"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.093,
+                0.246,
+                0.923,
+                0.278
+            ],
+            "angle": 0,
+            "content": "1. All information submitted in this application including all attachments, forms, documents and forwarding letters are:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.116,
+                0.285,
+                0.921,
+                0.332
+            ],
+            "angle": 0,
+            "content": "a. submitted pursuant to the provisions of Sections 86 and 87 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Sections 63 and 64 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.116,
+                0.339,
+                0.765,
+                0.355
+            ],
+            "angle": 0,
+            "content": "b. accurate, true and correct and that all estimations provided are fair and reasonable."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.116,
+                0.285,
+                0.921,
+                0.355
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.093,
+                0.362,
+                0.923,
+                0.394
+            ],
+            "angle": 0,
+            "content": "2. I am aware that it is an offence punishable under Section 192 of the LFSSA/Section 152 of the LIFSSA if I commit any of the following –"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.119,
+                0.401,
+                0.918,
+                0.431
+            ],
+            "angle": 0,
+            "content": "a. wilfully or recklessly makes a misrepresentation in any document or material or records to be filed, supplied or delivered under LFSSA or LIFSSA; or"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.119,
+                0.433,
+                0.919,
+                0.463
+            ],
+            "angle": 0,
+            "content": "b. makes any statement or gives any information or documents required under LFSSA or LIFSSA which is false or misleading in a material particular; or"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.119,
+                0.465,
+                0.921,
+                0.511
+            ],
+            "angle": 0,
+            "content": "c. being in charge of, or having alone or with another or others possession of or control over, any information, records, books or other documents referred to in the provisions of LFSSA or LIFSSA, refuses or wilfully neglects to comply with any lawful direction given under such provisions."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.119,
+                0.401,
+                0.921,
+                0.511
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.093,
+                0.518,
+                0.923,
+                0.566
+            ],
+            "angle": 0,
+            "content": "3. A printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company/Labuan insurance manager/Labuan underwriting manager being the agent approved by Labuan FSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.572,
+                0.923,
+                0.621
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960/. (please state any other relevant provisions)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.647,
+                0.465,
+                0.662
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.668,
+                0.35,
+                0.683
+            ],
+            "angle": 0,
+            "content": "named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.688,
+                0.349,
+                0.703
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.708,
+                0.351,
+                0.724
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.729,
+                0.353,
+                0.744
+            ],
+            "angle": 0,
+            "content": "This ....day of 20."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.763,
+                0.157,
+                0.778
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.813,
+                0.372,
+                0.835
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.61,
+                0.709,
+                0.686,
+                0.724
+            ],
+            "angle": 0,
+            "content": "Signature"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.042,
+                0.909,
+                0.058
+            ],
+            "angle": 0,
+            "content": "FORM LBB"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.798,
+                0.075,
+                0.91,
+                0.091
+            ],
+            "angle": 0,
+            "content": "Appendix IV"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.195,
+                0.106,
+                0.795,
+                0.134
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.24,
+                0.136,
+                0.753,
+                0.15
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.168,
+                0.911,
+                0.248
+            ],
+            "angle": 0,
+            "content": "I, (name) of (address) NRIC/Passport No: the authorized officer of (name of trust company/insurance manager/underwriting manager/other service providers) being the party responsible for the submission of application for (name of applicant) do solemnly and sincerely declare that in relation to the above application:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.262,
+                0.909,
+                0.329
+            ],
+            "angle": 0,
+            "content": "1. I have conducted due diligence process on .... (name of applicant) and on its director(s) and shareholder(s) and other persons or companies that involved and related to the application and satisfied that there is no adverse report against any of them related to legitimacy of the business structure, fitness and properness of the person, and money laundering or terrorism financing."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.344,
+                0.91,
+                0.408
+            ],
+            "angle": 0,
+            "content": "2. I am satisfied that the business structure of .... (name of applicant) falls within the scope of Labuan banking/investment banking business under Part VI of the Labuan Financial Services and Securities Act 2010/Labuan Islamic banking/Labuan Islamic Investment banking activities under Part VI of the Labuan Islamic Financial Services and Securities Act 2010. (To delete whichever is not necessary)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.069,
+                0.42,
+                0.91,
+                0.469
+            ],
+            "angle": 0,
+            "content": "3. I am satisfied that the requirements of all laws and applicable guidelines including but not limited to Guidelines on Fit and Proper Person Requirements and Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 in respect of the above application have been complied with."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.069,
+                0.168,
+                0.911,
+                0.469
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.068,
+                0.483,
+                0.922,
+                0.531
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1960/. (please state any other relevant provisions)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.078,
+                0.558,
+                0.383,
+                0.586
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.08,
+                0.587,
+                0.349,
+                0.6
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.081,
+                0.601,
+                0.345,
+                0.613
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.081,
+                0.614,
+                0.342,
+                0.628
+            ],
+            "angle": 0,
+            "content": "This...day of...20."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.655,
+                0.157,
+                0.669
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.732,
+                0.372,
+                0.751
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ]
+]

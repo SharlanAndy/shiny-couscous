@@ -38,6 +38,24 @@ export function AdminAnalyticsPage() {
         submissionsByForm[sub.formId] = (submissionsByForm[sub.formId] || 0) + 1
       })
 
+      // Calculate average processing time (days between submittedAt and reviewedAt for approved/rejected)
+      let totalProcessingDays = 0
+      let processedCount = 0
+      
+      submissions.forEach((sub) => {
+        if (sub.submittedAt && sub.reviewedAt && (sub.status === 'approved' || sub.status === 'rejected')) {
+          const submittedDate = new Date(sub.submittedAt)
+          const reviewedDate = new Date(sub.reviewedAt)
+          const daysDiff = (reviewedDate.getTime() - submittedDate.getTime()) / (1000 * 60 * 60 * 24)
+          if (daysDiff > 0) {
+            totalProcessingDays += daysDiff
+            processedCount++
+          }
+        }
+      })
+      
+      const averageProcessingTime = processedCount > 0 ? Math.round((totalProcessingDays / processedCount) * 10) / 10 : 0
+
       const analyticsData: AnalyticsData = {
         totalSubmissions: submissions.length,
         submissionsByStatus,
@@ -46,7 +64,7 @@ export function AdminAnalyticsPage() {
           count,
         })),
         submissionsByDate: [], // TODO: Calculate from submission dates
-        averageProcessingTime: 0, // TODO: Calculate from review times
+        averageProcessingTime,
       }
 
       setAnalytics(analyticsData)

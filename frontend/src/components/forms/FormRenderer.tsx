@@ -145,6 +145,7 @@ export function FormRenderer({
     // Render based on field type
     switch (field.fieldType) {
       // Standard input types
+      case 'text':
       case 'text-input':
       case 'input-text':
       case 'input-number':

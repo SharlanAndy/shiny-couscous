@@ -4,10 +4,13 @@ import apiClient from '@/api/client'
 import { FormResponse } from '@/types'
 
 export function FormListPage() {
-  const { data: forms, isLoading, error } = useQuery<FormResponse[]>({
+  const { data: allForms, isLoading, error } = useQuery<FormResponse[]>({
     queryKey: ['forms'],
-    queryFn: () => apiClient.getForms({ status: 'active' }),
+    queryFn: () => apiClient.getForms(),
   })
+
+  // Filter to only show active forms
+  const forms = allForms?.filter((form) => form.isActive) || []
 
   if (isLoading) {
     return (

@@ -1,204 +1,322 @@
 """
-Authentication API endpoints.
-
-Handles user registration, login, token refresh, and user management.
+Authentication API endpoints for user and admin login.
 """
 
-from datetime import datetime, timedelta
+from fastapi import APIRouter, HTTPException, Depends, Header
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from pydantic import BaseModel, EmailStr
+from typing import Optional
 
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
-
-from labuan_fsa.config import get_settings
-from labuan_fsa.database import get_db
-from labuan_fsa.models.user import User
-from labuan_fsa.schemas.auth import (
-    LoginRequest,
-    LoginResponse,
-    RegisterRequest,
-    RegisterResponse,
-    TokenRefreshRequest,
-    TokenRefreshResponse,
-    UserResponse,
-)
-from labuan_fsa.utils.security import (
-    create_access_token,
-    create_refresh_token,
-    get_password_hash,
-    verify_password,
-    verify_token,
+from labuan_fsa.auth_json import (
+    authenticate_user,
+    authenticate_admin,
+    create_session,
+    validate_session,
+    delete_session,
+    create_user as create_user_account,
+    create_admin as create_admin_account,
+    initialize_default_auth,
+    get_user_by_id,
+    update_user_profile,
+    change_user_password,
+    delete_user,
 )
 
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
+security = HTTPBearer(auto_error=False)
 
-settings = get_settings()
+
+class LoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+    role: str = "user"  # "user" or "admin"
 
 
-@router.post("/register", response_model=RegisterResponse, status_code=201)
-async def register(
-    request: RegisterRequest,
-    db: AsyncSession = Depends(get_db),
-) -> RegisterResponse:
-    """
-    Register a new user.
+class RegisterRequest(BaseModel):
+    email: EmailStr
+    password: str
+    name: Optional[str] = None
+    role: str = "user"  # "user" or "admin"
 
-    Args:
-        request: Registration request
-        db: Database session
 
-    Returns:
-        Registration response
+class LoginResponse(BaseModel):
+    token: str
+    user: dict
+    role: str
 
-    Raises:
-        HTTPException: 409 if email already exists
-    """
-    # Check if user already exists
-    result = await db.execute(select(User).where(User.email == request.email))
-    existing_user = result.scalar_one_or_none()
 
-    if existing_user:
-        raise HTTPException(status_code=409, detail="Email already registered")
+class LogoutResponse(BaseModel):
+    message: str
 
-    # Create user
-    user = User(
-        email=request.email,
-        password_hash=get_password_hash(request.password),
-        full_name=request.full_name,
-        phone_number=request.phone_number,
-        role="user",
-        is_active=True,
-        is_verified=False,  # TODO: Implement email verification
-    )
 
-    db.add(user)
-    await db.commit()
-    await db.refresh(user)
-
-    # TODO: Send verification email
-
-    return RegisterResponse(message="User registered successfully", user_id=user.id)
+async def get_current_user(
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> Optional[dict]:
+    """Get current user from session token."""
+    if not credentials:
+        return None
+    
+    session = await validate_session(credentials.credentials)
+    if not session:
+        return None
+    
+    return session
 
 
 @router.post("/login", response_model=LoginResponse)
-async def login(
-    request: LoginRequest,
-    db: AsyncSession = Depends(get_db),
-) -> LoginResponse:
+async def login(request: LoginRequest) -> LoginResponse:
     """
-    Login user and return JWT tokens.
-
+    Login endpoint for users and admins.
+    
     Args:
-        request: Login request
-        db: Database session
-
+        request: Login credentials (email, password, role)
+        
     Returns:
-        Login response with access and refresh tokens
-
-    Raises:
-        HTTPException: 401 if credentials invalid
+        Login response with token and user info
     """
-    # Get user
-    result = await db.execute(select(User).where(User.email == request.email))
-    user = result.scalar_one_or_none()
-
+    await initialize_default_auth()
+    
+    if request.role == "admin":
+        user = await authenticate_admin(request.email, request.password)
+    else:
+        user = await authenticate_user(request.email, request.password)
+    
     if not user:
-        raise HTTPException(status_code=401, detail="Invalid email or password")
-
-    # Verify password
-    if not verify_password(request.password, user.password_hash):
-        raise HTTPException(status_code=401, detail="Invalid email or password")
-
-    # Check if user is active
-    if not user.is_active:
-        raise HTTPException(status_code=403, detail="User account is disabled")
-
-    # Update last login
-    user.last_login_at = datetime.now()
-    await db.commit()
-
-    # Create tokens
-    access_token = create_access_token(
-        data={"sub": str(user.id), "email": user.email, "role": user.role}
-    )
-    refresh_token = create_refresh_token(
-        data={"sub": str(user.id), "email": user.email, "role": user.role}
-    )
-
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid email or password"
+        )
+    
+    token = await create_session(user["id"], user["role"])
+    
     return LoginResponse(
-        access_token=access_token,
-        refresh_token=refresh_token,
-        token_type="bearer",
-        expires_in=settings.security.access_token_expire_minutes * 60,
+        token=token,
+        user={
+            "id": user["id"],
+            "email": user["email"],
+            "name": user["name"],
+        },
+        role=user["role"],
     )
 
 
-@router.post("/refresh", response_model=TokenRefreshResponse)
-async def refresh_token(
-    request: TokenRefreshRequest,
-    db: AsyncSession = Depends(get_db),
-) -> TokenRefreshResponse:
+@router.post("/register", response_model=LoginResponse)
+async def register(request: RegisterRequest) -> LoginResponse:
     """
-    Refresh access token using refresh token.
-
+    Register endpoint for new users.
+    
     Args:
-        request: Token refresh request
-        db: Database session
-
+        request: Registration data (email, password, name, role)
+        
     Returns:
-        New access token
-
-    Raises:
-        HTTPException: 401 if refresh token invalid
+        Login response with token and user info
     """
-    # Verify refresh token
-    payload = verify_token(request.refresh_token)
-
-    if not payload or payload.get("type") != "refresh":
-        raise HTTPException(status_code=401, detail="Invalid refresh token")
-
-    # Get user
-    user_id = payload.get("sub")
-    if not user_id:
-        raise HTTPException(status_code=401, detail="Invalid token payload")
-
-    result = await db.execute(select(User).where(User.id == user_id))
-    user = result.scalar_one_or_none()
-
-    if not user or not user.is_active:
-        raise HTTPException(status_code=401, detail="User not found or inactive")
-
-    # Create new access token
-    access_token = create_access_token(
-        data={"sub": str(user.id), "email": user.email, "role": user.role}
-    )
-
-    return TokenRefreshResponse(
-        access_token=access_token,
-        token_type="bearer",
-        expires_in=settings.security.access_token_expire_minutes * 60,
+    await initialize_default_auth()
+    
+    try:
+        if request.role == "admin":
+            user = await create_admin_account(request.email, request.password, request.name)
+        else:
+            user = await create_user_account(request.email, request.password, request.name)
+    except ValueError as e:
+        raise HTTPException(
+            status_code=400,
+            detail=str(e)
+        )
+    
+    token = await create_session(user["id"], user["role"])
+    
+    return LoginResponse(
+        token=token,
+        user={
+            "id": user["id"],
+            "email": user["email"],
+            "name": user["name"],
+        },
+        role=user["role"],
     )
 
 
-@router.get("/me", response_model=UserResponse)
-async def get_current_user(
-    token: str = Depends(lambda: None),  # TODO: Implement token dependency
-    db: AsyncSession = Depends(get_db),
-) -> UserResponse:
+@router.post("/logout", response_model=LogoutResponse)
+async def logout(
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> LogoutResponse:
+    """
+    Logout endpoint.
+    
+    Args:
+        credentials: Bearer token
+        
+    Returns:
+        Logout confirmation
+    """
+    if credentials:
+        await delete_session(credentials.credentials)
+    
+    return LogoutResponse(message="Logged out successfully")
+
+
+@router.get("/me")
+async def get_current_user_info(
+    current_user: Optional[dict] = Depends(get_current_user)
+) -> dict:
     """
     Get current user information.
-
+    
     Args:
-        token: JWT token (from Authorization header)
-        db: Database session
-
+        current_user: Current user from session
+        
     Returns:
-        Current user information
-
-    Raises:
-        HTTPException: 401 if token invalid
+        User information
     """
-    # TODO: Implement token extraction from Authorization header
-    # TODO: Verify token and get user
-    raise HTTPException(status_code=501, detail="Get current user not yet implemented")
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    
+    # Get full user details
+    user_id = current_user.get("userId")
+    user = await get_user_by_id(user_id)
+    
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail="User not found"
+        )
+    
+    return user
 
+
+class ProfileUpdateRequest(BaseModel):
+    name: Optional[str] = None
+    email: Optional[str] = None
+
+
+class PasswordChangeRequest(BaseModel):
+    current_password: str
+    new_password: str
+
+
+class AccountDeleteRequest(BaseModel):
+    password: str
+
+
+@router.put("/profile", response_model=dict)
+async def update_profile(
+    request: ProfileUpdateRequest,
+    current_user: Optional[dict] = Depends(get_current_user)
+) -> dict:
+    """
+    Update current user's profile.
+    
+    Args:
+        request: Profile update data (name, email)
+        current_user: Current user from session
+        
+    Returns:
+        Updated user information with emailChanged flag if email was changed
+    """
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    
+    user_id = current_user.get("userId")
+    
+    # Check if email is being changed
+    email_changed = False
+    if request.email:
+        user = await get_user_by_id(user_id)
+        if user and user.get("email") != request.email:
+            email_changed = True
+    
+    try:
+        user = await update_user_profile(
+            user_id,
+            name=request.name,
+            email=request.email
+        )
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
+        
+        # Add flag to indicate email changed
+        if email_changed:
+            user["emailChanged"] = True
+        
+        return user
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/change-password", response_model=dict)
+async def change_password(
+    request: PasswordChangeRequest,
+    current_user: Optional[dict] = Depends(get_current_user)
+) -> dict:
+    """
+    Change user password.
+    
+    Args:
+        request: Password change data (current_password, new_password)
+        current_user: Current user from session
+        
+    Returns:
+        Success message
+    """
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    
+    user_id = current_user.get("userId")
+    
+    try:
+        success = await change_user_password(
+            user_id,
+            request.current_password,
+            request.new_password
+        )
+        if not success:
+            raise HTTPException(status_code=404, detail="User not found")
+        return {"message": "Password changed successfully"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/account/delete", response_model=dict)
+async def delete_account(
+    request: AccountDeleteRequest,
+    current_user: Optional[dict] = Depends(get_current_user)
+) -> dict:
+    """
+    Delete user account.
+    
+    Args:
+        request: Account deletion data (password)
+        current_user: Current user from session
+        
+    Returns:
+        Success message
+    """
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Not authenticated"
+        )
+    
+    user_id = current_user.get("userId")
+    
+    try:
+        success = await delete_user(user_id, request.password)
+        if not success:
+            raise HTTPException(status_code=404, detail="User not found")
+        
+        # Delete all sessions for this user
+        # This will be handled by delete_user function
+        
+        return {"message": "Account deleted successfully"}
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))

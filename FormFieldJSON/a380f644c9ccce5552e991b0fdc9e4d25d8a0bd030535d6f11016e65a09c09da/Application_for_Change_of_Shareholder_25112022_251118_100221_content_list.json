@@ -1,0 +1,1021 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR CHANGE OF SHAREHOLDER/SHAREHOLDING STRUCTURE*",
+        "text_level": 1,
+        "bbox": [
+            129,
+            118,
+            848,
+            133
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name of Labuan Company :",
+        "bbox": [
+            110,
+            142,
+            393,
+            156
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Type of Licence",
+        "bbox": [
+            110,
+            156,
+            393,
+            171
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "*only applicable for the changes of more than 10% of the paid up capital",
+        "bbox": [
+            110,
+            171,
+            707,
+            187
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA",
+        "bbox": [
+            110,
+            200,
+            887,
+            230
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            110,
+            231,
+            884,
+            247
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/8521cc112a7494ddca926b4b58957bb94ab8e2c76940eef1a5b32e4a1ecf752a.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>No</td><td>Documents</td><td>For \nApplicant</td><td>For Labuan \nFSA</td></tr><tr><td colspan=\"4\">Corporate Shareholder</td></tr><tr><td>1.</td><td>Duly completed application form as per Appendix I</td><td></td><td></td></tr><tr><td>2.</td><td>Certified copy of Certificate of Incorporation</td><td></td><td></td></tr><tr><td>3.</td><td>Certified copy of Memorandum &amp; Articles of Association</td><td></td><td></td></tr><tr><td>4.</td><td>Latest two (2) years Audited Financial Statements/Annual Report</td><td></td><td></td></tr><tr><td>5.</td><td>Board Resolution or extract of minutes of General Meeting which approved the change of shareholding structure</td><td></td><td></td></tr><tr><td>6.</td><td>Diagram structure before &amp; after change of shareholder</td><td></td><td></td></tr><tr><td>7.</td><td>Rationale for changes, purchase consideration of shares and source of funds to acquire the shares</td><td></td><td></td></tr><tr><td colspan=\"4\">Individual Shareholder</td></tr><tr><td>1.</td><td>Duly completed application form as per Appendix II</td><td></td><td></td></tr><tr><td>2.</td><td>Certified copy of IC (Malaysian)/passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>3.</td><td>Two (2) referral letters from institutions and/or professional bodies</td><td></td><td></td></tr><tr><td>4.</td><td>Proof of net worth of assets (net worth statement duly verified by qualified Accountant or certified copy of latest 3 months banks&#x27; statements certified by the bank)</td><td></td><td></td></tr><tr><td>5.</td><td>Board Resolution or extract of minutes of General Meeting which approved the change of shareholding structure</td><td></td><td></td></tr><tr><td>6.</td><td>Diagram structure before &amp; after the change of shareholder</td><td></td><td></td></tr><tr><td>7.</td><td>Rationale for changes, purchase consideration of shares and source of fund to acquire the shares</td><td></td><td></td></tr><tr><td colspan=\"4\">Statutory Declaration</td></tr><tr><td>1.</td><td>Duly completed Statutory Declaration of true and correct information submitted – to be completed by applicant as per Appendix III</td><td></td><td></td></tr><tr><td>2.</td><td>Duly completed Statutory Declaration by Shareholder on fit and proper person as per Appendix IV</td><td></td><td></td></tr><tr><td>3.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application (as per Appendix V) – not applicable for submission made directly by the Labuan company</td><td></td><td></td></tr><tr><td colspan=\"4\">Other Information</td></tr><tr><td>1.</td><td>Processing fee of RM1,000 or USD350 (Normal Processing) or RM4,500 or USD1,550 (Fast Track Processing)</td><td></td><td></td></tr></table>",
+        "bbox": [
+            31,
+            253,
+            942,
+            894
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            398,
+            35,
+            643,
+            104
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            940,
+            243,
+            961
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1",
+        "bbox": [
+            862,
+            925,
+            873,
+            936
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Notes:",
+        "text_level": 2,
+        "bbox": [
+            57,
+            59,
+            117,
+            74
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Copy of bank statements must be certified by the bank.",
+            "3) The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.",
+            "4) This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted"
+        ],
+        "bbox": [
+            55,
+            80,
+            942,
+            215
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Officer responsible for information submission:",
+        "bbox": [
+            127,
+            244,
+            512,
+            261
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Signature : Company :",
+        "bbox": [
+            134,
+            282,
+            927,
+            300
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Name Contact No",
+        "bbox": [
+            136,
+            313,
+            927,
+            330
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Designation : Email :",
+        "bbox": [
+            136,
+            344,
+            927,
+            361
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            862,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "table",
+        "img_path": "images/88a8e3ee260d00225f3c3e89856d4d5496ec3c05ff7fa30271dd796e3e35fec0.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"5\">PROFILE OF CORPORATE SHAREHOLDER(S) \nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of Company/ Head Office</td><td colspan=\"4\"></td></tr><tr><td>b. Company Address</td><td colspan=\"4\"></td></tr><tr><td>c. Nature and Type of Business</td><td colspan=\"4\"></td></tr><tr><td>d. Incorporation/ Registration Number</td><td colspan=\"4\"></td></tr><tr><td>e. Date and Place of Incorporation/ Registration</td><td colspan=\"4\"></td></tr><tr><td>f. Date, Type of Licence and Licence Number</td><td colspan=\"4\"></td></tr><tr><td>g. Home Supervisory Authority (if applicable)</td><td colspan=\"4\"></td></tr><tr><td rowspan=\"3\">Shareholders&#x27; Fund \n(Please specify currency and amount for the latest two (2) years Audited Financial Statements)</td><td>Year</td><td>Paid-Up Capital</td><td>Retained Profits / Accumulated Losses</td><td>Other Reserves</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"3\">Financial Performance \n(Please specify currency and amount for the latest two (2) years Audited Financial Statements)</td><td>Year</td><td>Total Assets</td><td>Total Liabilities</td><td>Profit/(Loss) Before Tax</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">j. Shareholder(s)</td><td colspan=\"2\">Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding (s)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"2\">k. Board of Director(s)</td><td colspan=\"2\">Name of Director(s)</td><td>Nationality</td><td>Nature of Appointment (executive or non-executive)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"2\">l. Credit Rating</td><td colspan=\"2\">Agency</td><td>Rating</td><td>Date</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>m. Any Other Information Relevant For Consideration of the Application</td><td colspan=\"4\"></td></tr></table>",
+        "bbox": [
+            45,
+            72,
+            963,
+            829
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Important:",
+        "text_level": 2,
+        "bbox": [
+            82,
+            829,
+            174,
+            843
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(i) All fields are mandatory and should not be left blank.",
+            "(ii) Please complete additional copy of Appendix II if there is more than one corporate shareholder.",
+            "(iii) If space provided is insufficient, provide such details in attachments."
+        ],
+        "bbox": [
+            95,
+            845,
+            899,
+            912
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX I",
+        "bbox": [
+            801,
+            54,
+            900,
+            66
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "3",
+        "bbox": [
+            865,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/7823df6fa64ce6627582e58fc3777f1b43561a1fad41c063d09004881accbf05.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">PROFILE OF INDIVIDUAL SHAREHOLDER(S) \nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Salutation</td><td colspan=\"5\"></td></tr><tr><td>b. Name \n(as per \nNRIC/passport)</td><td colspan=\"5\"></td></tr><tr><td>c. Date and Place of \nBirth</td><td colspan=\"5\"></td></tr><tr><td>d. Gender</td><td colspan=\"2\">Male</td><td colspan=\"3\">Female</td></tr><tr><td>e. Nationality</td><td colspan=\"5\"></td></tr><tr><td>f. NRIC Details \n(for Malaysian)</td><td colspan=\"5\">Old IC No.: \nNRIC No.:</td></tr><tr><td>g. Passport Details \n(for Non-Malaysian)</td><td colspan=\"5\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□  No □  Yes \n(please provide certified true \ncopy of the work permit)</td></tr><tr><td rowspan=\"7\">h. Financial Net \nWorth \n(latest three months \nstatement which duly \ncertified by Qualified \nAccountant or Bank)</td><td colspan=\"5\">a) Net Worth Statement Certified by Qualified Accountant; or</td></tr><tr><td colspan=\"5\">Currency and Amount</td></tr><tr><td colspan=\"2\">Total Assets</td><td colspan=\"3\"></td></tr><tr><td colspan=\"2\">Total Liabilities</td><td colspan=\"3\"></td></tr><tr><td colspan=\"5\">b) Bank Statement / Online Bank Statement Certified by the Bank</td></tr><tr><td>Name of Bank</td><td>Type of Account</td><td colspan=\"2\">Statement Date</td><td>Currency and Amount</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">i. Curriculum Vitae of Individual Shareholder</td></tr><tr><td colspan=\"6\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of School/College/ \nUniversity/Others</td><td colspan=\"2\">Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>",
+        "bbox": [
+            45,
+            85,
+            969,
+            914
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX II",
+        "bbox": [
+            831,
+            58,
+            946,
+            72
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "4",
+        "bbox": [
+            862,
+            925,
+            878,
+            936
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "table",
+        "img_path": "images/945402c18f0148cea3d1747b116376d0d442a6328cc7bfb44911df92cab3133f.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"7\">PROFILE OF INDIVIDUAL SHAREHOLDER(S)Important: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"7\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"3\">Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"3\">Name of Institution</td><td>Year Membership Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\" colspan=\"2\">Key Areas of Responsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"3\">Name of Corporation</td><td colspan=\"2\">Place of Incorporation</td><td>Date of Appointment(dd/mm/yy)</td><td>Nature of Appointment( executive or non-executive)</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td><td></td></tr></table>",
+        "bbox": [
+            45,
+            58,
+            966,
+            771
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Important:",
+        "text_level": 2,
+        "bbox": [
+            80,
+            771,
+            176,
+            785
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "(i) All fields are mandatory and should not be left blank.",
+            "(ii) Please complete additional copy of Appendix II if there is more than one corporate shareholder.",
+            "(iii) If space provided is insufficient, provide such details in attachments."
+        ],
+        "bbox": [
+            73,
+            800,
+            909,
+            851
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "5",
+        "bbox": [
+            863,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED",
+        "text_level": 2,
+        "bbox": [
+            188,
+            90,
+            803,
+            105
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "text_level": 3,
+        "bbox": [
+            215,
+            107,
+            779,
+            123
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "I .NRIC/Passport No.",
+        "bbox": [
+            102,
+            140,
+            887,
+            155
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "the (position) of. (name of company),",
+        "bbox": [
+            102,
+            158,
+            887,
+            173
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            102,
+            175,
+            487,
+            190
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable.",
+            "2. I am aware that if I make any misrepresentation herein this application, it is an offence punishable pursuant to Section 192 of the Labuan Financial Services and Securities Act 2010/Section 152 of the Labuan Islamic Financial Services and Securities Act 2010.",
+            "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        ],
+        "bbox": [
+            100,
+            198,
+            887,
+            367
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions.",
+        "bbox": [
+            100,
+            392,
+            889,
+            426
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above",
+        "bbox": [
+            102,
+            458,
+            499,
+            474
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "named",
+        "bbox": [
+            102,
+            481,
+            406,
+            495
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            102,
+            502,
+            406,
+            517
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            102,
+            525,
+            410,
+            539
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "This ....day of 20.",
+        "bbox": [
+            102,
+            548,
+            413,
+            563
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            102,
+            585,
+            196,
+            599
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            638,
+            525,
+            722,
+            541
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            102,
+            675,
+            433,
+            690
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX III",
+        "bbox": [
+            768,
+            58,
+            887,
+            73
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "page_number",
+        "text": "6",
+        "bbox": [
+            865,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY INDIVIDUAL SHAREHOLDER ON FIT AND PROPER PERSON",
+        "text_level": 2,
+        "bbox": [
+            124,
+            91,
+            865,
+            121
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "bbox": [
+            216,
+            123,
+            779,
+            139
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "I, ., NRIC/Passport no. .., proposed shareholder of....(name of company/individual), do hereby solemnly and sincerely declare that:",
+        "bbox": [
+            105,
+            175,
+            887,
+            210
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LIFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines).",
+            "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA/Section 4 of LIFSSA and the Guidelines.",
+            "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete.",
+            "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        ],
+        "bbox": [
+            119,
+            225,
+            843,
+            491
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions.",
+        "bbox": [
+            102,
+            520,
+            885,
+            552
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above named",
+        "bbox": [
+            112,
+            580,
+            473,
+            609
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            115,
+            612,
+            394,
+            625
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            115,
+            627,
+            396,
+            640
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "This...day of....20...",
+        "bbox": [
+            115,
+            642,
+            290,
+            656
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            105,
+            686,
+            200,
+            701
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            105,
+            770,
+            436,
+            791
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX IV",
+        "bbox": [
+            766,
+            58,
+            887,
+            73
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "page_number",
+        "text": "7",
+        "bbox": [
+            863,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION",
+        "text_level": 2,
+        "bbox": [
+            181,
+            103,
+            838,
+            133
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "bbox": [
+            255,
+            135,
+            766,
+            148
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "I, _______________________(name) of ______________________.(address) NRIC/Passport No: _______________________. the authorized officer of ______________________.(name of trust company/insurance manager/underwriting manager/other service providers) being the party responsible for the submission of application for ______________________.(name of the Labuan company) do solemnly and sincerely declare that in relation to the above application:",
+        "bbox": [
+            112,
+            204,
+            895,
+            291
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have conducted due diligence process on............ (name of shareholder(s)) and satisfied with the result thereof.",
+            "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person Requirements and Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 in respect of the above application have been complied with."
+        ],
+        "bbox": [
+            112,
+            307,
+            895,
+            428
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions.",
+        "bbox": [
+            112,
+            445,
+            894,
+            481
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above named",
+        "bbox": [
+            122,
+            527,
+            426,
+            558
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            124,
+            574,
+            376,
+            587
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            124,
+            589,
+            405,
+            602
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "This...day of....20...",
+        "bbox": [
+            124,
+            604,
+            299,
+            619
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            593,
+            589,
+            673,
+            604
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            115,
+            663,
+            201,
+            678
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            115,
+            717,
+            416,
+            732
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX V",
+        "bbox": [
+            771,
+            58,
+            887,
+            73
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            938,
+            243,
+            961
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Application for Change of Shareholder / Shareholding Structure",
+        "bbox": [
+            421,
+            925,
+            850,
+            939
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "page_number",
+        "text": "8",
+        "bbox": [
+            865,
+            925,
+            877,
+            936
+        ],
+        "page_idx": 7
+    }
+]

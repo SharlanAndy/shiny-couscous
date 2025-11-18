@@ -1,0 +1,916 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.399,
+                0.078,
+                0.548,
+                0.107
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.554,
+                0.056,
+                0.644,
+                0.126
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.401,
+                0.109,
+                0.548,
+                0.117
+            ],
+            "angle": 0,
+            "content": "Financial Services Authority"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.243,
+                0.145,
+                0.778,
+                0.16
+            ],
+            "angle": 0,
+            "content": "APPLICATION FOR ESTABLISHMENT OF ISLAMIC WINDOW"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.175,
+                0.394,
+                0.191
+            ],
+            "angle": 0,
+            "content": "Name of Labuan Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.191,
+                0.394,
+                0.207
+            ],
+            "angle": 0,
+            "content": "Type of Licence"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.11,
+                0.224,
+                0.89,
+                0.253
+            ],
+            "angle": 0,
+            "content": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.253,
+                0.745,
+                0.267
+            ],
+            "angle": 0,
+            "content": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.122,
+                0.272,
+                0.941,
+                0.503
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>No</td><td>Documents</td><td>For Applicant</td><td>For Labuan FSA</td></tr><tr><td>1.</td><td>Duly completed application form as per Appendix I</td><td></td><td></td></tr><tr><td>2.</td><td>Board Resolution/minutes of meeting on the proposed establishment of Islamic window</td><td></td><td></td></tr><tr><td>3.</td><td>Profile of Shariah Advisor as per Appendix II</td><td></td><td></td></tr><tr><td>4.</td><td>Duly completed Declaration of True and Correct Information Submitted as per Appendix III</td><td></td><td></td></tr><tr><td>5.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application (as per Appendix IV) (not applicable for submission made directly by the Labuan Company)</td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.114,
+                0.508,
+                0.174,
+                0.524
+            ],
+            "angle": 0,
+            "content": "Notes:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.111,
+                0.53,
+                0.9,
+                0.56
+            ],
+            "angle": 0,
+            "content": "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.561,
+                0.901,
+                0.605
+            ],
+            "angle": 0,
+            "content": "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.606,
+                0.901,
+                0.636
+            ],
+            "angle": 0,
+            "content": "3) The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.636,
+                0.901,
+                0.666
+            ],
+            "angle": 0,
+            "content": "4) This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.11,
+                0.53,
+                0.901,
+                0.666
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.693,
+                0.494,
+                0.709
+            ],
+            "angle": 0,
+            "content": "Officer responsible for information submission:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.119,
+                0.73,
+                0.928,
+                0.75
+            ],
+            "angle": 0,
+            "content": "Signature : Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.12,
+                0.761,
+                0.928,
+                0.779
+            ],
+            "angle": 0,
+            "content": "Name Contact No"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.12,
+                0.792,
+                0.928,
+                0.81
+            ],
+            "angle": 0,
+            "content": "Designation : Email"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.154,
+                0.925,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.526,
+                0.912,
+                0.853,
+                0.925
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.913,
+                0.875,
+                0.923
+            ],
+            "angle": 0,
+            "content": "1"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.803,
+                0.07,
+                0.902,
+                0.083
+            ],
+            "angle": 0,
+            "content": "APPENDIX I"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.058,
+                0.097,
+                0.957,
+                0.825
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PARTICULARS OF APPLICATION</td></tr><tr><td colspan=\"4\">Section A: Business Plan</td></tr><tr><td colspan=\"2\">a. Rationale or purpose of the establishment of the Islamic window</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">b. Objective of establishment</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">c. Product and services to be offered</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">d. Islamic operation model</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">e. Investment plan policy for Islamic operation</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">f. Islamic banking fund/seed capital</td><td colspan=\"2\"></td></tr><tr><td colspan=\"2\">g. Any other information relevant for consideration of the application</td><td colspan=\"2\"></td></tr><tr><td colspan=\"4\">Section B: Three Years Financial Projections</td></tr><tr><td colspan=\"4\">Currency:</td></tr><tr><td rowspan=\"2\">Statement of Comprehensive Income</td><td rowspan=\"2\" colspan=\"2\">Year 1</td><td rowspan=\"2\">Year 2</td></tr><tr></tr><tr><td>Gross Contribution</td><td colspan=\"2\"></td><td></td></tr><tr><td>Less: Earned Contribution Ceded to Retakaful Operator</td><td colspan=\"2\"></td><td></td></tr><tr><td>Net Earned Contribution / Net Income From Islamic Banking</td><td colspan=\"2\"></td><td></td></tr><tr><td>Other Revenue</td><td colspan=\"2\"></td><td></td></tr><tr><td>Net Claims and Benefits</td><td colspan=\"2\"></td><td></td></tr><tr><td>Other Expenses</td><td colspan=\"2\"></td><td></td></tr><tr><td>Income / (Loss Before Tax</td><td colspan=\"2\"></td><td></td></tr><tr><td>Tax</td><td colspan=\"2\"></td><td></td></tr><tr><td>Income / (Loss) After Tax</td><td colspan=\"2\"></td><td></td></tr><tr><td rowspan=\"2\">Statement of Financial Position</td><td rowspan=\"2\" colspan=\"2\">Year 1</td><td rowspan=\"2\">Year 2</td></tr><tr></tr><tr><td>Total Assets</td><td colspan=\"2\"></td><td></td></tr><tr><td>Total Liabilities</td><td colspan=\"2\"></td><td></td></tr><tr><td>Islamic Banking Fund / Seed Capital</td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"4\">Note:\n1. The projection must show the realistic view of the business in three years.\n2. Please provide the basis of assumption in deriving the projected figure.</td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.155,
+                0.926,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.527,
+                0.912,
+                0.853,
+                0.925
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.913,
+                0.878,
+                0.923
+            ],
+            "angle": 0,
+            "content": "2"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.788,
+                0.07,
+                0.901,
+                0.084
+            ],
+            "angle": 0,
+            "content": "APPENDIX II"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.058,
+                0.099,
+                0.957,
+                0.896
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PROFILE OF SHARIAH ADVISOR\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name\n(as per NRIC/ passport)</td><td colspan=\"3\"></td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male     Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details\n(for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>h. Passport Details\n(for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□ No   Yes\n(please provide certified true copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Principal Officer/Shariah Advisor</td></tr><tr><td colspan=\"4\">Section A: Tertiary / Highest Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of School/College/ University/Others</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.155,
+                0.926,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.526,
+                0.912,
+                0.853,
+                0.926
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.912,
+                0.878,
+                0.923
+            ],
+            "angle": 0,
+            "content": "3"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.058,
+                0.068,
+                0.957,
+                0.581
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"7\">PROFILE OF SHARIAH ADVISOR\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"7\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"3\">Name of Institution</td><td>Year Membership Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"3\"></td><td></td></tr><tr><td colspan=\"7\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date\n(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer1</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\" colspan=\"2\">Key Areas of Responsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td colspan=\"2\"></td></tr><tr><td colspan=\"7\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"3\">Name of Corporation</td><td colspan=\"2\">Place of Incorporation</td><td>Date of Appointment\n(dd/mm/yy)</td><td>Nature of Appointment\nexecutive or non-executive)</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.081,
+                0.882,
+                0.837,
+                0.909
+            ],
+            "angle": 0,
+            "content": "1 If the position applied for requires approval from relevant authority, please give detail of the approving authority (applicable to current employment only)."
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.155,
+                0.925,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.526,
+                0.912,
+                0.853,
+                0.925
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.912,
+                0.878,
+                0.924
+            ],
+            "angle": 0,
+            "content": "4"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.793,
+                0.07,
+                0.902,
+                0.084
+            ],
+            "angle": 0,
+            "content": "APPENDIX III"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.219,
+                0.102,
+                0.782,
+                0.117
+            ],
+            "angle": 0,
+            "content": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.272,
+                0.118,
+                0.731,
+                0.131
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.18,
+                0.88,
+                0.196
+            ],
+            "angle": 0,
+            "content": "I. NRIC/Passport No:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.197,
+                0.895,
+                0.215
+            ],
+            "angle": 0,
+            "content": "the (position) of.. (name of company),"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.215,
+                0.489,
+                0.231
+            ],
+            "angle": 0,
+            "content": "do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.238,
+                0.896,
+                0.289
+            ],
+            "angle": 0,
+            "content": "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.297,
+                0.896,
+                0.332
+            ],
+            "angle": 0,
+            "content": "2. I am aware that if I make any misrepresentation herein this application, it is an offence punishable pursuant to Section 192 of the LFSSA/Section 152 of the LIFSSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.339,
+                0.896,
+                0.391
+            ],
+            "angle": 0,
+            "content": "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.102,
+                0.238,
+                0.896,
+                0.391
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.101,
+                0.415,
+                0.896,
+                0.45
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.48,
+                0.501,
+                0.497
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.504,
+                0.41,
+                0.52
+            ],
+            "angle": 0,
+            "content": "named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.526,
+                0.408,
+                0.542
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.548,
+                0.411,
+                0.564
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.571,
+                0.414,
+                0.587
+            ],
+            "angle": 0,
+            "content": "This ....day of 20."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.608,
+                0.197,
+                0.624
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.694,
+                0.304,
+                0.7
+            ],
+            "angle": 0,
+            "content": "··"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.104,
+                0.694,
+                0.304,
+                0.7
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.104,
+                0.699,
+                0.433,
+                0.715
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.526,
+                0.912,
+                0.853,
+                0.926
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.913,
+                0.878,
+                0.923
+            ],
+            "angle": 0,
+            "content": "5"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.155,
+                0.926,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.79,
+                0.07,
+                0.902,
+                0.084
+            ],
+            "angle": 0,
+            "content": "APPENDIX IV"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.212,
+                0.105,
+                0.812,
+                0.134
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.281,
+                0.134,
+                0.742,
+                0.147
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.206,
+                0.884,
+                0.223
+            ],
+            "angle": 0,
+            "content": "I, (name) of (address) NRIC/Passport"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.224,
+                0.884,
+                0.293
+            ],
+            "angle": 0,
+            "content": "No: the authorized officer of . (name of trust company/insurance manager/underwriting manager/other service providers) being the party responsible for the submission of application for . (name of applicant) do solemnly and sincerely declare that in relation to the above application:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.127,
+                0.31,
+                0.883,
+                0.362
+            ],
+            "angle": 0,
+            "content": "1. I have conducted due diligence process on............ (name of applicant) and on its director(s) and shareholder(s) and other persons or companies that involved and related to the application and satisfied with the result thereof."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.379,
+                0.884,
+                0.448
+            ],
+            "angle": 0,
+            "content": "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person Requirements and Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 in respect of the above application have been complied with."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.126,
+                0.31,
+                0.884,
+                0.448
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.465,
+                0.884,
+                0.5
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.547,
+                0.44,
+                0.563
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.563,
+                0.44,
+                0.578
+            ],
+            "angle": 0,
+            "content": "by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.579,
+                0.295,
+                0.593
+            ],
+            "angle": 0,
+            "content": "··"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.593,
+                0.391,
+                0.607
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.608,
+                0.419,
+                0.622
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.137,
+                0.623,
+                0.313,
+                0.638
+            ],
+            "angle": 0,
+            "content": "This ...day of .... 20.."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.128,
+                0.683,
+                0.222,
+                0.698
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.128,
+                0.772,
+                0.458,
+                0.789
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.605,
+                0.608,
+                0.688,
+                0.624
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.532,
+                0.599,
+                0.761,
+                0.608
+            ],
+            "angle": 0,
+            "content": "··"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.155,
+                0.925,
+                0.244,
+                0.949
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.526,
+                0.912,
+                0.853,
+                0.926
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Islamic Window"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.866,
+                0.913,
+                0.878,
+                0.923
+            ],
+            "angle": 0,
+            "content": "6"
+        }
+    ]
+]

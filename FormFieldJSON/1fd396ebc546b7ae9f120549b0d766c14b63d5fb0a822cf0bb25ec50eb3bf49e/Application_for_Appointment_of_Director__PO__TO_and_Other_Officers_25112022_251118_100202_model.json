@@ -1,0 +1,696 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.359,
+                0.035,
+                0.604,
+                0.104
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.103,
+                0.113,
+                0.894,
+                0.129
+            ],
+            "angle": 0,
+            "content": "APPOINTMENT OF DIRECTOR/PRINCIPAL OFFICER/TRUST OFFICER/OTHER OFFICERS*"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.085,
+                0.143,
+                0.383,
+                0.159
+            ],
+            "angle": 0,
+            "content": "Name of Labuan Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.086,
+                0.166,
+                0.383,
+                0.182
+            ],
+            "angle": 0,
+            "content": "Type of Licence"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.071,
+                0.206,
+                0.867,
+                0.235
+            ],
+            "angle": 0,
+            "content": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.071,
+                0.236,
+                0.842,
+                0.253
+            ],
+            "angle": 0,
+            "content": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.079,
+                0.264,
+                0.932,
+                0.609
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>No</td><td>Documents</td><td>To be completed by Applicant</td><td>For Labuan FSA use</td></tr><tr><td>1.</td><td>Duly completed profile of Director(s)/Principal Officer/Trust Officer/Other Officers* (as per Appendix I)</td><td></td><td></td></tr><tr><td>2.</td><td>Duly completed Statutory Declaration by Director(s)/ Principal Officer/Trust Officer/Other Officers* on Fit and Proper Person (as per Appendix II)</td><td></td><td></td></tr><tr><td>3.</td><td>Certified true copy of IC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>4.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>5.</td><td>Two (2) referral letters from institutions and/or professional bodies (not applicable for appointment within the group of companies)</td><td></td><td></td></tr><tr><td>6.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application (as per Appendix III) (not applicable for submission made directly by the Labuan Company)</td><td></td><td></td></tr><tr><td>7.</td><td>Processing fee of USD350 (Normal Processing) or USD1,550 (Fast Track Processing) only application for Appointment of Trust Officer</td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.07,
+                0.623,
+                0.129,
+                0.637
+            ],
+            "angle": 0,
+            "content": "Notes:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.071,
+                0.646,
+                0.928,
+                0.69
+            ],
+            "angle": 0,
+            "content": "1) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.071,
+                0.691,
+                0.928,
+                0.72
+            ],
+            "angle": 0,
+            "content": "2) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.071,
+                0.721,
+                0.928,
+                0.751
+            ],
+            "angle": 0,
+            "content": "3) The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.071,
+                0.751,
+                0.928,
+                0.781
+            ],
+            "angle": 0,
+            "content": "4) Other officers as defined in Labuan Financial Services and Securities Act 2010, Labuan Islamic Financial Services and Securities Act 2010 and Labuan Companies Act 1990"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.071,
+                0.646,
+                0.928,
+                0.781
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.072,
+                0.781,
+                0.325,
+                0.796
+            ],
+            "angle": 0,
+            "content": "*Delete whichever inapplicable"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.07,
+                0.81,
+                0.451,
+                0.826
+            ],
+            "angle": 0,
+            "content": "Officer responsible for information submission:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.087,
+                0.856,
+                0.917,
+                0.873
+            ],
+            "angle": 0,
+            "content": "Signature : Company :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.087,
+                0.887,
+                0.917,
+                0.903
+            ],
+            "angle": 0,
+            "content": "Name : Contact No :"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.087,
+                0.918,
+                0.917,
+                0.934
+            ],
+            "angle": 0,
+            "content": "Designation : Email :"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.822,
+                0.041,
+                0.93,
+                0.059
+            ],
+            "angle": 0,
+            "content": "Appendix I"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.076,
+                0.106,
+                0.925,
+                0.925
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PROFILE OF DIRECTOR(S)/PRINCIPAL OFFICER/TRUST OFFICER\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name\n(as per NRIC/passport)</td><td colspan=\"3\"></td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male     Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details\n(for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>h. Passport Details\n(for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□  No   □  Yes\n(please provide certified \ntrue copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Principal Officer</td></tr><tr><td colspan=\"4\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of College/University/Others</td><td>Year\nQualification\nObtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.822,
+                0.041,
+                0.93,
+                0.059
+            ],
+            "angle": 0,
+            "content": "Appendix I"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.078,
+                0.084,
+                0.923,
+                0.876
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"6\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of Institution</td><td>Year \nQualification \nObtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"2\">Name of Institution</td><td>Year \nMembership \nObtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date \n(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer1</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\">Key Areas of \nResponsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"6\">Section E: Directorship Held in Other Company(s)</td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.067,
+                0.923,
+                0.923,
+                0.951
+            ],
+            "angle": 0,
+            "content": "1 If the position applied requires for approval from relevant authority, please give detail of the approving authority (applicable for current employment only)."
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.822,
+                0.041,
+                0.93,
+                0.059
+            ],
+            "angle": 0,
+            "content": "Appendix I"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.076,
+                0.083,
+                0.924,
+                0.342
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>Name of Corporation</td><td>Place of Incorporation</td><td>Date of Appointment(dd/mm/yy)</td><td>Nature of Appointment( executive or non-executive)</td></tr><tr><td></td><td></td><td></td><td></td></tr></table>"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.818,
+                0.041,
+                0.93,
+                0.058
+            ],
+            "angle": 0,
+            "content": "Appendix II"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.088,
+                0.087,
+                0.892,
+                0.118
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY DIRECTOR/PRINCIPAL OFFICER/TRUST OFFICER/OTHER OFFICERS ON FIT AND PROPER PERSON"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.21,
+                0.119,
+                0.773,
+                0.135
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.196,
+                0.889,
+                0.212
+            ],
+            "angle": 0,
+            "content": "I, . NRIC/Passport No: a"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.214,
+                0.888,
+                0.23
+            ],
+            "angle": 0,
+            "content": "proposed director/principal officer/trust officer/other officers"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.231,
+                0.888,
+                0.248
+            ],
+            "angle": 0,
+            "content": "of....(name of the Labuan company), do hereby"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.248,
+                0.39,
+                0.264
+            ],
+            "angle": 0,
+            "content": "solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.108,
+                0.276,
+                0.842,
+                0.338
+            ],
+            "angle": 0,
+            "content": "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LIFSSA) /Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person issued on 11 February 2014 (the Guidelines)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.107,
+                0.354,
+                0.842,
+                0.414
+            ],
+            "angle": 0,
+            "content": "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA /Section 4 of LIFSSA and the Guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.107,
+                0.431,
+                0.841,
+                0.462
+            ],
+            "angle": 0,
+            "content": "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.107,
+                0.478,
+                0.841,
+                0.526
+            ],
+            "angle": 0,
+            "content": "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.107,
+                0.276,
+                0.842,
+                0.526
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.091,
+                0.553,
+                0.889,
+                0.585
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.101,
+                0.613,
+                0.463,
+                0.644
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.645,
+                0.356,
+                0.658
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.659,
+                0.384,
+                0.673
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.674,
+                0.279,
+                0.689
+            ],
+            "angle": 0,
+            "content": "This...day of....20..."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.631,
+                0.658,
+                0.713,
+                0.674
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.718,
+                0.188,
+                0.733
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.094,
+                0.834,
+                0.425,
+                0.851
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.812,
+                0.041,
+                0.93,
+                0.058
+            ],
+            "angle": 0,
+            "content": "Appendix III"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.169,
+                0.088,
+                0.826,
+                0.121
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.217,
+                0.124,
+                0.78,
+                0.14
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.101,
+                0.197,
+                0.882,
+                0.214
+            ],
+            "angle": 0,
+            "content": "I, (name) of (address) NRIC/Passport"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.216,
+                0.882,
+                0.283
+            ],
+            "angle": 0,
+            "content": "No: the authorized officer of (name of trust company/insurance manager/underwriting manager/other service providers) being the party responsible for the submission of application for (name of the Labuan company) do solemnly and sincerely declare that in relation to the above application:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.101,
+                0.301,
+                0.882,
+                0.335
+            ],
+            "angle": 0,
+            "content": "1. I have conducted due diligence process on............ (name of director/principal officer/trust officer/other officers) and satisfied with the result thereof."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.352,
+                0.881,
+                0.404
+            ],
+            "angle": 0,
+            "content": "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person in respect of the above application have been complied with."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.1,
+                0.301,
+                0.882,
+                0.404
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.421,
+                0.88,
+                0.456
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.504,
+                0.414,
+                0.52
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.52,
+                0.414,
+                0.535
+            ],
+            "angle": 0,
+            "content": "by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.548,
+                0.366,
+                0.564
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.565,
+                0.393,
+                0.579
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.58,
+                0.288,
+                0.595
+            ],
+            "angle": 0,
+            "content": "This...day of....20.."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.58,
+                0.565,
+                0.662,
+                0.58
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.103,
+                0.639,
+                0.197,
+                0.654
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.103,
+                0.755,
+                0.434,
+                0.772
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        }
+    ]
+]

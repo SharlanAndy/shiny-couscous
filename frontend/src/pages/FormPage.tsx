@@ -10,6 +10,7 @@ export function FormPage() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const draftId = searchParams.get('draftId')
+  const resubmitId = searchParams.get('resubmitId')
   const { showSuccess, showError } = useToast()
 
   // Load draft data if editing existing draft
@@ -20,6 +21,16 @@ export function FormPage() {
       return apiClient.getSubmission(draftId)
     },
     enabled: !!draftId,
+  })
+
+  // Load rejected submission data if resubmitting
+  const { data: resubmitData, isLoading: isLoadingResubmit } = useQuery({
+    queryKey: ['submission', resubmitId],
+    queryFn: () => {
+      if (!resubmitId) return null
+      return apiClient.getSubmission(resubmitId)
+    },
+    enabled: !!resubmitId,
   })
 
   const submitMutation = useMutation({
@@ -81,19 +92,56 @@ export function FormPage() {
     )
   }
 
-  if (isLoadingDraft) {
+  if (isLoadingDraft || isLoadingResubmit) {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-          <p className="mt-4 text-sm text-gray-500">Loading draft...</p>
+          <p className="mt-4 text-sm text-gray-500">
+            {isLoadingDraft ? 'Loading draft...' : 'Loading previous submission...'}
+          </p>
         </div>
       </div>
     )
   }
 
-  // Extract initial data from draft
-  const initialData = draftData?.submittedData || undefined
+  // Extract initial data from draft or resubmit
+  let initialData: SubmissionData | undefined = undefined
+  if (resubmitData?.submittedData) {
+    // For resubmit, copy all data but reset signature date
+    // Deep clone to avoid mutating the original
+    initialData = JSON.parse(JSON.stringify(resubmitData.submittedData))
+    
+    // Find and reset signature date in all steps (handle nested objects and arrays)
+    const resetSignatureDate = (obj: any): any => {
+      if (obj === null || typeof obj !== 'object') {
+        return obj
+      }
+      
+      if (Array.isArray(obj)) {
+        return obj.map(resetSignatureDate)
+      }
+      
+      const result: any = {}
+      for (const key in obj) {
+        if (key === 'signatureDate') {
+          result[key] = ''
+        } else {
+          result[key] = resetSignatureDate(obj[key])
+        }
+      }
+      return result
+    }
+    
+    // Reset signature date in all steps
+    Object.keys(initialData).forEach((stepKey) => {
+      if (initialData[stepKey] && typeof initialData[stepKey] === 'object') {
+        initialData[stepKey] = resetSignatureDate(initialData[stepKey])
+      }
+    })
+  } else if (draftData?.submittedData) {
+    initialData = draftData.submittedData
+  }
 
   return (
     <div className="max-w-4xl mx-auto w-full px-2 sm:px-4">
@@ -101,6 +149,13 @@ export function FormPage() {
         <div className="mb-3 sm:mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4">
           <p className="text-xs sm:text-sm text-blue-800">
             <strong>Editing draft:</strong> {draftData?.submissionId}
+          </p>
+        </div>
+      )}
+      {resubmitId && (
+        <div className="mb-3 sm:mb-4 bg-yellow-50 border border-yellow-200 rounded-lg p-3 sm:p-4">
+          <p className="text-xs sm:text-sm text-yellow-800">
+            <strong>Resubmitting application:</strong> Previous submission data has been pre-filled. Please review and update as needed. Signature date has been reset.
           </p>
         </div>
       )}

@@ -22,14 +22,25 @@ export function LoginPage() {
       const response = await apiClient.client.post('/api/auth/login', {
         email: formData.email,
         password: formData.password,
+        role: 'user', // User login
       })
 
-      const { access_token, refresh_token, user } = response.data
+      const { token, user, role } = response.data
 
-      // Store tokens
-      apiClient.setToken(access_token)
+      // Clear any admin session first
+      if (localStorage.getItem('userRole') === 'admin') {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        localStorage.removeItem('userRole')
+      }
+
+      // Store token
+      apiClient.setToken(token)
+      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('userRole', role)
+      
       if (formData.rememberMe) {
-        localStorage.setItem('refresh_token', refresh_token)
+        localStorage.setItem('rememberMe', 'true')
       }
 
       // Redirect to dashboard or home

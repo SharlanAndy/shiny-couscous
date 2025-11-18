@@ -1,0 +1,1659 @@
+{
+    "pdf_info": [
+        {
+            "para_blocks": [
+                {
+                    "bbox": [
+                        219,
+                        70,
+                        534,
+                        106
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                219,
+                                70,
+                                534,
+                                106
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        219,
+                                        70,
+                                        534,
+                                        106
+                                    ],
+                                    "type": "text",
+                                    "content": "COMPLAINT FORM"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "line_avg_height": 38,
+                    "level": 1
+                },
+                {
+                    "bbox": [
+                        30,
+                        133,
+                        314,
+                        147
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                133,
+                                314,
+                                147
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        133,
+                                        314,
+                                        147
+                                    ],
+                                    "type": "text",
+                                    "content": "Please ensure to complete all required information on this form in full."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        31,
+                        169,
+                        136,
+                        181
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                31,
+                                169,
+                                136,
+                                181
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        31,
+                                        169,
+                                        136,
+                                        181
+                                    ],
+                                    "type": "text",
+                                    "content": "1. YOUR INFORMATION"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "line_avg_height": 13,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        55,
+                        191,
+                        202,
+                        205
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                55,
+                                191,
+                                202,
+                                205
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        55,
+                                        191,
+                                        202,
+                                        205
+                                    ],
+                                    "type": "text",
+                                    "content": "□Mr. □Mrs. □Miss □Ms."
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        30,
+                        214,
+                        280,
+                        227
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                214,
+                                280,
+                                227
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        214,
+                                        280,
+                                        227
+                                    ],
+                                    "type": "text",
+                                    "content": "Name"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 6
+                },
+                {
+                    "bbox": [
+                        30,
+                        236,
+                        280,
+                        249
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                236,
+                                280,
+                                249
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        236,
+                                        280,
+                                        249
+                                    ],
+                                    "type": "text",
+                                    "content": "NRIC/ID/Passport"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        30,
+                        258,
+                        280,
+                        271
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                258,
+                                280,
+                                271
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        258,
+                                        280,
+                                        271
+                                    ],
+                                    "type": "text",
+                                    "content": "Address"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 8
+                },
+                {
+                    "bbox": [
+                        30,
+                        280,
+                        278,
+                        293
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                280,
+                                278,
+                                293
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        280,
+                                        278,
+                                        293
+                                    ],
+                                    "type": "text",
+                                    "content": "City State"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        30,
+                        301,
+                        277,
+                        314
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                301,
+                                277,
+                                314
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        301,
+                                        277,
+                                        314
+                                    ],
+                                    "type": "text",
+                                    "content": "ZIP Country"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        30,
+                        322,
+                        240,
+                        336
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                322,
+                                240,
+                                336
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        322,
+                                        240,
+                                        336
+                                    ],
+                                    "type": "text",
+                                    "content": "Age 18-29□30-39□40-49□50-59□60+"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "bbox": [
+                        30,
+                        343,
+                        278,
+                        357
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                343,
+                                278,
+                                357
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        343,
+                                        278,
+                                        357
+                                    ],
+                                    "type": "text",
+                                    "content": "Phone"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 12
+                },
+                {
+                    "bbox": [
+                        30,
+                        365,
+                        278,
+                        379
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                365,
+                                278,
+                                379
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        365,
+                                        278,
+                                        379
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 13
+                },
+                {
+                    "bbox": [
+                        301,
+                        169,
+                        479,
+                        181
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                301,
+                                169,
+                                479,
+                                181
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        301,
+                                        169,
+                                        479,
+                                        181
+                                    ],
+                                    "type": "text",
+                                    "content": "2. PARTICULARS OF YOUR COMPLAINT"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 14,
+                    "line_avg_height": 14,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        302,
+                        192,
+                        554,
+                        206
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                192,
+                                554,
+                                206
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        192,
+                                        554,
+                                        206
+                                    ],
+                                    "type": "text",
+                                    "content": "Name/Entity"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 15
+                },
+                {
+                    "bbox": [
+                        302,
+                        214,
+                        550,
+                        227
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                214,
+                                550,
+                                227
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        214,
+                                        550,
+                                        227
+                                    ],
+                                    "type": "text",
+                                    "content": "Website"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 16
+                },
+                {
+                    "bbox": [
+                        302,
+                        236,
+                        550,
+                        249
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                236,
+                                550,
+                                249
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        236,
+                                        550,
+                                        249
+                                    ],
+                                    "type": "text",
+                                    "content": "Address"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 17
+                },
+                {
+                    "bbox": [
+                        302,
+                        257,
+                        554,
+                        271
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                257,
+                                554,
+                                271
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        257,
+                                        554,
+                                        271
+                                    ],
+                                    "type": "text",
+                                    "content": "City State"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 18
+                },
+                {
+                    "bbox": [
+                        302,
+                        279,
+                        553,
+                        292
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                279,
+                                553,
+                                292
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        279,
+                                        553,
+                                        292
+                                    ],
+                                    "type": "text",
+                                    "content": "ZIP Country"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 19
+                },
+                {
+                    "bbox": [
+                        302,
+                        301,
+                        553,
+                        314
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                301,
+                                553,
+                                314
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        301,
+                                        553,
+                                        314
+                                    ],
+                                    "type": "text",
+                                    "content": "Phone"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 20
+                },
+                {
+                    "bbox": [
+                        302,
+                        322,
+                        553,
+                        336
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                322,
+                                553,
+                                336
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        322,
+                                        553,
+                                        336
+                                    ],
+                                    "type": "text",
+                                    "content": "E-mail"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 21
+                },
+                {
+                    "bbox": [
+                        302,
+                        344,
+                        553,
+                        358
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                302,
+                                344,
+                                553,
+                                358
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        302,
+                                        344,
+                                        553,
+                                        358
+                                    ],
+                                    "type": "text",
+                                    "content": "Person you dealt with"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 22
+                },
+                {
+                    "bbox": [
+                        30,
+                        396,
+                        278,
+                        410
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                396,
+                                278,
+                                410
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        396,
+                                        278,
+                                        410
+                                    ],
+                                    "type": "text",
+                                    "content": "3. AMOUNT IN DISPUTE/ASSOCIATED WITH YOUR LOSS"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 23,
+                    "line_avg_height": 15,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        292,
+                        397,
+                        540,
+                        412
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                292,
+                                397,
+                                540,
+                                412
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        292,
+                                        397,
+                                        540,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "$"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 24
+                },
+                {
+                    "bbox": [
+                        30,
+                        423,
+                        276,
+                        437
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                423,
+                                276,
+                                437
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        423,
+                                        276,
+                                        437
+                                    ],
+                                    "type": "text",
+                                    "content": "4. WHEN DID THE TRANSACTION/INCIDENT OCCURED?"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 25,
+                    "line_avg_height": 15,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        316,
+                        425,
+                        476,
+                        438
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                316,
+                                425,
+                                476,
+                                438
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        316,
+                                        425,
+                                        476,
+                                        438
+                                    ],
+                                    "type": "text",
+                                    "content": "Date Time"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 26
+                },
+                {
+                    "bbox": [
+                        30,
+                        453,
+                        545,
+                        467
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                453,
+                                545,
+                                467
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        453,
+                                        545,
+                                        467
+                                    ],
+                                    "type": "text",
+                                    "content": "5. WHERE DID THE TRANSACTION/INCIDENT YOU ARE COMPLAINING ABOUT TOOK PLACE (Check the applicable box)"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 27,
+                    "line_avg_height": 17,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        30,
+                        475,
+                        349,
+                        530
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 31,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                30,
+                                475,
+                                327,
+                                489
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        475,
+                                        327,
+                                        489
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                475,
+                                                327,
+                                                489
+                                            ],
+                                            "type": "text",
+                                            "content": "□At the entity place of business By mail"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 28
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                495,
+                                349,
+                                510
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        495,
+                                        349,
+                                        510
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                495,
+                                                349,
+                                                510
+                                            ],
+                                            "type": "text",
+                                            "content": "□ By internet/e-mail □ By telephone"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 29
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                516,
+                                285,
+                                530
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        516,
+                                        285,
+                                        530
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                516,
+                                                285,
+                                                530
+                                            ],
+                                            "type": "text",
+                                            "content": "□ Other"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 30
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        30,
+                        545,
+                        369,
+                        559
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                545,
+                                369,
+                                559
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        545,
+                                        369,
+                                        559
+                                    ],
+                                    "type": "text",
+                                    "content": "6. WHEN WAS THE VERY FIRST CONTACT BETWEEN YOU AND THE ENTITY?"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 32,
+                    "line_avg_height": 15,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        30,
+                        565,
+                        455,
+                        640
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 37,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                30,
+                                565,
+                                442,
+                                579
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        565,
+                                        442,
+                                        579
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                565,
+                                                442,
+                                                579
+                                            ],
+                                            "type": "text",
+                                            "content": "□ I telephoned the entity □ I went to the entity place of business"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 33
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                586,
+                                448,
+                                600
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        586,
+                                        448,
+                                        600
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                586,
+                                                448,
+                                                600
+                                            ],
+                                            "type": "text",
+                                            "content": "□ I received a telephone call from the entity □ I responded to an offer on the Internet"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 34
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                606,
+                                455,
+                                621
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        606,
+                                        455,
+                                        621
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                606,
+                                                455,
+                                                621
+                                            ],
+                                            "type": "text",
+                                            "content": "□ I received information by e-mail □ A person came to my business premise"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 35
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                627,
+                                320,
+                                640
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        627,
+                                        320,
+                                        640
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                627,
+                                                320,
+                                                640
+                                            ],
+                                            "type": "text",
+                                            "content": "□ I received information in the mail □ Other"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 36
+                        }
+                    ],
+                    "sub_type": "text"
+                },
+                {
+                    "bbox": [
+                        30,
+                        655,
+                        209,
+                        669
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                655,
+                                209,
+                                669
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        655,
+                                        209,
+                                        669
+                                    ],
+                                    "type": "text",
+                                    "content": "7. WHAT WAS THE TRANSACTION FOR?"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 38,
+                    "line_avg_height": 15,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        246,
+                        655,
+                        504,
+                        670
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                246,
+                                655,
+                                504,
+                                670
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        246,
+                                        655,
+                                        504,
+                                        670
+                                    ],
+                                    "type": "text",
+                                    "content": "□ Business purpose □ Investment □ Retirement plan"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 39
+                },
+                {
+                    "bbox": [
+                        30,
+                        680,
+                        226,
+                        692
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                30,
+                                680,
+                                226,
+                                692
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        680,
+                                        226,
+                                        692
+                                    ],
+                                    "type": "text",
+                                    "content": "8. HOW DID YOU REMITTED THE PAYMENT?"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 40,
+                    "line_avg_height": 13,
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        30,
+                        697,
+                        564,
+                        759
+                    ],
+                    "type": "list",
+                    "angle": 0,
+                    "index": 44,
+                    "blocks": [
+                        {
+                            "bbox": [
+                                30,
+                                697,
+                                539,
+                                711
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        697,
+                                        539,
+                                        711
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                697,
+                                                539,
+                                                711
+                                            ],
+                                            "type": "text",
+                                            "content": "Cash Credit Card Cheque Instalment Loan Online Transfer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 41
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                718,
+                                513,
+                                732
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        718,
+                                        513,
+                                        732
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                718,
+                                                513,
+                                                732
+                                            ],
+                                            "type": "text",
+                                            "content": "□ Retirement Fund □ Private Insurance □ Other"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 42
+                        },
+                        {
+                            "bbox": [
+                                30,
+                                745,
+                                564,
+                                759
+                            ],
+                            "type": "text",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        30,
+                                        745,
+                                        564,
+                                        759
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                30,
+                                                745,
+                                                564,
+                                                759
+                                            ],
+                                            "type": "text",
+                                            "content": "9. DID YOU SIGNED ANY WRITTEN AGREEMENT? IF YES, PLEASE ATTACH A COPY OF THE AGREEMENT "
+                                        },
+                                        {
+                                            "bbox": [
+                                                30,
+                                                745,
+                                                564,
+                                                759
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "\\square"
+                                        },
+                                        {
+                                            "bbox": [
+                                                30,
+                                                745,
+                                                564,
+                                                759
+                                            ],
+                                            "type": "text",
+                                            "content": " Yes "
+                                        },
+                                        {
+                                            "bbox": [
+                                                30,
+                                                745,
+                                                564,
+                                                759
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "\\square"
+                                        },
+                                        {
+                                            "bbox": [
+                                                30,
+                                                745,
+                                                564,
+                                                759
+                                            ],
+                                            "type": "text",
+                                            "content": " No"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 43
+                        }
+                    ],
+                    "sub_type": "text"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        511,
+                        37,
+                        581,
+                        47
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                511,
+                                37,
+                                581,
+                                47
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        511,
+                                        37,
+                                        581,
+                                        47
+                                    ],
+                                    "type": "text",
+                                    "content": "CONFIDENTIAL"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        57,
+                        62,
+                        196,
+                        119
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                57,
+                                62,
+                                196,
+                                119
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        57,
+                                        62,
+                                        196,
+                                        119
+                                    ],
+                                    "type": "text",
+                                    "content": "Labuan FSA Financial Services Authority"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 1
+                },
+                {
+                    "bbox": [
+                        573,
+                        780,
+                        580,
+                        789
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                573,
+                                780,
+                                580,
+                                789
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        573,
+                                        780,
+                                        580,
+                                        789
+                                    ],
+                                    "type": "text",
+                                    "content": "1"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 45
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 0
+        },
+        {
+            "para_blocks": [
+                {
+                    "type": "table",
+                    "bbox": [
+                        19,
+                        60,
+                        573,
+                        765
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                19,
+                                60,
+                                573,
+                                765
+                            ],
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        19,
+                                        60,
+                                        573,
+                                        765
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                19,
+                                                60,
+                                                573,
+                                                765
+                                            ],
+                                            "type": "table",
+                                            "html": "<table><tr><td>10. HAVE YOU COMPLAINED TO THE ENTITY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>When? \nAction Taken?</td></tr><tr><td>11. HAVE YOU LODGED COMPLAINT TO OTHER AGENCY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>Agency Name \nWhen? \nAction Taken?</td></tr><tr><td>12. HAVE YOU CONTACTED A PRIVATE ATTORNEY? □ Yes □ No</td></tr><tr><td>13. HAVE YOU STARTED A COURT ACTION? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>14. HAVE YOU BEEN SUED OVER THIS ISSUE? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>15. PLEASE DESCRIBE YOUR COMPLAINT IN DETAIL (ATTACH ADDITIONAL PAGES IF NECESSARY)</td></tr><tr><td>Please attach a copy of all papers involved (order bank, warranty, payment receipt, bank statement, invoice, contract or written agreement, advertisement, cancelled check/transfer, correspondence, and all other related documents). Please print clearly or type.</td></tr><tr><td>16. ACKNOWLEDGEMENT &amp; DECLARATION</td></tr><tr><td>I hereby confirm that the information and any documents submitted are current, accurate, reflective, and true. The information provided in this complaint form is based on my personal knowledge. By submitting this complaint, I understand that Labuan FSA cannot answer legal questions or give legal advice to me and cannot act as my personal lawyer. \nSignature          Date</td></tr><tr><td>Please Read Important Information: If your complaint submitted without the above acknowledgment and declaration signature, we will not be able to process but will keep on file in our complaint database record.</td></tr></table>",
+                                            "image_path": "e508e5c628d62d0fa1124446228ee72438bf05689d7115160008eec5a8784903.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1,
+                            "angle": 0,
+                            "type": "table_body"
+                        }
+                    ],
+                    "index": 1
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        511,
+                        37,
+                        581,
+                        47
+                    ],
+                    "type": "header",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                511,
+                                37,
+                                581,
+                                47
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        511,
+                                        37,
+                                        581,
+                                        47
+                                    ],
+                                    "type": "text",
+                                    "content": "CONFIDENTIAL"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0
+                },
+                {
+                    "bbox": [
+                        573,
+                        780,
+                        580,
+                        789
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                573,
+                                780,
+                                580,
+                                789
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        573,
+                                        780,
+                                        580,
+                                        789
+                                    ],
+                                    "type": "text",
+                                    "content": "2"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2
+                }
+            ],
+            "page_size": [
+                595,
+                841
+            ],
+            "page_idx": 1
+        }
+    ],
+    "_backend": "vlm",
+    "_version_name": "2.6.4"
+}

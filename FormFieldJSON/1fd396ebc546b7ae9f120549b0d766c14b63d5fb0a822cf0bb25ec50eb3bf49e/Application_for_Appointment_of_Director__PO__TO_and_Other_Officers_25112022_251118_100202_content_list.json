@@ -1,0 +1,607 @@
+[
+    {
+        "type": "text",
+        "text": "APPOINTMENT OF DIRECTOR/PRINCIPAL OFFICER/TRUST OFFICER/OTHER OFFICERS*",
+        "text_level": 1,
+        "bbox": [
+            102,
+            112,
+            892,
+            128
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name of Labuan Company :",
+        "bbox": [
+            84,
+            142,
+            381,
+            158
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Type of Licence",
+        "bbox": [
+            85,
+            165,
+            381,
+            181
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA",
+        "text_level": 2,
+        "bbox": [
+            70,
+            205,
+            865,
+            234
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            70,
+            235,
+            840,
+            252
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/84dbac5d2c4cec1cceff587a56f3b2be4bdc16c6116b7ace51999359f2215fcc.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>No</td><td>Documents</td><td>To be completed by Applicant</td><td>For Labuan FSA use</td></tr><tr><td>1.</td><td>Duly completed profile of Director(s)/Principal Officer/Trust Officer/Other Officers* (as per Appendix I)</td><td></td><td></td></tr><tr><td>2.</td><td>Duly completed Statutory Declaration by Director(s)/ Principal Officer/Trust Officer/Other Officers* on Fit and Proper Person (as per Appendix II)</td><td></td><td></td></tr><tr><td>3.</td><td>Certified true copy of IC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>4.</td><td>Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td>5.</td><td>Two (2) referral letters from institutions and/or professional bodies (not applicable for appointment within the group of companies)</td><td></td><td></td></tr><tr><td>6.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application (as per Appendix III) (not applicable for submission made directly by the Labuan Company)</td><td></td><td></td></tr><tr><td>7.</td><td>Processing fee of USD350 (Normal Processing) or USD1,550 (Fast Track Processing) only application for Appointment of Trust Officer</td><td></td><td></td></tr></table>",
+        "bbox": [
+            78,
+            263,
+            931,
+            608
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Notes:",
+        "text_level": 2,
+        "bbox": [
+            68,
+            621,
+            127,
+            636
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.",
+            "2) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "3) The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.",
+            "4) Other officers as defined in Labuan Financial Services and Securities Act 2010, Labuan Islamic Financial Services and Securities Act 2010 and Labuan Companies Act 1990"
+        ],
+        "bbox": [
+            70,
+            645,
+            927,
+            780
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "*Delete whichever inapplicable",
+        "bbox": [
+            70,
+            780,
+            324,
+            795
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Officer responsible for information submission:",
+        "bbox": [
+            68,
+            809,
+            450,
+            825
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Signature : Company :",
+        "bbox": [
+            85,
+            854,
+            915,
+            872
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name : Contact No :",
+        "bbox": [
+            85,
+            885,
+            915,
+            902
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Designation : Email :",
+        "bbox": [
+            85,
+            917,
+            915,
+            933
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            357,
+            34,
+            603,
+            103
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/81ff64a7882c7be08ef3481ad648d3de13802548cd34b628fc78e40a81297d84.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"4\">PROFILE OF DIRECTOR(S)/PRINCIPAL OFFICER/TRUST OFFICER\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name\n(as per NRIC/passport)</td><td colspan=\"3\"></td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male     Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details\n(for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>h. Passport Details\n(for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□  No   □  Yes\n(please provide certified \ntrue copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Principal Officer</td></tr><tr><td colspan=\"4\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of College/University/Others</td><td>Year\nQualification\nObtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>",
+        "bbox": [
+            75,
+            105,
+            924,
+            923
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "Appendix I",
+        "bbox": [
+            821,
+            40,
+            929,
+            58
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "table",
+        "img_path": "images/614d467d435a03135e6730c05efe5bdce12938b1430f89465343108a69842ba5.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td colspan=\"6\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of Institution</td><td>Year \nQualification \nObtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"2\">Name of Institution</td><td>Year \nMembership \nObtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date \n(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer1</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\">Key Areas of \nResponsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"6\">Section E: Directorship Held in Other Company(s)</td></tr></table>",
+        "bbox": [
+            77,
+            83,
+            922,
+            875
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "Appendix I",
+        "bbox": [
+            821,
+            40,
+            929,
+            58
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_footnote",
+        "text": "1 If the position applied requires for approval from relevant authority, please give detail of the approving authority (applicable for current employment only).",
+        "bbox": [
+            65,
+            922,
+            922,
+            950
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "table",
+        "img_path": "images/b55cf2730fbb666069bb1cc754c662b96d02b2e4612eb7331b98f616c9b95971.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Name of Corporation</td><td>Place of Incorporation</td><td>Date of Appointment(dd/mm/yy)</td><td>Nature of Appointment( executive or non-executive)</td></tr><tr><td></td><td></td><td></td><td></td></tr></table>",
+        "bbox": [
+            75,
+            82,
+            922,
+            341
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "Appendix I",
+        "bbox": [
+            821,
+            40,
+            929,
+            58
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY DIRECTOR/PRINCIPAL OFFICER/TRUST OFFICER/OTHER OFFICERS ON FIT AND PROPER PERSON",
+        "text_level": 1,
+        "bbox": [
+            87,
+            86,
+            890,
+            117
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "bbox": [
+            208,
+            118,
+            771,
+            134
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "I, . NRIC/Passport No: a",
+        "bbox": [
+            92,
+            195,
+            887,
+            211
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "proposed director/principal officer/trust officer/other officers",
+        "bbox": [
+            92,
+            212,
+            887,
+            229
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "of....(name of the Labuan company), do hereby",
+        "bbox": [
+            92,
+            230,
+            887,
+            247
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "solemnly and sincerely declare that:",
+        "bbox": [
+            92,
+            247,
+            389,
+            263
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LIFSSA) /Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person issued on 11 February 2014 (the Guidelines).",
+            "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA /Section 4 of LIFSSA and the Guidelines.",
+            "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete.",
+            "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        ],
+        "bbox": [
+            105,
+            275,
+            840,
+            525
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions.",
+        "bbox": [
+            90,
+            552,
+            887,
+            583
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared by the above named",
+        "bbox": [
+            100,
+            612,
+            462,
+            643
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            100,
+            644,
+            354,
+            657
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            100,
+            658,
+            383,
+            671
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "This...day of....20...",
+        "bbox": [
+            100,
+            673,
+            278,
+            688
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            630,
+            657,
+            712,
+            673
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            92,
+            717,
+            186,
+            732
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            92,
+            833,
+            423,
+            850
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "Appendix II",
+        "bbox": [
+            816,
+            40,
+            929,
+            57
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION",
+        "text_level": 1,
+        "bbox": [
+            168,
+            87,
+            825,
+            120
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Important: All fields are mandatory and should not be left blank",
+        "bbox": [
+            216,
+            123,
+            779,
+            139
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "I, (name) of (address) NRIC/Passport",
+        "bbox": [
+            100,
+            196,
+            880,
+            212
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "No: the authorized officer of (name of trust company/insurance manager/underwriting manager/other service providers) being the party responsible for the submission of application for (name of the Labuan company) do solemnly and sincerely declare that in relation to the above application:",
+        "bbox": [
+            99,
+            215,
+            880,
+            282
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. I have conducted due diligence process on............ (name of director/principal officer/trust officer/other officers) and satisfied with the result thereof.",
+            "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person in respect of the above application have been complied with."
+        ],
+        "bbox": [
+            99,
+            300,
+            880,
+            403
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions.",
+        "bbox": [
+            99,
+            420,
+            878,
+            455
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Subscribed and solemnly declared",
+        "bbox": [
+            109,
+            502,
+            413,
+            519
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "by the above named",
+        "bbox": [
+            109,
+            519,
+            413,
+            533
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "At",
+        "bbox": [
+            109,
+            546,
+            364,
+            563
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "In the State of",
+        "bbox": [
+            109,
+            564,
+            391,
+            577
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "This...day of....20..",
+        "bbox": [
+            109,
+            579,
+            287,
+            594
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Signature",
+        "bbox": [
+            579,
+            564,
+            660,
+            579
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Before me,",
+        "bbox": [
+            102,
+            638,
+            196,
+            653
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "(Commissioner for Oaths/Notary Public)",
+        "bbox": [
+            102,
+            753,
+            433,
+            771
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "Appendix III",
+        "bbox": [
+            811,
+            40,
+            929,
+            57
+        ],
+        "page_idx": 5
+    }
+]

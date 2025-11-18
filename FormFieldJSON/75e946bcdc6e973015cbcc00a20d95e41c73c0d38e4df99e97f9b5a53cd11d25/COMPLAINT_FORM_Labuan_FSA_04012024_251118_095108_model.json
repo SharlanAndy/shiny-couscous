@@ -1,0 +1,545 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.859,
+                0.044,
+                0.977,
+                0.057
+            ],
+            "angle": 0,
+            "content": "CONFIDENTIAL"
+        },
+        {
+            "type": "header",
+            "bbox": [
+                0.097,
+                0.074,
+                0.331,
+                0.142
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.369,
+                0.084,
+                0.898,
+                0.127
+            ],
+            "angle": 0,
+            "content": "COMPLAINT FORM"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.051,
+                0.159,
+                0.529,
+                0.175
+            ],
+            "angle": 0,
+            "content": "Please ensure to complete all required information on this form in full."
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.053,
+                0.201,
+                0.229,
+                0.216
+            ],
+            "angle": 0,
+            "content": "1. YOUR INFORMATION"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.093,
+                0.228,
+                0.341,
+                0.244
+            ],
+            "angle": 0,
+            "content": "□Mr. □Mrs. □Miss □Ms."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.255,
+                0.472,
+                0.271
+            ],
+            "angle": 0,
+            "content": "Name"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.281,
+                0.472,
+                0.297
+            ],
+            "angle": 0,
+            "content": "NRIC/ID/Passport"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.307,
+                0.472,
+                0.323
+            ],
+            "angle": 0,
+            "content": "Address"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.333,
+                0.468,
+                0.349
+            ],
+            "angle": 0,
+            "content": "City State"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.358,
+                0.466,
+                0.374
+            ],
+            "angle": 0,
+            "content": "ZIP Country"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.383,
+                0.404,
+                0.4
+            ],
+            "angle": 0,
+            "content": "Age 18-29□30-39□40-49□50-59□60+"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.409,
+                0.468,
+                0.425
+            ],
+            "angle": 0,
+            "content": "Phone"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.435,
+                0.468,
+                0.451
+            ],
+            "angle": 0,
+            "content": "E-mail"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.507,
+                0.201,
+                0.806,
+                0.216
+            ],
+            "angle": 0,
+            "content": "2. PARTICULARS OF YOUR COMPLAINT"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.229,
+                0.932,
+                0.246
+            ],
+            "angle": 0,
+            "content": "Name/Entity"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.255,
+                0.926,
+                0.271
+            ],
+            "angle": 0,
+            "content": "Website"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.281,
+                0.926,
+                0.297
+            ],
+            "angle": 0,
+            "content": "Address"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.306,
+                0.932,
+                0.323
+            ],
+            "angle": 0,
+            "content": "City State"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.332,
+                0.931,
+                0.348
+            ],
+            "angle": 0,
+            "content": "ZIP Country"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.358,
+                0.931,
+                0.374
+            ],
+            "angle": 0,
+            "content": "Phone"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.384,
+                0.931,
+                0.4
+            ],
+            "angle": 0,
+            "content": "E-mail"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.508,
+                0.41,
+                0.931,
+                0.426
+            ],
+            "angle": 0,
+            "content": "Person you dealt with"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.051,
+                0.472,
+                0.468,
+                0.488
+            ],
+            "angle": 0,
+            "content": "3. AMOUNT IN DISPUTE/ASSOCIATED WITH YOUR LOSS"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.491,
+                0.473,
+                0.909,
+                0.49
+            ],
+            "angle": 0,
+            "content": "$"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.052,
+                0.504,
+                0.464,
+                0.52
+            ],
+            "angle": 0,
+            "content": "4. WHEN DID THE TRANSACTION/INCIDENT OCCURED?"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.532,
+                0.506,
+                0.8,
+                0.521
+            ],
+            "angle": 0,
+            "content": "Date Time"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.052,
+                0.539,
+                0.916,
+                0.556
+            ],
+            "angle": 0,
+            "content": "5. WHERE DID THE TRANSACTION/INCIDENT YOU ARE COMPLAINING ABOUT TOOK PLACE (Check the applicable box)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.565,
+                0.55,
+                0.582
+            ],
+            "angle": 0,
+            "content": "□At the entity place of business By mail"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.589,
+                0.588,
+                0.607
+            ],
+            "angle": 0,
+            "content": "□ By internet/e-mail □ By telephone"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.614,
+                0.48,
+                0.631
+            ],
+            "angle": 0,
+            "content": "□ Other"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.052,
+                0.565,
+                0.588,
+                0.631
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.052,
+                0.649,
+                0.621,
+                0.665
+            ],
+            "angle": 0,
+            "content": "6. WHEN WAS THE VERY FIRST CONTACT BETWEEN YOU AND THE ENTITY?"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.673,
+                0.743,
+                0.689
+            ],
+            "angle": 0,
+            "content": "□ I telephoned the entity □ I went to the entity place of business"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.697,
+                0.754,
+                0.714
+            ],
+            "angle": 0,
+            "content": "□ I received a telephone call from the entity □ I responded to an offer on the Internet"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.721,
+                0.765,
+                0.739
+            ],
+            "angle": 0,
+            "content": "□ I received information by e-mail □ A person came to my business premise"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.746,
+                0.538,
+                0.762
+            ],
+            "angle": 0,
+            "content": "□ I received information in the mail □ Other"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.052,
+                0.673,
+                0.765,
+                0.762
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.052,
+                0.78,
+                0.352,
+                0.796
+            ],
+            "angle": 0,
+            "content": "7. WHAT WAS THE TRANSACTION FOR?"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.415,
+                0.78,
+                0.848,
+                0.797
+            ],
+            "angle": 0,
+            "content": "□ Business purpose □ Investment □ Retirement plan"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.052,
+                0.809,
+                0.38,
+                0.824
+            ],
+            "angle": 0,
+            "content": "8. HOW DID YOU REMITTED THE PAYMENT?"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.829,
+                0.906,
+                0.846
+            ],
+            "angle": 0,
+            "content": "Cash Credit Card Cheque Instalment Loan Online Transfer"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.052,
+                0.854,
+                0.863,
+                0.871
+            ],
+            "angle": 0,
+            "content": "□ Retirement Fund □ Private Insurance □ Other"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.051,
+                0.886,
+                0.948,
+                0.903
+            ],
+            "angle": 0,
+            "content": "9. DID YOU SIGNED ANY WRITTEN AGREEMENT? IF YES, PLEASE ATTACH A COPY OF THE AGREEMENT \\(\\square\\) Yes \\(\\square\\) No"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.051,
+                0.829,
+                0.948,
+                0.903
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.964,
+                0.928,
+                0.975,
+                0.939
+            ],
+            "angle": 0,
+            "content": "1"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.86,
+                0.044,
+                0.977,
+                0.056
+            ],
+            "angle": 0,
+            "content": "CONFIDENTIAL"
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.033,
+                0.072,
+                0.964,
+                0.91
+            ],
+            "angle": 0,
+            "content": "<table><tr><td>10. HAVE YOU COMPLAINED TO THE ENTITY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>When? \nAction Taken?</td></tr><tr><td>11. HAVE YOU LODGED COMPLAINT TO OTHER AGENCY? (Check the applicable box) □ Yes □ No</td></tr><tr><td>Agency Name \nWhen? \nAction Taken?</td></tr><tr><td>12. HAVE YOU CONTACTED A PRIVATE ATTORNEY? □ Yes □ No</td></tr><tr><td>13. HAVE YOU STARTED A COURT ACTION? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>14. HAVE YOU BEEN SUED OVER THIS ISSUE? IF YES, PLEASE ATTACH A COPY OF ALL COURT PAPERS □ Yes □ No</td></tr><tr><td>15. PLEASE DESCRIBE YOUR COMPLAINT IN DETAIL (ATTACH ADDITIONAL PAGES IF NECESSARY)</td></tr><tr><td>Please attach a copy of all papers involved (order bank, warranty, payment receipt, bank statement, invoice, contract or written agreement, advertisement, cancelled check/transfer, correspondence, and all other related documents). Please print clearly or type.</td></tr><tr><td>16. ACKNOWLEDGEMENT &amp; DECLARATION</td></tr><tr><td>I hereby confirm that the information and any documents submitted are current, accurate, reflective, and true. The information provided in this complaint form is based on my personal knowledge. By submitting this complaint, I understand that Labuan FSA cannot answer legal questions or give legal advice to me and cannot act as my personal lawyer. \nSignature          Date</td></tr><tr><td>Please Read Important Information: If your complaint submitted without the above acknowledgment and declaration signature, we will not be able to process but will keep on file in our complaint database record.</td></tr></table>"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.964,
+                0.928,
+                0.976,
+                0.939
+            ],
+            "angle": 0,
+            "content": "2"
+        }
+    ]
+]

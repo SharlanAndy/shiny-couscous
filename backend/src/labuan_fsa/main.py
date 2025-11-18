@@ -29,19 +29,19 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 
     Handles startup and shutdown events.
     """
-    # Startup
+    # Startup - Initialize JSON database as fallback
+    print("🚀 Server starting...")
+    print("   Initializing JSON database fallback...")
     try:
-        await init_db()
-        print("✅ Database initialized successfully")
+        from labuan_fsa.json_db import initialize_default_data
+        await initialize_default_data()
+        print("   ✅ JSON database ready (will be used if SQL fails)")
     except Exception as e:
-        print(f"⚠️  Database initialization failed (this is OK for testing): {e}")
-        print("   The API will work but database-dependent endpoints may fail.")
-        # Don't print full traceback in production - just log the error
-        import traceback
-        if settings.app.debug:
-            traceback.print_exc()
-        # In Vercel/serverless, we want to continue even if DB init fails
-        # This allows the API to start and handle requests that don't need DB
+        print(f"   ⚠️  JSON database initialization warning: {e}")
+    
+    # Skip init_db() for now due to connection issues
+    # The API endpoints will use JSON fallback if SQL fails
+    print("   ⚠️  Skipping SQL database initialization (will use JSON fallback if needed)")
     
     yield
     

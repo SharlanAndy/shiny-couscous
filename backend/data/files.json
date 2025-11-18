@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-18T12:26:46.488557Z",
+  "items": [
+    {
+      "id": "c86173d5-c6ce-41be-91b2-6ade69aa9d85",
+      "fileId": "test-upload-1763468655",
+      "submissionId": "00000000-0000-0000-0000-000000000000",
+      "fieldName": "supportingDocuments",
+      "fileName": "test-upload.pdf",
+      "filePath": "/Users/khoo/Downloads/project4/projects/project-20251117-153458-labuan-fsa-e-submission-system/backend/uploads/supportingDocuments_23033601f4df4f9f.pdf",
+      "fileSize": 546,
+      "mimeType": "application/pdf",
+      "storageLocation": "local",
+      "storageUrl": null,
+      "fileHash": "49886b4232580ed26b8055a57a856683f634ccdcde90685324e9987efa7708de",
+      "uploadedAt": "2025-11-18T12:24:15.982312Z",
+      "uploadedBy": null
+    },
+    {
+      "id": "7cd64c26-a8e2-4111-ba2b-51ff86a77e23",
+      "fileId": "test-upload-1763468806",
+      "submissionId": "00000000-0000-0000-0000-000000000000",
+      "fieldName": "testField",
+      "fileName": "test-upload.pdf",
+      "filePath": "/Users/khoo/Downloads/project4/projects/project-20251117-153458-labuan-fsa-e-submission-system/backend/uploads/testField_8355b2c044ad4208.pdf",
+      "fileSize": 546,
+      "mimeType": "application/pdf",
+      "storageLocation": "local",
+      "storageUrl": null,
+      "fileHash": "49886b4232580ed26b8055a57a856683f634ccdcde90685324e9987efa7708de",
+      "uploadedAt": "2025-11-18T12:26:46.488526Z",
+      "uploadedBy": null
+    }
+  ]
+}

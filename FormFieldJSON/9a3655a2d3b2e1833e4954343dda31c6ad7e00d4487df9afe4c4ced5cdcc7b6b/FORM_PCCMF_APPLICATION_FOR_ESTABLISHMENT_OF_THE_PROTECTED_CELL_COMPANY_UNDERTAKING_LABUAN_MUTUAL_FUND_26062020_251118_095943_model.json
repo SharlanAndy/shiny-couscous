@@ -1,0 +1,2399 @@
+[
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.377,
+                0.024,
+                0.624,
+                0.095
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.139,
+                0.11,
+                0.878,
+                0.149
+            ],
+            "angle": 0,
+            "content": "APPLICATION FOR ESTABLISHMENT OF THE PROTECTED CELL COMPANY UNDERTAKING LABUAN MUTUAL FUND BUSINESS"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.418,
+                0.158,
+                0.602,
+                0.173
+            ],
+            "angle": 0,
+            "content": "IMPORTANT NOTES"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.096,
+                0.182,
+                0.743,
+                0.197
+            ],
+            "angle": 0,
+            "content": "1. The completed application form and supporting documents should be submitted to:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.209,
+                0.169,
+                0.222
+            ],
+            "angle": 0,
+            "content": "Head"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.224,
+                0.371,
+                0.237
+            ],
+            "angle": 0,
+            "content": "Authorization and Licensing Unit"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.238,
+                0.397,
+                0.251
+            ],
+            "angle": 0,
+            "content": "Labuan Financial Services Authority"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.252,
+                0.337,
+                0.263
+            ],
+            "angle": 0,
+            "content": "Level 17, Main Office Tower"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.265,
+                0.306,
+                0.278
+            ],
+            "angle": 0,
+            "content": "Financial Park Complex"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.279,
+                0.239,
+                0.291
+            ],
+            "angle": 0,
+            "content": "Jalan Merdeka"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.292,
+                0.269,
+                0.305
+            ],
+            "angle": 0,
+            "content": "87000 Labuan F.T."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.306,
+                0.195,
+                0.319
+            ],
+            "angle": 0,
+            "content": "Malaysia"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.126,
+                0.32,
+                0.395,
+                0.334
+            ],
+            "angle": 0,
+            "content": "Email: licensing@labuanfsa.gov.my"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.346,
+                0.925,
+                0.374
+            ],
+            "angle": 0,
+            "content": "2. Submission of application which does not comply with Labuan FSA's requirement or which are unsatisfactory may be returned."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.387,
+                0.925,
+                0.416
+            ],
+            "angle": 0,
+            "content": "3. The form and supporting documents serve as general requirement of the application, Labuan FSA reserves the right to request for additional information and/or documents to support the application"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.427,
+                0.925,
+                0.469
+            ],
+            "angle": 0,
+            "content": "4. Any information supplied pursuant to this form will be dealt with in confidence in accordance with Section 178 of the Labuan Financial Services and Securities Act 2010/Section 139 of the Labuan Islamic Financial Services and Securities Act 2010."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.482,
+                0.918,
+                0.538
+            ],
+            "angle": 0,
+            "content": "5. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.55,
+                0.918,
+                0.58
+            ],
+            "angle": 0,
+            "content": "6. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.592,
+                0.918,
+                0.647
+            ],
+            "angle": 0,
+            "content": "7. Labuan FSA has a whistle blowing policy in place where suppliers, consultants or even members of the public can report to the Designated Officers in writing as per the Whistle Blowing Disclosure Form if there is any element of wrongdoings by any staff of Labuan FSA or its subsidiaries in relation to the application or licence being awarded."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.66,
+                0.918,
+                0.689
+            ],
+            "angle": 0,
+            "content": "8. For details of applicable legislations and guidelines pertaining to banking or investment banking business, please visit our website at www.labuanibfc.com.my."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.701,
+                0.378,
+                0.716
+            ],
+            "angle": 0,
+            "content": "9. Processing fee and client charter:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.095,
+                0.346,
+                0.925,
+                0.716
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "table",
+            "bbox": [
+                0.16,
+                0.727,
+                0.832,
+                0.79
+            ],
+            "angle": 0,
+            "content": "<table><tr><td rowspan=\"2\">Type of Processing</td><td>Processing Fee</td><td rowspan=\"2\">Client Charter*</td></tr><tr><td>USD</td></tr><tr><td>Normal</td><td>350.00</td><td>30 working days</td></tr><tr><td>Fast Track</td><td>1,550.00</td><td>15 working days</td></tr></table>"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.79,
+                0.916,
+                0.803
+            ],
+            "angle": 0,
+            "content": "*Client Charter will be calculated upon complete submission of documentation and information to Labuan FSA."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.821,
+                0.484,
+                0.835
+            ],
+            "angle": 0,
+            "content": "10. Terms and conditions of fast track application."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.138,
+                0.837,
+                0.838,
+                0.851
+            ],
+            "angle": 0,
+            "content": "(i) Labuan FSA reserved the right to accept or decline any fast track application submitted."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.853,
+                0.857,
+                0.868
+            ],
+            "angle": 0,
+            "content": "(ii) The fast track processing timeline will only commence upon compliance with the following:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.138,
+                0.837,
+                0.857,
+                0.868
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.198,
+                0.87,
+                0.548,
+                0.883
+            ],
+            "angle": 0,
+            "content": "a. Submission of complete documentation;"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.198,
+                0.885,
+                0.559,
+                0.899
+            ],
+            "angle": 0,
+            "content": "b. Payment of fast track processing fee; and"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.198,
+                0.901,
+                0.639,
+                0.915
+            ],
+            "angle": 0,
+            "content": "c. Acceptance of fast track application by Labuan FSA."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.198,
+                0.87,
+                0.639,
+                0.915
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.942,
+                0.164,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.199,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.964,
+                0.939,
+                0.98
+            ],
+            "angle": 0,
+            "content": "1"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.087,
+                0.055,
+                0.931,
+                0.598
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"3\">(iii) The fast track processing fee will be forfeited should the applicant decided to withdraw after the fast track application has been accepted by Labuan FSA.\n(iv) Labuan FSA reserved the right to change the status of the application from fast track to normal processing. The applicant will duly notified and the fast track processing fee paid will be refunded accordingly.</td></tr><tr><td colspan=\"3\">GENERAL INFORMATION\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>1.</td><td colspan=\"2\">Party responsible for submission of application1\n\n□ Applicant&#x27;s Shareholder/Head Office          □ Labuan Trust Company\n\n□ Others: (please specify)</td></tr><tr><td>2.</td><td colspan=\"2\">Officer responsible for submission of application\n\nName:                            Company: \n\nDesignation:                            Contact No.: \n\nEmail:                            Signature:</td></tr><tr><td>3.</td><td colspan=\"2\">How do you know about Labuan IBFC\n\n□ Website                   □ Newspaper/Media\n\n□ Previous Experience               □ Business Referral\n\n□ Labuan Trust Company         □ Labuan IBFC Inc. Sdn. Bhd.2\n\n□ Others: \n(please specify)</td></tr><tr><td>4.</td><td colspan=\"2\">Consent for disclosure of information to be used for marketing/promotional purposes by Labuan FSA and Labuan IBFC Inc. Sdn. Bhd.\n\n□ Yes                    □ No</td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.09,
+                0.859,
+                0.911,
+                0.887
+            ],
+            "angle": 0,
+            "content": "<sup>1</sup> With the exception of the applicant's shareholder/head office, party responsible for submission of application is required to submit the duly completed Statutory Declaration as attached in Appendix I."
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.089,
+                0.888,
+                0.911,
+                0.913
+            ],
+            "angle": 0,
+            "content": "2 Labuan IBFC Inc. Sdn. Bhd. was incorporated in July 2008 as the sole official Malaysian agency authorised to promote, market and develop the benefits of Labuan IBFC as the premier international business and financial centre in Asia Pacific."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.089,
+                0.859,
+                0.911,
+                0.913
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.201,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.927,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "2"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.087,
+                0.056,
+                0.93,
+                0.622
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART I: PROFILE OF APPLICANT\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Name of the Protected Cell Company (PCC)\n(refers to the proposed Labuan Protected Cell Company)</td><td colspan=\"3\"></td></tr><tr><td>b. Type of PCC(Please tick (√) the appropriate box)</td><td colspan=\"3\">Conventional Islamic</td></tr><tr><td>c. Nature of Legal Entity(Please tick (√) the appropriate box)</td><td colspan=\"3\">Labuan Protected Cell Company - Subsidiary\nForeign Labuan Protected Cell Company - Branch</td></tr><tr><td>d. Marketing Office to be Established(Please tick (√) the appropriate box)</td><td colspan=\"3\">Yes       No</td></tr><tr><td>e. Proposed Paid-up Capital/Working Fund(please specify currency used)</td><td colspan=\"3\"></td></tr><tr><td rowspan=\"2\">Proposed Shareholder(s)\nf. (each of shareholder is required to complete Part II and/or Part III)</td><td>Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td></td><td></td><td></td></tr><tr><td>g. Proposed Director(s)\n(each of Director is required to complete Part IV and Part V)</td><td></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.94,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.928,
+                0.965,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "3"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.087,
+                0.056,
+                0.93,
+                0.921
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"5\">PART II: PROFILE OF CORPORATE SHAREHOLDER(S)\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a Name of Company/Head Office</td><td colspan=\"4\"></td></tr><tr><td>b Company Address</td><td colspan=\"4\"></td></tr><tr><td>c Nature and Type of Business</td><td colspan=\"4\"></td></tr><tr><td>d Incorporation/Registration Number</td><td colspan=\"4\"></td></tr><tr><td>e Date and Place of Incorporation/Registration</td><td colspan=\"4\"></td></tr><tr><td>f. Date, Type of Licence and Licence Number (if applicable)</td><td colspan=\"4\"></td></tr><tr><td>g Home Supervisory Authority (if applicable)</td><td colspan=\"4\"></td></tr><tr><td rowspan=\"4\">Shareholders&#x27; Fund (please specify currency and amount for the latest three(3) years Audited Financial Statements)</td><td>Year</td><td>Paid-up Capital</td><td>Retained Profits/Accumulated Losses</td><td>Other Reserves</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"4\">i. Financial Performance (please specify currency and amount for the latest three (3) years Audited Financial Statements)</td><td>Year</td><td>Total Assets</td><td>Total Liabilities</td><td>Profit/(Loss) Before Tax</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td rowspan=\"2\">j. Shareholder(s)</td><td colspan=\"2\">Name of Shareholder(s)</td><td>Country of Origin</td><td>Percentage of Shareholding(s)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td rowspan=\"2\">k Board of Director(s)</td><td colspan=\"2\">Name of Director(s)</td><td>Nationality</td><td>Nature of Appointment (executive or non-executive)</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td>Any Other Information Relevant For Consideration of the Application</td><td colspan=\"4\"></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.109,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.201,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.928,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "4"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.053,
+                0.072,
+                0.952,
+                0.906
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"6\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S) \nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Salutation</td><td colspan=\"5\"></td></tr><tr><td>Name \nb. (as per NRIC/passport)</td><td colspan=\"5\"></td></tr><tr><td>c. Date and Place of Birth</td><td colspan=\"5\"></td></tr><tr><td>d. Gender</td><td colspan=\"3\">Male</td><td colspan=\"2\">Female</td></tr><tr><td>e. Nationality</td><td colspan=\"5\"></td></tr><tr><td>f. NRIC Details \n(for Malaysian)</td><td colspan=\"5\">Old IC No.: \nNRIC No.:</td></tr><tr><td>g. Passport Details \n(for Non-Malaysian)</td><td colspan=\"5\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \n□ No □ Yes \n(please provide certified true copy of the \nwork permit)</td></tr><tr><td rowspan=\"7\">h. Financial Net Worth \n(latest three months statement which duly certified by Qualified Accountant or Bank)</td><td colspan=\"5\">a) Net Worth Statement Certified by Qualified Accountant; or</td></tr><tr><td colspan=\"5\">Currency and Amount</td></tr><tr><td colspan=\"2\">Total Assets</td><td colspan=\"3\"></td></tr><tr><td colspan=\"2\">Total Liabilities</td><td colspan=\"3\"></td></tr><tr><td colspan=\"5\">b) Bank Statement / Online Bank Statement Certified by the Bank</td></tr><tr><td>Name of Bank</td><td>Type of Account</td><td colspan=\"2\">Statement Date</td><td>Currency and Amount</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">i. Curriculum Vitae of Individual Shareholder</td></tr><tr><td colspan=\"6\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of School/College/ University/Others</td><td colspan=\"2\">Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr><tr><td colspan=\"6\">Section B: Professional Qualification(s)</td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.954
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.928,
+                0.965,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "5"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.053,
+                0.056,
+                0.952,
+                0.731
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"6\">PART III: PROFILE OF INDIVIDUAL SHAREHOLDER(S)\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"3\">Type of Qualification/ Certification</td><td colspan=\"2\">Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section C: Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"2\">Name of Institution</td><td>Year Membership Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr><tr><td colspan=\"6\">Section D: Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date\n(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer</td><td rowspan=\"2\">Designation</td><td rowspan=\"2\">Key Areas of Responsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"6\">Section E: Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"3\">Name of Corporation</td><td colspan=\"2\">Place of Incorporation</td><td>Nature of Appointment\n(elective or non-executive)</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.94,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.928,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "6"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.048,
+                0.064,
+                0.952,
+                0.912
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART IV: PROFILE OF DIRECTOR(S)\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Position to be held</td><td colspan=\"3\"></td></tr><tr><td>b. Salutation</td><td colspan=\"3\"></td></tr><tr><td>c. Name\n(as per NRIC/passport)</td><td colspan=\"3\"></td></tr><tr><td>d. Date and Place of Birth</td><td colspan=\"3\"></td></tr><tr><td>e. Gender</td><td colspan=\"3\">Male     Female</td></tr><tr><td>f. Nationality</td><td colspan=\"3\"></td></tr><tr><td>g. NRIC Details\n(for Malaysian)</td><td colspan=\"3\">Old IC No.: \nNRIC No.:</td></tr><tr><td>h. Passport Details\n(for Non-Malaysian)</td><td colspan=\"3\">Passport No.: \nExpiry Date: \nCountry of Issue: \nIssuing Authority: \nLength of residence in Malaysia: \nAny work permit applied prior to this application: \nNo        Yes\n(please provide certified \ntrue copy of the work permit)</td></tr><tr><td colspan=\"4\">i. Curriculum Vitae of Director/Principal Officer</td></tr><tr><td colspan=\"4\">Section A: Education(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of College/University/Others</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr><tr><td colspan=\"4\">Section B: Professional Qualification(s)</td></tr><tr><td colspan=\"2\">Type of Qualification/ Certification</td><td>Name of Institution</td><td>Year Qualification Obtained</td></tr><tr><td colspan=\"2\"></td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.109,
+                0.939,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.927,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "7"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.051,
+                0.056,
+                0.949,
+                0.57
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"9\">Section C:Membership of Professional Body(s)</td></tr><tr><td colspan=\"3\">Type and Details of Membership</td><td colspan=\"5\">Name of Institution</td><td>Year Membership Obtained</td></tr><tr><td colspan=\"3\"></td><td colspan=\"5\"></td><td></td></tr><tr><td colspan=\"9\">Section D:Past and Current Work Experience(s)</td></tr><tr><td colspan=\"2\">Date(dd/mm/yy)</td><td rowspan=\"2\" colspan=\"2\">Name of Employer3</td><td rowspan=\"2\" colspan=\"2\">Designation</td><td rowspan=\"2\" colspan=\"3\">Key Areas of Responsibilities</td></tr><tr><td>From</td><td>To</td></tr><tr><td></td><td></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"3\"></td></tr><tr><td colspan=\"9\">Section E:Directorship Held in Other Company(s)</td></tr><tr><td colspan=\"3\">Name of Corporation</td><td colspan=\"2\">Place of Incorporation</td><td colspan=\"2\">Date of Appointment(dd/mm/yy)</td><td colspan=\"2\">Nature of Appointment (executive or non-executive)</td></tr><tr><td colspan=\"3\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td><td colspan=\"2\"></td></tr></table>"
+        },
+        {
+            "type": "page_footnote",
+            "bbox": [
+                0.087,
+                0.9,
+                0.845,
+                0.928
+            ],
+            "angle": 0,
+            "content": "3 If the position applied requires for approval from relevant authority, please give detail of the approving authority (applicable for current employment only)."
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.201,
+                0.96
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.927,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "8"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.041,
+                0.056,
+                0.954,
+                0.921
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"2\">PART V: BUSINESS PLAN\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td>a. Objective of Establishment</td><td></td></tr><tr><td>Type of mutual fund\nb. (To specify whether it is private or public)</td><td></td></tr><tr><td>Target Market\nc. (To specify whether it is individual and/or corporate client and the percentage)</td><td></td></tr><tr><td>Territorial Scope\nd. (To specify the country and percentage)</td><td></td></tr><tr><td>e. Investment plan</td><td></td></tr><tr><td>List of service provider i.e.\nf. Custodian, Trustee, fund manager and fund administrator and etc</td><td></td></tr><tr><td>Proposed Cell(s)\ng. (To provide the brief profile of the proposed cell)</td><td></td></tr><tr><td>h. Any other information relevant to the application</td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.954
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.166,
+                0.937,
+                0.199,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.205,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.927,
+                0.964,
+                0.939,
+                0.979
+            ],
+            "angle": 0,
+            "content": "9"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.041,
+                0.056,
+                0.954,
+                0.91
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART V: BUSINESS PLAN\nImportant: All fields are mandatory and should not be left blank</td></tr><tr><td colspan=\"4\">Three Years Financial Projection</td></tr><tr><td colspan=\"4\">Currency:</td></tr><tr><td>Statement of Comprehensive Income</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>Asset Under Management - Cell (1), Cell \n(2) Cell (3) &amp;...</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">REVENUES</td></tr><tr><td>Interest income</td><td></td><td></td><td></td></tr><tr><td>Subscription Fee income</td><td></td><td></td><td></td></tr><tr><td>Management Fee Income</td><td></td><td></td><td></td></tr><tr><td>Total Revenues</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">EXPENSES</td></tr><tr><td>General &amp; Administrative</td><td></td><td></td><td></td></tr><tr><td>Professional Fee</td><td></td><td></td><td></td></tr><tr><td>Other Operating Expenses</td><td></td><td></td><td></td></tr><tr><td>Total Expenses</td><td></td><td></td><td></td></tr><tr><td>Income / (Loss) Before Tax</td><td></td><td></td><td></td></tr><tr><td>Tax</td><td></td><td></td><td></td></tr><tr><td>Income / (Loss) After Tax</td><td></td><td></td><td></td></tr><tr><td>Distribution of Dividend</td><td></td><td></td><td></td></tr><tr><td>Net Profit</td><td></td><td></td><td></td></tr><tr><td>Statement of Financial Position</td><td>Year 1</td><td>Year 2</td><td>Year 3</td></tr><tr><td>ASSETS</td><td></td><td></td><td></td></tr><tr><td>Non-current assets</td><td></td><td></td><td></td></tr><tr><td>Current assets</td><td></td><td></td><td></td></tr><tr><td>Total assets</td><td></td><td></td><td></td></tr><tr><td>LIABILITIES</td><td></td><td></td><td></td></tr><tr><td>Long term liabilities</td><td></td><td></td><td></td></tr><tr><td>Short term liabilities</td><td></td><td></td><td></td></tr><tr><td>Total Liabilities</td><td></td><td></td><td></td></tr><tr><td>SHAREHOLDERS&#x27; FUND$</td><td></td><td></td><td></td></tr><tr><td>Paid up capital</td><td></td><td></td><td></td></tr><tr><td>Retained profits / accumulated losses</td><td></td><td></td><td></td></tr><tr><td>Participant/Cell shares</td><td></td><td></td><td></td></tr><tr><td>Total Shareholders&#x27; Funds</td><td></td><td></td><td></td></tr><tr><td colspan=\"4\">Note:\n1. Please ensure the three years projection is realistic and reasonable.\n2. Please provide basis of assumption in deriving to the projected figure.</td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.166,
+                0.937,
+                0.2,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.965,
+                0.947,
+                0.978
+            ],
+            "angle": 0,
+            "content": "10"
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "bbox": [
+                0.041,
+                0.056,
+                0.952,
+                0.869
+            ],
+            "angle": 0,
+            "content": "<table><tr><td colspan=\"4\">PART V: SUPPORTING DOCUMENTS\n(Please √ at the appropriate box and provide reason(s)/justification(s) for any non-submission)</td></tr><tr><td colspan=\"2\">No Documents</td><td>For \nApplicant</td><td>For Labuan \nFSA</td></tr><tr><td colspan=\"4\">Supporting Documents for Proposed Shareholder</td></tr><tr><td>1.</td><td>Corporate Shareholder</td><td></td><td></td></tr><tr><td rowspan=\"6\"></td><td>(a) Certified true copy of certificate of incorporation</td><td></td><td></td></tr><tr><td>(a) Certified true copy of certificate of licence granted by relevant authority(s) in its home country – (if applicable)</td><td></td><td></td></tr><tr><td>(b) Certified true copy of board resolution or minutes of general meeting which approved the establishment of the core</td><td></td><td></td></tr><tr><td>(c) Certified true copy of memorandum &amp; articles of association</td><td></td><td></td></tr><tr><td>(d) Latest two (2) years Audited Financial Statements/Annual Report</td><td></td><td></td></tr><tr><td>(e) Duly signed Letter of Guarantee as per Appendix I</td><td></td><td></td></tr><tr><td>2.</td><td>Individual Shareholder</td><td></td><td></td></tr><tr><td rowspan=\"4\"></td><td>(a) Certified copy of IC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>(b) Two (2) referral letters from institutions and/or professional bodies</td><td></td><td></td></tr><tr><td>(c) Proof of net worth of assets (net worth statement duly verified by qualified Accountant or certified copy of latest 3 months banks&#x27; statements certified by the bank)</td><td></td><td></td></tr><tr><td>(d) Duly signed Letter of Guarantee as per Appendix II</td><td></td><td></td></tr><tr><td colspan=\"4\">Supporting Documents for Proposed Director</td></tr><tr><td rowspan=\"4\">3.</td><td>(a) Duly completed profile of the proposed Director(s)</td><td></td><td></td></tr><tr><td>(b) Duly completed Statutory Declaration by Director(s)/ Principal Officer* on Fit and Proper Person (as per Appendix III)</td><td></td><td></td></tr><tr><td>(c) Certified true copy of IC (Malaysian) or passport (non-Malaysian)</td><td></td><td></td></tr><tr><td>(d) Certified true copy of relevant academic and professional certificates</td><td></td><td></td></tr><tr><td colspan=\"4\">Other Supporting Documents</td></tr><tr><td>4.</td><td>Duly completed Declaration of True and Correct Information submitted as per Appendix IV</td><td></td><td></td></tr><tr><td>5.</td><td>Duly completed Statutory Declaration by Service Provider Responsible for Submission of Application as per Appendix v – not applicable for submission made directly by the Labuan Protected Cell Company</td><td></td><td></td></tr><tr><td>6.</td><td>Diagram/flow chart of the mutual fund structure which include explanatory notes</td><td></td><td></td></tr><tr><td>7.</td><td>Draft cell management agreement between the PCC and the cell</td><td></td><td></td></tr><tr><td>8.</td><td>Statutory Declaration by Services Provider Responsible for Submission of Application as per Appendix VI.</td><td></td><td></td></tr><tr><td>9.</td><td>Framework on Know-Your-Customers&#x27; policy and compliance to the Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001</td><td></td><td></td></tr><tr><td>10.</td><td>Risk Management and Internal Control Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>11.</td><td>Investment Management Policy, if any. The policy must be available for inspection once the licence is granted.</td><td></td><td></td></tr><tr><td>12.</td><td>Processing fee of USD350 (Normal Processing) or USD1,550 (Fast Track Processing)</td><td></td><td></td></tr></table>"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.937,
+                0.198,
+                0.96
+            ],
+            "angle": 0,
+            "content": "Labuan FSA Financial Services Authority"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.205,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.965,
+                0.947,
+                0.978
+            ],
+            "angle": 0,
+            "content": "11"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.801,
+                0.057,
+                0.911,
+                0.072
+            ],
+            "angle": 0,
+            "content": "APPENDIX I"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.347,
+                0.089,
+                0.656,
+                0.105
+            ],
+            "angle": 0,
+            "content": "Letterhead of Corporate Shareholder"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.104,
+                0.146,
+                0.121
+            ],
+            "angle": 0,
+            "content": "[Date]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.133,
+                0.27,
+                0.147
+            ],
+            "angle": 0,
+            "content": "The Director General"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.148,
+                0.39,
+                0.163
+            ],
+            "angle": 0,
+            "content": "Labuan Financial Services Authority"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.163,
+                0.326,
+                0.176
+            ],
+            "angle": 0,
+            "content": "Level 17, Main Office Tower"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.177,
+                0.41,
+                0.191
+            ],
+            "angle": 0,
+            "content": "Financial Park Labuan, Jalan Merdeka"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.192,
+                0.376,
+                0.206
+            ],
+            "angle": 0,
+            "content": "87000 Federal Territory of Labuan"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.207,
+                0.168,
+                0.222
+            ],
+            "angle": 0,
+            "content": "Malaysia"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.235,
+                0.169,
+                0.25
+            ],
+            "angle": 0,
+            "content": "Dear Sir,"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.09,
+                0.264,
+                0.321,
+                0.279
+            ],
+            "angle": 0,
+            "content": "LETTER OF GUARANTEE"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.293,
+                0.912,
+                0.352
+            ],
+            "angle": 0,
+            "content": "This letter of guarantee is issued for [name of Labuan Protected Cell Company], to carry on Labuan mutual fund business under the provisions of the Labuan Financial Services and Securities Act 2010/Labuan Islamic Financial Services and Securities Act 2010 [delete whichever not applicable] (hereinafter referred to as \"the Act\")."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.365,
+                0.912,
+                0.439
+            ],
+            "angle": 0,
+            "content": "We, being the [percentage of shareholding] shareholder of [name of Labuan Protected Cell Company ], do hereby irrevocably and unconditionally undertake and guarantee in respect of [name of Labuan Protected Cell Company ]s, a Labuan [type of licence], that during validity of [name of Labuan Protected Cell Company ]s licence and its operation in Labuan IBFC, it shall comply with the following:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.134,
+                0.451,
+                0.91,
+                0.482
+            ],
+            "angle": 0,
+            "content": "a. The financial obligations and requirements imposed under the Act on it and shall meet its liabilities in respect of its Labuan [type of licence] business."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.134,
+                0.496,
+                0.776,
+                0.512
+            ],
+            "angle": 0,
+            "content": "b. The requirement to obtain a prior written approval from Labuan FSA for:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.134,
+                0.451,
+                0.91,
+                0.512
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.181,
+                0.527,
+                0.91,
+                0.559
+            ],
+            "angle": 0,
+            "content": "i. any change of [name of Labuan Protected Cell Company ]s shareholder who holds ten percent centum or more of its paid up capital."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.181,
+                0.571,
+                0.91,
+                0.602
+            ],
+            "angle": 0,
+            "content": "ii. any appointment of [name of Labuan Protected Cell Company ]s director and principal officer, whom shall be of a fit and proper person."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.181,
+                0.614,
+                0.91,
+                0.644
+            ],
+            "angle": 0,
+            "content": "iii. any amendment or alteration to any of [name of Labuan Protected Cell Company ]’s constituent documents."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.181,
+                0.527,
+                0.91,
+                0.644
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.134,
+                0.658,
+                0.91,
+                0.703
+            ],
+            "angle": 0,
+            "content": "c. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] licence."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.715,
+                0.912,
+                0.811
+            ],
+            "angle": 0,
+            "content": "We shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA to the extent of the proportion of our shareholding in [name of Labuan Protected Cell Company ], and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of Labuan Protected Cell Company ]."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.823,
+                0.221,
+                0.839
+            ],
+            "angle": 0,
+            "content": "Yours faithfully,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.853,
+                0.26,
+                0.868
+            ],
+            "angle": 0,
+            "content": "For and on behalf of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.868,
+                0.276,
+                0.883
+            ],
+            "angle": 0,
+            "content": "[Name of shareholder]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.91,
+                0.224,
+                0.926
+            ],
+            "angle": 0,
+            "content": "[Name] Director"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.109,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.965,
+                0.947,
+                0.979
+            ],
+            "angle": 0,
+            "content": "12"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.805,
+                0.056,
+                0.911,
+                0.07
+            ],
+            "angle": 0,
+            "content": "APPENDIX II"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.348,
+                0.084,
+                0.652,
+                0.099
+            ],
+            "angle": 0,
+            "content": "Letterhead of Individual Shareholder"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.09,
+                0.113,
+                0.146,
+                0.129
+            ],
+            "angle": 0,
+            "content": "[Date]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.142,
+                0.27,
+                0.156
+            ],
+            "angle": 0,
+            "content": "The Director General"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.158,
+                0.39,
+                0.172
+            ],
+            "angle": 0,
+            "content": "Labuan Financial Services Authority"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.173,
+                0.326,
+                0.186
+            ],
+            "angle": 0,
+            "content": "Level 17, Main Office Tower"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.187,
+                0.41,
+                0.201
+            ],
+            "angle": 0,
+            "content": "Financial Park Labuan, Jalan Merdeka"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.202,
+                0.375,
+                0.216
+            ],
+            "angle": 0,
+            "content": "87000 Federal Territory of Labuan"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.092,
+                0.217,
+                0.167,
+                0.231
+            ],
+            "angle": 0,
+            "content": "Malaysia"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.244,
+                0.168,
+                0.259
+            ],
+            "angle": 0,
+            "content": "Dear Sir,"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.09,
+                0.273,
+                0.321,
+                0.287
+            ],
+            "angle": 0,
+            "content": "LETTER OF GUARANTEE"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.302,
+                0.912,
+                0.362
+            ],
+            "angle": 0,
+            "content": "This letter of guarantee is issued for [name of Labuan Protected Cell Company], to carry on Labuan mutual fund business under the provisions of the Labuan Financial Services and Securities Act 2010/Labuan Islamic Financial Services and Securities Act 2010 [delete whichever not applicable] (hereinafter referred to as \"the Act\")."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.374,
+                0.915,
+                0.435
+            ],
+            "angle": 0,
+            "content": "I, being the [percentage of shareholding] shareholder of [name of Labuan Protected Cell Company ], do hereby irrevocably and unconditionally undertake and guarantee in respect of [name of Labuan Protected Cell Company ]'s, a Labuan [type of licence], that during validity of [name of Labuan Protected Cell Company ]'s licence and its operation in Labuan IBFC, it shall comply with the following:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.134,
+                0.447,
+                0.91,
+                0.478
+            ],
+            "angle": 0,
+            "content": "b. The financial obligations and requirements imposed under the Act on it and shall meet it's liabilities in respect of its Labuan [type of licence] business."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.134,
+                0.491,
+                0.776,
+                0.508
+            ],
+            "angle": 0,
+            "content": "b. The requirement to obtain a prior written approval from Labuan FSA for:"
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.134,
+                0.447,
+                0.91,
+                0.508
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.182,
+                0.522,
+                0.909,
+                0.555
+            ],
+            "angle": 0,
+            "content": "ii. any change of [name of Labuan Protected Cell Company ]’s shareholder who holds ten percent centum or more of its paid up capital."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.182,
+                0.566,
+                0.91,
+                0.597
+            ],
+            "angle": 0,
+            "content": "ii. any appointment of [name of Labuan Protected Cell Company ]s director and principal officer, whom shall be of a fit and proper person."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.182,
+                0.61,
+                0.91,
+                0.64
+            ],
+            "angle": 0,
+            "content": "iii. any amendment or alteration to any of [name of Labuan Protected Cell Company ]’s constituent documents."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.182,
+                0.522,
+                0.91,
+                0.64
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.135,
+                0.653,
+                0.91,
+                0.699
+            ],
+            "angle": 0,
+            "content": "c. The requirement to immediately notify Labuan FSA of any amendment or alteration to any information which had been furnished to Labuan FSA in connection with the application for the Labuan [type of licence] licence."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.711,
+                0.912,
+                0.807
+            ],
+            "angle": 0,
+            "content": "I shall when so demanded in writing by Labuan FSA, on first demand, make good, meet and honour the above requirements including, but not limited to, paying such sum of money in satisfaction of such financial obligations, requirements and liabilities to the extent they are properly due in such currency as may be specified by Labuan FSA to the extent of the proportion of my shareholding in [name of Labuan Protected Cell Company ], and on the basis such payments extinguish such financial obligations, requirements and liabilities of [name of Labuan Protected Cell Company ]."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.818,
+                0.221,
+                0.835
+            ],
+            "angle": 0,
+            "content": "Yours faithfully,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.088,
+                0.848,
+                0.26,
+                0.862
+            ],
+            "angle": 0,
+            "content": "For and on behalf of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.09,
+                0.863,
+                0.276,
+                0.879
+            ],
+            "angle": 0,
+            "content": "[Name of shareholder]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.089,
+                0.905,
+                0.224,
+                0.921
+            ],
+            "angle": 0,
+            "content": "[Name] Director"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.965,
+                0.947,
+                0.978
+            ],
+            "angle": 0,
+            "content": "13"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.783,
+                0.074,
+                0.903,
+                0.087
+            ],
+            "angle": 0,
+            "content": "APPENDIX III"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.189,
+                0.109,
+                0.793,
+                0.123
+            ],
+            "angle": 0,
+            "content": "PART IV: STATUTORY DECLARATION BY DIRECTOR/PRINCIPAL OFFICER"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.366,
+                0.126,
+                0.616,
+                0.138
+            ],
+            "angle": 0,
+            "content": "ON FIT AND PROPER PERSON"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.237,
+                0.14,
+                0.746,
+                0.154
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.085,
+                0.19,
+                0.896,
+                0.205
+            ],
+            "angle": 0,
+            "content": "I, .NRIC/Passport No: a proposed"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.085,
+                0.206,
+                0.896,
+                0.221
+            ],
+            "angle": 0,
+            "content": "director/principal officer of....... (name of the Labuan Protected Cell"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.086,
+                0.222,
+                0.527,
+                0.237
+            ],
+            "angle": 0,
+            "content": "Company ), do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.102,
+                0.253,
+                0.85,
+                0.308
+            ],
+            "angle": 0,
+            "content": "1. I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA) /Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines)."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.322,
+                0.85,
+                0.362
+            ],
+            "angle": 0,
+            "content": "2. to the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA /Section 4 of LIFSSA and the Guidelines."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.376,
+                0.848,
+                0.404
+            ],
+            "angle": 0,
+            "content": "3. the information given in this declaration and in the attached documents (if any) are accurate, true and complete."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.1,
+                0.418,
+                0.85,
+                0.46
+            ],
+            "angle": 0,
+            "content": "4. I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.1,
+                0.253,
+                0.85,
+                0.46
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.084,
+                0.473,
+                0.896,
+                0.502
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960/ other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.528,
+                0.454,
+                0.555
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.559,
+                0.325,
+                0.572
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.574,
+                0.351,
+                0.587
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.095,
+                0.589,
+                0.255,
+                0.602
+            ],
+            "angle": 0,
+            "content": "This ...day of .... 20.."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.085,
+                0.63,
+                0.171,
+                0.644
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.085,
+                0.714,
+                0.385,
+                0.732
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.939,
+                0.164,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.199,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.929,
+                0.965,
+                0.947,
+                0.979
+            ],
+            "angle": 0,
+            "content": "14"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.818,
+                0.057,
+                0.938,
+                0.071
+            ],
+            "angle": 0,
+            "content": "APPENDIX VI"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.214,
+                0.107,
+                0.829,
+                0.122
+            ],
+            "angle": 0,
+            "content": "DECLARATION OF TRUE AND CORRECT INFORMATION SUBMITTED"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.241,
+                0.124,
+                0.803,
+                0.14
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.174,
+                0.908,
+                0.19
+            ],
+            "angle": 0,
+            "content": "I .NRIC/Passport No."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.192,
+                0.93,
+                0.224
+            ],
+            "angle": 0,
+            "content": "the (position) of. (name of company), do hereby solemnly and sincerely declare that:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.232,
+                0.93,
+                0.282
+            ],
+            "angle": 0,
+            "content": "1. all information submitted in this application including all attachments, forms, documents and forwarding letters are accurate, true and correct and that all estimations provided are fair and reasonable."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.291,
+                0.929,
+                0.341
+            ],
+            "angle": 0,
+            "content": "2. I am aware that if I make any misrepresentation herein in this application, it is an offence punishable pursuant to Section 192 of the Labuan Financial Services and Securities Act 2010/Section 152 of the Labuan Islamic Financial Services and Securities Act 2010."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.35,
+                0.93,
+                0.402
+            ],
+            "angle": 0,
+            "content": "3. a printed signed copy of this application which reflects the same information provided in this application is being kept at the office of my principal or our appointed Labuan trust company being the agent approved by Labuan FSA."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.11,
+                0.232,
+                0.93,
+                0.402
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.427,
+                0.929,
+                0.461
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true and by virtue of the provisions of the Statutory Declaration Act 1960 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.491,
+                0.508,
+                0.507
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared by the above"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.515,
+                0.417,
+                0.529
+            ],
+            "angle": 0,
+            "content": "named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.538,
+                0.416,
+                0.552
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.559,
+                0.418,
+                0.574
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.582,
+                0.42,
+                0.597
+            ],
+            "angle": 0,
+            "content": "This ....day of 20"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.62,
+                0.203,
+                0.634
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.11,
+                0.714,
+                0.44,
+                0.731
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.648,
+                0.56,
+                0.73,
+                0.575
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.163,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.199,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.205,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.93,
+                0.965,
+                0.947,
+                0.978
+            ],
+            "angle": 0,
+            "content": "15"
+        }
+    ],
+    [
+        {
+            "type": "header",
+            "bbox": [
+                0.815,
+                0.057,
+                0.932,
+                0.072
+            ],
+            "angle": 0,
+            "content": "APPENDIX V"
+        },
+        {
+            "type": "title",
+            "bbox": [
+                0.194,
+                0.093,
+                0.853,
+                0.124
+            ],
+            "angle": 0,
+            "content": "STATUTORY DECLARATION BY SERVICE PROVIDER RESPONSIBLE FOR SUBMISSION OF APPLICATION"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.242,
+                0.126,
+                0.804,
+                0.142
+            ],
+            "angle": 0,
+            "content": "Important: All fields are mandatory and should not be left blank"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.123,
+                0.196,
+                0.907,
+                0.213
+            ],
+            "angle": 0,
+            "content": "I, (name) of (address) NRIC/Passport"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.215,
+                0.907,
+                0.282
+            ],
+            "angle": 0,
+            "content": "No: the authorized officer of ....(name of trust company/other service providers) being the party responsible for the submission of application for ....(name of applicant) do solemnly and sincerely declare that in relation to the above application:"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.3,
+                0.907,
+                0.351
+            ],
+            "angle": 0,
+            "content": "1. I have conducted due diligence process on............ (name of applicant) and on its director(s) and shareholder(s) and other persons or companies that involved and related to the application and satisfied with the result thereof."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.124,
+                0.369,
+                0.906,
+                0.438
+            ],
+            "angle": 0,
+            "content": "2. I am satisfied that the requirements of all legislations and applicable guidelines including but not limited to Guidelines on Fit and Proper Person Requirements and Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful Activities Act 2001 in respect of the above application have been complied with."
+        },
+        {
+            "type": "list",
+            "bbox": [
+                0.124,
+                0.3,
+                0.907,
+                0.438
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.123,
+                0.456,
+                0.907,
+                0.49
+            ],
+            "angle": 0,
+            "content": "And I make this solemn declaration conscientiously believing the same to be true, and by virtue of the provisions of the Statutory Declaration Act 1990 / other relevant provisions."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.133,
+                0.538,
+                0.436,
+                0.553
+            ],
+            "angle": 0,
+            "content": "Subscribed and solemnly declared"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.135,
+                0.554,
+                0.436,
+                0.569
+            ],
+            "angle": 0,
+            "content": "by the above named"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.135,
+                0.584,
+                0.388,
+                0.598
+            ],
+            "angle": 0,
+            "content": "At"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.599,
+                0.416,
+                0.613
+            ],
+            "angle": 0,
+            "content": "In the State of"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.136,
+                0.614,
+                0.31,
+                0.629
+            ],
+            "angle": 0,
+            "content": "This ...day of .... 20.."
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.602,
+                0.599,
+                0.685,
+                0.614
+            ],
+            "angle": 0,
+            "content": "Signature"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.674,
+                0.218,
+                0.688
+            ],
+            "angle": 0,
+            "content": "Before me,"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.125,
+                0.766,
+                0.455,
+                0.785
+            ],
+            "angle": 0,
+            "content": "(Commissioner for Oaths/Notary Public)"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.11,
+                0.941,
+                0.165,
+                0.955
+            ],
+            "angle": 0,
+            "content": "Labuan"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.165,
+                0.937,
+                0.2,
+                0.959
+            ],
+            "angle": 0,
+            "content": "FSA"
+        },
+        {
+            "type": "footer",
+            "bbox": [
+                0.204,
+                0.964,
+                0.882,
+                0.977
+            ],
+            "angle": 0,
+            "content": "Application for Establishment of Cell of Labuan Protected Cell Company to Carry on Labuan Mutual Fund"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.93,
+                0.965,
+                0.947,
+                0.978
+            ],
+            "angle": 0,
+            "content": "16"
+        }
+    ]
+]

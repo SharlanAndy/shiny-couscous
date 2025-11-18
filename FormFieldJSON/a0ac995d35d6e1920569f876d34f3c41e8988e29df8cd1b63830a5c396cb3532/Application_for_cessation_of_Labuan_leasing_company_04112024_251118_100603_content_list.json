@@ -1,0 +1,476 @@
+[
+    {
+        "type": "text",
+        "text": "APPLICATION FOR CESSATION OF LABUAN LEASING COMPANY",
+        "text_level": 1,
+        "bbox": [
+            196,
+            147,
+            783,
+            162
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name of Labuan Company :",
+        "text_level": 2,
+        "bbox": [
+            109,
+            185,
+            394,
+            200
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The duly completed checklist is to be attached as part of the documentations submitted to Labuan FSA",
+        "text_level": 3,
+        "bbox": [
+            109,
+            230,
+            889,
+            259
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(Pleases at the appropriate box and provide reason(s)/justification(s) for any non-submission)",
+        "bbox": [
+            109,
+            259,
+            746,
+            274
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "table",
+        "img_path": "images/39664f8b72bb81a18ac7b4b95bf68653260f2e2295fed505c9ce9a79fe0a4594.jpg",
+        "table_caption": [],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>No.</td><td>Documents</td><td>For \nApplicant</td><td>For \nLabuan \nFSA</td></tr><tr><td>1.</td><td>Certified true copy of the board resolution or extract of minutes of board meeting on their intention to surrender the licence.</td><td></td><td></td></tr><tr><td>2.</td><td>Letter of Guarantee/Undertaking from the shareholder/head office to undertake all outstanding liabilities (as per Appendix I).</td><td></td><td></td></tr><tr><td>3.</td><td>Latest audited financial statements.</td><td></td><td></td></tr><tr><td>4.</td><td>Latest management account signed and duly verified by the Director of the leasing company.</td><td></td><td></td></tr></table>",
+        "bbox": [
+            119,
+            279,
+            910,
+            494
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Notes:",
+        "text_level": 3,
+        "bbox": [
+            110,
+            508,
+            171,
+            524
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.",
+            "2) Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.",
+            "3) The checklist serves as general requirement of the application. However, pursuant to Section 91 of the Labuan Financial Services and Securities Act 2010, Labuan FSA reserves the right to request for additional information to support the application."
+        ],
+        "bbox": [
+            107,
+            531,
+            899,
+            651
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Officer responsible for information submission:",
+        "bbox": [
+            109,
+            680,
+            494,
+            696
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Signature : Company :",
+        "bbox": [
+            112,
+            724,
+            895,
+            741
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Name : Contact No. :",
+        "bbox": [
+            112,
+            760,
+            895,
+            777
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Designation : Email: :",
+        "bbox": [
+            112,
+            791,
+            895,
+            809
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Labuan",
+        "bbox": [
+            398,
+            80,
+            547,
+            108
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "FSA",
+        "bbox": [
+            549,
+            57,
+            642,
+            127
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "Financial Services Authority",
+        "bbox": [
+            400,
+            110,
+            547,
+            118
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Application for Cessation of Labuan Leasing Company",
+        "bbox": [
+            495,
+            910,
+            850,
+            923
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "1",
+        "bbox": [
+            867,
+            910,
+            877,
+            921
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            100,
+            938,
+            189,
+            961
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "To:",
+        "bbox": [
+            80,
+            99,
+            112,
+            112
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Director-General",
+        "bbox": [
+            80,
+            129,
+            221,
+            143
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Labuan Financial Services Authority",
+        "bbox": [
+            82,
+            146,
+            379,
+            160
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Level 17, Main Office Tower",
+        "bbox": [
+            82,
+            161,
+            315,
+            174
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Financial Park Labuan",
+        "bbox": [
+            82,
+            175,
+            268,
+            189
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Jalan Merdeka",
+        "bbox": [
+            82,
+            191,
+            206,
+            204
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "87000 Federal Territory of Labuan",
+        "bbox": [
+            82,
+            206,
+            364,
+            219
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "MALAYSIA",
+        "bbox": [
+            82,
+            221,
+            176,
+            234
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "And",
+        "bbox": [
+            80,
+            250,
+            119,
+            263
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Any Other Interested Party",
+        "bbox": [
+            80,
+            280,
+            304,
+            296
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In consideration of [the name of Labuan company] to cease its leasing operations and request for Labuan Financial Services Authority (hereinafter referred to as \"Labuan FSA\") to revoke the approval granted for licence to carry on leasing business.",
+        "bbox": [
+            78,
+            324,
+            900,
+            370
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "I/We, [name of the Head Office/Shareholder], being the Head Office/Shareholder of [name of Labuan company], hereby irrevocably and unconditionally undertake and guarantee to Labuan FSA that if at any time after the approval for licence to carry on leasing business is revoked, [name of Labuan company] fails or unable to comply with any financial obligation or requirement imposed under the Labuan Financial Services and Securities Act 2010 on it or fail to meet its liabilities in respect of its Labuan leasing business, we shall when so demanded in writing by Labuan FSA or any other interested person, on first demand, make good, meet and honour all such financial obligations, requirements and liabilities by paying such sum of money, in any currency in satisfaction of such financial obligations, requirements and liabilities in such manner within such time as may be specified by Labuan FSA.",
+        "bbox": [
+            78,
+            384,
+            904,
+            537
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Dated this day of , 20",
+        "bbox": [
+            80,
+            550,
+            589,
+            567
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "The Common Seal",
+        "bbox": [
+            80,
+            595,
+            453,
+            609
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "of [name of Head Office/Shareholder]",
+        "bbox": [
+            82,
+            612,
+            453,
+            626
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "was hereunto affixed",
+        "bbox": [
+            82,
+            627,
+            453,
+            640
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "in the presence of:",
+        "bbox": [
+            82,
+            642,
+            453,
+            656
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Director",
+        "bbox": [
+            80,
+            686,
+            151,
+            700
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(Name in block letters)",
+        "bbox": [
+            82,
+            702,
+            268,
+            715
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Secretary",
+        "bbox": [
+            504,
+            686,
+            586,
+            701
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(Name in block letters)",
+        "bbox": [
+            505,
+            702,
+            692,
+            715
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "APPENDIX I",
+        "bbox": [
+            778,
+            68,
+            887,
+            83
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Labuan FSA Financial Services Authority",
+        "bbox": [
+            154,
+            925,
+            243,
+            948
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Application for Cessation of Labuan Leasing Company",
+        "bbox": [
+            495,
+            913,
+            850,
+            926
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "2",
+        "bbox": [
+            863,
+            912,
+            877,
+            923
+        ],
+        "page_idx": 1
+    }
+]

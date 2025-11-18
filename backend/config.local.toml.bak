@@ -1,0 +1,48 @@
+# Labuan FSA E-Submission System - Local Development Configuration
+# This file is gitignored for security
+
+[app]
+name = "Labuan FSA E-Submission API"
+version = "1.0.0"
+debug = true
+environment = "development"
+
+[server]
+host = "127.0.0.1"
+port = 8000
+reload = true
+workers = 1
+
+[database]
+# Supabase PostgreSQL connection for local development
+# The DATABASE_URL from .env.local will override this if set
+# Format: postgresql+asyncpg://postgres:password@db.project-ref.supabase.co:5432/postgres
+# For SQLite (temporary/fallback), use: sqlite+aiosqlite:///./labuan_fsa.db
+url = "postgresql+asyncpg://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres"
+echo = false
+pool_size = 5
+max_overflow = 5
+pool_pre_ping = true
+
+[security]
+# Secret key for JWT tokens (change in production!)
+secret_key = "dev-secret-key-change-me-in-production-1234567890abcdef"
+algorithm = "HS256"
+access_token_expire_minutes = 60
+refresh_token_expire_days = 7
+
+[storage]
+provider = "local"
+local_path = "./uploads"
+
+max_file_size = 10485760  # 10MB in bytes
+allowed_extensions = [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".jpg", ".jpeg", ".png"]
+
+[secrets_manager]
+provider = "local"
+
+[email]
+provider = "local"
+from_email = "noreply@labuanfsa.gov.my"
+from_name = "Labuan FSA"
+

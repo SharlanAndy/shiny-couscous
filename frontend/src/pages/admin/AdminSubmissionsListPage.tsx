@@ -4,9 +4,16 @@ import apiClient from '@/api/client'
 import type { SubmissionResponse, FormResponse } from '@/types'
 import { cn } from '@/lib/utils'
 
+interface User {
+  id: string
+  email: string
+  name: string
+}
+
 export function AdminSubmissionsListPage() {
   const [submissions, setSubmissions] = useState<SubmissionResponse[]>([])
   const [forms, setForms] = useState<FormResponse[]>([])
+  const [users, setUsers] = useState<User[]>([])
   const [loading, setLoading] = useState(true)
   const [filters, setFilters] = useState({
     formId: '',
@@ -25,7 +32,7 @@ export function AdminSubmissionsListPage() {
   const loadData = async () => {
     setLoading(true)
     try {
-      const [submissionsData, formsData] = await Promise.all([
+      const [submissionsData, formsData, usersData] = await Promise.all([
         apiClient.getAdminSubmissions({
           formId: filters.formId || undefined,
           status: filters.status || undefined,
@@ -33,9 +40,11 @@ export function AdminSubmissionsListPage() {
           pageSize: filters.pageSize,
         }),
         apiClient.getForms(),
+        apiClient.getAdminUsers(),
       ])
       setSubmissions(submissionsData)
       setForms(formsData)
+      setUsers(usersData)
 
       // Filter by search term
       if (filters.search) {
@@ -80,6 +89,12 @@ export function AdminSubmissionsListPage() {
   const getFormName = (formId: string): string => {
     const form = forms.find((f) => f.formId === formId)
     return form?.name || formId
+  }
+
+  const getUserEmail = (userId: string | null | undefined): string => {
+    if (!userId) return '-'
+    const user = users.find((u) => u.id === userId)
+    return user?.email || userId
   }
 
   return (
@@ -207,7 +222,7 @@ export function AdminSubmissionsListPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {submission.submittedBy || '-'}
+                      {getUserEmail(submission.submittedBy)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {submission.submittedAt

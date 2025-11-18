@@ -1,0 +1,13 @@
+{
+  "admins": [
+    {
+      "id": "dEURhlvKi__fN0PosOzKzQ",
+      "email": "admin@example.com",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "name": "Test Admin",
+      "role": "admin",
+      "createdAt": "2025-11-18T10:31:05.782636Z",
+      "isActive": true
+    }
+  ]
+}

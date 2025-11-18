@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { cn } from '@/lib/utils'
 import { useToast } from '@/components/ui/ToastProvider'
+import apiClient from '@/api/client'
 
 export function AdminSettingsPage() {
   const { showSuccess, showError } = useToast()
+  const queryClient = useQueryClient()
   const [activeTab, setActiveTab] = useState<'general' | 'users' | 'integrations' | 'security'>('general')
   const [settings, setSettings] = useState({
     siteName: 'Labuan FSA E-Submission System',
@@ -12,7 +15,40 @@ export function AdminSettingsPage() {
     allowRegistration: true,
     requireEmailVerification: true,
     maxFileSize: 10, // MB
-    allowedFileTypes: ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'],
+    allowedFileTypes: ['.pdf', '.doc', '.docx', '.jpg', '.jpeg', '.png'],
+  })
+
+  // Fetch settings
+  const { data: fetchedSettings, isLoading } = useQuery({
+    queryKey: ['admin-settings'],
+    queryFn: () => apiClient.getAdminSettings(),
+  })
+
+  // Update local settings when fetched
+  useEffect(() => {
+    if (fetchedSettings) {
+      setSettings({
+        siteName: fetchedSettings.siteName || settings.siteName,
+        siteUrl: fetchedSettings.siteUrl || settings.siteUrl,
+        maintenanceMode: fetchedSettings.maintenanceMode ?? settings.maintenanceMode,
+        allowRegistration: fetchedSettings.allowRegistration ?? settings.allowRegistration,
+        requireEmailVerification: fetchedSettings.requireEmailVerification ?? settings.requireEmailVerification,
+        maxFileSize: fetchedSettings.maxFileSize || settings.maxFileSize,
+        allowedFileTypes: fetchedSettings.allowedFileTypes || settings.allowedFileTypes,
+      })
+    }
+  }, [fetchedSettings])
+
+  // Update settings mutation
+  const updateMutation = useMutation({
+    mutationFn: (data: any) => apiClient.updateAdminSettings(data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin-settings'] })
+      showSuccess('Settings have been saved successfully.', 'Settings Saved')
+    },
+    onError: (error: any) => {
+      showError(error.response?.data?.detail || error.message || 'Failed to save settings', 'Save Failed')
+    },
   })
 
   const handleSettingChange = (key: string, value: any) => {
@@ -20,8 +56,7 @@ export function AdminSettingsPage() {
   }
 
   const handleSave = () => {
-    // TODO: Implement API call to save settings
-    showSuccess('Settings have been saved successfully.', 'Settings Saved')
+    updateMutation.mutate(settings)
   }
 
   return (
@@ -220,8 +255,12 @@ export function AdminSettingsPage() {
 
         {/* Save Button */}
         <div className="mt-6 pt-6 border-t border-gray-200 flex justify-end">
-          <button onClick={handleSave} className="btn btn-primary">
-            Save Settings
+          <button 
+            onClick={handleSave} 
+            disabled={updateMutation.isPending || isLoading}
+            className="btn btn-primary"
+          >
+            {updateMutation.isPending ? 'Saving...' : 'Save Settings'}
           </button>
         </div>
       </div>

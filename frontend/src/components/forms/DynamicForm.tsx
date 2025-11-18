@@ -285,7 +285,7 @@ export function DynamicForm({
               if (!allRequiredUploaded) {
                 isEmpty = true
               }
-            } else if (required) {
+            } else if (field.required) {
               // If field is required but no documents config, check if any document is uploaded
               const hasAnyUpload = Object.values(fieldValue).some((doc: any) => doc && doc.uploaded === true)
               if (!hasAnyUpload) {
