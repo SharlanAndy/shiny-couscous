@@ -1,5 +1,7 @@
 # Labuan FSA E-Submission System
 
+> **Note:** All documentation has been reorganized into the [`docs/`](./docs/) directory. See [Documentation](#documentation) section below.
+
 **Project Name**: Labuan FSA E-Online Submission System  
 **Project ID**: `labuan-fsa-e-submission-system`  
 **Created**: 2025-11-17 15:34:58  
@@ -161,6 +163,22 @@ See `README-DEV.md` for detailed setup instructions including:
 
 ## 📚 DOCUMENTATION
 
+All documentation has been organized into the [`docs/`](./docs/) directory.
+
+### Quick Links
+
+- **[Deployment Guides](./docs/deployment/)** - Complete deployment documentation
+  - [Environment Variables](./docs/deployment/environment-variables.md)
+  - [Vercel Deployment](./docs/deployment/vercel-deployment.md)
+  - [Supabase Database](./docs/deployment/supabase-database.md)
+  - [GitHub Pages Frontend](./docs/deployment/github-pages-frontend.md)
+
+- **[Troubleshooting Guides](./docs/troubleshooting/)** - Common issues and solutions
+  - [Database Connection Issues](./docs/troubleshooting/database-connection.md)
+  - [Prepared Statement Errors](./docs/troubleshooting/prepared-statements.md)
+  - [CORS Issues](./docs/troubleshooting/cors-issues.md)
+  - [Auto-Deploy Issues](./docs/troubleshooting/auto-deploy.md)
+
 ### Project Documentation
 
 - **Complete Requirements**: See `labuan-fsa-e-submission-prompt.md`
@@ -176,6 +194,13 @@ See `README-DEV.md` for detailed setup instructions including:
 3. **Secure Configuration**: TOML + cloud secrets manager (NO .env files)
 4. **Component Modularity**: Every DOM element as individual, reusable component
 5. **Reference Components**: Extract and adapt from OpenMRS Form Builder and Alibaba Formily
+
+### Security Note
+
+**⚠️ No credentials are stored in documentation files.** All sensitive values use placeholders like:
+- `[YOUR-PASSWORD]` - Database password
+- `[PROJECT-REF]` - Supabase project reference
+- `[REGION]` - AWS region for Supabase
 
 ---
 
