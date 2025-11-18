@@ -147,7 +147,8 @@ async def init_db() -> None:
         async with engine.begin() as conn:
             # Test basic query (PostgreSQL only)
             if not is_sqlite:
-                result = await conn.execute("SELECT 1")
+                from sqlalchemy import text
+                result = await conn.execute(text("SELECT 1"))
                 print(f"✅ Database connection successful")
             
             # Create tables
