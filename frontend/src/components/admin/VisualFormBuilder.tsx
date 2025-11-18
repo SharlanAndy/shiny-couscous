@@ -121,13 +121,15 @@ export function VisualFormBuilder({ initialSchema, onChange }: VisualFormBuilder
   const createDefaultField = (fieldType: string, stepIndex: number): FormField => {
     const fieldId = generateFieldId(fieldType, stepIndex)
     const fieldName = generateFieldName(fieldType, stepIndex)
+    // Get field type info for default label
     const fieldTypeInfo = FIELD_TYPES.find((f) => f.type === fieldType)
+    const defaultLabel = fieldTypeInfo?.name || fieldType
 
     const baseField: FormField = {
       fieldId,
       fieldType,
       fieldName,
-      label: fieldTypeInfo?.name || fieldType,
+      label: defaultLabel,
       required: false,
       disabled: false,
       readonly: false,
@@ -575,7 +577,8 @@ function SortableFieldItem({ id, field, isSelected, onClick, onDelete }: Sortabl
     opacity: isDragging ? 0.5 : 1,
   }
 
-  const fieldTypeInfo = FIELD_TYPES.find((f) => f.type === field.fieldType)
+    // fieldTypeInfo - icon lookup below
+    const fieldTypeInfo = FIELD_TYPES.find((f) => f.type === field.fieldType)
 
   // Handle click - only trigger onClick if not dragging
   const handleClick = (e: React.MouseEvent) => {

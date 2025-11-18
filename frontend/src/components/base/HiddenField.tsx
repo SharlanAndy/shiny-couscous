@@ -1,4 +1,3 @@
-import React from 'react'
 import { BaseFieldProps } from '@/types'
 
 export interface HiddenFieldProps extends BaseFieldProps {

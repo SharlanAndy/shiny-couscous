@@ -1,4 +1,3 @@
-import React from 'react'
 import { BaseFieldProps, FormStep } from '@/types'
 import { cn } from '@/lib/utils'
 import { FormRenderer } from '@/components/forms/FormRenderer'

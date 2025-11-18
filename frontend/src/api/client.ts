@@ -118,7 +118,8 @@ class APIClient {
 
   async updateFormSchema(formId: string, schemaData: FormSchemaResponse): Promise<FormSchemaResponse> {
     // First update the form with the schema data
-    const form = await this.getForm(formId)
+    // Get form to ensure it exists
+    await this.getForm(formId)
     await this.updateForm(formId, {
       schema_data: {
         formId: schemaData.formId,

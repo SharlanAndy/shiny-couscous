@@ -1,4 +1,3 @@
-import React from 'react'
 import { BaseFieldProps } from '@/types'
 import { cn } from '@/lib/utils'
 

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { FormField, FieldValidation, FieldStyle } from '@/types'
-import { cn } from '@/lib/utils'
 
 interface FieldPropertyEditorProps {
   field: FormField
@@ -47,7 +46,8 @@ export function FieldPropertyEditor({ field, fieldTypes, onUpdate }: FieldProper
     updateField({ options })
   }
 
-  const fieldTypeInfo = fieldTypes.find((f) => f.type === localField.fieldType)
+  // fieldTypeInfo used for future enhancements (keeping for reference)
+  // const fieldTypeInfo = fieldTypes.find((f) => f.type === localField.fieldType)
 
   return (
     <div className="space-y-4 text-sm">

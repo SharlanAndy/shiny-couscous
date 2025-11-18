@@ -1,4 +1,4 @@
-import React from 'react'
+// React import not needed with JSX transform
 import { FormField, FormStep } from '@/types'
 import { InputField } from '@/components/base/InputField'
 import { SelectField } from '@/components/base/SelectField'
