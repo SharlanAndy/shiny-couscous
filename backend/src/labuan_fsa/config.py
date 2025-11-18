@@ -249,7 +249,12 @@ def get_settings() -> Settings:
     """Get global settings instance."""
     global _settings
     if _settings is None:
-        _settings = Settings.load_from_toml()
+        try:
+            _settings = Settings.load_from_toml()
+        except Exception as e:
+            # If TOML loading fails (e.g., in Vercel), use environment variables directly
+            print(f"⚠️  Failed to load TOML config: {e}, using environment variables")
+            _settings = Settings()
     return _settings
 
 

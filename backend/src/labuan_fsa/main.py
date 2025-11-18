@@ -32,8 +32,12 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     except Exception as e:
         print(f"⚠️  Database initialization failed (this is OK for testing): {e}")
         print("   The API will work but database-dependent endpoints may fail.")
+        # Don't print full traceback in production - just log the error
         import traceback
-        traceback.print_exc()
+        if settings.app.debug:
+            traceback.print_exc()
+        # In Vercel/serverless, we want to continue even if DB init fails
+        # This allows the API to start and handle requests that don't need DB
     
     yield
     
