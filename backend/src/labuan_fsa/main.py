@@ -94,13 +94,63 @@ if "https://clkhoo5211.github.io" not in cors_origins and "*" not in str(cors_or
 print(f"🔧 CORS origins configured: {cors_origins}")
 print(f"🔧 Environment: {settings.app.environment}, Debug: {settings.app.debug}")
 
-# Use regex_origins for wildcard matching (GitHub Pages)
-# Fallback to allow_origins if regex doesn't work
+# CRITICAL: Add CORS enforcement middleware FIRST to wrap ALL responses
+class CORSEnforcementMiddleware(BaseHTTPMiddleware):
+    """Middleware to ensure CORS headers on ALL responses, including errors."""
+    async def dispatch(self, request: Request, call_next):
+        origin = request.headers.get("origin", "")
+        is_allowed_origin = (
+            origin and (
+                "github.io" in origin or 
+                "localhost" in origin or 
+                "127.0.0.1" in origin
+            )
+        ) or True  # Allow all for now to debug
+        
+        # Handle preflight OPTIONS requests
+        if request.method == "OPTIONS":
+            response = JSONResponse(status_code=200, content={})
+            if is_allowed_origin:
+                response.headers["Access-Control-Allow-Origin"] = origin or "*"
+                response.headers["Access-Control-Allow-Credentials"] = "true"
+                response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+                response.headers["Access-Control-Allow-Headers"] = "*"
+                response.headers["Access-Control-Max-Age"] = "600"
+            return response
+        
+        try:
+            response = await call_next(request)
+        except Exception as exc:
+            # Catch ANY exception and add CORS headers
+            import traceback
+            print(f"❌ Exception in request: {exc}")
+            print(traceback.format_exc())
+            response = JSONResponse(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                content={
+                    "detail": str(exc),
+                    "type": type(exc).__name__,
+                }
+            )
+        
+        # ALWAYS add CORS headers to response, even if error occurred
+        if is_allowed_origin:
+            response.headers["Access-Control-Allow-Origin"] = origin or "*"
+            response.headers["Access-Control-Allow-Credentials"] = "true"
+            response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+            response.headers["Access-Control-Allow-Headers"] = "*"
+            response.headers["Access-Control-Expose-Headers"] = "*"
+        
+        return response
+
+# Add CORS enforcement middleware FIRST (outermost layer)
+app.add_middleware(CORSEnforcementMiddleware)
+
+# Then add standard CORS middleware (it may not handle errors, but helps with normal responses)
 try:
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=cors_origins if "*" not in str(cors_origins) else ["*"],
-        allow_origin_regex=r"https://.*\.github\.io",  # Allow all GitHub Pages
+        allow_origins=["*"],  # Allow all for debugging - restrict later
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -108,22 +158,14 @@ try:
     )
 except Exception as e:
     print(f"⚠️ CORS middleware setup error: {e}")
-    # Fallback: use most permissive settings
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-        expose_headers=["*"],
-    )
 
 # Trusted host middleware (configure in production)
-if settings.app.environment == "production":
-    app.add_middleware(
-        TrustedHostMiddleware,
-        allowed_hosts=["*.labuanfsa.gov.my", "labuanfsa.gov.my"],
-    )
+# DISABLED for now - causing issues in Vercel
+# if settings.app.environment == "production":
+#     app.add_middleware(
+#         TrustedHostMiddleware,
+#         allowed_hosts=["*.labuanfsa.gov.my", "labuanfsa.gov.my"],
+#     )
 
 
 @app.get("/")
@@ -142,55 +184,6 @@ async def health_check() -> dict[str, str]:
     return {"status": "healthy"}
 
 
-# CORS middleware MUST process all responses, including errors
-class CORSEnforcementMiddleware(BaseHTTPMiddleware):
-    """Middleware to ensure CORS headers on ALL responses, including errors."""
-    async def dispatch(self, request: Request, call_next):
-        origin = request.headers.get("origin", "")
-        is_allowed_origin = (
-            origin and (
-                "github.io" in origin or 
-                "localhost" in origin or 
-                "127.0.0.1" in origin
-            )
-        )
-        
-        try:
-            response = await call_next(request)
-        except Exception as exc:
-            # Catch ANY exception and add CORS headers
-            response = JSONResponse(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                content={
-                    "detail": str(exc),
-                    "type": type(exc).__name__,
-                }
-            )
-        
-        # ALWAYS add CORS headers to response, even if error occurred
-        if is_allowed_origin:
-            response.headers["Access-Control-Allow-Origin"] = origin
-            response.headers["Access-Control-Allow-Credentials"] = "true"
-            response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS, PATCH"
-            response.headers["Access-Control-Allow-Headers"] = "*"
-            response.headers["Access-Control-Expose-Headers"] = "*"
-        
-        # Handle preflight requests
-        if request.method == "OPTIONS":
-            response = JSONResponse(status_code=200, content={})
-            if is_allowed_origin:
-                response.headers["Access-Control-Allow-Origin"] = origin
-                response.headers["Access-Control-Allow-Credentials"] = "true"
-                response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS, PATCH"
-                response.headers["Access-Control-Allow-Headers"] = "*"
-                response.headers["Access-Control-Max-Age"] = "600"
-        
-        return response
-
-
-# Add CORS enforcement middleware BEFORE exception handlers
-# This ensures ALL responses get CORS headers
-app.add_middleware(CORSEnforcementMiddleware)
 
 
 # Exception handlers as backup (in case middleware doesn't catch it)
