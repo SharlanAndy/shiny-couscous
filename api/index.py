@@ -1,116 +1,132 @@
 """
 Vercel serverless function entry point for FastAPI.
 
-This file is placed at the root api/ directory for Vercel deployment.
-It imports the FastAPI app from the backend directory.
+Vercel Python runtime expects FastAPI app to be exported as 'app'.
+This file imports the FastAPI app from the backend directory.
 """
+# Use sys.stdout for immediate output that will appear in logs
 import sys
+sys.stdout.write("=" * 60 + "\n")
+sys.stdout.write("🚀 Vercel Function Starting...\n")
+sys.stdout.flush()
+
 import os
 from pathlib import Path
 
-# Critical: Print immediately to ensure we see output
-print("=" * 60)
-print("🚀 Vercel Function Starting...")
-print("=" * 60)
+sys.stdout.write("✅ Basic imports loaded\n")
+sys.stdout.flush()
 
 # Get the directory containing this file (api/ at root)
 current_dir = Path(__file__).parent.absolute()
-# Get root directory (parent of api/)
 root_dir = current_dir.parent.absolute()
-# Get backend directory (root/backend)
 backend_dir = root_dir / "backend"
-# Get src directory (backend/src)
 src_dir = backend_dir / "src"
 
-# Debug output (will appear in Vercel logs)
-print(f"🔍 Vercel Entry Point Debug:")
-print(f"   Current dir: {current_dir}")
-print(f"   Root dir: {root_dir}")
-print(f"   Backend dir: {backend_dir} (exists: {backend_dir.exists()})")
-print(f"   Src dir: {src_dir} (exists: {src_dir.exists()})")
+sys.stdout.write(f"🔍 Directory Check:\n")
+sys.stdout.write(f"   Current dir: {current_dir}\n")
+sys.stdout.write(f"   Root dir: {root_dir}\n")
+sys.stdout.write(f"   Backend dir: {backend_dir} (exists: {backend_dir.exists()})\n")
+sys.stdout.write(f"   Src dir: {src_dir} (exists: {src_dir.exists()})\n")
+sys.stdout.flush()
 
-# List actual contents to debug
+# List contents for debugging
 if root_dir.exists():
-    print(f"   Root contents: {[p.name for p in root_dir.iterdir()][:10]}")
-if current_dir.exists():
-    print(f"   Api dir contents: {[p.name for p in current_dir.iterdir()][:10]}")
+    try:
+        contents = [p.name for p in root_dir.iterdir()][:15]
+        sys.stdout.write(f"   Root contents: {contents}\n")
+    except Exception as e:
+        sys.stdout.write(f"   Error listing root: {e}\n")
 
-# Add backend/src to Python path so we can import labuan_fsa
+sys.stdout.flush()
+
+# Add backend/src to Python path
 if src_dir.exists():
     if str(src_dir) not in sys.path:
         sys.path.insert(0, str(src_dir))
-        print(f"✅ Added {src_dir} to Python path")
+        sys.stdout.write(f"✅ Added {src_dir} to Python path\n")
 else:
-    print(f"⚠️  WARNING: {src_dir} does NOT exist!")
-    print(f"   This means backend code is not included in deployment!")
-    print(f"   Check vercel.json includeFiles configuration")
+    sys.stdout.write(f"⚠️  WARNING: {src_dir} does NOT exist!\n")
+    sys.stdout.write(f"   Backend code might not be included in deployment\n")
+sys.stdout.flush()
 
-# Also add backend directory to path for imports
+# Also add backend directory
 if backend_dir.exists():
     if str(backend_dir) not in sys.path:
         sys.path.insert(0, str(backend_dir))
-        print(f"✅ Added {backend_dir} to Python path")
-else:
-    print(f"⚠️  WARNING: {backend_dir} does NOT exist!")
+        sys.stdout.write(f"✅ Added {backend_dir} to Python path\n")
+sys.stdout.flush()
 
-# Change working directory to backend if it exists
+# Change working directory if backend exists
 if backend_dir.exists():
     os.chdir(str(backend_dir))
-    print(f"✅ Changed working directory to: {backend_dir}")
+    sys.stdout.write(f"✅ Changed working directory to: {backend_dir}\n")
+sys.stdout.flush()
 
-# Try to import the FastAPI app
-app = None
-handler = None
-
+# Try to import FastAPI app
+# Vercel expects 'app' to be exported directly
 try:
-    print(f"🔄 Attempting to import labuan_fsa.main...")
-    print(f"   Python path: {sys.path[:5]}...")  # Show first 5 paths
+    sys.stdout.write(f"🔄 Attempting to import labuan_fsa.main...\n")
+    sys.stdout.write(f"   Python path (first 5): {sys.path[:5]}\n")
+    sys.stdout.flush()
+    
     from labuan_fsa.main import app
-    print(f"✅ Successfully imported labuan_fsa.main")
+    sys.stdout.write(f"✅ Successfully imported labuan_fsa.main\n")
+    sys.stdout.write(f"   App type: {type(app)}\n")
+    sys.stdout.write(f"   App: {app}\n")
+    sys.stdout.flush()
     
-    # Vercel serverless function handler
-    try:
-        from mangum import Mangum
-        handler = Mangum(app, lifespan="off")
-        print(f"✅ Created Mangum handler")
-    except ImportError as e:
-        print(f"⚠️  Mangum not available ({e}), using FastAPI app directly")
-        handler = app
-        print(f"✅ Using FastAPI app as handler")
-    
-    print(f"✅ Handler ready: {type(handler)}")
+    # Vercel Python runtime expects 'app' to be exported directly
+    # No need for handler wrapper when using FastAPI
     
 except ImportError as e:
-    print(f"❌ CRITICAL Import error: {e}")
-    print(f"   Error type: {type(e).__name__}")
+    sys.stdout.write(f"❌ CRITICAL Import error: {e}\n")
     import traceback
-    traceback.print_exc()
+    for line in traceback.format_exc().split('\n'):
+        sys.stdout.write(f"   {line}\n")
+    sys.stdout.flush()
     
-    # Create fallback handler
-    def error_handler(req, res):
-        error_msg = str(e)
-        res.status(500).send(f'{{"error": "Import failed", "message": "{error_msg}"}}')
-    handler = error_handler
-    print(f"⚠️  Created error handler as fallback")
+    # Create minimal FastAPI app as fallback
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    @app.get("/")
+    async def error():
+        return {"error": "Import failed", "message": str(e)}
+    
+    sys.stdout.write(f"⚠️  Created fallback FastAPI app\n")
+    sys.stdout.flush()
     
 except Exception as e:
-    print(f"❌ CRITICAL Unexpected error: {e}")
+    sys.stdout.write(f"❌ CRITICAL Unexpected error: {e}\n")
     import traceback
-    traceback.print_exc()
+    for line in traceback.format_exc().split('\n'):
+        sys.stdout.write(f"   {line}\n")
+    sys.stdout.flush()
     
-    def error_handler(req, res):
-        error_msg = str(e)
-        res.status(500).send(f'{{"error": "Initialization failed", "message": "{error_msg}"}}')
-    handler = error_handler
-    print(f"⚠️  Created error handler as fallback")
+    # Create minimal FastAPI app as fallback
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    @app.get("/")
+    async def error():
+        return {"error": "Initialization failed", "message": str(e)}
+    
+    sys.stdout.write(f"⚠️  Created fallback FastAPI app\n")
+    sys.stdout.flush()
 
-# Ensure handler exists
-if handler is None:
-    print(f"❌ CRITICAL: Handler is None!")
-    def fallback_handler(req, res):
-        res.status(500).send('{"error": "Handler not initialized"}')
-    handler = fallback_handler
+# Ensure app exists
+if 'app' not in locals():
+    sys.stdout.write(f"❌ CRITICAL: app not defined!\n")
+    from fastapi import FastAPI
+    app = FastAPI()
+    
+    @app.get("/")
+    async def error():
+        return {"error": "App not initialized"}
 
-print(f"=" * 60)
-print(f"✅ Handler exported: {type(handler)}")
-print(f"=" * 60)
+sys.stdout.write("=" * 60 + "\n")
+sys.stdout.write(f"✅ App exported: {type(app)}\n")
+sys.stdout.write("=" * 60 + "\n")
+sys.stdout.flush()
+
+# Vercel Python runtime will automatically use 'app' as the FastAPI application
