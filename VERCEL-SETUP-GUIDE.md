@@ -45,10 +45,12 @@ Since we're using Python serverless functions, these should be **disabled/empty*
 DATABASE_URL=postgresql://postgres:[YOUR_PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
 ```
 
-Example:
-```
-DATABASE_URL=postgresql://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres
-```
+**To get connection string:**
+1. Go to Supabase Dashboard → Database
+2. Click "Connect to your project"
+3. For Vercel/serverless: Select Method: "Transaction pooler" (recommended)
+4. For traditional servers: Select Method: "Direct connection"
+5. Copy the connection string shown
 
 ```
 SECRET_KEY=[Generate a random secret key]

@@ -26,10 +26,11 @@ Name: DATABASE_URL
 Value: postgresql://postgres:[YOUR_PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
 ```
 
-Example:
-```
-postgresql://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres
-```
+**To get connection pooler URL (recommended for Vercel):**
+1. Go to Supabase Dashboard → Database
+2. Click "Connect to your project"
+3. Select Method: "Transaction pooler"
+4. Copy the connection string shown
 
 #### 2. SECRET_KEY (Required)
 ```

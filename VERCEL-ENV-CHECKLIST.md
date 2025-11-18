@@ -6,13 +6,13 @@
 - **Key:** `DATABASE_URL`
 - **Value Option 1 (Direct Connection - port 5432):** 
   ```
-  postgresql://postgres:1KJibOLhhk7e6t9D@db.mwvyldzcutztjenscbyr.supabase.co:5432/postgres
+  postgresql://postgres:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
   ```
 - **Value Option 2 (Connection Pooler - Recommended - port 6543):**
   ```
-  postgresql://postgres.mwvyldzcutztjenscbyr:1KJibOLhhk7e6t9D@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+  postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-[REGION].pooler.supabase.com:6543/postgres
   ```
-  **Note:** Get pooler URL from Supabase Dashboard → Settings → Database → Connection Pooler
+  **Note:** Get pooler URL from Supabase Dashboard → Database → "Connect to your project" → Method: "Transaction pooler"
   **Why:** Connection pooler is designed for serverless and prevents Errno 99 errors!
 - **Environments:** ✅ Production, ✅ Preview, ✅ Development
 - **Sensitive:** ✅ Enable (toggle ON)
