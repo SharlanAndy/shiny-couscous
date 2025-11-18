@@ -27,19 +27,30 @@ is_sqlite = "sqlite" in database_url.lower()
 # Detect serverless environment (Vercel, AWS Lambda, etc.)
 # Vercel sets VERCEL=1 or VERCEL_ENV or VERCEL_URL
 # AWS Lambda sets AWS_LAMBDA_FUNCTION_NAME
-# Also check for common serverless indicators
+# Also check production environment
 vercel_env = os.getenv("VERCEL") or os.getenv("VERCEL_ENV") or os.getenv("VERCEL_URL")
+is_production = os.getenv("ENVIRONMENT") == "production" or os.getenv("APP_ENVIRONMENT") == "production"
 is_serverless = (
     vercel_env is not None or 
     os.getenv("AWS_LAMBDA_FUNCTION_NAME") is not None or
-    # Default to serverless if no traditional server indicators
-    # (Traditional servers usually have PORT or HOST set explicitly)
-    (os.getenv("PORT") is None and os.getenv("HOST") is None)
+    is_production  # Force serverless config in production (Vercel/Render)
 )
+
+# CRITICAL: In production/Vercel, ALWAYS use NullPool
+# Connection pooling doesn't work in serverless functions
+if is_production and not is_serverless:
+    is_serverless = True
+    print("⚠️  Production environment detected - forcing NullPool (serverless config)")
 
 # Log detection for debugging
 if is_serverless:
-    print(f"🌐 Serverless environment detected - VERCEL={os.getenv('VERCEL')}, VERCEL_ENV={os.getenv('VERCEL_ENV')}, VERCEL_URL={os.getenv('VERCEL_URL')}")
+    print(f"🌐 Serverless environment detected:")
+    print(f"   VERCEL={os.getenv('VERCEL')}")
+    print(f"   VERCEL_ENV={os.getenv('VERCEL_ENV')}")
+    print(f"   VERCEL_URL={os.getenv('VERCEL_URL')}")
+    print(f"   ENVIRONMENT={os.getenv('ENVIRONMENT')}")
+    print(f"   APP_ENVIRONMENT={os.getenv('APP_ENVIRONMENT')}")
+    print(f"   Production={is_production}")
 
 # Create async engine
 # SQLite requires NullPool and different connection parameters
@@ -63,27 +74,37 @@ if is_sqlite:
     )
 else:
     # PostgreSQL or other databases
-    # CRITICAL: Use NullPool for serverless environments (Vercel, Lambda)
+    # CRITICAL: Use NullPool for serverless environments (Vercel, Lambda, Production)
     # Connection pooling doesn't work in stateless serverless functions
     # and causes "Errno 99: Cannot assign requested address" errors
     if is_serverless:
-        print("🌐 Serverless environment detected - using NullPool for database connections")
-        print(f"   VERCEL={os.getenv('VERCEL')}, VERCEL_ENV={os.getenv('VERCEL_ENV')}, VERCEL_URL={os.getenv('VERCEL_URL')}")
+        print("🌐 Serverless/Production environment - using NullPool for database connections")
+        print(f"   Pool class: NullPool")
+        print(f"   This prevents 'Errno 99' errors in serverless functions")
+        
+        # Use NullPool - no connection pooling in serverless
         engine = create_async_engine(
             database_url,
             echo=settings.database.echo,
-            poolclass=NullPool,  # No connection pooling in serverless
+            poolclass=NullPool,  # CRITICAL: No connection pooling
             pool_pre_ping=False,  # Not needed with NullPool
-            # Additional connection args for serverless
+            # Connection args for PostgreSQL
             connect_args={
                 "server_settings": {
                     "application_name": "labuan_fsa_serverless"
-                }
+                },
+                # Timeout settings for serverless
+                "command_timeout": 10,
+                "server_lifetime": 3600,
             } if "postgresql" in database_url.lower() else {},
+            # Additional engine args
+            future=True,
         )
     else:
         # Traditional server with connection pooling
         print("🖥️  Traditional server detected - using connection pooling")
+        print(f"   Pool size: {settings.database.pool_size}")
+        print(f"   Max overflow: {settings.database.max_overflow}")
         engine = create_async_engine(
             database_url,
             echo=settings.database.echo,
