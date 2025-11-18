@@ -15,7 +15,7 @@ from sqlalchemy.ext.asyncio import (
 )
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.pool import NullPool
-from sqlalchemy.engine import make_url
+from sqlalchemy.engine import make_url, URL
 
 from labuan_fsa.config import get_settings
 
@@ -31,16 +31,28 @@ is_sqlite = "sqlite" in database_url_str.lower()
 is_pooler = "pooler" in database_url_str.lower() or ":6543" in database_url_str
 
 # Parse URL and add statement_cache_size if using pooler
+# SQLAlchemy's asyncpg dialect reads this from URL query parameters
 if is_pooler and "postgresql" in database_url_str.lower():
     try:
         url = make_url(database_url_str)
         # Add statement_cache_size=0 to query parameters
-        if url.query is None:
-            url = url.set(query={"statement_cache_size": "0"})
-        else:
-            url = url.update_query_dict({"statement_cache_size": "0"})
+        # This is the correct way for asyncpg through SQLAlchemy
+        query_params = dict(url.query) if url.query else {}
+        query_params["statement_cache_size"] = "0"
+        # Rebuild URL with new query parameters
+        url = URL.create(
+            drivername=url.drivername,
+            username=url.username,
+            password=url.password,
+            host=url.host,
+            port=url.port,
+            database=url.database,
+            query=query_params
+        )
         database_url_str = str(url)
-        print("⚠️  Transaction Pooler detected - disabling prepared statements (statement_cache_size=0)")
+        print("⚠️  Transaction Pooler detected - disabling prepared statements")
+        print(f"   Added statement_cache_size=0 to URL query parameters")
+        print(f"   Modified URL: {database_url_str[:100]}...")
     except Exception as e:
         # Fallback: append as string if URL parsing fails
         separator = "&" if "?" in database_url_str else "?"
@@ -119,10 +131,13 @@ else:
                 "command_timeout": 10,  # Command timeout in seconds
             }
             # CRITICAL: Disable prepared statements for pgbouncer (Transaction Pooler)
-            # This must be passed as an integer, not a string
+            # asyncpg needs statement_cache_size=0 to disable prepared statements
+            # This must be passed via connect_args as an integer
             if is_pooler:
                 connect_args["statement_cache_size"] = 0
-                print("⚠️  Transaction Pooler detected - disabling prepared statements (statement_cache_size=0)")
+                print("⚠️  Transaction Pooler detected - disabling prepared statements")
+                print(f"   statement_cache_size=0 (integer) added to connect_args")
+                print(f"   Database URL: {database_url[:80]}...")
         
         engine = create_async_engine(
             database_url,
