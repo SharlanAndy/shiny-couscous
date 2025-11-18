@@ -993,7 +993,6 @@ export function FormRenderer({
           />
         )
 
-      case 'button-group':
       case 'button-group-field':
         return (
           <ButtonGroupField
