@@ -21,11 +21,14 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path aliases */
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "rootDirs": ["./src"]
+      "@/*": ["./*"],
+      "@/lib/*": ["./lib/*"],
+      "@/components/*": ["./components/*"],
+      "@/types/*": ["./types/*"],
+      "@/api/*": ["./api/*"]
+    }
   },
   "include": ["src/**/*", "src/vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
