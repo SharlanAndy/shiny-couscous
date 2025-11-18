@@ -83,22 +83,23 @@ else:
         print(f"   This prevents 'Errno 99' errors in serverless functions")
         
         # Use NullPool - no connection pooling in serverless
+        # For asyncpg, connect_args should be minimal - timeout handled differently
+        connect_args = {}
+        if "postgresql" in database_url.lower():
+            # asyncpg connection parameters
+            connect_args = {
+                "server_settings": {
+                    "application_name": "labuan_fsa_serverless"
+                },
+                "command_timeout": 10,  # Command timeout in seconds
+            }
+        
         engine = create_async_engine(
             database_url,
             echo=settings.database.echo,
             poolclass=NullPool,  # CRITICAL: No connection pooling
             pool_pre_ping=False,  # Not needed with NullPool
-            # Connection args for PostgreSQL
-            connect_args={
-                "server_settings": {
-                    "application_name": "labuan_fsa_serverless"
-                },
-                # Timeout settings for serverless
-                "command_timeout": 10,
-                "server_lifetime": 3600,
-            } if "postgresql" in database_url.lower() else {},
-            # Additional engine args
-            future=True,
+            connect_args=connect_args,
         )
     else:
         # Traditional server with connection pooling
