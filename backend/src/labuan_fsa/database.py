@@ -107,6 +107,15 @@ else:
             # This is the ONLY way SQLAlchemy's asyncpg dialect properly passes it through
             if is_pooler:
                 connect_args["statement_cache_size"] = 0  # Integer, not string
+                # SSL for Supabase pooler - need SSL context without strict verification
+                import ssl
+                ssl_context = ssl.create_default_context()
+                ssl_context.check_hostname = False
+                ssl_context.verify_mode = ssl.CERT_NONE  # For development only
+                connect_args["ssl"] = ssl_context
+            else:
+                # Direct connections can use boolean
+                connect_args["ssl"] = True
                 print("⚠️  Transaction Pooler detected - disabling prepared statements")
                 print(f"   statement_cache_size=0 (integer) added to connect_args")
                 print(f"   This is required for pgbouncer transaction mode compatibility")
@@ -120,17 +129,55 @@ else:
             connect_args=connect_args,
         )
     else:
-        # Traditional server with connection pooling
-        print("🖥️  Traditional server detected - using connection pooling")
-        print(f"   Pool size: {settings.database.pool_size}")
-        print(f"   Max overflow: {settings.database.max_overflow}")
-        engine = create_async_engine(
-            database_url,
-            echo=settings.database.echo,
-            pool_size=settings.database.pool_size,
-            max_overflow=settings.database.max_overflow,
-            pool_pre_ping=settings.database.pool_pre_ping,
-        )
+        # Traditional server - check if using pooler
+        # CRITICAL: When using Supabase pooler, use NullPool since pooler handles pooling
+        # Double-pooling (SQLAlchemy + pooler) causes connection issues
+        if is_pooler:
+            print("🌐 Connection Pooler detected - using NullPool (pooler handles pooling)")
+            print(f"   Pool class: NullPool")
+            
+            connect_args = {}
+            if "postgresql" in database_url.lower():
+                # Pooler connections need SSL context without strict verification
+                import ssl
+                ssl_context = ssl.create_default_context()
+                ssl_context.check_hostname = False
+                ssl_context.verify_mode = ssl.CERT_NONE  # For development only
+                connect_args["ssl"] = ssl_context
+                connect_args["command_timeout"] = 10
+                
+                # Disable prepared statements for pgbouncer
+                connect_args["statement_cache_size"] = 0
+                print("   SSL context configured for pooler")
+                print("   statement_cache_size=0 (required for pgbouncer)")
+            
+            engine = create_async_engine(
+                database_url,
+                echo=settings.database.echo,
+                poolclass=NullPool,  # No connection pooling - pooler handles it
+                pool_pre_ping=False,
+                connect_args=connect_args,
+            )
+        else:
+            # Traditional server with connection pooling (direct connection)
+            print("🖥️  Traditional server detected - using connection pooling")
+            print(f"   Pool size: {settings.database.pool_size}")
+            print(f"   Max overflow: {settings.database.max_overflow}")
+            
+            # Configure SSL for Supabase (asyncpg requires ssl in connect_args)
+            connect_args = {}
+            if "postgresql" in database_url.lower() and ("supabase" in database_url.lower() or not is_sqlite):
+                # Direct connections can use boolean
+                connect_args["ssl"] = True
+            
+            engine = create_async_engine(
+                database_url,
+                echo=settings.database.echo,
+                pool_size=settings.database.pool_size,
+                max_overflow=settings.database.max_overflow,
+                pool_pre_ping=settings.database.pool_pre_ping,
+                connect_args=connect_args,
+            )
 
 # Create async session factory
 AsyncSessionLocal = async_sessionmaker(

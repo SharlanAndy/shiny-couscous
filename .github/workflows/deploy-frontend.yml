@@ -40,6 +40,8 @@ jobs:
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://your-backend-url.com' }}
           VITE_BASE_PATH: '/shiny-couscous/'
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || '' }}
         run: npm run build
 
       - name: Create 404.html for SPA routing

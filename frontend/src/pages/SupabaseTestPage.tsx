@@ -124,9 +124,9 @@ export function SupabaseTestPage() {
             </h2>
             <div className="bg-gray-50 rounded-lg p-4">
               <p className="text-sm text-gray-600 mb-2">
-                Client initialized: {supabase ? '✅ Yes' : '❌ No'}
+                Client initialized: {supabase ? '✅ Yes' : '❌ No (not configured)'}
               </p>
-              {supabase && (
+              {supabase ? (
                 <div className="mt-3 space-y-1">
                   <p className="text-sm text-gray-600">
                     <span className="font-semibold">Supabase URL:</span>{' '}
@@ -134,6 +134,15 @@ export function SupabaseTestPage() {
                   </p>
                   <p className="text-sm text-gray-600">
                     <span className="font-semibold">Client Type:</span> JavaScript/TypeScript
+                  </p>
+                </div>
+              ) : (
+                <div className="mt-3 space-y-1">
+                  <p className="text-sm text-yellow-600">
+                    ⚠️ Supabase not configured - features disabled
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">
+                    Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to enable
                   </p>
                 </div>
               )}
