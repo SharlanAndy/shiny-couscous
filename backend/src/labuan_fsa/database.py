@@ -68,14 +68,22 @@ else:
     # and causes "Errno 99: Cannot assign requested address" errors
     if is_serverless:
         print("🌐 Serverless environment detected - using NullPool for database connections")
+        print(f"   VERCEL={os.getenv('VERCEL')}, VERCEL_ENV={os.getenv('VERCEL_ENV')}, VERCEL_URL={os.getenv('VERCEL_URL')}")
         engine = create_async_engine(
             database_url,
             echo=settings.database.echo,
             poolclass=NullPool,  # No connection pooling in serverless
             pool_pre_ping=False,  # Not needed with NullPool
+            # Additional connection args for serverless
+            connect_args={
+                "server_settings": {
+                    "application_name": "labuan_fsa_serverless"
+                }
+            } if "postgresql" in database_url.lower() else {},
         )
     else:
         # Traditional server with connection pooling
+        print("🖥️  Traditional server detected - using connection pooling")
         engine = create_async_engine(
             database_url,
             echo=settings.database.echo,
