@@ -179,6 +179,14 @@ All documentation has been organized into the [`docs/`](./docs/) directory.
   - [CORS Issues](./docs/troubleshooting/cors-issues.md)
   - [Auto-Deploy Issues](./docs/troubleshooting/auto-deploy.md)
 
+- **[Refactoring Plans](./docs/refactoring/)** - GitHub-only refactoring documentation
+  - [Overview & Quick Start](./docs/refactoring/README.md) - Start here
+  - [Complete Refactoring Plan](./docs/refactoring/GITHUB_ONLY_REFACTORING_PLAN.md) - Detailed architecture and approach
+  - [API Endpoint Mapping](./docs/refactoring/GITHUB_API_ENDPOINT_MAPPING.md) - Current → GitHub API mapping
+  - [Implementation Steps](./docs/refactoring/IMPLEMENTATION_STEPS.md) - Step-by-step guide (10 phases)
+  - [Example Implementation](./docs/refactoring/GITHUB_API_CLIENT_EXAMPLE.ts) - Code examples
+  - [Executive Summary](./docs/refactoring/SUMMARY.md) - High-level overview
+
 ### Project Documentation
 
 - **Complete Requirements**: See `labuan-fsa-e-submission-prompt.md`
