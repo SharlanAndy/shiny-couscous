@@ -245,7 +245,7 @@ export function FileUploadField({
         onFocus={onFocus}
         required={required && fileList.length === 0}
         disabled={disabled || readonly}
-        style={{ position: 'absolute', width: 0, height: 0, opacity: 0, pointerEvents: 'none' }}
+        style={{ position: 'absolute', width: 0, height: 0, opacity: 0 }}
         aria-invalid={!!error}
         aria-describedby={error ? `${fieldId}-error` : helpText ? `${fieldId}-help` : undefined}
       />
