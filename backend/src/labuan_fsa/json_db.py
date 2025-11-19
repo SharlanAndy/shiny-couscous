@@ -10,6 +10,7 @@ function with local file storage.
 
 import json
 import uuid
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -40,26 +41,119 @@ def async_file_operation(func):
     return wrapper
 
 
-def _load_json_file(file_path: Path, default_value: list) -> list:
-    """Load JSON array from file."""
-    if not file_path.exists():
-        return default_value.copy()
+def _is_split_file(file_path: Path) -> bool:
+    """Check if a file path matches the split file pattern (e.g., forms.0.json)."""
+    pattern = r'^(.+)\.(\d+)\.json$'
+    return bool(re.match(pattern, file_path.name))
+
+
+def _get_split_file_paths(base_path: Path, max_chunks: int = 100) -> List[Path]:
+    """Get all potential split file paths for a given base file path."""
+    paths = []
+    base_name = base_path.stem  # filename without extension
+    parent_dir = base_path.parent
     
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            # Handle both array format and object with array format
-            if isinstance(data, list):
-                return data
-            elif isinstance(data, dict) and "items" in data:
-                return data["items"]
-            elif isinstance(data, dict) and "data" in data:
-                return data["data"]
-            else:
-                return default_value.copy()
-    except (json.JSONDecodeError, IOError) as e:
-        print(f"⚠️  Error loading JSON file {file_path}: {e}")
-        return default_value.copy()
+    for i in range(max_chunks):
+        split_path = parent_dir / f"{base_name}.{i}.json"
+        paths.append(split_path)
+    
+    return paths
+
+
+def _merge_split_files(split_files: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Merge multiple split file chunks back into a single data structure."""
+    if not split_files:
+        return {}
+    
+    if len(split_files) == 1:
+        # Single chunk - remove chunk metadata
+        chunk = split_files[0]
+        if 'chunkIndex' in chunk:
+            chunk = chunk.copy()
+            chunk.pop('chunkIndex', None)
+            chunk.pop('totalChunks', None)
+        return chunk
+    
+    # Multiple chunks - merge items arrays
+    # Sort by chunkIndex
+    sorted_chunks = sorted(split_files, key=lambda x: x.get('chunkIndex', 0))
+    
+    # Get metadata from first chunk
+    merged = sorted_chunks[0].copy()
+    merged.pop('chunkIndex', None)
+    merged.pop('totalChunks', None)
+    
+    # Merge items arrays
+    if 'items' in merged and isinstance(merged['items'], list):
+        all_items = []
+        for chunk in sorted_chunks:
+            if 'items' in chunk and isinstance(chunk['items'], list):
+                all_items.extend(chunk['items'])
+        merged['items'] = all_items
+    
+    return merged
+
+
+def _load_json_file(file_path: Path, default_value: list) -> list:
+    """Load JSON array from file, handling both single files and split files."""
+    # First, try to read the main file
+    if file_path.exists():
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                # Handle both array format and object with array format
+                if isinstance(data, list):
+                    return data
+                elif isinstance(data, dict) and "items" in data:
+                    return data["items"]
+                elif isinstance(data, dict) and "data" in data:
+                    return data["data"]
+                else:
+                    return default_value.copy()
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"⚠️  Error loading JSON file {file_path}: {e}")
+            # Continue to check for split files
+    
+    # If main file doesn't exist, check for split files
+    split_paths = _get_split_file_paths(file_path, max_chunks=100)
+    split_files = []
+    
+    for split_path in split_paths:
+        if not split_path.exists():
+            # Stop at first missing chunk
+            break
+        
+        try:
+            with open(split_path, 'r', encoding='utf-8') as f:
+                chunk_data = json.load(f)
+                # Extract chunk index from filename
+                match = re.match(r'^.+\.(\d+)\.json$', split_path.name)
+                if match:
+                    chunk_index = int(match.group(1))
+                    if isinstance(chunk_data, dict):
+                        chunk_data['chunkIndex'] = chunk_index
+                split_files.append(chunk_data)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"⚠️  Error loading split file {split_path}: {e}")
+            break
+    
+    # If we found split files, merge them
+    if split_files:
+        print(f"📦 Found {len(split_files)} split files for {file_path.name}, merging...")
+        merged_data = _merge_split_files(split_files)
+        
+        # Extract items array from merged data
+        if isinstance(merged_data, list):
+            return merged_data
+        elif isinstance(merged_data, dict) and "items" in merged_data:
+            return merged_data["items"]
+        elif isinstance(merged_data, dict) and "data" in merged_data:
+            return merged_data["data"]
+        else:
+            return default_value.copy()
+    
+    # No main file and no split files found
+    return default_value.copy()
 
 
 def _save_json_file(file_path: Path, data: list) -> None:
