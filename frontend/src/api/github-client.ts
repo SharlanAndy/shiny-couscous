@@ -57,6 +57,7 @@ export class GitHubClient {
       'Accept': acceptRaw 
         ? 'application/vnd.github.v3.raw' 
         : 'application/vnd.github.v3+json',
+      'User-Agent': 'Labuan-FSA-E-Submission-System', // GitHub API requires User-Agent
     }
     return headers
   }
@@ -94,7 +95,8 @@ export class GitHubClient {
     try {
       const url = `${this.baseURL}/repos/${this.owner}/${this.repo}/contents/${path}`
       
-      // First, get metadata (includes SHA) using JSON accept header
+      // Get metadata (includes SHA) using JSON accept header
+      // GitHub API returns: { sha, content (base64), encoding, size, name, path, url, ... }
       const metaResponse = await fetch(url, {
         headers: this.getHeaders(false),
       })
@@ -108,10 +110,8 @@ export class GitHubClient {
       }
 
       // Parse metadata response
-      // GitHub API with application/vnd.github.v3+json returns:
-      // { sha, content (base64), encoding, size, name, path, url, ... }
       const metaText = await metaResponse.text()
-      let meta: GitHubFileResponse
+      let meta: any
       
       try {
         meta = JSON.parse(metaText)
@@ -121,34 +121,67 @@ export class GitHubClient {
         throw new GitHubAPIError(500, `Invalid metadata response format for: ${path}`)
       }
       
-      // Log response structure for debugging
-      console.log(`[GitHub Client] Metadata response for ${path}:`, {
-        hasSha: 'sha' in meta,
-        sha: meta.sha,
-        keys: Object.keys(meta),
-        isArray: Array.isArray(meta),
-      })
+      // Check if response is the file content (parsed JSON) instead of metadata
+      // This happens when GitHub returns the file content directly
+      if (!('sha' in meta) && !('content' in meta) && !Array.isArray(meta)) {
+        // This looks like file content, not metadata
+        // We need to get SHA from a different endpoint or use Git API
+        console.warn(`[GitHub Client] Response appears to be file content, not metadata. Using Git API to get SHA.`)
+        
+        // Use Git Trees API to get SHA
+        // First, get the latest commit SHA
+        const commitsUrl = `${this.baseURL}/repos/${this.owner}/${this.repo}/commits?path=${encodeURIComponent(path)}&per_page=1`
+        const commitsResponse = await fetch(commitsUrl, {
+          headers: this.getHeaders(false),
+        })
+        
+        if (commitsResponse.ok) {
+          const commits = await commitsResponse.json()
+          if (commits && commits.length > 0) {
+            const commit = commits[0]
+            // Get tree SHA from commit
+            const treeUrl = `${this.baseURL}/repos/${this.owner}/${this.repo}/git/trees/${commit.commit.tree.sha}?recursive=1`
+            const treeResponse = await fetch(treeUrl, {
+              headers: this.getHeaders(false),
+            })
+            
+            if (treeResponse.ok) {
+              const tree = await treeResponse.json()
+              const fileEntry = tree.tree?.find((entry: any) => entry.path === path)
+              if (fileEntry && fileEntry.sha) {
+                // Use the file content we already have and the SHA from tree
+                const data = meta as T
+                return { data, sha: fileEntry.sha }
+              }
+            }
+          }
+        }
+        
+        // Fallback: try to get SHA from the file's blob
+        throw new GitHubAPIError(500, `Could not retrieve SHA for file: ${path}. Response appears to be file content, not metadata.`)
+      }
       
-      // GitHub API returns metadata with 'sha' field when using JSON accept header
+      // Normal case: metadata response with sha and content
       const sha = meta.sha || ''
       
       if (!sha) {
         console.error(`File exists but SHA is missing in metadata for ${path}`)
-        console.error('Full metadata response:', JSON.stringify(meta, null, 2))
-        // Check if response has 'sha' in a different location or if it's an array
-        if (Array.isArray(meta)) {
-          throw new GitHubAPIError(500, `Unexpected array response for file: ${path}`)
-        }
-        // If meta has content but no sha, it might be the file content itself
-        if ('content' in meta && !('sha' in meta)) {
-          throw new GitHubAPIError(500, `Metadata response missing SHA field for: ${path}. Response keys: ${Object.keys(meta).join(', ')}`)
-        }
+        console.error('Metadata response keys:', Object.keys(meta))
         throw new GitHubAPIError(500, `Could not retrieve SHA for existing file: ${path}`)
       }
 
-      // Now get the actual file content using raw accept header
+      // Decode base64 content from metadata
       let data: T
-      try {
+      if (meta.content && meta.encoding === 'base64') {
+        try {
+          const decodedContent = atob(meta.content.replace(/\s/g, ''))
+          data = JSON.parse(decodedContent) as T
+        } catch (parseError) {
+          console.error(`Failed to decode/parse content from metadata for ${path}:`, parseError)
+          throw new GitHubAPIError(422, `Invalid JSON in file: ${path}`)
+        }
+      } else {
+        // Fallback: get content using raw endpoint
         const contentResponse = await fetch(url, {
           headers: this.getHeaders(true),
         })
@@ -163,18 +196,12 @@ export class GitHubClient {
           data = {} as T
         } else {
           try {
-            data = JSON.parse(text)
+            data = JSON.parse(text) as T
           } catch (parseError) {
             console.error(`Failed to parse JSON from ${path}:`, parseError)
             throw new GitHubAPIError(422, `Invalid JSON in file: ${path}`)
           }
         }
-      } catch (error) {
-        if (error instanceof GitHubAPIError) {
-          throw error
-        }
-        console.error(`Error getting file content for ${path}:`, error)
-        throw new GitHubAPIError(500, `Failed to retrieve file content: ${path}`)
       }
 
       // Update cache
