@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T07:15:22.537Z",
+  "lastUpdated": "2025-11-19T07:19:32.724Z",
   "items": [
     {
       "id": "SUB-20251119-847442",
@@ -925,7 +925,7 @@
       "status": "draft",
       "submittedBy": "user-1763535335952-ipf73ipyh",
       "createdAt": "2025-11-19T07:00:22.537Z",
-      "updatedAt": "2025-11-19T07:15:22.537Z",
+      "updatedAt": "2025-11-19T07:19:32.724Z",
       "data": {
         "step-1-general-info": {
           "partyResponsible": "applicant-shareholder",
@@ -965,7 +965,52 @@
           ]
         },
         "step-3-business-plan": {
-          "financialProjectionCurrency": "USD"
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "<p>To establish a Labuan company management business providing comprehensive corporate services including company incorporation, secretarial services, and compliance management.</p>",
+          "typeProductsServices": "<p>Company incorporation, corporate secretarial services, compliance management, accounting services, and corporate advisory services.</p>",
+          "targetMarket": [
+            [
+              "Corporate Clients",
+              "100"
+            ]
+          ],
+          "territorialScope": [
+            [
+              "Malaysia",
+              "100"
+            ]
+          ],
+          "businessOperationalPlan": "<p>Business Operational and Strategic Plan: Comprehensive plan including treasury processing services, managerial services, and corporate governance.</p>",
+          "internalPolicies": "<p>Internal policies and controls: Risk management framework, compliance procedures, and internal audit mechanisms.</p>",
+          "marketingStrategy": "<p>Marketing Strategy: Digital marketing, business development, and strategic partnerships.</p>",
+          "functionalStructureLabuan": "<p>Functional Structure of Management Office: CEO, CFO, Operations Manager, Compliance Officer, and support staff.</p>",
+          "functionalStructureMarketing": "<p>Basis of Assumption: Projections based on market research, industry benchmarks, and conservative growth estimates.</p>",
+          "manpowerPlanning": [
+            [
+              "Management",
+              "3",
+              "2",
+              "5",
+              "500000"
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "Revenue",
+              "500000",
+              "600000",
+              "700000"
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "Total Assets",
+              "1000000",
+              "1200000",
+              "1500000"
+            ]
+          ],
+          "projectionBasis": "<p>Projections based on market research, industry benchmarks, and conservative growth estimates.</p>"
         }
       },
       "submittedData": {
@@ -1007,7 +1052,52 @@
           ]
         },
         "step-3-business-plan": {
-          "financialProjectionCurrency": "USD"
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "<p>To establish a Labuan company management business providing comprehensive corporate services including company incorporation, secretarial services, and compliance management.</p>",
+          "typeProductsServices": "<p>Company incorporation, corporate secretarial services, compliance management, accounting services, and corporate advisory services.</p>",
+          "targetMarket": [
+            [
+              "Corporate Clients",
+              "100"
+            ]
+          ],
+          "territorialScope": [
+            [
+              "Malaysia",
+              "100"
+            ]
+          ],
+          "businessOperationalPlan": "<p>Business Operational and Strategic Plan: Comprehensive plan including treasury processing services, managerial services, and corporate governance.</p>",
+          "internalPolicies": "<p>Internal policies and controls: Risk management framework, compliance procedures, and internal audit mechanisms.</p>",
+          "marketingStrategy": "<p>Marketing Strategy: Digital marketing, business development, and strategic partnerships.</p>",
+          "functionalStructureLabuan": "<p>Functional Structure of Management Office: CEO, CFO, Operations Manager, Compliance Officer, and support staff.</p>",
+          "functionalStructureMarketing": "<p>Basis of Assumption: Projections based on market research, industry benchmarks, and conservative growth estimates.</p>",
+          "manpowerPlanning": [
+            [
+              "Management",
+              "3",
+              "2",
+              "5",
+              "500000"
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "Revenue",
+              "500000",
+              "600000",
+              "700000"
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "Total Assets",
+              "1000000",
+              "1200000",
+              "1500000"
+            ]
+          ],
+          "projectionBasis": "<p>Projections based on market research, industry benchmarks, and conservative growth estimates.</p>"
         }
       }
     }
