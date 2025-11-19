@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T07:11:00.585Z",
+  "lastUpdated": "2025-11-19T07:15:22.537Z",
   "items": [
     {
       "id": "SUB-20251119-847442",
@@ -925,12 +925,12 @@
       "status": "draft",
       "submittedBy": "user-1763535335952-ipf73ipyh",
       "createdAt": "2025-11-19T07:00:22.537Z",
-      "updatedAt": "2025-11-19T07:11:00.585Z",
+      "updatedAt": "2025-11-19T07:15:22.537Z",
       "data": {
         "step-1-general-info": {
           "partyResponsible": "applicant-shareholder",
           "officerName": "John Doe",
-          "officerCompany": "Updated Test Company Sdn Bhd",
+          "officerCompany": "Test Company Sdn Bhd",
           "officerDesignation": "Managing Director",
           "officerContact": "+60123456789",
           "officerEmail": "john.doe@testcompany.com",
@@ -948,14 +948,31 @@
           "legalEntity": "labuan-company-subsidiary",
           "marketingOffice": "yes",
           "paidUpCapital": 100000,
-          "processingType": "normal"
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": null,
+              "shareholderCountry": null,
+              "shareholderPercentage": null
+            }
+          ],
+          "directors": [
+            {
+              "directorName": null,
+              "directorNationality": null,
+              "directorPosition": null
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD"
         }
       },
       "submittedData": {
         "step-1-general-info": {
           "partyResponsible": "applicant-shareholder",
           "officerName": "John Doe",
-          "officerCompany": "Updated Test Company Sdn Bhd",
+          "officerCompany": "Test Company Sdn Bhd",
           "officerDesignation": "Managing Director",
           "officerContact": "+60123456789",
           "officerEmail": "john.doe@testcompany.com",
@@ -973,7 +990,24 @@
           "legalEntity": "labuan-company-subsidiary",
           "marketingOffice": "yes",
           "paidUpCapital": 100000,
-          "processingType": "normal"
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": null,
+              "shareholderCountry": null,
+              "shareholderPercentage": null
+            }
+          ],
+          "directors": [
+            {
+              "directorName": null,
+              "directorNationality": null,
+              "directorPosition": null
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD"
         }
       }
     }
