@@ -55,7 +55,7 @@ async def list_forms(
     """
     List all available forms.
 
-    Falls back to JSON database if SQL database fails.
+    Uses JSON database by default. Falls back to SQL database only if explicitly configured.
 
     Args:
         status: Filter by status (active, inactive, all)
@@ -101,78 +101,27 @@ async def list_forms(
                 continue
         return result_forms
     
-    # If no database connection, use JSON immediately
-    if db is None:
-        print("📄 No SQL database connection - using JSON database")
-        await initialize_default_data()
-        json_forms = await json_get_forms(status=status)
-        
-        # Apply additional filters
-        if category:
-            json_forms = [f for f in json_forms if f.get("category") == category]
-        if search:
-            search_lower = search.lower()
-            json_forms = [
-                f for f in json_forms
-                if search_lower in f.get("name", "").lower() or search_lower in f.get("description", "").lower()
-            ]
-        
-        # Pagination
-        start = (page - 1) * page_size
-        end = start + page_size
-        paginated_forms = json_forms[start:end]
-        
-        return _convert_json_forms(paginated_forms)
+    # Use JSON database by default (preferred for local development and GitHub-based storage)
+    print("📄 Using JSON database (default)")
+    await initialize_default_data()
+    json_forms = await json_get_forms(status=status)
     
-    # Try SQL database first
-    try:
-        # Build query
-        query = select(Form)
-
-        # Apply filters
-        if status == "active":
-            query = query.where(Form.is_active == True)
-        elif status == "inactive":
-            query = query.where(Form.is_active == False)
-
-        if category:
-            query = query.where(Form.category == category)
-
-        if search:
-            query = query.where(Form.name.ilike(f"%{search}%"))
-
-        # Execute query
-        result = await db.execute(query)
-        forms = result.scalars().all()
-
-        # Pagination (simple implementation)
-        start = (page - 1) * page_size
-        end = start + page_size
-        paginated_forms = forms[start:end]
-
-        return [FormResponse.model_validate(form) for form in paginated_forms]
-    except Exception as e:
-        print(f"⚠️  SQL database error, using JSON fallback: {e}")
-        # Fallback to JSON database
-        await initialize_default_data()
-        json_forms = await json_get_forms(status=status)
-        
-        # Apply additional filters
-        if category:
-            json_forms = [f for f in json_forms if f.get("category") == category]
-        if search:
-            search_lower = search.lower()
-            json_forms = [
-                f for f in json_forms
-                if search_lower in f.get("name", "").lower() or search_lower in f.get("description", "").lower()
-            ]
-        
-        # Pagination
-        start = (page - 1) * page_size
-        end = start + page_size
-        paginated_forms = json_forms[start:end]
-        
-        return _convert_json_forms(paginated_forms)
+    # Apply additional filters
+    if category:
+        json_forms = [f for f in json_forms if f.get("category") == category]
+    if search:
+        search_lower = search.lower()
+        json_forms = [
+            f for f in json_forms
+            if search_lower in f.get("name", "").lower() or search_lower in f.get("description", "").lower()
+        ]
+    
+    # Pagination
+    start = (page - 1) * page_size
+    end = start + page_size
+    paginated_forms = json_forms[start:end]
+    
+    return _convert_json_forms(paginated_forms)
 
 
 @router.get("/{form_id}", response_model=FormResponse)

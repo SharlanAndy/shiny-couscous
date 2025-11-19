@@ -96,25 +96,7 @@ def _merge_split_files(split_files: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 def _load_json_file(file_path: Path, default_value: list) -> list:
     """Load JSON array from file, handling both single files and split files."""
-    # First, try to read the main file
-    if file_path.exists():
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                # Handle both array format and object with array format
-                if isinstance(data, list):
-                    return data
-                elif isinstance(data, dict) and "items" in data:
-                    return data["items"]
-                elif isinstance(data, dict) and "data" in data:
-                    return data["data"]
-                else:
-                    return default_value.copy()
-        except (json.JSONDecodeError, IOError) as e:
-            print(f"⚠️  Error loading JSON file {file_path}: {e}")
-            # Continue to check for split files
-    
-    # If main file doesn't exist, check for split files
+    # Check for split files first (they take precedence if they exist)
     split_paths = _get_split_file_paths(file_path, max_chunks=100)
     split_files = []
     
@@ -137,7 +119,7 @@ def _load_json_file(file_path: Path, default_value: list) -> list:
             print(f"⚠️  Error loading split file {split_path}: {e}")
             break
     
-    # If we found split files, merge them
+    # If we found split files, prefer them (they're more complete/recent)
     if split_files:
         print(f"📦 Found {len(split_files)} split files for {file_path.name}, merging...")
         merged_data = _merge_split_files(split_files)
@@ -150,6 +132,24 @@ def _load_json_file(file_path: Path, default_value: list) -> list:
         elif isinstance(merged_data, dict) and "data" in merged_data:
             return merged_data["data"]
         else:
+            return default_value.copy()
+    
+    # If no split files, try to read the main file
+    if file_path.exists():
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                # Handle both array format and object with array format
+                if isinstance(data, list):
+                    return data
+                elif isinstance(data, dict) and "items" in data:
+                    return data["items"]
+                elif isinstance(data, dict) and "data" in data:
+                    return data["data"]
+                else:
+                    return default_value.copy()
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"⚠️  Error loading JSON file {file_path}: {e}")
             return default_value.copy()
     
     # No main file and no split files found
