@@ -508,9 +508,10 @@ class APIClient {
       submissionId,
       status: 'draft',
       submittedBy: auth.id,
+      submittedData: request.data,  // Save form data as submittedData
+      data: request.data,  // Also save as data for backward compatibility
       createdAt: now,
       updatedAt: now,
-      ...(request as any),
     }
 
     data.items = [...(data.items || []), draft]
@@ -551,7 +552,8 @@ class APIClient {
 
     const updated: SubmissionResponse = {
       ...submission,
-      ...(request as any),
+      submittedData: request.data,  // Update form data as submittedData
+      data: request.data,  // Also update as data for backward compatibility
       updatedAt: new Date().toISOString(),
     }
 

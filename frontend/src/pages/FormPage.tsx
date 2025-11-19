@@ -107,40 +107,48 @@ export function FormPage() {
 
   // Extract initial data from draft or resubmit
   let initialData: SubmissionData | undefined = undefined
-  if (resubmitData?.submittedData) {
-    // For resubmit, copy all data but reset signature date
-    // Deep clone to avoid mutating the original
-    initialData = JSON.parse(JSON.stringify(resubmitData.submittedData))
-    
-    // Find and reset signature date in all steps (handle nested objects and arrays)
-    const resetSignatureDate = (obj: any): any => {
-      if (obj === null || typeof obj !== 'object') {
-        return obj
-      }
+  // Support both submittedData and data fields (for backward compatibility)
+  const getSubmissionData = (submission: any): SubmissionData | undefined => {
+    return submission?.submittedData || submission?.data
+  }
+  
+  if (resubmitData) {
+    const resubmitFormData = getSubmissionData(resubmitData)
+    if (resubmitFormData) {
+      // For resubmit, copy all data but reset signature date
+      // Deep clone to avoid mutating the original
+      initialData = JSON.parse(JSON.stringify(resubmitFormData))
       
-      if (Array.isArray(obj)) {
-        return obj.map(resetSignatureDate)
-      }
-      
-      const result: any = {}
-      for (const key in obj) {
-        if (key === 'signatureDate') {
-          result[key] = ''
-        } else {
-          result[key] = resetSignatureDate(obj[key])
+      // Find and reset signature date in all steps (handle nested objects and arrays)
+      const resetSignatureDate = (obj: any): any => {
+        if (obj === null || typeof obj !== 'object') {
+          return obj
         }
+        
+        if (Array.isArray(obj)) {
+          return obj.map(resetSignatureDate)
+        }
+        
+        const result: any = {}
+        for (const key in obj) {
+          if (key === 'signatureDate') {
+            result[key] = ''
+          } else {
+            result[key] = resetSignatureDate(obj[key])
+          }
+        }
+        return result
       }
-      return result
+      
+      // Reset signature date in all steps
+      Object.keys(initialData).forEach((stepKey) => {
+        if (initialData[stepKey] && typeof initialData[stepKey] === 'object') {
+          initialData[stepKey] = resetSignatureDate(initialData[stepKey])
+        }
+      })
     }
-    
-    // Reset signature date in all steps
-    Object.keys(initialData).forEach((stepKey) => {
-      if (initialData[stepKey] && typeof initialData[stepKey] === 'object') {
-        initialData[stepKey] = resetSignatureDate(initialData[stepKey])
-      }
-    })
-  } else if (draftData?.submittedData) {
-    initialData = draftData.submittedData
+  } else if (draftData) {
+    initialData = getSubmissionData(draftData)
   }
 
   return (

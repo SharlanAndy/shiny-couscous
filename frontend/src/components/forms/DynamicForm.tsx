@@ -27,6 +27,13 @@ export function DynamicForm({
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [currentStep, setCurrentStep] = useState(0)
 
+  // Update formData when initialData changes (e.g., when draft loads)
+  useEffect(() => {
+    if (initialData && Object.keys(initialData).length > 0) {
+      setFormData(initialData)
+    }
+  }, [initialData])
+
   // Fetch form schema
   const { data: schema, isLoading, error } = useQuery<FormSchemaResponse>({
     queryKey: ['form-schema', formId],

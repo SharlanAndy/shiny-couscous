@@ -31,6 +31,9 @@ DB_PATH = DATA_DIR / "database.json"
 # Lock for file operations
 _file_lock = asyncio.Lock()
 
+# Maximum file size before splitting (800KB - stay under 1MB GitHub limit)
+MAX_FILE_SIZE = 800 * 1024
+
 
 def async_file_operation(func):
     """Decorator to ensure thread-safe file operations."""
@@ -156,17 +159,102 @@ def _load_json_file(file_path: Path, default_value: list) -> list:
     return default_value.copy()
 
 
-def _save_json_file(file_path: Path, data: list) -> None:
-    """Save JSON array to file."""
-    try:
-        # Save as array with metadata
-        file_data = {
-            "version": "1.0.0",
-            "lastUpdated": datetime.utcnow().isoformat() + "Z",
-            "items": data
+def _estimate_json_size(data: Any) -> int:
+    """Estimate JSON string size in bytes."""
+    return len(json.dumps(data, ensure_ascii=False).encode('utf-8'))
+
+
+def _split_data_into_chunks(file_path: Path, data: list) -> List[Dict[str, Any]]:
+    """Split large data array into chunks if it exceeds MAX_FILE_SIZE."""
+    # Create file data structure
+    file_data = {
+        "version": "1.0.0",
+        "lastUpdated": datetime.utcnow().isoformat() + "Z",
+        "items": data
+    }
+    
+    # Check if file needs splitting
+    estimated_size = _estimate_json_size(file_data)
+    if estimated_size <= MAX_FILE_SIZE:
+        return [{"path": file_path, "data": file_data}]
+    
+    # Need to split - calculate items per chunk
+    if not data:
+        return [{"path": file_path, "data": file_data}]
+    
+    # Estimate size per item
+    sample_item = data[0]
+    item_size = _estimate_json_size(sample_item)
+    # Add metadata overhead (version, lastUpdated, items wrapper)
+    metadata_overhead = 200
+    items_per_chunk = max(1, (MAX_FILE_SIZE - metadata_overhead) // (item_size + 100))  # 100 bytes safety margin
+    
+    chunks = []
+    base_name = file_path.stem  # filename without extension
+    parent_dir = file_path.parent
+    
+    # Split items into chunks
+    for i in range(0, len(data), items_per_chunk):
+        chunk_items = data[i:i + items_per_chunk]
+        chunk_index = i // items_per_chunk
+        
+        chunk_path = parent_dir / f"{base_name}.{chunk_index}.json"
+        chunk_data = {
+            "version": file_data["version"],
+            "lastUpdated": file_data["lastUpdated"],
+            "items": chunk_items,
+            "chunkIndex": chunk_index,
+            "totalChunks": (len(data) + items_per_chunk - 1) // items_per_chunk,
         }
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(file_data, f, indent=2, ensure_ascii=False)
+        
+        chunks.append({"path": chunk_path, "data": chunk_data})
+    
+    return chunks
+
+
+def _save_json_file(file_path: Path, data: list) -> None:
+    """Save JSON array to file, automatically splitting if too large."""
+    try:
+        # Check if we need to split
+        chunks = _split_data_into_chunks(file_path, data)
+        
+        if len(chunks) == 1:
+            # Single file - save normally
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(chunks[0]["data"], f, indent=2, ensure_ascii=False)
+            
+            # Delete old split files if they exist
+            split_paths = _get_split_file_paths(file_path, max_chunks=100)
+            for split_path in split_paths:
+                if split_path.exists():
+                    try:
+                        split_path.unlink()
+                    except Exception as e:
+                        print(f"⚠️  Error deleting old split file {split_path}: {e}")
+        else:
+            # Multiple chunks - save each chunk
+            for chunk in chunks:
+                with open(chunk["path"], 'w', encoding='utf-8') as f:
+                    json.dump(chunk["data"], f, indent=2, ensure_ascii=False)
+            
+            # Delete old main file if it exists
+            if file_path.exists():
+                try:
+                    file_path.unlink()
+                except Exception as e:
+                    print(f"⚠️  Error deleting old main file {file_path}: {e}")
+            
+            # Delete any old split files beyond the new count
+            split_paths = _get_split_file_paths(file_path, max_chunks=100)
+            for i in range(len(chunks), len(split_paths)):
+                old_split_path = split_paths[i]
+                if old_split_path.exists():
+                    try:
+                        old_split_path.unlink()
+                    except Exception as e:
+                        print(f"⚠️  Error deleting old split file {old_split_path}: {e}")
+            
+            print(f"📦 Split {file_path.name} into {len(chunks)} chunks")
     except IOError as e:
         print(f"⚠️  Error saving JSON file {file_path}: {e}")
         raise

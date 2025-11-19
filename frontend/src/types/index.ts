@@ -128,6 +128,8 @@ export interface SubmissionResponse {
   reviewedAt?: string
   reviewNotes?: string
   requestedInfo?: string
+  submittedData?: SubmissionData  // Form field data
+  data?: SubmissionData  // Alias for submittedData (for backward compatibility)
   createdAt: string
   updatedAt: string
 }
