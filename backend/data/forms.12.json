@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T06:00:46.317Z",
+  "lastUpdated": "2025-11-19T06:08:48.774Z",
   "items": [
     {
       "id": "form-1763522198593-012345678",
@@ -9,7 +9,7 @@
       "description": "Application for Licence to Carry on Labuan Banking/Investment Banking/Digital Banking Business",
       "category": "Banking",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "form-lbb-labuan-banking-business",
         "formName": "Form LBB - Labuan Banking Business",
@@ -158,7 +158,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T11:16:38.593192Z",
-      "updatedAt": "2025-11-19T11:16:38.593193Z",
+      "updatedAt": "2025-11-19T06:08:48.774Z",
       "createdBy": null,
       "updatedBy": null
     }
