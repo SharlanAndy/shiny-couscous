@@ -32,5 +32,18 @@
       "uploadedAt": "2025-11-18T12:26:46.488526Z",
       "uploadedBy": null
     }
+  ],
+  "files": [
+    {
+      "id": "file-1763519056977-7bzh0rfmr",
+      "fileId": "supportingDocuments_1763519054828_test-document-16.pdf",
+      "fieldName": "supportingDocuments",
+      "fileName": "test-document-16.pdf",
+      "filePath": "backend/uploads/supportingDocuments_1763519054828_test-document-16.pdf",
+      "fileSize": 551,
+      "mimeType": "application/pdf",
+      "storageLocation": "github",
+      "uploadedAt": "2025-11-19T02:24:16.977Z"
+    }
   ]
 }
