@@ -41,14 +41,17 @@ jobs:
 
       - name: Build frontend
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://your-backend-url.com' }}
-          VITE_BASE_PATH: '/shiny-couscous/'
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || '' }}
+          # GitHub API configuration (required for GitHub-only mode)
           VITE_GITHUB_OWNER: ${{ github.repository_owner }}
           VITE_GITHUB_REPO: ${{ github.event.repository.name }}
           VITE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VITE_JWT_SECRET: ${{ secrets.JWT_SECRET || 'default-jwt-secret-change-in-production' }}
+          # GitHub Pages base path
+          VITE_BASE_PATH: '/shiny-couscous/'
+          # Optional: Supabase (if still using)
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || '' }}
+          # VITE_API_URL not needed - GitHub API client uses GitHub API directly
         run: npm run build
 
       - name: Create 404.html for SPA routing
