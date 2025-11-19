@@ -106,12 +106,20 @@ export function AdminFormsPage() {
     })
   }
 
-  const filteredForms = forms.filter(
-    (form) =>
-      form.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      form.formId.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      form.description?.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const filteredForms = React.useMemo(() => {
+    if (!searchTerm.trim()) {
+      return forms
+    }
+    
+    const searchLower = searchTerm.toLowerCase().trim()
+    return forms.filter(
+      (form) =>
+        (form.name && form.name.toLowerCase().includes(searchLower)) ||
+        (form.formId && form.formId.toLowerCase().includes(searchLower)) ||
+        (form.description && form.description.toLowerCase().includes(searchLower)) ||
+        (form.category && form.category.toLowerCase().includes(searchLower))
+    )
+  }, [forms, searchTerm])
 
   return (
     <div className="space-y-6">
