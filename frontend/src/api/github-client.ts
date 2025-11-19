@@ -384,7 +384,8 @@ export class GitHubClient {
         // When writing in parallel, SHAs can change between read and write
         for (let i = 0; i < chunks.length; i++) {
           const chunk = chunks[i]
-          const chunkMessage = `${message} (chunk ${(chunk.chunkIndex ?? i) + 1}/${chunks.length})`
+          const chunkIndex = (chunk as any).chunkIndex ?? i
+          const chunkMessage = `${message} (chunk ${chunkIndex + 1}/${chunks.length})`
           
           // Read current SHA right before writing (don't cache, use fresh SHA)
           let chunkSha: string | undefined
