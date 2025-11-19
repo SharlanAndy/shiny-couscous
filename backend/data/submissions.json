@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T07:42:11.220Z",
+  "lastUpdated": "2025-11-19T07:44:58.158Z",
   "items": [
     {
       "id": "SUB-20251119-847442",
@@ -1309,6 +1309,122 @@
       },
       "createdAt": "2025-11-19T07:33:30.745Z",
       "updatedAt": "2025-11-19T07:42:11.220Z"
+    },
+    {
+      "id": "SUB-20251119-808395",
+      "formId": "labuan-company-management-license",
+      "submissionId": "SUB-20251119-808395",
+      "status": "submitted",
+      "submittedBy": "user-1763537494718-e9n3nxddd",
+      "submittedAt": "2025-11-19T07:44:58.158Z",
+      "createdAt": "2025-11-19T07:44:58.158Z",
+      "updatedAt": "2025-11-19T07:44:58.158Z",
+      "data": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "John Doe",
+          "officerCompany": "Test Company Ltd",
+          "officerDesignation": "Manager",
+          "officerContact": "+60123456789",
+          "officerEmail": "john.doe@testcompany.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        },
+        "step-2-applicant-profile": {
+          "applicantName": "Test Labuan Company Management Ltd",
+          "licenseType": [
+            "conventional"
+          ],
+          "legalEntity": "labuan-company-subsidiary",
+          "marketingOffice": "no",
+          "paidUpCapital": 100000,
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": null,
+              "shareholderCountry": null,
+              "shareholderPercentage": null
+            }
+          ],
+          "directors": [
+            {
+              "directorName": null,
+              "directorNationality": null,
+              "directorPosition": null
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "Projections based on market research, industry benchmarks, and conservative growth estimates.",
+          "typeProductsServices": "<p>Company incorporation, corporate secretarial services, compliance management, and corporate advisory services.</p>",
+          "businessOperationalPlan": "<p>Comprehensive plan including treasury processing services, managerial services, and corporate governance.</p>",
+          "internalPolicies": "<p>Risk management framework, compliance procedures, and internal audit mechanisms.</p>",
+          "marketingStrategy": "<p>Digital marketing, business development, and strategic partnerships.</p>",
+          "functionalStructureLabuan": "<p>CEO, CFO, Operations Manager, Compliance Officer, and support staff.</p>",
+          "functionalStructureMarketing": "<p>Projections based on market research, industry benchmarks, and conservative growth estimates.</p>",
+          "targetMarket": [
+            [
+              "Corporate Clients",
+              ""
+            ]
+          ],
+          "territorialScope": [
+            [
+              "Malaysia",
+              ""
+            ]
+          ],
+          "manpowerPlanning": [
+            [
+              "Management",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "Revenue",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "Total Assets",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "projectionBasis": "Projections based on market research, industry benchmarks, and conservative growth estimates."
+        },
+        "step-4-documents": {
+          "documentChecklist": {
+            "corporate-shareholding-structure": {
+              "uploaded": true,
+              "fileId": "file-1763538257344-test-document.pdf"
+            }
+          }
+        },
+        "step-5-declaration": {
+          "declarationAccurate": [
+            "yes"
+          ],
+          "declarationUnderstand": [
+            "yes"
+          ],
+          "declarationConsent": [
+            "yes"
+          ],
+          "signatureDate": "2025-01-19"
+        }
+      }
     }
   ]
 }
