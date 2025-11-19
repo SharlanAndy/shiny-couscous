@@ -26,7 +26,8 @@ export function AdminFormsPage() {
   const loadForms = async () => {
     setLoading(true)
     try {
-      const data = await apiClient.getForms()
+      // Admin panel should show ALL forms (active and inactive)
+      const data = await apiClient.getForms({ includeInactive: true })
       setForms(data)
     } catch (error) {
       console.error('Error loading forms:', error)

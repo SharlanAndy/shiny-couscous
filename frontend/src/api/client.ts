@@ -127,6 +127,7 @@ class APIClient {
     search?: string
     page?: number
     pageSize?: number
+    includeInactive?: boolean // New parameter to include inactive forms
   }): Promise<FormResponse[]> {
     const github = getGitHubClient()
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
@@ -135,8 +136,9 @@ class APIClient {
 
     let forms = data.items || []
     
-    // Filter active forms by default (unless status specified)
-    if (!params?.status) {
+    // Filter active forms by default for user frontend (unless includeInactive is true or status is specified)
+    // Admin panel should pass includeInactive: true to see all forms
+    if (!params?.includeInactive && !params?.status) {
       forms = forms.filter((f) => f.isActive)
     }
 
