@@ -1,5 +1,6 @@
 import { Navigate, useLocation } from 'react-router-dom'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
+import { isAdminRole, preloadAdminRoles } from '@/lib/role-utils'
 
 interface ProtectedRouteProps {
   children: ReactNode
@@ -29,9 +30,19 @@ export function ProtectedRoute({
   }
   
   const isAuthenticated = !!(token && user)
-  // Any role that is not 'user' is considered an admin role (e.g., 'admin', 'superAdmin', 'test', etc.)
-  const isAdmin = userRole && userRole !== 'user'
+  const [isAdmin, setIsAdmin] = useState(false)
   const isUser = userRole === 'user'
+
+  // Load admin role status dynamically
+  useEffect(() => {
+    if (userRole && userRole !== 'user') {
+      preloadAdminRoles().then(() => {
+        isAdminRole(userRole).then(setIsAdmin)
+      })
+    } else {
+      setIsAdmin(false)
+    }
+  }, [userRole])
   
   // Check if route matches user role
   const isAdminRoute = location.pathname.startsWith('/admin')

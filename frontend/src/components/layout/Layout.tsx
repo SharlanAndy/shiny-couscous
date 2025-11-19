@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import apiClient from '@/api/client'
+import { isAdminRole, preloadAdminRoles, isAdminRoleSync } from '@/lib/role-utils'
 
 interface LayoutProps {
   children: ReactNode
@@ -29,17 +30,39 @@ export function Layout({ children }: LayoutProps) {
     
     // Separate admin and user sessions based on route
     if (isAdminRoute) {
-      // On admin routes, show any non-user role (admin, superAdmin, test, etc.)
+      // On admin routes, check if role is an admin role dynamically
       if (storedUser && token && storedRole && storedRole !== 'user') {
-        try {
-          setUser(JSON.parse(storedUser))
-          setUserRole(storedRole)
-          setIsAuthenticated(true)
-        } catch (e) {
-          console.error('Error parsing user data:', e)
-          setUser(null)
-          setUserRole(null)
-          setIsAuthenticated(false)
+        // Preload roles and check if it's an admin role
+        preloadAdminRoles().then(() => {
+          isAdminRole(storedRole).then((isAdmin) => {
+            if (isAdmin) {
+              try {
+                setUser(JSON.parse(storedUser))
+                setUserRole(storedRole)
+                setIsAuthenticated(true)
+              } catch (e) {
+                console.error('Error parsing user data:', e)
+                setUser(null)
+                setUserRole(null)
+                setIsAuthenticated(false)
+              }
+            } else {
+              // Not an admin role, clear session
+              setUser(null)
+              setUserRole(null)
+              setIsAuthenticated(false)
+            }
+          })
+        })
+        // For immediate check, use sync version (may be false if cache not loaded yet)
+        if (isAdminRoleSync(storedRole)) {
+          try {
+            setUser(JSON.parse(storedUser))
+            setUserRole(storedRole)
+            setIsAuthenticated(true)
+          } catch (e) {
+            console.error('Error parsing user data:', e)
+          }
         }
       } else {
         // Clear user session if not admin on admin route

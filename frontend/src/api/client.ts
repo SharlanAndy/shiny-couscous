@@ -27,68 +27,8 @@ function generateSubmissionId(): string {
   return `SUB-${dateStr}-${random}`
 }
 
-// Cache for admin roles to avoid repeated API calls
-let adminRolesCache: { roles: Array<{ name: string; isActive: boolean }>; timestamp: number } | null = null
-const ADMIN_ROLES_CACHE_TTL = 5 * 60 * 1000 // 5 minutes
-
-/**
- * Check if a role is an admin role by reading admin_roles.json
- * Returns true if the role exists in admin_roles.json and is active
- */
-async function isAdminRole(roleName: string | null | undefined): Promise<boolean> {
-  if (!roleName || roleName === 'user') {
-    return false
-  }
-
-  try {
-    // Check cache first
-    const now = Date.now()
-    if (adminRolesCache && (now - adminRolesCache.timestamp) < ADMIN_ROLES_CACHE_TTL) {
-      return adminRolesCache.roles.some((r) => r.name === roleName && r.isActive)
-    }
-
-    // Fetch from GitHub
-    const github = getGitHubClient()
-    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean }> }>(
-      'backend/data/admin_roles.json'
-    )
-
-    // Update cache
-    adminRolesCache = {
-      roles: data.roles || [],
-      timestamp: now,
-    }
-
-    // Check if role exists and is active
-    return adminRolesCache.roles.some((r) => r.name === roleName && r.isActive)
-  } catch (error) {
-    console.error('Error checking admin role:', error)
-    // Fallback: if we can't read roles, assume any non-user role is admin
-    return roleName !== 'user'
-  }
-}
-
-/**
- * Synchronous version that uses cache (may return false if cache is empty)
- * Use this for client-side checks where async is not possible
- */
-function isAdminRoleSync(roleName: string | null | undefined): boolean {
-  if (!roleName || roleName === 'user') {
-    return false
-  }
-
-  // If cache exists and is valid, use it
-  if (adminRolesCache) {
-    const now = Date.now()
-    if ((now - adminRolesCache.timestamp) < ADMIN_ROLES_CACHE_TTL) {
-      return adminRolesCache.roles.some((r) => r.name === roleName && r.isActive)
-    }
-  }
-
-  // Cache miss - return false and let async version handle it
-  // This is a fallback for synchronous contexts
-  return false
-}
+// Import role checking utilities
+import { isAdminRole } from '@/lib/role-utils'
 
 // Helper to filter array based on params
 function filterArray<T extends { [key: string]: any }>(
