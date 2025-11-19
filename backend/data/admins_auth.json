@@ -18,6 +18,15 @@
       "role": "test",
       "isActive": true,
       "createdAt": "2025-11-19T04:38:32.924Z"
+    },
+    {
+      "id": "superadmin-20251119-001",
+      "email": "superadmin@example.com",
+      "passwordHash": "e34f92a20532a873cb3184398070b4b82a8fa29cf48572c203dc5f0fa6158231",
+      "name": "Super Administrator",
+      "role": "superAdmin",
+      "createdAt": "2025-11-19T12:00:00.000Z",
+      "isActive": true
     }
   ]
 }
