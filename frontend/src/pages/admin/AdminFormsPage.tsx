@@ -113,12 +113,12 @@ export function AdminFormsPage() {
     
     const searchLower = searchTerm.toLowerCase().trim()
     return forms.filter(
-      (form) =>
+    (form) =>
         (form.name && form.name.toLowerCase().includes(searchLower)) ||
         (form.formId && form.formId.toLowerCase().includes(searchLower)) ||
         (form.description && form.description.toLowerCase().includes(searchLower)) ||
         (form.category && form.category.toLowerCase().includes(searchLower))
-    )
+  )
   }, [forms, searchTerm])
 
   return (

@@ -176,7 +176,7 @@ class APIClient {
     if (!form) {
       throw new Error(`Form not found: ${formId}`)
     }
-
+    
     // Extract schema from form's schemaData (stored in JSON but not in type definition)
     if (!form.schemaData) {
       throw new Error(`Schema not found for form: ${formId}`)
@@ -437,7 +437,7 @@ class APIClient {
     const submission = data.items![index]
     
     // Verify ownership (users can only update their own drafts)
-    if (submission.submittedBy !== auth.id && auth.role !== 'admin') {
+    if (submission.submittedBy !== auth.id && auth.role === 'user') {
       throw new Error('Unauthorized to update this submission')
     }
 
@@ -475,7 +475,7 @@ class APIClient {
     let submissions = data.items || []
 
     // Filter by user (non-admins only see their own)
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       submissions = submissions.filter((s) => s.submittedBy === auth.id)
     }
 
@@ -502,7 +502,7 @@ class APIClient {
     }
 
     // Verify access
-    if (submission.submittedBy !== auth.id && auth.role !== 'admin') {
+    if (submission.submittedBy !== auth.id && auth.role === 'user') {
       throw new Error('Unauthorized to view this submission')
     }
 
@@ -591,7 +591,7 @@ class APIClient {
     pageSize?: number
   }): Promise<SubmissionResponse[]> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -617,7 +617,7 @@ class APIClient {
     }
   ): Promise<SubmissionResponse> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -656,7 +656,7 @@ class APIClient {
 
   async deleteSubmission(submissionId: string): Promise<void> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -694,7 +694,7 @@ class APIClient {
     }>
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -844,7 +844,7 @@ class APIClient {
 
     users[index] = updated
 
-    if (auth.role === 'admin') {
+    if (auth.role !== 'user') {
       authData.admins = users
     } else {
       authData.users = users
@@ -880,15 +880,15 @@ class APIClient {
     }
 
     const github = getGitHubClient()
-    const authFile = auth.role === 'admin' 
+    const authFile = auth.role !== 'user' 
       ? 'backend/data/admins_auth.json' 
       : 'backend/data/users_auth.json'
     
     const { data: authData } = await github.readJsonFile<{ users?: any[]; admins?: any[] }>(authFile)
-    const users = auth.role === 'admin' ? authData.admins || [] : authData.users || []
+    const users = auth.role !== 'user' ? authData.admins || [] : authData.users || []
     const filtered = users.filter((u: any) => u.id !== auth.id)
 
-    if (auth.role === 'admin') {
+    if (auth.role !== 'user') {
       authData.admins = filtered
     } else {
       authData.users = filtered
@@ -912,7 +912,7 @@ class APIClient {
     createdAt: string
   }>> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -938,7 +938,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -969,7 +969,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1031,7 +1031,7 @@ class APIClient {
       newUsers.push(updated)
       if (newRole === 'user') {
         newAuthData.users = newUsers
-      } else {
+    } else {
         newAuthData.admins = newUsers
       }
       await github.writeJsonFile(newAuthFile, newAuthData, `Admin update user: added ${user.email} (role change to ${newRole})`, newSha)
@@ -1066,7 +1066,7 @@ class APIClient {
     createdAt: string
   }>> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1092,7 +1092,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1120,7 +1120,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1159,7 +1159,7 @@ class APIClient {
 
   async deleteAdmin(adminId: string): Promise<void> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1186,7 +1186,7 @@ class APIClient {
     sessionTimeout: number
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1216,7 +1216,7 @@ class APIClient {
     sessionTimeout: number
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1246,7 +1246,7 @@ class APIClient {
     createdAt: string
   }>> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1275,7 +1275,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1332,7 +1332,7 @@ class APIClient {
     createdAt: string
   }> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 
@@ -1377,7 +1377,7 @@ class APIClient {
 
   async deleteAdminRole(roleId: string): Promise<void> {
     const auth = this.verifyAuth()
-    if (auth.role !== 'admin') {
+    if (auth.role === 'user') {
       throw new Error('Admin access required')
     }
 

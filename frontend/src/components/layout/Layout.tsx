@@ -29,8 +29,8 @@ export function Layout({ children }: LayoutProps) {
     
     // Separate admin and user sessions based on route
     if (isAdminRoute) {
-      // On admin routes, only show admin session
-      if (storedUser && token && storedRole === 'admin') {
+      // On admin routes, show any non-user role (admin, superAdmin, test, etc.)
+      if (storedUser && token && storedRole && storedRole !== 'user') {
         try {
           setUser(JSON.parse(storedUser))
           setUserRole(storedRole)
@@ -82,7 +82,7 @@ export function Layout({ children }: LayoutProps) {
       setUserRole(null)
       setIsAuthenticated(false)
       // Redirect to appropriate login page based on role (not just route)
-      if (currentRole === 'admin' || isAdminRoute) {
+      if ((currentRole && currentRole !== 'user') || isAdminRoute) {
         navigate('/admin/login')
       } else {
         navigate('/login')

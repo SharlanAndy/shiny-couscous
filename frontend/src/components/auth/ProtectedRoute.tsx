@@ -29,7 +29,8 @@ export function ProtectedRoute({
   }
   
   const isAuthenticated = !!(token && user)
-  const isAdmin = userRole === 'admin'
+  // Any role that is not 'user' is considered an admin role (e.g., 'admin', 'superAdmin', 'test', etc.)
+  const isAdmin = userRole && userRole !== 'user'
   const isUser = userRole === 'user'
   
   // Check if route matches user role

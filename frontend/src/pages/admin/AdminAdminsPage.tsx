@@ -232,12 +232,12 @@ export function AdminAdminsPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Admin Management</h1>
           <p className="text-gray-600">Manage admin accounts and privileges</p>
         </div>
-        <button
-          onClick={() => setShowCreateForm(!showCreateForm)}
-          className="btn btn-primary"
-        >
-          + Create New Admin
-        </button>
+          <button
+            onClick={() => setShowCreateForm(!showCreateForm)}
+            className="btn btn-primary"
+          >
+            + Create New Admin
+          </button>
       </div>
 
       {/* Create Admin Form */}
@@ -397,9 +397,9 @@ export function AdminAdminsPage() {
                                 ))}
                             </select>
                           ) : (
-                            <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
-                              {admin.role}
-                            </span>
+                          <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
+                            {admin.role}
+                          </span>
                           )}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
