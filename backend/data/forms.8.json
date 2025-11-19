@@ -1,0 +1,162 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-19T05:39:26.412Z",
+  "items": [
+    {
+      "id": "form-1763521945380-012345678",
+      "formId": "application-for-cessation-of-labuan-leasing-company",
+      "name": "Application for Cessation of Labuan Leasing Company",
+      "description": "Application for Cessation of Labuan Leasing Company under Labuan Financial Services and Securities Act 2010",
+      "category": "Leasing Business",
+      "version": "1.0.0",
+      "isActive": true,
+      "schemaData": {
+        "formId": "application-for-cessation-of-labuan-leasing-company",
+        "formName": "Application for Cessation of Labuan Leasing Company",
+        "version": "1.0.0",
+        "steps": [
+          {
+            "stepId": "step-1-important-notes",
+            "stepName": "Important Notes & Checklist",
+            "stepOrder": 1,
+            "stepDescription": "Please read the important notes and document checklist",
+            "fields": [
+              {
+                "fieldId": "important-notes",
+                "fieldType": "help-text",
+                "fieldName": "importantNotes",
+                "label": "IMPORTANT NOTES",
+                "content": "1. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n2. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.\n\n3. The checklist serves as general requirement of the application. However, pursuant to Section 91 of the Labuan Financial Services and Securities Act 2010, Labuan FSA reserves the right to request for additional information to support the application.",
+                "format": "plain",
+                "position": "above",
+                "required": false,
+                "hidden": false,
+                "style": {
+                  "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+                  "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+                }
+              },
+              {
+                "fieldId": "company-name",
+                "fieldType": "text-input",
+                "inputType": "text",
+                "fieldName": "companyName",
+                "label": "Name of Labuan Company",
+                "required": true,
+                "placeholder": "Enter company name"
+              },
+              {
+                "fieldId": "officer-name",
+                "fieldType": "text-input",
+                "inputType": "text",
+                "fieldName": "officerName",
+                "label": "Officer Name (responsible for information submission)",
+                "required": true,
+                "placeholder": "Enter officer name"
+              },
+              {
+                "fieldId": "officer-company",
+                "fieldType": "text-input",
+                "inputType": "text",
+                "fieldName": "officerCompany",
+                "label": "Company",
+                "required": true,
+                "placeholder": "Enter company name"
+              },
+              {
+                "fieldId": "officer-designation",
+                "fieldType": "text-input",
+                "inputType": "text",
+                "fieldName": "officerDesignation",
+                "label": "Designation",
+                "required": true,
+                "placeholder": "Enter designation"
+              },
+              {
+                "fieldId": "officer-contact",
+                "fieldType": "text-input",
+                "inputType": "tel",
+                "fieldName": "officerContact",
+                "label": "Contact No.",
+                "required": true,
+                "placeholder": "Enter contact number"
+              },
+              {
+                "fieldId": "officer-email",
+                "fieldType": "text-input",
+                "inputType": "email",
+                "fieldName": "officerEmail",
+                "label": "Email",
+                "required": true,
+                "placeholder": "Enter email address"
+              }
+            ]
+          },
+          {
+            "stepId": "step-2-supporting-documents",
+            "stepName": "Supporting Documents",
+            "stepOrder": 2,
+            "stepDescription": "Upload all required supporting documents",
+            "fields": [
+              {
+                "fieldId": "document-checklist",
+                "fieldType": "document-checklist",
+                "fieldName": "documentChecklist",
+                "label": "Required Documents Checklist",
+                "required": true,
+                "documents": [
+                  {
+                    "id": "board-resolution",
+                    "label": "Certified true copy of the board resolution or extract of minutes of board meeting on their intention to surrender the licence",
+                    "required": true
+                  },
+                  {
+                    "id": "letter-guarantee",
+                    "label": "Letter of Guarantee/Undertaking from the shareholder/head office to undertake all outstanding liabilities",
+                    "required": true
+                  },
+                  {
+                    "id": "audited-financial-statements",
+                    "label": "Latest audited financial statements",
+                    "required": true
+                  },
+                  {
+                    "id": "management-account",
+                    "label": "Latest management account signed and duly verified by the Director of the leasing company",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "fieldId": "supporting-documents",
+                "fieldType": "file-upload",
+                "fieldName": "supportingDocuments",
+                "label": "Upload Supporting Documents",
+                "required": false,
+                "multiple": true,
+                "maxFileSize": 10485760,
+                "allowedExtensions": [
+                  ".pdf",
+                  ".doc",
+                  ".docx",
+                  ".jpg",
+                  ".jpeg",
+                  ".png"
+                ],
+                "helpText": "Upload all required documents. Maximum file size: 10MB per file."
+              }
+            ]
+          }
+        ]
+      },
+      "requiresAuth": true,
+      "estimatedTime": "1-2 hours",
+      "createdAt": "2025-11-19T11:12:25.380484Z",
+      "updatedAt": "2025-11-19T05:22:37.921Z",
+      "createdBy": null,
+      "updatedBy": null
+    }
+  ],
+  "chunkIndex": 8,
+  "totalChunks": 23
+}
