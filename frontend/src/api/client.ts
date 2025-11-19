@@ -564,7 +564,17 @@ class APIClient {
     pageSize?: number
   }): Promise<SubmissionResponse[]> {
     const auth = this.verifyAuth()
+    
+    // Use backend API if GitHub is not configured
+    if (this.useBackendAPI && this.backendClient) {
+      const response = await this.backendClient.get('/api/submissions', { params })
+      return response.data
+    }
+
     const github = getGitHubClient()
+    if (!github) {
+      throw new Error('No API client available. Please configure GitHub API or start backend server.')
+    }
 
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
       'backend/data/submissions.json'
@@ -589,7 +599,17 @@ class APIClient {
 
   async getSubmission(submissionId: string): Promise<SubmissionResponse> {
     const auth = this.verifyAuth()
+    
+    // Use backend API if GitHub is not configured
+    if (this.useBackendAPI && this.backendClient) {
+      const response = await this.backendClient.get(`/api/submissions/${submissionId}`)
+      return response.data
+    }
+
     const github = getGitHubClient()
+    if (!github) {
+      throw new Error('No API client available. Please configure GitHub API or start backend server.')
+    }
 
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
       'backend/data/submissions.json'
@@ -693,8 +713,18 @@ class APIClient {
     await this.checkPermission('review_submissions')
     const auth = this.verifyAuth()
 
+    // Use backend API if GitHub is not configured
+    if (this.useBackendAPI && this.backendClient) {
+      const response = await this.backendClient.get('/api/admin/submissions', { params })
+      return response.data
+    }
+
     // Same as getSubmissions but without user filter
     const github = getGitHubClient()
+    if (!github) {
+      throw new Error('No API client available. Please configure GitHub API or start backend server.')
+    }
+    
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
       'backend/data/submissions.json'
     )
@@ -790,7 +820,16 @@ class APIClient {
     await this.checkPermission('view_analytics')
     const auth = this.verifyAuth()
 
+    // Use backend API if GitHub is not configured
+    if (this.useBackendAPI && this.backendClient) {
+      const response = await this.backendClient.get('/api/admin/statistics')
+      return response.data
+    }
+
     const github = getGitHubClient()
+    if (!github) {
+      throw new Error('No API client available. Please configure GitHub API or start backend server.')
+    }
     
     // Read submissions and forms
     const [submissionsData, formsData] = await Promise.all([
