@@ -175,16 +175,29 @@ export async function registerUser(
   name?: string,
   role: string = 'user'
 ): Promise<LoginResponse> {
-  let github
-  try {
-    github = getGitHubClient()
-  } catch (error) {
-    // Re-throw GitHub client initialization errors with more context
-    if (error instanceof Error) {
-      console.error('[Register] GitHub client initialization failed:', error.message)
-      throw new Error(`Configuration error: ${error.message}`)
+  // Use backend API if GitHub is not configured
+  if (!isGitHubConfigured()) {
+    try {
+      const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const response = await axios.post(`${apiURL}/api/auth/register`, {
+        email,
+        password,
+        name,
+        role,
+      })
+      return response.data
+    } catch (error: any) {
+      if (error.response?.data?.detail) {
+        throw new Error(error.response.data.detail)
+      }
+      throw new Error('Registration failed')
     }
-    throw error
+  }
+
+  // Use GitHub API
+  const github = getGitHubClient()
+  if (!github) {
+    throw new Error('No API client available. Please configure GitHub API or start backend server.')
   }
   
   const passwordHash = hashPassword(password)
@@ -291,7 +304,29 @@ export async function registerUser(
  * Get user by ID from GitHub auth files
  */
 export async function getUserById(userId: string, role?: 'user' | 'admin'): Promise<AuthUser | null> {
+  // Use backend API if GitHub is not configured
+  if (!isGitHubConfigured()) {
+    try {
+      const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const endpoint = role === 'admin' 
+        ? `/api/admin/admins/${userId}`
+        : `/api/admin/users/${userId}`
+      const response = await axios.get(`${apiURL}${endpoint}`)
+      return response.data
+    } catch (error: any) {
+      if (error.response?.status === 404) {
+        return null
+      }
+      console.error('Error getting user by ID:', error)
+      return null
+    }
+  }
+
+  // Use GitHub API
   const github = getGitHubClient()
+  if (!github) {
+    throw new Error('No API client available. Please configure GitHub API or start backend server.')
+  }
 
   try {
     // If role is specified, only check that file
@@ -327,7 +362,32 @@ export async function updateUserPassword(
   newPassword: string,
   role?: 'user' | 'admin'
 ): Promise<void> {
+  // Use backend API if GitHub is not configured
+  if (!isGitHubConfigured()) {
+    try {
+      const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const endpoint = role === 'admin'
+        ? `/api/admin/admins/${userId}/password`
+        : `/api/admin/users/${userId}/password`
+      await axios.put(`${apiURL}${endpoint}`, {
+        currentPassword,
+        newPassword,
+      })
+      return
+    } catch (error: any) {
+      if (error.response?.data?.detail) {
+        throw new Error(error.response.data.detail)
+      }
+      throw new Error('Failed to update password')
+    }
+  }
+
+  // Use GitHub API
   const github = getGitHubClient()
+  if (!github) {
+    throw new Error('No API client available. Please configure GitHub API or start backend server.')
+  }
+  
   const currentPasswordHash = hashPassword(currentPassword)
   const newPasswordHash = hashPassword(newPassword)
 
