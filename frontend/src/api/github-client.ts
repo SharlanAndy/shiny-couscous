@@ -109,10 +109,22 @@ export class GitHubClient {
 
       // Parse metadata response
       const meta: GitHubFileResponse = await metaResponse.json()
+      
+      // GitHub API returns metadata with 'sha' field when using JSON accept header
+      // If 'sha' is missing, log the full response for debugging
       const sha = meta.sha || ''
       
       if (!sha) {
-        console.error(`File exists but SHA is missing in metadata for ${path}`, meta)
+        console.error(`File exists but SHA is missing in metadata for ${path}`)
+        console.error('Metadata response:', JSON.stringify(meta, null, 2))
+        // Check if response has 'sha' in a different location or if it's an array
+        if (Array.isArray(meta)) {
+          throw new GitHubAPIError(500, `Unexpected array response for file: ${path}`)
+        }
+        // If meta has content but no sha, it might be the file content itself
+        if ('content' in meta && !('sha' in meta)) {
+          throw new GitHubAPIError(500, `Metadata response missing SHA field for: ${path}. Response keys: ${Object.keys(meta).join(', ')}`)
+        }
         throw new GitHubAPIError(500, `Could not retrieve SHA for existing file: ${path}`)
       }
 
