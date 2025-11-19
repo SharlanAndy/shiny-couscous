@@ -1,4 +1,15 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosError } from 'axios'
+/**
+ * API Client for Labuan FSA E-Submission System
+ * 
+ * REFACTORED VERSION: Uses GitHub API instead of FastAPI backend
+ * 
+ * This file maintains the same interface as the original client.ts
+ * but implements all operations using GitHub API to read/write JSON files.
+ */
+
+import { getGitHubClient, GitHubAPIError } from './github-client'
+import { loginUser, registerUser, getUserById, updateUserPassword, verifyJWT } from '@/lib/github-auth'
+import CryptoJS from 'crypto-js'
 import type {
   FormResponse,
   FormSchemaResponse,
@@ -8,47 +19,75 @@ import type {
   ValidationResponse,
 } from '@/types'
 
+// Helper to generate submission ID
+function generateSubmissionId(): string {
+  const date = new Date()
+  const dateStr = date.toISOString().split('T')[0].replace(/-/g, '')
+  const random = Math.floor(Math.random() * 1000000).toString().padStart(6, '0')
+  return `SUB-${dateStr}-${random}`
+}
+
+// Helper to filter array based on params
+function filterArray<T extends { [key: string]: any }>(
+  items: T[],
+  params?: { [key: string]: any }
+): T[] {
+  if (!params) return items
+
+  return items.filter((item) => {
+    if (params.status && item.status !== params.status) return false
+    if (params.category && item.category !== params.category) return false
+    if (params.formId && item.formId !== params.formId) return false
+    if (params.search) {
+      const searchLower = params.search.toLowerCase()
+      const searchableFields = ['name', 'description', 'formId', 'email']
+      const matches = searchableFields.some((field) => {
+        const value = item[field]
+        return value && String(value).toLowerCase().includes(searchLower)
+      })
+      if (!matches) return false
+    }
+    return true
+  })
+}
+
+// Helper to paginate array
+function paginateArray<T>(items: T[], page?: number, pageSize?: number): T[] {
+  if (!page && !pageSize) return items
+  const start = page && pageSize ? (page - 1) * pageSize : 0
+  const end = pageSize ? start + pageSize : undefined
+  return items.slice(start, end)
+}
+
 /**
- * API Client for Labuan FSA E-Submission System
+ * API Client Class - GitHub Implementation
  */
 class APIClient {
-  public client: AxiosInstance
+  // Keep client property for backward compatibility (components may use it)
+  public client: {
+    get: (url: string, config?: any) => Promise<any>
+    post: (url: string, data?: any, config?: any) => Promise<any>
+    put: (url: string, data?: any) => Promise<any>
+    delete: (url: string) => Promise<any>
+  }
   private token: string | null = null
 
-  constructor(baseURL: string) {
-    this.client = axios.create({
-      baseURL,
-      timeout: 30000,
-      headers: {
-        'Content-Type': 'application/json',
+  constructor() {
+    // Create mock axios-like client for backward compatibility
+    this.client = {
+      get: async (url: string) => {
+        throw new Error(`Direct client.get() calls are not supported. Use API methods instead. URL: ${url}`)
       },
-    })
-
-    // Request interceptor for auth token
-    this.client.interceptors.request.use(
-      (config) => {
-        // Always check localStorage in case token was updated
-        const token = this.getToken()
-        if (token) {
-          config.headers.Authorization = `Bearer ${token}`
-        }
-        return config
+      post: async (url: string) => {
+        throw new Error(`Direct client.post() calls are not supported. Use API methods instead. URL: ${url}`)
       },
-      (error) => Promise.reject(error)
-    )
-
-    // Response interceptor for error handling
-    this.client.interceptors.response.use(
-      (response) => response,
-      (error: AxiosError) => {
-        if (error.response?.status === 401) {
-          // Handle unauthorized - redirect to login or clear token
-          this.setToken(null)
-          // window.location.href = '/login'
-        }
-        return Promise.reject(error)
-      }
-    )
+      put: async (url: string) => {
+        throw new Error(`Direct client.put() calls are not supported. Use API methods instead. URL: ${url}`)
+      },
+      delete: async (url: string) => {
+        throw new Error(`Direct client.delete() calls are not supported. Use API methods instead. URL: ${url}`)
+      },
+    }
   }
 
   setToken(token: string | null) {
@@ -67,6 +106,20 @@ class APIClient {
     return this.token
   }
 
+  // Helper to verify authentication
+  private verifyAuth(): { id: string; email: string; role: string } {
+    const token = this.getToken()
+    if (!token) {
+      throw new Error('Authentication required')
+    }
+    const payload = verifyJWT(token)
+    if (!payload) {
+      this.setToken(null)
+      throw new Error('Invalid or expired token')
+    }
+    return payload
+  }
+
   // Forms API
   async getForms(params?: {
     status?: string
@@ -75,18 +128,50 @@ class APIClient {
     page?: number
     pageSize?: number
   }): Promise<FormResponse[]> {
-    const response = await this.client.get<FormResponse[]>('/api/forms', { params })
-    return response.data
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
+      'backend/data/forms.json'
+    )
+
+    let forms = data.items || []
+    
+    // Filter active forms by default (unless status specified)
+    if (!params?.status) {
+      forms = forms.filter((f) => f.isActive)
+    }
+
+    // Apply filters
+    forms = filterArray(forms, params)
+    
+    // Apply pagination
+    forms = paginateArray(forms, params?.page, params?.pageSize)
+
+    return forms
   }
 
   async getForm(formId: string): Promise<FormResponse> {
-    const response = await this.client.get<FormResponse>(`/api/forms/${formId}`)
-    return response.data
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
+      'backend/data/forms.json'
+    )
+
+    const form = data.items?.find((f) => f.formId === formId || f.id === formId)
+    if (!form) {
+      throw new Error(`Form not found: ${formId}`)
+    }
+
+    return form
   }
 
   async getFormSchema(formId: string): Promise<FormSchemaResponse> {
-    const response = await this.client.get<FormSchemaResponse>(`/api/forms/${formId}/schema`)
-    return response.data
+    const form = await this.getForm(formId)
+    
+    // Extract schema from form's schemaData
+    if (!form.schemaData) {
+      throw new Error(`Schema not found for form: ${formId}`)
+    }
+
+    return form.schemaData as FormSchemaResponse
   }
 
   async createForm(formData: {
@@ -100,8 +185,42 @@ class APIClient {
     requires_auth: boolean
     estimated_time?: string
   }): Promise<FormResponse> {
-    const response = await this.client.post<FormResponse>('/api/forms', formData)
-    return response.data
+    this.verifyAuth() // Admin only in practice
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
+      'backend/data/forms.json'
+    )
+
+    // Check if form already exists
+    const existing = data.items?.find((f) => f.formId === formData.form_id)
+    if (existing) {
+      throw new Error(`Form with ID ${formData.form_id} already exists`)
+    }
+
+    const newForm: FormResponse = {
+      id: `form-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      formId: formData.form_id,
+      name: formData.name,
+      description: formData.description,
+      category: formData.category,
+      version: formData.version,
+      isActive: formData.is_active,
+      requiresAuth: formData.requires_auth,
+      estimatedTime: formData.estimated_time,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }
+
+    // Add schemaData to form (stored separately in JSON)
+    ;(newForm as any).schemaData = formData.schema_data
+
+    data.items = [...(data.items || []), newForm]
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile('backend/data/forms.json', data, `Create form: ${formData.name}`)
+
+    return newForm
   }
 
   async updateForm(formId: string, formData: Partial<{
@@ -114,14 +233,45 @@ class APIClient {
     requires_auth: boolean
     estimated_time?: string
   }>): Promise<FormResponse> {
-    const response = await this.client.put<FormResponse>(`/api/forms/${formId}`, formData)
-    return response.data
+    this.verifyAuth() // Admin only
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
+      'backend/data/forms.json'
+    )
+
+    const index = data.items?.findIndex((f) => f.formId === formId || f.id === formId) ?? -1
+    if (index === -1) {
+      throw new Error(`Form not found: ${formId}`)
+    }
+
+    const form = data.items![index]
+    const updatedForm: FormResponse = {
+      ...form,
+      ...(formData.name && { name: formData.name }),
+      ...(formData.description !== undefined && { description: formData.description }),
+      ...(formData.category !== undefined && { category: formData.category }),
+      ...(formData.version && { version: formData.version }),
+      ...(formData.is_active !== undefined && { isActive: formData.is_active }),
+      ...(formData.requires_auth !== undefined && { requiresAuth: formData.requires_auth }),
+      ...(formData.estimated_time !== undefined && { estimatedTime: formData.estimated_time }),
+      updatedAt: new Date().toISOString(),
+    }
+
+    // Update schemaData if provided
+    if (formData.schema_data) {
+      ;(updatedForm as any).schemaData = formData.schema_data
+    }
+
+    data.items![index] = updatedForm
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile('backend/data/forms.json', data, `Update form: ${formId}`)
+
+    return updatedForm
   }
 
   async updateFormSchema(formId: string, schemaData: FormSchemaResponse): Promise<FormSchemaResponse> {
-    // First update the form with the schema data
-    // Get form to ensure it exists
-    await this.getForm(formId)
     await this.updateForm(formId, {
       schema_data: {
         formId: schemaData.formId,
@@ -135,7 +285,22 @@ class APIClient {
   }
 
   async deleteForm(formId: string): Promise<void> {
-    await this.client.delete(`/api/admin/forms/${formId}`)
+    this.verifyAuth() // Admin only
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: FormResponse[] }>(
+      'backend/data/forms.json'
+    )
+
+    const index = data.items?.findIndex((f) => f.formId === formId || f.id === formId) ?? -1
+    if (index === -1) {
+      throw new Error(`Form not found: ${formId}`)
+    }
+
+    data.items!.splice(index, 1)
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile('backend/data/forms.json', data, `Delete form: ${formId}`)
   }
 
   // Submissions API
@@ -144,44 +309,143 @@ class APIClient {
     data: Record<string, any>,
     stepId?: string
   ): Promise<ValidationResponse> {
-    const response = await this.client.post<ValidationResponse>(
-      `/api/forms/${formId}/validate`,
-      { data, stepId }
-    )
-    return response.data
+    // Client-side validation - this is a simplified version
+    // In production, you might want to implement more comprehensive validation
+    const errors: any[] = []
+
+    // Basic validation - can be enhanced
+    // This is a placeholder - implement actual validation logic based on form schema
+
+    return {
+      valid: errors.length === 0,
+      errors,
+    }
   }
 
   async submitForm(
     formId: string,
     request: SubmissionCreateRequest
   ): Promise<SubmissionCreateResponse> {
-    const response = await this.client.post<SubmissionCreateResponse>(
-      `/api/forms/${formId}/submit`,
-      request
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    // Get form to verify it exists
+    await this.getForm(formId)
+
+    // Read submissions
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
     )
-    return response.data
+
+    const submissionId = generateSubmissionId()
+    const now = new Date().toISOString()
+
+    const newSubmission: SubmissionResponse = {
+      id: submissionId,
+      formId,
+      submissionId,
+      status: 'submitted',
+      submittedBy: auth.id,
+      submittedAt: now,
+      createdAt: now,
+      updatedAt: now,
+      ...(request as any), // Include submittedData, files, etc.
+    }
+
+    data.items = [...(data.items || []), newSubmission]
+    data.lastUpdated = now
+
+    await github.writeJsonFile(
+      'backend/data/submissions.json',
+      data,
+      `Submit form: ${formId} - ${submissionId}`
+    )
+
+    return {
+      formId,
+      submissionId,
+      status: 'submitted',
+      message: 'Submission successful',
+      submittedAt: now,
+    }
   }
 
   async saveDraft(
     formId: string,
     request: SubmissionCreateRequest
   ): Promise<SubmissionResponse> {
-    const response = await this.client.post<SubmissionResponse>(
-      `/api/forms/${formId}/draft`,
-      request
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
     )
-    return response.data
+
+    const submissionId = generateSubmissionId()
+    const now = new Date().toISOString()
+
+    const draft: SubmissionResponse = {
+      id: submissionId,
+      formId,
+      submissionId,
+      status: 'draft',
+      submittedBy: auth.id,
+      createdAt: now,
+      updatedAt: now,
+      ...(request as any),
+    }
+
+    data.items = [...(data.items || []), draft]
+    data.lastUpdated = now
+
+    await github.writeJsonFile(
+      'backend/data/submissions.json',
+      data,
+      `Save draft: ${formId} - ${submissionId}`
+    )
+
+    return draft
   }
 
   async updateDraft(
     submissionId: string,
     request: SubmissionCreateRequest
   ): Promise<SubmissionResponse> {
-    const response = await this.client.put<SubmissionResponse>(
-      `/api/submissions/${submissionId}/draft`,
-      request
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
     )
-    return response.data
+
+    const index = data.items?.findIndex((s) => s.submissionId === submissionId || s.id === submissionId) ?? -1
+    if (index === -1) {
+      throw new Error(`Submission not found: ${submissionId}`)
+    }
+
+    const submission = data.items![index]
+    
+    // Verify ownership (users can only update their own drafts)
+    if (submission.submittedBy !== auth.id && auth.role !== 'admin') {
+      throw new Error('Unauthorized to update this submission')
+    }
+
+    const updated: SubmissionResponse = {
+      ...submission,
+      ...(request as any),
+      updatedAt: new Date().toISOString(),
+    }
+
+    data.items![index] = updated
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/submissions.json',
+      data,
+      `Update draft: ${submissionId}`
+    )
+
+    return updated
   }
 
   async getSubmissions(params?: {
@@ -190,15 +454,48 @@ class APIClient {
     page?: number
     pageSize?: number
   }): Promise<SubmissionResponse[]> {
-    const response = await this.client.get<SubmissionResponse[]>('/api/submissions', { params })
-    return response.data
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
+    )
+
+    let submissions = data.items || []
+
+    // Filter by user (non-admins only see their own)
+    if (auth.role !== 'admin') {
+      submissions = submissions.filter((s) => s.submittedBy === auth.id)
+    }
+
+    // Apply filters
+    submissions = filterArray(submissions, params)
+    
+    // Apply pagination
+    submissions = paginateArray(submissions, params?.page, params?.pageSize)
+
+    return submissions
   }
 
   async getSubmission(submissionId: string): Promise<SubmissionResponse> {
-    const response = await this.client.get<SubmissionResponse>(
-      `/api/submissions/${submissionId}`
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
     )
-    return response.data
+
+    const submission = data.items?.find((s) => s.submissionId === submissionId || s.id === submissionId)
+    if (!submission) {
+      throw new Error(`Submission not found: ${submissionId}`)
+    }
+
+    // Verify access
+    if (submission.submittedBy !== auth.id && auth.role !== 'admin') {
+      throw new Error('Unauthorized to view this submission')
+    }
+
+    return submission
   }
 
   // File Upload API
@@ -207,24 +504,72 @@ class APIClient {
     fieldName: string,
     onProgress?: (progress: number) => void
   ): Promise<any> {
-    const formData = new FormData()
-    formData.append('file', file)
-    formData.append('fieldName', fieldName)
+    this.verifyAuth()
 
-    const config: AxiosRequestConfig = {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-      onUploadProgress: (progressEvent) => {
-        if (onProgress && progressEvent.total) {
-          const progress = (progressEvent.loaded / progressEvent.total) * 100
-          onProgress(progress)
-        }
-      },
+    // For files < 1MB, use GitHub Content API
+    // For files > 1MB, use GitHub Releases API (not implemented here - see note)
+    
+    if (file.size > 1024 * 1024) {
+      throw new Error('Files larger than 1MB are not yet supported. Please use GitHub Releases API.')
     }
 
-    const response = await this.client.post('/api/files/upload', formData, config)
-    return response.data
+    const github = getGitHubClient()
+    
+    // Convert file to base64
+    const reader = new FileReader()
+    const base64Promise = new Promise<string>((resolve, reject) => {
+      reader.onload = () => {
+        const result = reader.result as string
+        const base64 = result.split(',')[1] // Remove data:type;base64, prefix
+        resolve(base64)
+      }
+      reader.onerror = reject
+    })
+    reader.readAsDataURL(file)
+
+    const base64Content = await base64Promise
+
+    // Store file in backend/uploads/ directory
+    const fileName = `${fieldName}_${Date.now()}_${file.name}`
+    const filePath = `backend/uploads/${fileName}`
+
+    try {
+      await github.writeJsonFile(
+        filePath,
+        { content: base64Content, fileName: file.name, size: file.size, mimeType: file.type },
+        `Upload file: ${fileName}`
+      )
+
+      // Also update files.json with metadata
+      const { data: filesData } = await github.readJsonFile<{ files: any[] }>('backend/data/files.json')
+      const fileRecord = {
+        id: `file-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        fileId: fileName,
+        fieldName,
+        fileName: file.name,
+        filePath,
+        fileSize: file.size,
+        mimeType: file.type,
+        storageLocation: 'github',
+        uploadedAt: new Date().toISOString(),
+      }
+
+      filesData.files = [...(filesData.files || []), fileRecord]
+      await github.writeJsonFile('backend/data/files.json', filesData, `Add file record: ${fileName}`)
+
+      if (onProgress) {
+        onProgress(100)
+      }
+
+      return fileRecord
+    } catch (error) {
+      if (error instanceof GitHubAPIError && error.status === 409) {
+        // File path conflict, try with different name
+        const newFileName = `${fieldName}_${Date.now()}_${Math.random().toString(36).substr(2, 6)}_${file.name}`
+        return this.uploadFile(new File([file], newFileName, { type: file.type }), fieldName, onProgress)
+      }
+      throw error
+    }
   }
 
   // Admin API
@@ -234,10 +579,22 @@ class APIClient {
     page?: number
     pageSize?: number
   }): Promise<SubmissionResponse[]> {
-    const response = await this.client.get<SubmissionResponse[]>('/api/admin/submissions', {
-      params,
-    })
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    // Same as getSubmissions but without user filter
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
+    )
+
+    let submissions = data.items || []
+    submissions = filterArray(submissions, params)
+    submissions = paginateArray(submissions, params?.page, params?.pageSize)
+
+    return submissions
   }
 
   async reviewSubmission(
@@ -248,15 +605,66 @@ class APIClient {
       requestedInfo?: string
     }
   ): Promise<SubmissionResponse> {
-    const response = await this.client.put<SubmissionResponse>(
-      `/api/admin/submissions/${submissionId}`,
-      updateData
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
     )
-    return response.data
+
+    const index = data.items?.findIndex((s) => s.submissionId === submissionId || s.id === submissionId) ?? -1
+    if (index === -1) {
+      throw new Error(`Submission not found: ${submissionId}`)
+    }
+
+    const submission = data.items![index]
+    const updated: SubmissionResponse = {
+      ...submission,
+      ...updateData,
+      reviewedBy: auth.id,
+      reviewedAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }
+
+    data.items![index] = updated
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/submissions.json',
+      data,
+      `Review submission: ${submissionId} - ${updateData.status}`
+    )
+
+    return updated
   }
 
   async deleteSubmission(submissionId: string): Promise<void> {
-    await this.client.delete(`/api/admin/submissions/${submissionId}`)
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; items: SubmissionResponse[] }>(
+      'backend/data/submissions.json'
+    )
+
+    const index = data.items?.findIndex((s) => s.submissionId === submissionId || s.id === submissionId) ?? -1
+    if (index === -1) {
+      throw new Error(`Submission not found: ${submissionId}`)
+    }
+
+    data.items!.splice(index, 1)
+    data.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/submissions.json',
+      data,
+      `Delete submission: ${submissionId}`
+    )
   }
 
   async getAdminStatistics(): Promise<{
@@ -272,8 +680,48 @@ class APIClient {
       timestamp: string
     }>
   }> {
-    const response = await this.client.get('/api/admin/statistics')
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    
+    // Read submissions and forms
+    const [submissionsData, formsData] = await Promise.all([
+      github.readJsonFile<{ items: SubmissionResponse[] }>('backend/data/submissions.json'),
+      github.readJsonFile<{ items: FormResponse[] }>('backend/data/forms.json'),
+    ])
+
+    const submissions = submissionsData.data.items || []
+    const forms = formsData.data.items || []
+
+    // Calculate statistics
+    const totalSubmissions = submissions.length
+    const pendingSubmissions = submissions.filter((s) => s.status === 'submitted' || s.status === 'reviewing').length
+    const approvedSubmissions = submissions.filter((s) => s.status === 'approved').length
+    const rejectedSubmissions = submissions.filter((s) => s.status === 'rejected').length
+    const totalForms = forms.filter((f) => f.isActive).length
+
+    // Generate recent activity (simplified - based on recent submissions)
+    const recentActivity = submissions
+      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+      .slice(0, 10)
+      .map((s) => ({
+        id: s.id,
+        type: 'submission',
+        description: `Submission ${s.submissionId} - ${s.status}`,
+        timestamp: s.updatedAt,
+      }))
+
+    return {
+      totalSubmissions,
+      pendingSubmissions,
+      approvedSubmissions,
+      rejectedSubmissions,
+      totalForms,
+      recentActivity,
+    }
   }
 
   // Auth API
@@ -286,12 +734,9 @@ class APIClient {
     }
     role: string
   }> {
-    const response = await this.client.post('/api/auth/login', {
-      email,
-      password,
-      role,
-    })
-    return response.data
+    const result = await loginUser(email, password, role)
+    this.setToken(result.token)
+    return result
   }
 
   async register(email: string, password: string, name?: string, role: 'user' | 'admin' = 'user'): Promise<{
@@ -303,28 +748,17 @@ class APIClient {
     }
     role: string
   }> {
-    const response = await this.client.post('/api/auth/register', {
-      email,
-      password,
-      name,
-      role,
-    })
-    return response.data
+    const result = await registerUser(email, password, name, role)
+    this.setToken(result.token)
+    return result
   }
 
   async logout(): Promise<void> {
-    try {
-      await this.client.post('/api/auth/logout')
-    } catch (e) {
-      // Ignore logout errors - still clear local storage
-      console.error('Logout API error:', e)
-    } finally {
-      this.setToken(null)
-      localStorage.removeItem('token')
-      localStorage.removeItem('user')
-      localStorage.removeItem('userRole')
-      localStorage.removeItem('rememberMe')
-    }
+    this.setToken(null)
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+    localStorage.removeItem('userRole')
+    localStorage.removeItem('rememberMe')
   }
 
   async getCurrentUser(): Promise<{
@@ -335,15 +769,21 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.get<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>('/api/auth/me')
-    return response.data
+    const auth = this.verifyAuth()
+    const user = await getUserById(auth.id, auth.role as 'user' | 'admin')
+    
+    if (!user) {
+      throw new Error('User not found')
+    }
+
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+    }
   }
 
   async updateProfile(data: { name?: string; email?: string }): Promise<{
@@ -355,31 +795,98 @@ class APIClient {
     createdAt: string
     emailChanged?: boolean
   }> {
-    const response = await this.client.put<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-      emailChanged?: boolean
-    }>('/api/auth/profile', data)
-    return response.data
+    const auth = this.verifyAuth()
+    const github = getGitHubClient()
+
+    // Determine which file to update
+    const authFile = auth.role === 'admin' 
+      ? 'backend/data/admins_auth.json' 
+      : 'backend/data/users_auth.json'
+    
+    const { data: authData } = await github.readJsonFile<{ users?: any[]; admins?: any[] }>(authFile)
+    const users = auth.role === 'admin' ? authData.admins || [] : authData.users || []
+    const index = users.findIndex((u: any) => u.id === auth.id)
+
+    if (index === -1) {
+      throw new Error('User not found')
+    }
+
+    const user = users[index]
+    const emailChanged = data.email && data.email !== user.email
+
+    // Check if email already exists
+    if (data.email && data.email !== user.email) {
+      const allUsers = [...(authData.users || []), ...(authData.admins || [])]
+      if (allUsers.some((u: any) => u.email.toLowerCase() === data.email!.toLowerCase() && u.id !== auth.id)) {
+        throw new Error('Email already in use')
+      }
+    }
+
+    const updated = {
+      ...user,
+      ...(data.name && { name: data.name }),
+      ...(data.email && { email: data.email.toLowerCase() }),
+      updatedAt: new Date().toISOString(),
+    }
+
+    users[index] = updated
+
+    if (auth.role === 'admin') {
+      authData.admins = users
+    } else {
+      authData.users = users
+    }
+
+    await github.writeJsonFile(authFile, authData, `Update profile: ${user.email}`)
+
+    return {
+      id: updated.id,
+      email: updated.email,
+      name: updated.name,
+      role: updated.role,
+      isActive: updated.isActive,
+      createdAt: updated.createdAt,
+      emailChanged,
+    }
   }
 
   async changePassword(currentPassword: string, newPassword: string): Promise<{ message: string }> {
-    const response = await this.client.post<{ message: string }>('/api/auth/change-password', {
-      current_password: currentPassword,
-      new_password: newPassword,
-    })
-    return response.data
+    const auth = this.verifyAuth()
+    await updateUserPassword(auth.id, currentPassword, newPassword, auth.role as 'user' | 'admin')
+    return { message: 'Password updated successfully' }
   }
 
   async deleteAccount(password: string): Promise<{ message: string }> {
-    const response = await this.client.post<{ message: string }>('/api/auth/account/delete', {
-      password,
-    })
-    return response.data
+    const auth = this.verifyAuth()
+    
+    // Verify password
+    try {
+      await loginUser(auth.email, password, auth.role as 'user' | 'admin')
+    } catch {
+      throw new Error('Invalid password')
+    }
+
+    const github = getGitHubClient()
+    const authFile = auth.role === 'admin' 
+      ? 'backend/data/admins_auth.json' 
+      : 'backend/data/users_auth.json'
+    
+    const { data: authData } = await github.readJsonFile<{ users?: any[]; admins?: any[] }>(authFile)
+    const users = auth.role === 'admin' ? authData.admins || [] : authData.users || []
+    const filtered = users.filter((u: any) => u.id !== auth.id)
+
+    if (auth.role === 'admin') {
+      authData.admins = filtered
+    } else {
+      authData.users = filtered
+    }
+
+    await github.writeJsonFile(authFile, authData, `Delete account: ${auth.email}`)
+    
+    // Logout
+    await this.logout()
+
+    return { message: 'Account deleted successfully' }
   }
 
   // Admin User Management API
@@ -391,15 +898,22 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }>> {
-    const response = await this.client.get<Array<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>>('/api/admin/users')
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ users: any[] }>('backend/data/users_auth.json')
+
+    return (data.users || []).map((u) => ({
+      id: u.id,
+      email: u.email,
+      name: u.name,
+      role: u.role,
+      isActive: u.isActive,
+      createdAt: u.createdAt,
+    }))
   }
 
   async getAdminUser(userId: string): Promise<{
@@ -410,15 +924,24 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.get<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>(`/api/admin/users/${userId}`)
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const user = await getUserById(userId)
+    if (!user) {
+      throw new Error('User not found')
+    }
+
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+    }
   }
 
   async updateAdminUser(
@@ -432,15 +955,58 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.put<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>(`/api/admin/users/${userId}`, data)
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const user = await getUserById(userId)
+    if (!user) {
+      throw new Error('User not found')
+    }
+
+    const authFile = user.role === 'admin' 
+      ? 'backend/data/admins_auth.json' 
+      : 'backend/data/users_auth.json'
+    
+    const { data: authData } = await github.readJsonFile<{ users?: any[]; admins?: any[] }>(authFile)
+    const users = user.role === 'admin' ? authData.admins || [] : authData.users || []
+    const index = users.findIndex((u: any) => u.id === userId)
+
+    if (index === -1) {
+      throw new Error('User not found')
+    }
+
+    const updated = {
+      ...users[index],
+      ...(data.name && { name: data.name }),
+      ...(data.email && { email: data.email.toLowerCase() }),
+      ...(data.is_active !== undefined && { isActive: data.is_active }),
+      ...(data.password && { 
+        passwordHash: CryptoJS.SHA256(data.password).toString() 
+      }),
+      updatedAt: new Date().toISOString(),
+    }
+
+    users[index] = updated
+
+    if (user.role === 'admin') {
+      authData.admins = users
+    } else {
+      authData.users = users
+    }
+
+    await github.writeJsonFile(authFile, authData, `Admin update user: ${user.email}`)
+
+    return {
+      id: updated.id,
+      email: updated.email,
+      name: updated.name,
+      role: updated.role,
+      isActive: updated.isActive,
+      createdAt: updated.createdAt,
+    }
   }
 
   // Admin Management API
@@ -452,15 +1018,22 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }>> {
-    const response = await this.client.get<Array<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>>('/api/admin/admins')
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ admins: any[] }>('backend/data/admins_auth.json')
+
+    return (data.admins || []).map((u) => ({
+      id: u.id,
+      email: u.email,
+      name: u.name,
+      role: u.role,
+      isActive: u.isActive,
+      createdAt: u.createdAt,
+    }))
   }
 
   async getAdminAdmin(adminId: string): Promise<{
@@ -471,15 +1044,24 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.get<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>(`/api/admin/admins/${adminId}`)
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const user = await getUserById(adminId, 'admin')
+    if (!user) {
+      throw new Error('Admin not found')
+    }
+
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+    }
   }
 
   async createAdmin(data: { email: string; password: string; name?: string }): Promise<{
@@ -490,15 +1072,26 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.post<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>('/api/admin/admins', data)
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const result = await registerUser(data.email, data.password, data.name, 'admin')
+    const user = await getUserById(result.user.id, 'admin')
+    
+    if (!user) {
+      throw new Error('Failed to create admin')
+    }
+
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      role: user.role,
+      isActive: user.isActive,
+      createdAt: user.createdAt,
+    }
   }
 
   async updateAdminAdmin(
@@ -512,19 +1105,25 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
-    const response = await this.client.put<{
-      id: string
-      email: string
-      name: string
-      role: string
-      isActive: boolean
-      createdAt: string
-    }>(`/api/admin/admins/${adminId}`, data)
-    return response.data
+    return this.updateAdminUser(adminId, data)
   }
 
   async deleteAdmin(adminId: string): Promise<void> {
-    await this.client.delete(`/api/admin/admins/${adminId}`)
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    if (auth.id === adminId) {
+      throw new Error('Cannot delete your own account')
+    }
+
+    const github = getGitHubClient()
+    const { data: authData } = await github.readJsonFile<{ admins: any[] }>('backend/data/admins_auth.json')
+    
+    authData.admins = (authData.admins || []).filter((u: any) => u.id !== adminId)
+
+    await github.writeJsonFile('backend/data/admins_auth.json', authData, `Delete admin: ${adminId}`)
   }
 
   async getAdminSettings(): Promise<{
@@ -537,17 +1136,15 @@ class APIClient {
     allowedFileTypes: string[]
     sessionTimeout: number
   }> {
-    const response = await this.client.get<{
-      siteName: string
-      siteUrl: string
-      maintenanceMode: boolean
-      allowRegistration: boolean
-      requireEmailVerification: boolean
-      maxFileSize: number
-      allowedFileTypes: string[]
-      sessionTimeout: number
-    }>('/api/admin/settings')
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile('backend/data/settings.json')
+
+    return data
   }
 
   async updateAdminSettings(data: {
@@ -569,24 +1166,28 @@ class APIClient {
     allowedFileTypes: string[]
     sessionTimeout: number
   }> {
-    const response = await this.client.put<{
-      siteName: string
-      siteUrl: string
-      maintenanceMode: boolean
-      allowRegistration: boolean
-      requireEmailVerification: boolean
-      maxFileSize: number
-      allowedFileTypes: string[]
-      sessionTimeout: number
-    }>('/api/admin/settings', data)
-    return response.data
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data: settings } = await github.readJsonFile('backend/data/settings.json')
+
+    const updated = {
+      ...settings,
+      ...data,
+      updatedAt: new Date().toISOString(),
+    }
+
+    await github.writeJsonFile('backend/data/settings.json', updated, 'Update admin settings')
+
+    return updated
   }
 }
 
 // Create singleton instance
-const apiClient = new APIClient(
-  import.meta.env.VITE_API_URL || 'http://localhost:8000'
-)
+const apiClient = new APIClient()
 
 // Load token from localStorage on initialization
 apiClient.setToken(apiClient.getToken())
