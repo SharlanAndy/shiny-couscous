@@ -1050,7 +1050,30 @@ class APIClient {
     await this.checkPermission('manage_users')
     const auth = this.verifyAuth()
 
+    // Use backend API if GitHub is not configured
+    if (this.useBackendAPI && this.backendClient) {
+      try {
+        const response = await this.backendClient.get('/api/admin/users')
+        return response.data.map((u: any) => ({
+          id: u.id,
+          email: u.email,
+          name: u.name,
+          role: u.role || 'user',
+          isActive: u.isActive !== undefined ? u.isActive : true,
+          createdAt: u.createdAt,
+        }))
+      } catch (error: any) {
+        // If backend API fails, try GitHub API as fallback
+        console.warn('Backend API failed, trying GitHub API:', error.message)
+      }
+    }
+
+    // Use GitHub API (works on GitHub Pages and localhost if configured)
     const github = this.getGitHubClientOrThrow()
+    if (!github) {
+      throw new Error('No API client available')
+    }
+    
     const { data } = await github.readJsonFile<{ users: any[] }>('backend/data/users_auth.json')
 
     return (data.users || []).map((u) => ({
