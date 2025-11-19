@@ -5,6 +5,16 @@
  * in the repository. This replaces the FastAPI backend.
  */
 
+import {
+  splitDataIntoChunks,
+  mergeChunksIntoData,
+  getSplitFilePaths,
+  isSplitFile,
+  getBasePathFromSplit,
+  estimateJsonSize,
+  MAX_FILE_SIZE,
+} from './github-client-split'
+
 export interface GitHubFileResponse {
   sha: string
   content: string
@@ -82,8 +92,57 @@ export class GitHubClient {
 
   /**
    * Read a JSON file from GitHub repository
+   * Automatically handles split files (e.g., forms.0.json, forms.1.json)
    */
   async readJsonFile<T = any>(path: string, useCache = true): Promise<{ data: T; sha: string }> {
+    // Check cache first
+    if (useCache) {
+      const cached = this.cache.get(path)
+      if (cached && Date.now() - cached.timestamp < this.cacheTTL) {
+        return { data: cached.data, sha: cached.sha }
+      }
+    }
+
+    // Check if this is a split file - if so, read all chunks and merge
+    if (isSplitFile(path)) {
+      return this.readSplitFile<T>(path, useCache)
+    }
+
+    // Check if split files exist for this base path
+    const splitPaths = getSplitFilePaths(path, 100)
+    const existingSplitFiles: Array<{ path: string; data: T; sha: string }> = []
+    
+    // Try to read split files first (forms.0.json, forms.1.json, etc.)
+    for (const splitPath of splitPaths) {
+      try {
+        const result = await this.readSingleFile<T>(splitPath)
+        existingSplitFiles.push({ path: splitPath, ...result })
+      } catch (error) {
+        // File doesn't exist, stop checking
+        break
+      }
+    }
+
+    // If we found split files, merge them
+    if (existingSplitFiles.length > 0) {
+      const merged = mergeChunksIntoData<T>(existingSplitFiles.map(f => ({ path: f.path, data: f.data })))
+      const firstSha = existingSplitFiles[0].sha // Use first chunk's SHA for cache
+      
+      if (useCache) {
+        this.cache.set(path, { data: merged, sha: firstSha, timestamp: Date.now() })
+      }
+      
+      return { data: merged, sha: firstSha }
+    }
+
+    // No split files found, read as normal file
+    return this.readSingleFile<T>(path, useCache)
+  }
+
+  /**
+   * Read a single JSON file (internal method)
+   */
+  private async readSingleFile<T = any>(path: string, useCache = true): Promise<{ data: T; sha: string }> {
     // Check cache first
     if (useCache) {
       const cached = this.cache.get(path)
@@ -246,9 +305,87 @@ export class GitHubClient {
   }
 
   /**
+   * Read a split file (when path is already a split file like forms.0.json)
+   */
+  private async readSplitFile<T = any>(path: string, useCache = true): Promise<{ data: T; sha: string }> {
+    const basePath = getBasePathFromSplit(path)
+    return this.readJsonFile<T>(basePath, useCache)
+  }
+
+  /**
    * Write/Update a JSON file in GitHub repository
+   * Automatically splits large files into chunks if they exceed size limit
    */
   async writeJsonFile<T = any>(
+    path: string,
+    content: T,
+    message: string,
+    sha?: string,
+    retries = 3
+  ): Promise<void> {
+    // Check if file needs to be split
+    const estimatedSize = estimateJsonSize(content)
+    const needsSplit = estimatedSize > MAX_FILE_SIZE
+
+    if (needsSplit) {
+      // Split into chunks
+      const chunks = splitDataIntoChunks(content, path)
+      
+      if (chunks.length > 1) {
+        // Write all chunks
+        await Promise.all(
+          chunks.map((chunk: { path: string; data: T; chunkIndex?: number }, index: number) => {
+            const chunkMessage = `${message} (chunk ${(chunk.chunkIndex ?? index) + 1}/${chunks.length})`
+            return this.writeSingleFile(chunk.path, chunk.data, chunkMessage, undefined, retries)
+          })
+        )
+
+        // Delete old main file if it exists (to avoid confusion)
+        try {
+          const current = await this.readSingleFile(path, false)
+          if (current.sha) {
+            await this.deleteJsonFile(path, `Remove old file after splitting into ${chunks.length} chunks`)
+          }
+        } catch (error) {
+          // File doesn't exist, that's fine
+        }
+
+        // Delete any old split files beyond the new count
+        const splitPaths = getSplitFilePaths(path, 100)
+        for (let i = chunks.length; i < splitPaths.length; i++) {
+          try {
+            await this.deleteJsonFile(splitPaths[i], `Remove old split chunk ${i} after resplitting`)
+          } catch (error) {
+            // File doesn't exist, that's fine
+          }
+        }
+
+        // Invalidate cache
+        this.cache.delete(path)
+        chunks.forEach((chunk: { path: string; data: T }) => this.cache.delete(chunk.path))
+        
+        return
+      }
+    }
+
+    // File doesn't need splitting or is single chunk, write normally
+    // But first check if old split files exist and delete them
+    const splitPaths = getSplitFilePaths(path, 100)
+    for (const splitPath of splitPaths) {
+      try {
+        await this.deleteJsonFile(splitPath, `Remove split files after consolidating into single file`)
+      } catch (error) {
+        // File doesn't exist, that's fine
+      }
+    }
+
+    await this.writeSingleFile(path, content, message, sha, retries)
+  }
+
+  /**
+   * Write a single JSON file (internal method)
+   */
+  private async writeSingleFile<T = any>(
     path: string,
     content: T,
     message: string,
@@ -259,7 +396,7 @@ export class GitHubClient {
     let currentSha = sha
     if (!currentSha) {
       try {
-        const current = await this.readJsonFile(path, false)
+        const current = await this.readSingleFile(path, false)
         currentSha = current.sha
       } catch (error) {
         if (error instanceof GitHubAPIError && error.status === 404) {
@@ -301,8 +438,8 @@ export class GitHubClient {
           // Conflict - file changed, retry with new SHA
           console.warn(`Conflict writing ${path}, retrying... (${retries} retries left)`)
           await this.delay(1000) // Wait 1 second before retry
-          const current = await this.readJsonFile(path, false)
-          return this.writeJsonFile(path, content, message, current.sha, retries - 1)
+          const current = await this.readSingleFile(path, false)
+          return this.writeSingleFile(path, content, message, current.sha, retries - 1)
         }
         await this.handleError(response)
       }
