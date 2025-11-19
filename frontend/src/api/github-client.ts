@@ -93,59 +93,58 @@ export class GitHubClient {
 
     try {
       const url = `${this.baseURL}/repos/${this.owner}/${this.repo}/contents/${path}`
-      const response = await fetch(url, {
-        headers: this.getHeaders(true),
+      
+      // First, get metadata (includes SHA) using JSON accept header
+      const metaResponse = await fetch(url, {
+        headers: this.getHeaders(false),
       })
 
-      if (!response.ok) {
-        if (response.status === 404) {
+      if (!metaResponse.ok) {
+        if (metaResponse.status === 404) {
           // File doesn't exist, return empty structure
           return { data: {} as T, sha: '' }
         }
-        await this.handleError(response)
+        await this.handleError(metaResponse)
       }
 
-      const text = await response.text()
-      let data: T
+      // Parse metadata response
+      const meta: GitHubFileResponse = await metaResponse.json()
+      const sha = meta.sha || ''
       
-      if (text.trim() === '') {
-        data = {} as T
-      } else {
-        try {
-          data = JSON.parse(text)
-        } catch (parseError) {
-          console.error(`Failed to parse JSON from ${path}:`, parseError)
-          throw new GitHubAPIError(422, `Invalid JSON in file: ${path}`)
-        }
+      if (!sha) {
+        console.error(`File exists but SHA is missing in metadata for ${path}`, meta)
+        throw new GitHubAPIError(500, `Could not retrieve SHA for existing file: ${path}`)
       }
 
-      // Get SHA from metadata endpoint (needed for updates)
-      // Use the same endpoint but with JSON accept header to get metadata including SHA
-      let sha = ''
+      // Now get the actual file content using raw accept header
+      let data: T
       try {
-        const metaResponse = await fetch(url, {
-          headers: this.getHeaders(false),
+        const contentResponse = await fetch(url, {
+          headers: this.getHeaders(true),
         })
         
-        if (metaResponse.ok) {
-          const meta: GitHubFileResponse = await metaResponse.json()
-          sha = meta.sha || ''
-          if (!sha) {
-            console.error(`File exists but SHA is missing for ${path}`)
-            throw new GitHubAPIError(500, `Could not retrieve SHA for existing file: ${path}`)
-          }
+        if (!contentResponse.ok) {
+          throw new GitHubAPIError(contentResponse.status, `Failed to get file content: ${path}`)
+        }
+
+        const text = await contentResponse.text()
+        
+        if (text.trim() === '') {
+          data = {} as T
         } else {
-          // If file exists (first request succeeded) but metadata request fails, this is an error
-          console.error(`Failed to get metadata for ${path}: ${metaResponse.status} ${metaResponse.statusText}`)
-          throw new GitHubAPIError(metaResponse.status, `Could not retrieve file metadata: ${path}`)
+          try {
+            data = JSON.parse(text)
+          } catch (parseError) {
+            console.error(`Failed to parse JSON from ${path}:`, parseError)
+            throw new GitHubAPIError(422, `Invalid JSON in file: ${path}`)
+          }
         }
       } catch (error) {
-        // If file exists (we got content), we MUST have SHA to update it
         if (error instanceof GitHubAPIError) {
           throw error
         }
-        console.error(`Error getting SHA for ${path}:`, error)
-        throw new GitHubAPIError(500, `Failed to retrieve SHA for file: ${path}`)
+        console.error(`Error getting file content for ${path}:`, error)
+        throw new GitHubAPIError(500, `Failed to retrieve file content: ${path}`)
       }
 
       // Update cache
