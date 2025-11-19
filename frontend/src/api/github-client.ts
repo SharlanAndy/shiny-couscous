@@ -337,10 +337,18 @@ export function createGitHubClient(): GitHubClient {
   const repo = import.meta.env.VITE_GITHUB_REPO || ''
   const token = import.meta.env.VITE_GITHUB_TOKEN || ''
 
-  if (!owner || !repo || !token) {
-    throw new Error(
-      'GitHub configuration missing. Please set VITE_GITHUB_OWNER, VITE_GITHUB_REPO, and VITE_GITHUB_TOKEN environment variables.'
-    )
+  // Better error message with details about what's missing
+  const missing: string[] = []
+  if (!owner) missing.push('VITE_GITHUB_OWNER')
+  if (!repo) missing.push('VITE_GITHUB_REPO')
+  if (!token) missing.push('VITE_GITHUB_TOKEN')
+
+  if (missing.length > 0) {
+    const errorMsg = `GitHub configuration missing: ${missing.join(', ')}. ` +
+      `Please ensure these environment variables are set in your GitHub Actions workflow. ` +
+      `Current values: OWNER=${owner ? '***' : 'MISSING'}, REPO=${repo ? '***' : 'MISSING'}, TOKEN=${token ? '***' : 'MISSING'}`
+    console.error('[GitHub Client]', errorMsg)
+    throw new Error(errorMsg)
   }
 
   return new GitHubClient(owner, repo, token)

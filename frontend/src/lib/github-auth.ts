@@ -150,13 +150,37 @@ export async function registerUser(
   name?: string,
   role: 'user' | 'admin' = 'user'
 ): Promise<LoginResponse> {
-  const github = getGitHubClient()
+  let github
+  try {
+    github = getGitHubClient()
+  } catch (error) {
+    // Re-throw GitHub client initialization errors with more context
+    if (error instanceof Error) {
+      console.error('[Register] GitHub client initialization failed:', error.message)
+      throw new Error(`Configuration error: ${error.message}`)
+    }
+    throw error
+  }
+  
   const passwordHash = hashPassword(password)
 
   try {
     // Read appropriate auth file
     const authFile = role === 'admin' ? 'backend/data/admins_auth.json' : 'backend/data/users_auth.json'
-    const { data } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
+    let { data } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
+
+    // Initialize empty structure if file doesn't exist
+    if (!data || Object.keys(data).length === 0) {
+      data = role === 'admin' ? { admins: [] } : { users: [] }
+    }
+
+    // Ensure arrays exist
+    if (role === 'admin' && !data.admins) {
+      data.admins = []
+    }
+    if (role === 'user' && !data.users) {
+      data.users = []
+    }
 
     // Check if user already exists
     const users = role === 'admin' ? data.admins || [] : data.users || []
@@ -211,10 +235,27 @@ export async function registerUser(
       role: newUser.role,
     }
   } catch (error) {
+    // Log the full error for debugging
+    console.error('[Register] Registration error:', error)
+    
     if (error instanceof Error) {
+      // Check if it's a GitHub API error
+      if (error.message.includes('GitHub configuration missing')) {
+        throw error // Re-throw config errors as-is
+      }
+      if (error.message.includes('404') || error.message.includes('Not Found')) {
+        throw new Error('Authentication file not found. Please ensure backend/data/users_auth.json exists in the repository.')
+      }
+      if (error.message.includes('401') || error.message.includes('Unauthorized')) {
+        throw new Error('GitHub authentication failed. Please check your GitHub token permissions.')
+      }
+      if (error.message.includes('403') || error.message.includes('Forbidden')) {
+        throw new Error('GitHub access denied. Please check your token has write permissions to the repository.')
+      }
+      // Re-throw other errors with original message
       throw error
     }
-    throw new Error('Registration failed')
+    throw new Error('Registration failed. Please check the console for details.')
   }
 }
 
