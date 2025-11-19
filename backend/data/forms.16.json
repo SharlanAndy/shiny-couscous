@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T06:08:48.774Z",
+  "lastUpdated": "2025-11-19T06:18:07.763888Z",
   "items": [
     {
       "id": "form-1763522198593-012345678",
@@ -9,7 +9,7 @@
       "description": "Application for Licence to Carry on Labuan Money Broking Business",
       "category": "Money Broking",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "form-lmb-labuan-money-broking-business",
         "formName": "Form LMB - Labuan Money Broking Business",
