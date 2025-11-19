@@ -1170,6 +1170,8 @@ class APIClient {
     isActive: boolean
     createdAt: string
   }> {
+    // updateAdminAdmin always requires manage_admins permission (updating an admin)
+    await this.checkPermission('manage_admins')
     return this.updateAdminUser(adminId, data)
   }
 
