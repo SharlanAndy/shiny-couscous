@@ -5,9 +5,10 @@
  * and validating credentials client-side.
  */
 
-import { getGitHubClient } from '@/api/github-client'
+import { getGitHubClient, isGitHubConfigured } from '@/api/github-client'
 // Note: Install crypto-js: npm install crypto-js @types/crypto-js
 import CryptoJS from 'crypto-js'
+import axios from 'axios'
 
 export interface AuthUser {
   id: string
