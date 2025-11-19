@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T07:22:47.820Z",
+  "lastUpdated": "2025-11-19T07:33:30.745Z",
   "items": [
     {
       "id": "SUB-20251119-847442",
@@ -1130,6 +1130,43 @@
           ]
         }
       }
+    },
+    {
+      "id": "SUB-20251119-132378",
+      "formId": "labuan-company-management-license",
+      "submissionId": "SUB-20251119-132378",
+      "status": "draft",
+      "submittedBy": "user-1763537494718-e9n3nxddd",
+      "submittedData": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "John Doe",
+          "officerCompany": "Test Company Ltd",
+          "officerDesignation": "Manager",
+          "officerContact": "+60123456789",
+          "officerEmail": "john.doe@testcompany.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        }
+      },
+      "data": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "John Doe",
+          "officerCompany": "Test Company Ltd",
+          "officerDesignation": "Manager",
+          "officerContact": "+60123456789",
+          "officerEmail": "john.doe@testcompany.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        }
+      },
+      "createdAt": "2025-11-19T07:33:30.745Z",
+      "updatedAt": "2025-11-19T07:33:30.745Z"
     }
   ]
 }
