@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T05:44:41.696Z",
+  "lastUpdated": "2025-11-19T05:46:20.791Z",
   "items": [
     {
       "id": "form-1763522198593-012345678",
@@ -9,7 +9,7 @@
       "description": "Application for Licence to Carry on Labuan Leasing Business",
       "category": "Leasing Business",
       "version": "1.0.0",
-      "isActive": true,
+      "isActive": false,
       "schemaData": {
         "formId": "form-lfb-labuan-leasing-business",
         "formName": "Form LFB - Labuan Leasing Business",
@@ -158,7 +158,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T11:16:38.593374Z",
-      "updatedAt": "2025-11-19T05:44:27.930Z",
+      "updatedAt": "2025-11-19T11:16:38.593375Z",
       "createdBy": null,
       "updatedBy": null
     }
