@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T05:41:47.707Z",
+  "lastUpdated": "2025-11-19T05:44:32.495Z",
   "items": [
     {
       "id": "form-1763520952315-012345678",
@@ -9,7 +9,7 @@
       "description": "Application to Carry on Business as a Payment System Operator under Sections 171, Labuan Financial Services and Securities Act 2010 / Section 136, Labuan Islamic Financial Services and Securities Act 2010",
       "category": "Payment Systems",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "application-form-payment-system-operator",
         "formName": "Application Form - Payment System Operator",
@@ -272,7 +272,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T10:55:52.315311Z",
-      "updatedAt": "2025-11-19T05:41:47.707Z",
+      "updatedAt": "2025-11-19T04:24:15.363Z",
       "createdBy": null,
       "updatedBy": null
     }
