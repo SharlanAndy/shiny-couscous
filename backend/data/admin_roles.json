@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T12:00:00.000Z",
+  "lastUpdated": "2025-11-19T04:38:14.053Z",
   "roles": [
     {
       "id": "role-admin",
@@ -37,7 +37,19 @@
       "isSystem": true,
       "isActive": true,
       "createdAt": "2025-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "role-test",
+      "name": "test",
+      "displayName": "test",
+      "description": "test",
+      "permissions": [
+        "view_dashboard",
+        "manage_admins"
+      ],
+      "isSystem": false,
+      "isActive": true,
+      "createdAt": "2025-11-19T04:38:14.053Z"
     }
   ]
 }
-
