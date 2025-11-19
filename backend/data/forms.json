@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T04:24:35.641Z",
+  "lastUpdated": "2025-11-19T04:24:35.644Z",
   "items": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
@@ -1833,7 +1833,7 @@
       "description": "Application for Approval to Conduct Subsequent Leasing Transaction under Labuan Financial Services and Securities Act 2010",
       "category": "Leasing Business",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "application-for-approval-to-conduct-subsequent-leasing",
         "formName": "Application for Approval to Conduct Subsequent Leasing",
@@ -2584,7 +2584,7 @@
       "requiresAuth": true,
       "estimatedTime": "1-2 hours",
       "createdAt": "2025-11-19T11:05:04.011836Z",
-      "updatedAt": "2025-11-19T11:05:04.011839Z",
+      "updatedAt": "2025-11-19T04:24:35.644Z",
       "createdBy": null,
       "updatedBy": null
     },
@@ -2595,7 +2595,7 @@
       "description": "Application for Change of Shareholder/Shareholding Structure (only applicable for changes of more than 10% of the paid up capital)",
       "category": "Corporate Changes",
       "version": "1.0.0",
-      "isActive": true,
+      "isActive": false,
       "schemaData": {
         "formId": "application-for-change-of-shareholder",
         "formName": "Application for Change of Shareholder",
@@ -2848,7 +2848,7 @@
       "requiresAuth": true,
       "estimatedTime": "1-2 hours",
       "createdAt": "2025-11-19T11:07:52.772703Z",
-      "updatedAt": "2025-11-19T04:24:35.641Z",
+      "updatedAt": "2025-11-19T11:07:52.772705Z",
       "createdBy": null,
       "updatedBy": null
     },
