@@ -26,6 +26,13 @@ export async function isAdminRole(roleName: string | null | undefined): Promise<
 
     // Fetch from GitHub
     const github = getGitHubClient()
+    if (!github) {
+      // GitHub client not available (local development mode)
+      // Fallback: assume any non-user role is admin
+      console.warn('[role-utils] GitHub client not available, using fallback admin check')
+      return roleName !== 'user'
+    }
+    
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean; permissions?: string[] }> }>(
       'backend/data/admin_roles.json'
     )
@@ -80,6 +87,12 @@ export async function preloadAdminRoles(): Promise<void> {
 
   try {
     const github = getGitHubClient()
+    if (!github) {
+      // GitHub client not available (local development mode)
+      console.warn('[role-utils] GitHub client not available, skipping admin roles preload')
+      return
+    }
+    
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean; permissions?: string[] }> }>(
       'backend/data/admin_roles.json'
     )
@@ -112,6 +125,12 @@ export async function getRolePermissions(roleName: string | null | undefined): P
 
     // If cache not available, fetch directly
     const github = getGitHubClient()
+    if (!github) {
+      // GitHub client not available (local development mode)
+      console.warn('[role-utils] GitHub client not available, returning empty permissions')
+      return []
+    }
+    
     const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean; permissions?: string[] }> }>(
       'backend/data/admin_roles.json'
     )
