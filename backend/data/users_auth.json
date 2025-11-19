@@ -3,11 +3,12 @@
     {
       "id": "a-iWrMY-BEmDVKXXUnu9pg",
       "email": "user@example.com",
-      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "passwordHash": "e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446",
       "name": "Test User",
       "role": "user",
       "createdAt": "2025-11-18T10:31:05.782311Z",
-      "isActive": true
+      "isActive": true,
+      "updatedAt": "2025-11-19T12:00:00.000Z"
     },
     {
       "id": "rDoAO5uOfeeDiOI-1ni6-Q",

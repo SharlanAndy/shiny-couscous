@@ -72,6 +72,14 @@ export function LoginPage() {
               create a new account
             </Link>
           </p>
+          {/* Default Test Credentials */}
+          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-sm font-medium text-blue-900 mb-2">Default Test Account:</p>
+            <div className="text-sm text-blue-800 space-y-1">
+              <p><strong>Email:</strong> user@example.com</p>
+              <p><strong>Password:</strong> user123</p>
+            </div>
+          </div>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
