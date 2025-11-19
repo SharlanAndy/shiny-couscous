@@ -707,7 +707,7 @@
                   {
                     "id": "certificate-incorporation",
                     "label": "Certified true copy of certificate of incorporation",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "certificate-license",
@@ -717,67 +717,67 @@
                   {
                     "id": "letter-awareness",
                     "label": "Letter of awareness or approvals of authorities from the home country",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "board-resolution",
                     "label": "Certified true copy of board resolution or minutes of general meeting",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "memorandum-articles",
                     "label": "Certified true copy of memorandum & articles of association",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "audited-financial-statements",
                     "label": "Copy of two (2) years audited financial statements/annual reports",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "letter-guarantee",
                     "label": "Letter of guarantee or undertaking by shareholder/head office",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "nric-passport",
                     "label": "Certified true copy of NRIC (Malaysian) or passport (non-Malaysian)",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "academic-certificates",
                     "label": "Certified true copy of relevant academic and professional certificates",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "referral-letters",
                     "label": "Two (2) referral letters from corporations, institutions and/or professional bodies",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "net-worth-statement",
                     "label": "Net worth statement certified by qualified accountant or bank statements",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "organisation-chart",
                     "label": "Proposed organisation chart of the applicant",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "declaration-true-correct",
                     "label": "Declaration of True and Correct Information Submitted",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "statutory-declaration-service-provider",
                     "label": "Statutory Declaration by Service Provider Responsible for Submission",
-                    "required": true
+                    "required": false
                   },
                   {
                     "id": "kyc-policy",
                     "label": "Framework on Know-Your-Customers' policy and AML compliance",
-                    "required": true
+                    "required": false
                   }
                 ]
               },
