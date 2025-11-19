@@ -318,7 +318,18 @@ export function DocumentChecklist({
                         </label>
                       )}
                       <input
-                        ref={(el) => setFileInputRef(document.id, el)}
+                        ref={(el) => {
+                          setFileInputRef(document.id, el)
+                          if (el) {
+                            // Add focus event listener to verify label is working
+                            el.addEventListener('focus', () => {
+                              console.log('[DocumentChecklist] File input received focus for document:', document.id)
+                            })
+                            el.addEventListener('click', () => {
+                              console.log('[DocumentChecklist] File input clicked directly for document:', document.id)
+                            })
+                          }
+                        }}
                         id={`${fieldId}-${document.id}`}
                         type="file"
                         onChange={(e) => {
@@ -326,7 +337,10 @@ export function DocumentChecklist({
                           handleFileUpload(document.id, e)
                         }}
                         onBlur={onBlur}
-                        onFocus={onFocus}
+                        onFocus={(e) => {
+                          console.log('[DocumentChecklist] File input onFocus event for document:', document.id)
+                          if (onFocus) onFocus(e)
+                        }}
                         disabled={disabled}
                         style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
                         accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"

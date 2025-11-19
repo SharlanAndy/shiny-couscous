@@ -212,7 +212,18 @@ export function FileUploadField({
 
       {/* File input (visually hidden but accessible to label) */}
       <input
-        ref={fileInputRef}
+        ref={(el) => {
+          fileInputRef.current = el
+          if (el) {
+            // Add focus event listener to verify label is working
+            el.addEventListener('focus', () => {
+              console.log('[FileUploadField] File input received focus')
+            })
+            el.addEventListener('click', () => {
+              console.log('[FileUploadField] File input clicked directly')
+            })
+          }
+        }}
         id={fieldId}
         name={fieldName}
         type="file"
@@ -223,7 +234,10 @@ export function FileUploadField({
           handleInputChange(e)
         }}
         onBlur={onBlur}
-        onFocus={onFocus}
+        onFocus={(e) => {
+          console.log('[FileUploadField] File input onFocus event')
+          if (onFocus) onFocus(e)
+        }}
         required={required && fileList.length === 0}
         disabled={disabled || readonly}
         style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
