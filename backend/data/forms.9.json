@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T05:46:20.791Z",
+  "lastUpdated": "2025-11-19T05:52:54.372Z",
   "items": [
     {
       "id": "form-1763521945380-012345678",
@@ -9,7 +9,7 @@
       "description": "Complaint Form for Labuan Financial Services Authority",
       "category": "Complaints",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "complaint-form-labuan-fsa",
         "formName": "Complaint Form - Labuan FSA",
@@ -734,7 +734,7 @@
       "requiresAuth": false,
       "estimatedTime": "30-60 minutes",
       "createdAt": "2025-11-19T11:12:25.380574Z",
-      "updatedAt": "2025-11-19T11:12:25.380575Z",
+      "updatedAt": "2025-11-19T05:52:54.372Z",
       "createdBy": null,
       "updatedBy": null
     }
