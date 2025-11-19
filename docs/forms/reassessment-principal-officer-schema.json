@@ -1,0 +1,216 @@
+{
+  "formId": "reassessment-for-appointment-of-principal-officer",
+  "formName": "Re-assessment for the Appointment of Principal Officer",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes & Checklist",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and document checklist",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n2. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.\n\n3. Labuan FSA reserves the right to request for additional information and/or documents to support the application.",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "company-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "companyName",
+          "label": "Name of Labuan Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "license-type",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "licenseType",
+          "label": "Type of Licence",
+          "required": true,
+          "placeholder": "Enter license type"
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name (responsible for information submission)",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 2,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "document-checklist",
+          "fieldType": "document-checklist",
+          "fieldName": "documentChecklist",
+          "label": "Required Documents Checklist",
+          "required": true,
+          "documents": [
+            {
+              "id": "profile-principal-officer",
+              "label": "Latest Profile of Principal Officer (copy of curriculum vitae)",
+              "required": true
+            },
+            {
+              "id": "passport",
+              "label": "Certified True Copy of Passport (only applicable for non-resident of Malaysia)",
+              "required": false
+            },
+            {
+              "id": "statutory-declaration-fit-proper",
+              "label": "Duly Completed Statutory Declaration by Principal Officer on Fit and Proper Person",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file."
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-declaration",
+      "stepName": "Statutory Declaration",
+      "stepOrder": 3,
+      "stepDescription": "Review and confirm your declaration",
+      "fields": [
+        {
+          "fieldId": "declaration-read",
+          "fieldType": "checkbox",
+          "fieldName": "declarationRead",
+          "label": "I have read Section 4 of the Labuan Financial Services and Securities Act 2010 (LFSSA)/Section 4 of the Labuan Islamic Financial Services and Securities Act 2010 (LIFSSA) and the Guidelines on Fit and Proper Person Requirements issued on 11 February 2014 (the Guidelines)",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes, I confirm"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "fieldId": "declaration-fit-proper",
+          "fieldType": "checkbox",
+          "fieldName": "declarationFitProper",
+          "label": "To the best of my knowledge and belief in making this declaration and/or submitting the attached documents in relation to this declaration, that I am a fit and proper person based on the criteria stated under the said Section 4 of LFSSA /Section 4 of LIFSSA and the Guidelines",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes, I confirm"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "fieldId": "declaration-accurate",
+          "fieldType": "checkbox",
+          "fieldName": "declarationAccurate",
+          "label": "The information given in this declaration and in the attached documents (if any) are accurate, true and complete",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes, I confirm"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "fieldId": "declaration-understand",
+          "fieldType": "checkbox",
+          "fieldName": "declarationUnderstand",
+          "label": "I understand that if it is found that I have made false declaration herein and/or in the attached document (if any), Labuan FSA is entitled to take any legal action including disqualifying myself from acting in the capacity expressly mentioned herein",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes, I understand"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "fieldId": "signature",
+          "fieldType": "signature",
+          "fieldName": "signature",
+          "label": "Digital Signature",
+          "required": true,
+          "helpText": "Please provide your digital signature"
+        },
+        {
+          "fieldId": "signature-date",
+          "fieldType": "date",
+          "fieldName": "signatureDate",
+          "label": "Date of Signature",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
+

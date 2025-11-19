@@ -1,0 +1,145 @@
+{
+  "formId": "form-lscm-labuan-capital-market",
+  "formName": "Form LSCM - Labuan Capital Market",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and processing information",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. The completed application form and supporting documents should be submitted to:\nHead of Authorization and Licensing Unit\nLabuan Financial Services Authority\nLevel 17, Main Office Tower\nFinancial Park Complex\nJalan Merdeka\n87000 Labuan F.T.\nMalaysia\n\n2. Applicant may also submit a soft copy of the completed application form and supporting documents via email to licensing@labuanfsa.gov.my for preliminary review by the officer.\n\n3. Submission of application which does not comply with Labuan FSA's requirement or which are unsatisfactory may be returned.\n\n4. The form and supporting documents serve as general requirement of the application, Labuan FSA reserves the right to request for additional information and/or documents to support the application.\n\n5. Any information supplied pursuant to this form will be dealt with in confidence in accordance with Section 178 of the Labuan Financial Services and Securities Act 2010/Section 139 of the Labuan Islamic Financial Services and Securities Act 2010.\n\n6. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n7. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.\n\n8. Labuan FSA has a whistle blowing policy in place where suppliers, consultants or even members of the public can report to the Designated Officers in writing as per the Whistle Blowing Disclosure Form if there is any element of wrongdoings by any staff of Labuan FSA or its subsidiaries in relation to the application or licence being awarded.",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-general-information",
+      "stepName": "General Information",
+      "stepOrder": 2,
+      "stepDescription": "Party responsible for submission and officer details",
+      "fields": [
+        {
+          "fieldId": "party-responsible",
+          "fieldType": "radio",
+          "fieldName": "partyResponsible",
+          "label": "Party responsible for submission of application",
+          "required": true,
+          "options": [
+            {
+              "value": "applicant-shareholder",
+              "label": "Applicant's Shareholder/Head Office"
+            },
+            {
+              "value": "labuan-trust-company",
+              "label": "Labuan Trust Company"
+            },
+            {
+              "value": "others",
+              "label": "Others"
+            }
+          ],
+          "defaultValue": null
+        },
+        {
+          "fieldId": "party-responsible-other",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "partyResponsibleOther",
+          "label": "Please specify (if Others)",
+          "required": false,
+          "placeholder": "Enter party responsible",
+          "conditionalDisplay": {
+            "when": "partyResponsible",
+            "equals": "others",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 3,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [
+            ".pdf",
+            ".doc",
+            ".docx",
+            ".jpg",
+            ".jpeg",
+            ".png"
+          ],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file. Additional sections and fields will be added in future updates."
+        }
+      ]
+    }
+  ]
+}

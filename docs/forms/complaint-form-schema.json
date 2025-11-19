@@ -1,0 +1,700 @@
+{
+  "formId": "complaint-form-labuan-fsa",
+  "formName": "Complaint Form - Labuan FSA",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-complainant-information",
+      "stepName": "Your Information",
+      "stepOrder": 1,
+      "stepDescription": "Please provide your personal information",
+      "fields": [
+        {
+          "fieldId": "salutation",
+          "fieldType": "select",
+          "fieldName": "salutation",
+          "label": "Salutation",
+          "required": true,
+          "options": [
+            {
+              "value": "mr",
+              "label": "Mr"
+            },
+            {
+              "value": "mrs",
+              "label": "Mrs"
+            },
+            {
+              "value": "miss",
+              "label": "Miss"
+            },
+            {
+              "value": "ms",
+              "label": "Ms"
+            }
+          ]
+        },
+        {
+          "fieldId": "name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "name",
+          "label": "Name",
+          "required": true,
+          "placeholder": "Enter your full name"
+        },
+        {
+          "fieldId": "nric-passport",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "nricPassport",
+          "label": "NRIC/ID/Passport",
+          "required": true,
+          "placeholder": "Enter NRIC/ID/Passport number"
+        },
+        {
+          "fieldId": "address",
+          "fieldType": "textarea",
+          "fieldName": "address",
+          "label": "Address",
+          "required": true,
+          "placeholder": "Enter your address",
+          "rows": 3
+        },
+        {
+          "fieldId": "city",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "city",
+          "label": "City",
+          "required": true,
+          "placeholder": "Enter city"
+        },
+        {
+          "fieldId": "state",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "state",
+          "label": "State",
+          "required": true,
+          "placeholder": "Enter state"
+        },
+        {
+          "fieldId": "zip",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "zip",
+          "label": "ZIP Code",
+          "required": true,
+          "placeholder": "Enter ZIP code"
+        },
+        {
+          "fieldId": "country",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "country",
+          "label": "Country",
+          "required": true,
+          "placeholder": "Enter country"
+        },
+        {
+          "fieldId": "age-range",
+          "fieldType": "radio",
+          "fieldName": "ageRange",
+          "label": "Age",
+          "required": true,
+          "options": [
+            {
+              "value": "18-29",
+              "label": "18-29"
+            },
+            {
+              "value": "30-39",
+              "label": "30-39"
+            },
+            {
+              "value": "40-49",
+              "label": "40-49"
+            },
+            {
+              "value": "50-59",
+              "label": "50-59"
+            },
+            {
+              "value": "60+",
+              "label": "60+"
+            }
+          ]
+        },
+        {
+          "fieldId": "phone",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "phone",
+          "label": "Phone",
+          "required": true,
+          "placeholder": "Enter phone number"
+        },
+        {
+          "fieldId": "email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "email",
+          "label": "E-mail",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-complaint-details",
+      "stepName": "Particulars of Your Complaint",
+      "stepOrder": 2,
+      "stepDescription": "Information about the entity and complaint",
+      "fields": [
+        {
+          "fieldId": "entity-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "entityName",
+          "label": "Name/Entity",
+          "required": true,
+          "placeholder": "Enter name of entity"
+        },
+        {
+          "fieldId": "entity-website",
+          "fieldType": "text-input",
+          "inputType": "url",
+          "fieldName": "entityWebsite",
+          "label": "Website",
+          "required": false,
+          "placeholder": "Enter website URL"
+        },
+        {
+          "fieldId": "entity-address",
+          "fieldType": "textarea",
+          "fieldName": "entityAddress",
+          "label": "Address",
+          "required": true,
+          "placeholder": "Enter entity address",
+          "rows": 3
+        },
+        {
+          "fieldId": "entity-city",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "entityCity",
+          "label": "City",
+          "required": true,
+          "placeholder": "Enter city"
+        },
+        {
+          "fieldId": "entity-state",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "entityState",
+          "label": "State",
+          "required": true,
+          "placeholder": "Enter state"
+        },
+        {
+          "fieldId": "entity-zip",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "entityZip",
+          "label": "ZIP Code",
+          "required": true,
+          "placeholder": "Enter ZIP code"
+        },
+        {
+          "fieldId": "entity-country",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "entityCountry",
+          "label": "Country",
+          "required": true,
+          "placeholder": "Enter country"
+        },
+        {
+          "fieldId": "entity-phone",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "entityPhone",
+          "label": "Phone",
+          "required": false,
+          "placeholder": "Enter phone number"
+        },
+        {
+          "fieldId": "entity-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "entityEmail",
+          "label": "E-mail",
+          "required": false,
+          "placeholder": "Enter email address"
+        },
+        {
+          "fieldId": "person-dealt-with",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "personDealtWith",
+          "label": "Person you dealt with",
+          "required": false,
+          "placeholder": "Enter name of person"
+        },
+        {
+          "fieldId": "amount-dispute",
+          "fieldType": "currency",
+          "fieldName": "amountDispute",
+          "label": "Amount in Dispute/Associated with Your Loss",
+          "required": false,
+          "placeholder": "0.00",
+          "currency": "USD"
+        },
+        {
+          "fieldId": "transaction-date",
+          "fieldType": "date",
+          "fieldName": "transactionDate",
+          "label": "When did the transaction/incident occurred? (Date)",
+          "required": true
+        },
+        {
+          "fieldId": "transaction-time",
+          "fieldType": "text-input",
+          "inputType": "time",
+          "fieldName": "transactionTime",
+          "label": "When did the transaction/incident occurred? (Time)",
+          "required": false,
+          "placeholder": "HH:MM"
+        },
+        {
+          "fieldId": "transaction-location",
+          "fieldType": "checkbox",
+          "fieldName": "transactionLocation",
+          "label": "Where did the transaction/incident you are complaining about took place?",
+          "required": true,
+          "options": [
+            {
+              "value": "entity-place",
+              "label": "At the entity place of business"
+            },
+            {
+              "value": "by-mail",
+              "label": "By mail"
+            },
+            {
+              "value": "by-internet-email",
+              "label": "By internet/e-mail"
+            },
+            {
+              "value": "by-telephone",
+              "label": "By telephone"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ],
+          "multiple": true
+        },
+        {
+          "fieldId": "first-contact",
+          "fieldType": "checkbox",
+          "fieldName": "firstContact",
+          "label": "When was the very first contact between you and the entity?",
+          "required": true,
+          "options": [
+            {
+              "value": "i-telephoned",
+              "label": "I telephoned the entity"
+            },
+            {
+              "value": "i-went-to-entity",
+              "label": "I went to the entity place of business"
+            },
+            {
+              "value": "received-call",
+              "label": "I received a telephone call from the entity"
+            },
+            {
+              "value": "responded-internet",
+              "label": "I responded to an offer on the Internet"
+            },
+            {
+              "value": "received-email",
+              "label": "I received information by e-mail"
+            },
+            {
+              "value": "received-mail",
+              "label": "I received information in the mail"
+            },
+            {
+              "value": "person-came",
+              "label": "A person came to my business premise"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ],
+          "multiple": true
+        },
+        {
+          "fieldId": "transaction-purpose",
+          "fieldType": "checkbox",
+          "fieldName": "transactionPurpose",
+          "label": "What was the transaction for?",
+          "required": true,
+          "options": [
+            {
+              "value": "business-purpose",
+              "label": "Business purpose"
+            },
+            {
+              "value": "investment",
+              "label": "Investment"
+            },
+            {
+              "value": "retirement-plan",
+              "label": "Retirement plan"
+            }
+          ],
+          "multiple": true
+        },
+        {
+          "fieldId": "payment-method",
+          "fieldType": "checkbox",
+          "fieldName": "paymentMethod",
+          "label": "How did you remitted the payment?",
+          "required": true,
+          "options": [
+            {
+              "value": "cash",
+              "label": "Cash"
+            },
+            {
+              "value": "credit-card",
+              "label": "Credit Card"
+            },
+            {
+              "value": "cheque",
+              "label": "Cheque"
+            },
+            {
+              "value": "instalment",
+              "label": "Instalment"
+            },
+            {
+              "value": "loan",
+              "label": "Loan"
+            },
+            {
+              "value": "online-transfer",
+              "label": "Online Transfer"
+            },
+            {
+              "value": "retirement-fund",
+              "label": "Retirement Fund"
+            },
+            {
+              "value": "private-insurance",
+              "label": "Private Insurance"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ],
+          "multiple": true
+        },
+        {
+          "fieldId": "signed-agreement",
+          "fieldType": "radio",
+          "fieldName": "signedAgreement",
+          "label": "Did you signed any written agreement? If yes, please attach a copy of the agreement",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "agreement-document",
+          "fieldType": "file-upload",
+          "fieldName": "agreementDocument",
+          "label": "Copy of Agreement (if applicable)",
+          "required": false,
+          "multiple": false,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "conditionalDisplay": {
+            "when": "signedAgreement",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "complained-to-entity",
+          "fieldType": "radio",
+          "fieldName": "complainedToEntity",
+          "label": "Have you complained to the entity?",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "entity-complaint-date",
+          "fieldType": "date",
+          "fieldName": "entityComplaintDate",
+          "label": "When? (Date of complaint to entity)",
+          "required": false,
+          "conditionalDisplay": {
+            "when": "complainedToEntity",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "entity-action-taken",
+          "fieldType": "textarea",
+          "fieldName": "entityActionTaken",
+          "label": "Action Taken?",
+          "required": false,
+          "placeholder": "Describe action taken by entity",
+          "rows": 3,
+          "conditionalDisplay": {
+            "when": "complainedToEntity",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "lodged-other-agency",
+          "fieldType": "radio",
+          "fieldName": "lodgedOtherAgency",
+          "label": "Have you lodged complaint to other agency?",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "other-agency-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "otherAgencyName",
+          "label": "Agency Name",
+          "required": false,
+          "placeholder": "Enter agency name",
+          "conditionalDisplay": {
+            "when": "lodgedOtherAgency",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "other-agency-date",
+          "fieldType": "date",
+          "fieldName": "otherAgencyDate",
+          "label": "When? (Date of complaint to other agency)",
+          "required": false,
+          "conditionalDisplay": {
+            "when": "lodgedOtherAgency",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "other-agency-action",
+          "fieldType": "textarea",
+          "fieldName": "otherAgencyAction",
+          "label": "Action Taken?",
+          "required": false,
+          "placeholder": "Describe action taken by other agency",
+          "rows": 3,
+          "conditionalDisplay": {
+            "when": "lodgedOtherAgency",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "contacted-attorney",
+          "fieldType": "radio",
+          "fieldName": "contactedAttorney",
+          "label": "Have you contacted a private attorney?",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "court-action",
+          "fieldType": "radio",
+          "fieldName": "courtAction",
+          "label": "Have you started a court action? If yes, please attach a copy of all court papers",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "court-papers",
+          "fieldType": "file-upload",
+          "fieldName": "courtPapers",
+          "label": "Court Papers (if applicable)",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx"],
+          "conditionalDisplay": {
+            "when": "courtAction",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "been-sued",
+          "fieldType": "radio",
+          "fieldName": "beenSued",
+          "label": "Have you been sued over this issue? If yes, please attach a copy of all court papers",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "sued-court-papers",
+          "fieldType": "file-upload",
+          "fieldName": "suedCourtPapers",
+          "label": "Court Papers (if applicable)",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx"],
+          "conditionalDisplay": {
+            "when": "beenSued",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "complaint-description",
+          "fieldType": "textarea",
+          "fieldName": "complaintDescription",
+          "label": "Please describe your complaint in detail (attach additional pages if necessary)",
+          "required": true,
+          "placeholder": "Provide detailed description of your complaint",
+          "rows": 8,
+          "helpText": "Please attach a copy of all papers involved (order bank, warranty, payment receipt, bank statement, invoice, contract or written agreement, advertisement, cancelled check/transfer, correspondence, and all other related documents)."
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "helpText": "Upload all related documents (bank statements, receipts, invoices, contracts, correspondence, etc.). Maximum file size: 10MB per file."
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-acknowledgement",
+      "stepName": "Acknowledgement & Declaration",
+      "stepOrder": 3,
+      "stepDescription": "Review and confirm your complaint",
+      "fields": [
+        {
+          "fieldId": "acknowledgement",
+          "fieldType": "help-text",
+          "fieldName": "acknowledgement",
+          "label": "Important Information",
+          "content": "I hereby confirm that the information and any documents submitted are current, accurate, reflective, and true. The information provided in this complaint form is based on my personal knowledge. By submitting this complaint, I understand that Labuan FSA cannot answer legal questions or give legal advice to me and cannot act as my personal lawyer.\n\nPlease Read Important Information: If your complaint submitted without the above acknowledgment and declaration signature, we will not be able to process but will keep on file in our complaint database record.",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "declaration-confirm",
+          "fieldType": "checkbox",
+          "fieldName": "declarationConfirm",
+          "label": "I confirm that the information and any documents submitted are current, accurate, reflective, and true",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes, I confirm"
+            }
+          ],
+          "multiple": false
+        },
+        {
+          "fieldId": "signature",
+          "fieldType": "signature",
+          "fieldName": "signature",
+          "label": "Digital Signature",
+          "required": true,
+          "helpText": "Please provide your digital signature"
+        },
+        {
+          "fieldId": "signature-date",
+          "fieldType": "date",
+          "fieldName": "signatureDate",
+          "label": "Date",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
+

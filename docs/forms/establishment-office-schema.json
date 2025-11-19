@@ -1,0 +1,332 @@
+{
+  "formId": "application-for-establishment-of-office",
+  "formName": "Application for Establishment of Office",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes & Checklist",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and document checklist",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n2. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.\n\n3. The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.\n\n4. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.\n\n5. Processing fee: USD 350",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "company-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "companyName",
+          "label": "Name of Labuan Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "license-type",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "licenseType",
+          "label": "Type of Licence",
+          "required": true,
+          "placeholder": "Enter license type"
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name (responsible for information submission)",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-general-information",
+      "stepName": "Section A: General Information",
+      "stepOrder": 2,
+      "stepDescription": "General information about the office to be established",
+      "fields": [
+        {
+          "fieldId": "office-type",
+          "fieldType": "checkbox",
+          "fieldName": "officeType",
+          "label": "Type of office",
+          "required": true,
+          "options": [
+            {
+              "value": "co-located-office",
+              "label": "Co-located Office/Conversion of KLMO to Co-located Office"
+            },
+            {
+              "value": "kuala-lumpur-marketing-office",
+              "label": "Kuala Lumpur Marketing Office"
+            },
+            {
+              "value": "representative-office",
+              "label": "Representative Office Outside Labuan or Malaysia"
+            }
+          ],
+          "multiple": true
+        },
+        {
+          "fieldId": "rationale-purpose",
+          "fieldType": "textarea",
+          "fieldName": "rationalePurpose",
+          "label": "Rationale or purpose of establishment/conversion of the office",
+          "required": true,
+          "placeholder": "Describe the rationale and purpose",
+          "rows": 4
+        },
+        {
+          "fieldId": "office-location",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officeLocation",
+          "label": "Location of the office",
+          "required": true,
+          "placeholder": "Enter office location"
+        },
+        {
+          "fieldId": "office-function",
+          "fieldType": "textarea",
+          "fieldName": "officeFunction",
+          "label": "Function of the office",
+          "required": true,
+          "placeholder": "Describe the functions of the office",
+          "rows": 4
+        },
+        {
+          "fieldId": "staff-particulars",
+          "fieldType": "repeater",
+          "fieldName": "staffParticulars",
+          "label": "Key personal particulars of all staff to be stationed at the office",
+          "required": true,
+          "fields": [
+            {
+              "fieldId": "staff-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "staffName",
+              "label": "Name",
+              "required": true
+            },
+            {
+              "fieldId": "staff-position",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "staffPosition",
+              "label": "Position",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fieldId": "other-information",
+          "fieldType": "textarea",
+          "fieldName": "otherInformation",
+          "label": "Any other information relevant for consideration of the application",
+          "required": false,
+          "placeholder": "Enter any additional information",
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-financial-projection",
+      "stepName": "Section B: Three Years Financial Projection",
+      "stepOrder": 3,
+      "stepDescription": "Financial projection for the office",
+      "fields": [
+        {
+          "fieldId": "projection-currency",
+          "fieldType": "select",
+          "fieldName": "projectionCurrency",
+          "label": "Currency for Financial Projection",
+          "required": true,
+          "options": [
+            {
+              "value": "USD",
+              "label": "USD - US Dollar"
+            },
+            {
+              "value": "MYR",
+              "label": "MYR - Malaysian Ringgit"
+            },
+            {
+              "value": "EUR",
+              "label": "EUR - Euro"
+            },
+            {
+              "value": "GBP",
+              "label": "GBP - British Pound"
+            },
+            {
+              "value": "SGD",
+              "label": "SGD - Singapore Dollar"
+            }
+          ]
+        },
+        {
+          "fieldId": "financial-projection",
+          "fieldType": "table",
+          "fieldName": "financialProjection",
+          "label": "Three Years Financial Projection - Statement of Comprehensive Income",
+          "required": true,
+          "columns": [
+            {
+              "key": "item",
+              "label": "Item",
+              "type": "text"
+            },
+            {
+              "key": "year1",
+              "label": "Year 1",
+              "type": "currency"
+            },
+            {
+              "key": "year2",
+              "label": "Year 2",
+              "type": "currency"
+            },
+            {
+              "key": "year3",
+              "label": "Year 3",
+              "type": "currency"
+            }
+          ],
+          "defaultRows": [
+            {
+              "item": "Revenue earned from the office (where applicable)"
+            },
+            {
+              "item": "Expenses incurred - Staff cost"
+            },
+            {
+              "item": "Expenses incurred - Rental expenses"
+            },
+            {
+              "item": "Expenses incurred - Other expenses"
+            },
+            {
+              "item": "Income / expenses derived / incurred from the office"
+            }
+          ]
+        },
+        {
+          "fieldId": "projection-basis",
+          "fieldType": "textarea",
+          "fieldName": "projectionBasis",
+          "label": "Basis of Assumption",
+          "required": true,
+          "helpText": "Please provide basis of assumption in deriving the projected figure",
+          "placeholder": "Explain the basis and assumptions",
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "stepId": "step-4-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 4,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "document-checklist",
+          "fieldType": "document-checklist",
+          "fieldName": "documentChecklist",
+          "label": "Required Documents Checklist",
+          "required": true,
+          "documents": [
+            {
+              "id": "application-form",
+              "label": "Duly completed application form as per Appendix I",
+              "required": true
+            },
+            {
+              "id": "organisation-chart",
+              "label": "Proposed organisation chart of proposed office",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration",
+              "label": "Duly completed Statutory Declaration of true and correct information submitted (as per Appendix II)",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration-service-provider",
+              "label": "Statutory Declaration by Service Provider Responsible for Submission (as per Appendix III)",
+              "required": false,
+              "helpText": "Not applicable for submission made directly by the Labuan Company"
+            },
+            {
+              "id": "processing-fee",
+              "label": "Processing fee of USD 350",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file."
+        }
+      ]
+    }
+  ]
+}
+

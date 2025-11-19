@@ -1,0 +1,621 @@
+{
+  "formId": "application-for-establishment-of-islamic-window",
+  "formName": "Application for Establishment of Islamic Window",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes & Checklist",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and document checklist",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n2. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.\n\n3. The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.\n\n4. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "company-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "companyName",
+          "label": "Name of Labuan Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "license-type",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "licenseType",
+          "label": "Type of Licence",
+          "required": true,
+          "placeholder": "Enter license type"
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name (responsible for information submission)",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-business-plan",
+      "stepName": "Section A: Business Plan",
+      "stepOrder": 2,
+      "stepDescription": "Business plan for the Islamic window",
+      "fields": [
+        {
+          "fieldId": "rationale-purpose",
+          "fieldType": "textarea",
+          "fieldName": "rationalePurpose",
+          "label": "Rationale or purpose of the establishment of the Islamic window",
+          "required": true,
+          "placeholder": "Describe the rationale and purpose",
+          "rows": 4
+        },
+        {
+          "fieldId": "objective-establishment",
+          "fieldType": "textarea",
+          "fieldName": "objectiveEstablishment",
+          "label": "Objective of establishment",
+          "required": true,
+          "placeholder": "Describe the objectives",
+          "rows": 4
+        },
+        {
+          "fieldId": "products-services",
+          "fieldType": "textarea",
+          "fieldName": "productsServices",
+          "label": "Product and services to be offered",
+          "required": true,
+          "placeholder": "Describe products and services",
+          "rows": 4
+        },
+        {
+          "fieldId": "islamic-operation-model",
+          "fieldType": "textarea",
+          "fieldName": "islamicOperationModel",
+          "label": "Islamic operation model",
+          "required": true,
+          "placeholder": "Describe the Islamic operation model",
+          "rows": 4
+        },
+        {
+          "fieldId": "investment-plan-policy",
+          "fieldType": "textarea",
+          "fieldName": "investmentPlanPolicy",
+          "label": "Investment plan policy for Islamic operation",
+          "required": true,
+          "placeholder": "Describe investment plan policy",
+          "rows": 4
+        },
+        {
+          "fieldId": "islamic-banking-fund",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "islamicBankingFund",
+          "label": "Islamic banking fund/seed capital",
+          "required": true,
+          "placeholder": "Enter amount"
+        },
+        {
+          "fieldId": "other-information",
+          "fieldType": "textarea",
+          "fieldName": "otherInformation",
+          "label": "Any other information relevant for consideration of the application",
+          "required": false,
+          "placeholder": "Enter any additional information",
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-financial-projection",
+      "stepName": "Section B: Three Years Financial Projections",
+      "stepOrder": 3,
+      "stepDescription": "Financial projections for the Islamic window",
+      "fields": [
+        {
+          "fieldId": "projection-currency",
+          "fieldType": "select",
+          "fieldName": "projectionCurrency",
+          "label": "Currency for Financial Projection",
+          "required": true,
+          "options": [
+            {
+              "value": "USD",
+              "label": "USD - US Dollar"
+            },
+            {
+              "value": "MYR",
+              "label": "MYR - Malaysian Ringgit"
+            },
+            {
+              "value": "EUR",
+              "label": "EUR - Euro"
+            },
+            {
+              "value": "GBP",
+              "label": "GBP - British Pound"
+            },
+            {
+              "value": "SGD",
+              "label": "SGD - Singapore Dollar"
+            }
+          ]
+        },
+        {
+          "fieldId": "financial-projection-income",
+          "fieldType": "table",
+          "fieldName": "financialProjectionIncome",
+          "label": "Three Years Financial Projection - Statement of Comprehensive Income",
+          "required": true,
+          "columns": [
+            {
+              "key": "item",
+              "label": "Item",
+              "type": "text"
+            },
+            {
+              "key": "year1",
+              "label": "Year 1",
+              "type": "currency"
+            },
+            {
+              "key": "year2",
+              "label": "Year 2",
+              "type": "currency"
+            }
+          ],
+          "defaultRows": [
+            {
+              "item": "Gross Contribution"
+            },
+            {
+              "item": "Less: Earned Contribution Ceded to Retakaful Operator"
+            },
+            {
+              "item": "Net Earned Contribution / Net Income From Islamic Banking"
+            },
+            {
+              "item": "Other Revenue"
+            },
+            {
+              "item": "Net Claims and Benefits"
+            },
+            {
+              "item": "Other Expenses"
+            },
+            {
+              "item": "Income / (Loss) Before Tax"
+            },
+            {
+              "item": "Tax"
+            },
+            {
+              "item": "Income / (Loss) After Tax"
+            }
+          ]
+        },
+        {
+          "fieldId": "financial-projection-balance",
+          "fieldType": "table",
+          "fieldName": "financialProjectionBalance",
+          "label": "Three Years Financial Projection - Statement of Financial Position",
+          "required": true,
+          "columns": [
+            {
+              "key": "item",
+              "label": "Item",
+              "type": "text"
+            },
+            {
+              "key": "year1",
+              "label": "Year 1",
+              "type": "currency"
+            },
+            {
+              "key": "year2",
+              "label": "Year 2",
+              "type": "currency"
+            }
+          ],
+          "defaultRows": [
+            {
+              "item": "Total Assets"
+            },
+            {
+              "item": "Total Liabilities"
+            },
+            {
+              "item": "Islamic Banking Fund / Seed Capital"
+            }
+          ]
+        },
+        {
+          "fieldId": "projection-basis",
+          "fieldType": "textarea",
+          "fieldName": "projectionBasis",
+          "label": "Basis of Assumption",
+          "required": true,
+          "helpText": "Please provide basis of assumption in deriving to the projected figure",
+          "placeholder": "Explain the basis and assumptions",
+          "rows": 4
+        }
+      ]
+    },
+    {
+      "stepId": "step-4-shariah-advisor",
+      "stepName": "Profile of Shariah Advisor",
+      "stepOrder": 4,
+      "stepDescription": "Information about the Shariah Advisor",
+      "fields": [
+        {
+          "fieldId": "position-held",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "positionHeld",
+          "label": "Position to be held",
+          "required": true,
+          "placeholder": "Enter position"
+        },
+        {
+          "fieldId": "salutation",
+          "fieldType": "select",
+          "fieldName": "salutation",
+          "label": "Salutation",
+          "required": true,
+          "options": [
+            {
+              "value": "mr",
+              "label": "Mr"
+            },
+            {
+              "value": "mrs",
+              "label": "Mrs"
+            },
+            {
+              "value": "ms",
+              "label": "Ms"
+            },
+            {
+              "value": "dr",
+              "label": "Dr"
+            },
+            {
+              "value": "prof",
+              "label": "Prof"
+            }
+          ]
+        },
+        {
+          "fieldId": "full-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "fullName",
+          "label": "Name (as per NRIC/passport)",
+          "required": true,
+          "placeholder": "Enter full name"
+        },
+        {
+          "fieldId": "date-of-birth",
+          "fieldType": "date",
+          "fieldName": "dateOfBirth",
+          "label": "Date of Birth",
+          "required": true
+        },
+        {
+          "fieldId": "place-of-birth",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "placeOfBirth",
+          "label": "Place of Birth",
+          "required": true,
+          "placeholder": "Enter place of birth"
+        },
+        {
+          "fieldId": "gender",
+          "fieldType": "radio",
+          "fieldName": "gender",
+          "label": "Gender",
+          "required": true,
+          "options": [
+            {
+              "value": "male",
+              "label": "Male"
+            },
+            {
+              "value": "female",
+              "label": "Female"
+            }
+          ]
+        },
+        {
+          "fieldId": "nationality",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "nationality",
+          "label": "Nationality",
+          "required": true,
+          "placeholder": "Enter nationality"
+        },
+        {
+          "fieldId": "is-malaysian",
+          "fieldType": "radio",
+          "fieldName": "isMalaysian",
+          "label": "Are you a Malaysian?",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "nric-no",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "nricNo",
+          "label": "NRIC No. (if Malaysian)",
+          "required": false,
+          "placeholder": "Enter NRIC number",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-no",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "passportNo",
+          "label": "Passport No. (if Non-Malaysian)",
+          "required": false,
+          "placeholder": "Enter passport number",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-expiry",
+          "fieldType": "date",
+          "fieldName": "passportExpiry",
+          "label": "Passport Expiry Date",
+          "required": false,
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "education",
+          "fieldType": "repeater",
+          "fieldName": "education",
+          "label": "Education(s)",
+          "required": true,
+          "fields": [
+            {
+              "fieldId": "qualification-type",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "qualificationType",
+              "label": "Type of Qualification/Certification",
+              "required": true
+            },
+            {
+              "fieldId": "institution-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "institutionName",
+              "label": "Name of School/College/University/Others",
+              "required": true
+            },
+            {
+              "fieldId": "year-obtained",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "yearObtained",
+              "label": "Year Qualification Obtained",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fieldId": "professional-qualifications",
+          "fieldType": "repeater",
+          "fieldName": "professionalQualifications",
+          "label": "Professional Qualification(s)",
+          "required": false,
+          "fields": [
+            {
+              "fieldId": "qualification-type",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "qualificationType",
+              "label": "Type of Qualification/Certification",
+              "required": true
+            },
+            {
+              "fieldId": "institution-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "institutionName",
+              "label": "Name of Institution",
+              "required": true
+            },
+            {
+              "fieldId": "year-obtained",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "yearObtained",
+              "label": "Year Qualification Obtained",
+              "required": true
+            }
+          ]
+        },
+        {
+          "fieldId": "work-experience",
+          "fieldType": "repeater",
+          "fieldName": "workExperience",
+          "label": "Past and Current Work Experience(s)",
+          "required": true,
+          "fields": [
+            {
+              "fieldId": "date-from",
+              "fieldType": "date",
+              "fieldName": "dateFrom",
+              "label": "Date From",
+              "required": true
+            },
+            {
+              "fieldId": "date-to",
+              "fieldType": "date",
+              "fieldName": "dateTo",
+              "label": "Date To",
+              "required": false
+            },
+            {
+              "fieldId": "employer-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "employerName",
+              "label": "Name of Employer",
+              "required": true
+            },
+            {
+              "fieldId": "designation",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "designation",
+              "label": "Designation",
+              "required": true
+            },
+            {
+              "fieldId": "key-responsibilities",
+              "fieldType": "textarea",
+              "fieldName": "keyResponsibilities",
+              "label": "Key Areas of Responsibilities",
+              "required": true,
+              "rows": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepId": "step-5-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 5,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "document-checklist",
+          "fieldType": "document-checklist",
+          "fieldName": "documentChecklist",
+          "label": "Required Documents Checklist",
+          "required": true,
+          "documents": [
+            {
+              "id": "application-form",
+              "label": "Duly completed application form as per Appendix I",
+              "required": true
+            },
+            {
+              "id": "board-resolution",
+              "label": "Board Resolution/minutes of meeting on the proposed establishment of Islamic window",
+              "required": true
+            },
+            {
+              "id": "profile-shariah-advisor",
+              "label": "Profile of Shariah Advisor as per Appendix II",
+              "required": true
+            },
+            {
+              "id": "declaration-true-correct",
+              "label": "Duly completed Declaration of True and Correct Information Submitted as per Appendix III",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration-service-provider",
+              "label": "Statutory Declaration by Service Provider Responsible for Submission (as per Appendix IV)",
+              "required": false,
+              "helpText": "Not applicable for submission made directly by the Labuan Company"
+            }
+          ]
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file."
+        }
+      ]
+    }
+  ]
+}
+

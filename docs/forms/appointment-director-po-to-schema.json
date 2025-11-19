@@ -1,0 +1,657 @@
+{
+  "formId": "application-for-appointment-of-director-po-to-and-other-officers",
+  "formName": "Application for Appointment of Director, PO, TO and Other Officers",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes & Checklist",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and document checklist",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies.\n\n2. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n3. The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.\n\n4. Other officers as defined in Labuan Financial Services and Securities Act 2010, Labuan Islamic Financial Services and Securities Act 2010 and Labuan Companies Act 1990\n\n5. Processing fee: USD 350 (Normal Processing) or USD 1,550 (Fast Track Processing) - only for application for Appointment of Trust Officer",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "company-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "companyName",
+          "label": "Name of Labuan Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "license-type",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "licenseType",
+          "label": "Type of Licence",
+          "required": true,
+          "placeholder": "Enter license type"
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name (responsible for information submission)",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-officer-profile",
+      "stepName": "Profile of Director/Principal Officer/Trust Officer",
+      "stepOrder": 2,
+      "stepDescription": "Information about the officer to be appointed",
+      "fields": [
+        {
+          "fieldId": "position-held",
+          "fieldType": "select",
+          "fieldName": "positionHeld",
+          "label": "Position to be held",
+          "required": true,
+          "options": [
+            {
+              "value": "director",
+              "label": "Director"
+            },
+            {
+              "value": "principal-officer",
+              "label": "Principal Officer"
+            },
+            {
+              "value": "trust-officer",
+              "label": "Trust Officer"
+            },
+            {
+              "value": "other-officer",
+              "label": "Other Officer"
+            }
+          ]
+        },
+        {
+          "fieldId": "salutation",
+          "fieldType": "select",
+          "fieldName": "salutation",
+          "label": "Salutation",
+          "required": true,
+          "options": [
+            {
+              "value": "mr",
+              "label": "Mr"
+            },
+            {
+              "value": "mrs",
+              "label": "Mrs"
+            },
+            {
+              "value": "ms",
+              "label": "Ms"
+            },
+            {
+              "value": "dr",
+              "label": "Dr"
+            },
+            {
+              "value": "prof",
+              "label": "Prof"
+            },
+            {
+              "value": "dato",
+              "label": "Dato'"
+            },
+            {
+              "value": "datuk",
+              "label": "Datuk"
+            },
+            {
+              "value": "tan-sri",
+              "label": "Tan Sri"
+            }
+          ]
+        },
+        {
+          "fieldId": "full-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "fullName",
+          "label": "Name (as per NRIC/passport)",
+          "required": true,
+          "placeholder": "Enter full name as per NRIC/passport"
+        },
+        {
+          "fieldId": "date-of-birth",
+          "fieldType": "date",
+          "fieldName": "dateOfBirth",
+          "label": "Date of Birth",
+          "required": true
+        },
+        {
+          "fieldId": "place-of-birth",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "placeOfBirth",
+          "label": "Place of Birth",
+          "required": true,
+          "placeholder": "Enter place of birth"
+        },
+        {
+          "fieldId": "gender",
+          "fieldType": "radio",
+          "fieldName": "gender",
+          "label": "Gender",
+          "required": true,
+          "options": [
+            {
+              "value": "male",
+              "label": "Male"
+            },
+            {
+              "value": "female",
+              "label": "Female"
+            }
+          ]
+        },
+        {
+          "fieldId": "nationality",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "nationality",
+          "label": "Nationality",
+          "required": true,
+          "placeholder": "Enter nationality"
+        },
+        {
+          "fieldId": "is-malaysian",
+          "fieldType": "radio",
+          "fieldName": "isMalaysian",
+          "label": "Are you a Malaysian?",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ]
+        },
+        {
+          "fieldId": "old-ic-no",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "oldIcNo",
+          "label": "Old IC No. (if applicable)",
+          "required": false,
+          "placeholder": "Enter old IC number",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "nric-no",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "nricNo",
+          "label": "NRIC No.",
+          "required": false,
+          "placeholder": "Enter NRIC number",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "yes",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-no",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "passportNo",
+          "label": "Passport No.",
+          "required": false,
+          "placeholder": "Enter passport number",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-expiry",
+          "fieldType": "date",
+          "fieldName": "passportExpiry",
+          "label": "Passport Expiry Date",
+          "required": false,
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-country-issue",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "passportCountryIssue",
+          "label": "Country of Issue",
+          "required": false,
+          "placeholder": "Enter country of issue",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "passport-issuing-authority",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "passportIssuingAuthority",
+          "label": "Issuing Authority",
+          "required": false,
+          "placeholder": "Enter issuing authority",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "length-residence-malaysia",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "lengthResidenceMalaysia",
+          "label": "Length of residence in Malaysia",
+          "required": false,
+          "placeholder": "e.g., 5 years",
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        },
+        {
+          "fieldId": "work-permit-applied",
+          "fieldType": "radio",
+          "fieldName": "workPermitApplied",
+          "label": "Any work permit applied prior to this application?",
+          "required": false,
+          "options": [
+            {
+              "value": "no",
+              "label": "No"
+            },
+            {
+              "value": "yes",
+              "label": "Yes"
+            }
+          ],
+          "conditionalDisplay": {
+            "when": "isMalaysian",
+            "equals": "no",
+            "show": true
+          }
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-education-qualifications",
+      "stepName": "Education & Professional Qualifications",
+      "stepOrder": 3,
+      "stepDescription": "Educational background and professional qualifications",
+      "fields": [
+        {
+          "fieldId": "education",
+          "fieldType": "repeater",
+          "fieldName": "education",
+          "label": "Education(s)",
+          "required": true,
+          "helpText": "List all educational qualifications",
+          "fields": [
+            {
+              "fieldId": "qualification-type",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "qualificationType",
+              "label": "Type of Qualification/Certification",
+              "required": true,
+              "placeholder": "e.g., Bachelor's Degree, Master's Degree"
+            },
+            {
+              "fieldId": "institution-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "institutionName",
+              "label": "Name of College/University/Others",
+              "required": true,
+              "placeholder": "Enter institution name"
+            },
+            {
+              "fieldId": "year-obtained",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "yearObtained",
+              "label": "Year Qualification Obtained",
+              "required": true,
+              "placeholder": "e.g., 2010"
+            }
+          ]
+        },
+        {
+          "fieldId": "professional-qualifications",
+          "fieldType": "repeater",
+          "fieldName": "professionalQualifications",
+          "label": "Professional Qualification(s)",
+          "required": false,
+          "helpText": "List all professional qualifications",
+          "fields": [
+            {
+              "fieldId": "qualification-type",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "qualificationType",
+              "label": "Type of Qualification/Certification",
+              "required": true,
+              "placeholder": "e.g., CPA, CFA, ACCA"
+            },
+            {
+              "fieldId": "institution-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "institutionName",
+              "label": "Name of Institution",
+              "required": true,
+              "placeholder": "Enter institution name"
+            },
+            {
+              "fieldId": "year-obtained",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "yearObtained",
+              "label": "Year Qualification Obtained",
+              "required": true,
+              "placeholder": "e.g., 2015"
+            }
+          ]
+        },
+        {
+          "fieldId": "professional-memberships",
+          "fieldType": "repeater",
+          "fieldName": "professionalMemberships",
+          "label": "Membership of Professional Body(s)",
+          "required": false,
+          "helpText": "List all professional memberships",
+          "fields": [
+            {
+              "fieldId": "membership-type",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "membershipType",
+              "label": "Type and Details of Membership",
+              "required": true,
+              "placeholder": "e.g., Member, Fellow"
+            },
+            {
+              "fieldId": "institution-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "institutionName",
+              "label": "Name of Institution",
+              "required": true,
+              "placeholder": "Enter institution name"
+            },
+            {
+              "fieldId": "year-obtained",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "yearObtained",
+              "label": "Year Membership Obtained",
+              "required": true,
+              "placeholder": "e.g., 2018"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepId": "step-4-work-experience",
+      "stepName": "Work Experience & Directorships",
+      "stepOrder": 4,
+      "stepDescription": "Past and current work experience and directorships",
+      "fields": [
+        {
+          "fieldId": "work-experience",
+          "fieldType": "repeater",
+          "fieldName": "workExperience",
+          "label": "Past and Current Work Experience(s)",
+          "required": true,
+          "helpText": "List all work experience in chronological order",
+          "fields": [
+            {
+              "fieldId": "date-from",
+              "fieldType": "date",
+              "fieldName": "dateFrom",
+              "label": "Date From",
+              "required": true
+            },
+            {
+              "fieldId": "date-to",
+              "fieldType": "date",
+              "fieldName": "dateTo",
+              "label": "Date To",
+              "required": false,
+              "placeholder": "Leave blank if current"
+            },
+            {
+              "fieldId": "employer-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "employerName",
+              "label": "Name of Employer",
+              "required": true,
+              "placeholder": "Enter employer name"
+            },
+            {
+              "fieldId": "designation",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "designation",
+              "label": "Designation",
+              "required": true,
+              "placeholder": "Enter designation"
+            },
+            {
+              "fieldId": "key-responsibilities",
+              "fieldType": "textarea",
+              "fieldName": "keyResponsibilities",
+              "label": "Key Areas of Responsibilities",
+              "required": true,
+              "placeholder": "Describe key responsibilities",
+              "rows": 4
+            }
+          ]
+        },
+        {
+          "fieldId": "directorships",
+          "fieldType": "repeater",
+          "fieldName": "directorships",
+          "label": "Directorship Held in Other Company(s)",
+          "required": false,
+          "helpText": "List all directorships in other companies",
+          "fields": [
+            {
+              "fieldId": "corporation-name",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "corporationName",
+              "label": "Name of Corporation",
+              "required": true,
+              "placeholder": "Enter corporation name"
+            },
+            {
+              "fieldId": "place-incorporation",
+              "fieldType": "text-input",
+              "inputType": "text",
+              "fieldName": "placeIncorporation",
+              "label": "Place of Incorporation",
+              "required": true,
+              "placeholder": "Enter place of incorporation"
+            },
+            {
+              "fieldId": "date-appointment",
+              "fieldType": "date",
+              "fieldName": "dateAppointment",
+              "label": "Date of Appointment",
+              "required": true
+            },
+            {
+              "fieldId": "nature-appointment",
+              "fieldType": "select",
+              "fieldName": "natureAppointment",
+              "label": "Nature of Appointment",
+              "required": true,
+              "options": [
+                {
+                  "value": "executive",
+                  "label": "Executive"
+                },
+                {
+                  "value": "non-executive",
+                  "label": "Non-Executive"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepId": "step-5-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 5,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "document-checklist",
+          "fieldType": "document-checklist",
+          "fieldName": "documentChecklist",
+          "label": "Required Documents Checklist",
+          "required": true,
+          "documents": [
+            {
+              "id": "profile-form",
+              "label": "Duly completed profile of Director(s)/Principal Officer/Trust Officer/Other Officers",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration-fit-proper",
+              "label": "Duly completed Statutory Declaration on Fit and Proper Person",
+              "required": true
+            },
+            {
+              "id": "nric-passport",
+              "label": "Certified true copy of IC (Malaysian) or passport (non-Malaysian)",
+              "required": true
+            },
+            {
+              "id": "academic-certificates",
+              "label": "Certified true copy of relevant academic and professional certificates",
+              "required": true
+            },
+            {
+              "id": "referral-letters",
+              "label": "Two (2) referral letters from institutions and/or professional bodies",
+              "required": false,
+              "helpText": "Not applicable for appointment within the group of companies"
+            },
+            {
+              "id": "statutory-declaration-service-provider",
+              "label": "Statutory Declaration by Service Provider Responsible for Submission",
+              "required": false,
+              "helpText": "Not applicable for submission made directly by the Labuan Company"
+            },
+            {
+              "id": "work-permit",
+              "label": "Certified true copy of work permit (if applicable)",
+              "required": false
+            }
+          ]
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [
+            ".pdf",
+            ".doc",
+            ".docx",
+            ".jpg",
+            ".jpeg",
+            ".png"
+          ],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file. Accepted formats: PDF, DOC, DOCX, JPG, JPEG, PNG"
+        }
+      ]
+    }
+  ]
+}
+

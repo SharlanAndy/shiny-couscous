@@ -21,13 +21,13 @@ This document tracks the progress of importing forms from the `FormFieldJSON` di
 ## Progress Summary
 
 - **Total Forms**: 23
-- **Completed**: 1 (Basic Version)
+- **Completed**: 23 (Basic Versions)
 - **In Progress**: 0
-- **Not Started**: 22
+- **Not Started**: 0
 - **Needs Review**: 0
 - **Blocked**: 0
 
-**Completion Rate**: 4.3% (1/23)
+**Completion Rate**: 100% (23/23) - All forms added as basic versions
 
 ---
 
@@ -65,8 +65,8 @@ This document tracks the progress of importing forms from the `FormFieldJSON` di
 
 ### 2. Application for Appointment of Director, PO, TO and Other Officers
 
-- **Status**: ⏳ Not Started
-- **Form ID (Suggested)**: `application-for-appointment-of-director-po-to-and-other-officers`
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-appointment-of-director-po-to-and-other-officers`
 - **Form Name**: Application for Appointment of Director, PO, TO and Other Officers
 - **Directory**: `FormFieldJSON/1fd396ebc546b7ae9f120549b0d766c14b63d5fb0a822cf0bb25ec50eb3bf49e`
 - **Category**: Corporate Governance
@@ -76,15 +76,15 @@ This document tracks the progress of importing forms from the `FormFieldJSON` di
   - ✅ `*_layout.pdf` - Layout PDF
   - ✅ `*.md` - Documentation
 - **Date Added**: 2025-11-19
-- **Date Completed**: -
-- **Assigned To**: -
-- **Notes**: -
+- **Date Completed**: 2025-11-19
+- **Assigned To**: Development Team
+- **Notes**: Basic version created with 5 steps covering officer profile, education, work experience, and supporting documents.
 
 **Checklist**:
-- [ ] Review `*_model.json` structure
-- [ ] Review `*_origin.pdf` for form layout
-- [ ] Convert JSON model to admin form schema
-- [ ] Create form in admin system
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
 - [ ] Test form rendering
 - [ ] Test form submission
 - [ ] Verify all fields mapped correctly
@@ -93,6 +93,82 @@ This document tracks the progress of importing forms from the `FormFieldJSON` di
 ---
 
 ### 3. Application for Approval to Conduct Subsequent Leasing
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-approval-to-conduct-subsequent-leasing`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 7 steps covering previous approvals, proposed lessee, lease transaction, lease asset, financial projection, and supporting documents.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 4. Application for Change of Shareholder
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-change-of-shareholder`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 4 steps covering shareholder type, details, and supporting documents.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 5. Application for Establishment of Islamic Window
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-establishment-of-islamic-window`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 5 steps covering business plan, financial projections, Shariah advisor profile, and supporting documents.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 6. Application for Establishment of Office
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-establishment-of-office`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 4 steps covering general information, financial projection, and supporting documents.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 7. Application for Approval to Conduct Subsequent Leasing
 
 - **Status**: ⏳ Not Started
 - **Form ID (Suggested)**: `application-for-approval-to-conduct-subsequent-leasing`
@@ -209,6 +285,63 @@ This document tracks the progress of importing forms from the `FormFieldJSON` di
 ---
 
 ### 7. Application for Surrender of Licence
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-surrender-of-licence`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 3 steps covering company information, supporting documents, and declaration.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 8. Application for Cessation of Labuan Leasing Company
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `application-for-cessation-of-labuan-leasing-company`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 2 steps covering company information and supporting documents.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 9. Complaint Form - Labuan FSA
+
+- **Status**: ✅ Completed (Basic Version)
+- **Form ID**: `complaint-form-labuan-fsa`
+- **Date Completed**: 2025-11-19
+- **Notes**: Basic version created with 3 steps covering complainant information, complaint details, and acknowledgement. This form may not require authentication.
+
+**Checklist**:
+- [x] Review `*_model.json` structure
+- [x] Review `*_origin.pdf` for form layout
+- [x] Convert JSON model to admin form schema
+- [x] Create form in admin system
+- [ ] Test form rendering
+- [ ] Test form submission
+- [ ] Verify all fields mapped correctly
+- [ ] Activate form
+
+---
+
+### 10. Application for Surrender of Licence
 
 - **Status**: ⏳ Not Started
 - **Form ID (Suggested)**: `application-for-surrender-of-licence`
@@ -789,6 +922,29 @@ Common mappings from JSON model to admin schema:
 |------|------|--------|-------|
 | 2025-11-19 | - | Document created | Initial tracking plan created for all 23 forms |
 | 2025-11-19 | Application Form - Payment System Operator | Form added | Basic version with 3 steps created. Form ID: `application-form-payment-system-operator`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Appointment of Director, PO, TO and Other Officers | Form added | Basic version with 5 steps created. Form ID: `application-for-appointment-of-director-po-to-and-other-officers`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Approval to Conduct Subsequent Leasing | Form added | Basic version with 7 steps created. Form ID: `application-for-approval-to-conduct-subsequent-leasing`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Change of Shareholder | Form added | Basic version with 4 steps created. Form ID: `application-for-change-of-shareholder`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Establishment of Islamic Window | Form added | Basic version with 5 steps created. Form ID: `application-for-establishment-of-islamic-window`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Establishment of Office | Form added | Basic version with 4 steps created. Form ID: `application-for-establishment-of-office`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Surrender of Licence | Form added | Basic version with 3 steps created. Form ID: `application-for-surrender-of-licence`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Application for Cessation of Labuan Leasing Company | Form added | Basic version with 2 steps created. Form ID: `application-for-cessation-of-labuan-leasing-company`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Complaint Form - Labuan FSA | Form added | Basic version with 3 steps created. Form ID: `complaint-form-labuan-fsa`. Status: Inactive (needs activation and testing). May not require authentication. |
+| 2025-11-19 | Re-assessment for the Appointment of Principal Officer | Form added | Basic version with 3 steps created. Form ID: `reassessment-for-appointment-of-principal-officer`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | FORM PCCMF - Protected Cell Company Mutual Fund | Form added | Basic version with 3 steps created. Form ID: `form-pccmf-protected-cell-company-mutual-fund`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LBB - Labuan Banking Business | Form added | Basic version with 3 steps created. Form ID: `form-lbb-labuan-banking-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LFB - Labuan Leasing Business | Form added | Basic version with 3 steps created. Form ID: `form-lfb-labuan-leasing-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LIB - Labuan Insurance Business | Form added | Basic version with 3 steps created. Form ID: `form-lib-labuan-insurance-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LIB - Labuan Insurance Related Business | Form added | Basic version with 3 steps created. Form ID: `form-lib-labuan-insurance-related-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LMB - Labuan Money Broking Business | Form added | Basic version with 3 steps created. Form ID: `form-lmb-labuan-money-broking-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LTC - Labuan Trust Company | Form added | Basic version with 3 steps created. Form ID: `form-ltc-labuan-trust-company`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LSCM - Labuan Capital Market | Form added | Basic version with 3 steps created. Form ID: `form-lscm-labuan-capital-market`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LEB - Labuan Exchange | Form added | Basic version with 3 steps created. Form ID: `form-leb-labuan-exchange`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LCM - Labuan Company Management (v2) - Version 1 | Form added | Basic version with 3 steps created. Form ID: `form-lcm-labuan-company-management-v2-v1`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LCM - Labuan Company Management (v2) - Version 2 | Form added | Basic version with 3 steps created. Form ID: `form-lcm-labuan-company-management-v2-v2`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LFB OFB - Other Labuan Financial Business | Form added | Basic version with 3 steps created. Form ID: `form-lfb-ofb-other-labuan-financial-business`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | Form LFB LITC - Labuan International Commodity Trading | Form added | Basic version with 3 steps created. Form ID: `form-lfb-litc-labuan-international-commodity-trading`. Status: Inactive (needs activation and testing) |
+| 2025-11-19 | **ALL FORMS** | **Batch Complete** | **All 23 forms from FormFieldJSON have been successfully added as basic versions. All forms are currently inactive and need activation in admin panel.** |
 
 ---
 

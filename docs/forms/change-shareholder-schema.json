@@ -1,0 +1,238 @@
+{
+  "formId": "application-for-change-of-shareholder",
+  "formName": "Application for Change of Shareholder",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "stepId": "step-1-important-notes",
+      "stepName": "Important Notes & Checklist",
+      "stepOrder": 1,
+      "stepDescription": "Please read the important notes and document checklist",
+      "fields": [
+        {
+          "fieldId": "important-notes",
+          "fieldType": "help-text",
+          "fieldName": "importantNotes",
+          "label": "IMPORTANT NOTES",
+          "content": "1. Where documents are not in the national language of Malaysia or in English, please provide English-translated version of the documents, duly certified/notarized.\n\n2. Documents may be certified by any authorised person including, but not limited to, commissioner for oaths, notary public, certified public accountants, advocates or solicitors, company secretaries and Malaysian/foreign embassies. Copy of bank statements must be certified by the bank.\n\n3. The checklist serves as general requirement of the application, Labuan FSA reserves the right to request for additional information to support the application.\n\n4. This document belongs to Labuan FSA, no modification or tampering with the format or its contents is permitted.\n\n5. Processing fee: RM 1,000 or USD 350 (Normal Processing) or RM 4,500 or USD 1,550 (Fast Track Processing)\n\nNote: Only applicable for changes of more than 10% of the paid up capital",
+          "format": "plain",
+          "position": "above",
+          "required": false,
+          "hidden": false,
+          "style": {
+            "containerClassName": "bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6",
+            "className": "text-sm text-gray-800 whitespace-pre-line leading-relaxed"
+          }
+        },
+        {
+          "fieldId": "company-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "companyName",
+          "label": "Name of Labuan Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "license-type",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "licenseType",
+          "label": "Type of Licence",
+          "required": true,
+          "placeholder": "Enter license type"
+        },
+        {
+          "fieldId": "officer-name",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerName",
+          "label": "Officer Name (responsible for information submission)",
+          "required": true,
+          "placeholder": "Enter officer name"
+        },
+        {
+          "fieldId": "officer-company",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerCompany",
+          "label": "Company",
+          "required": true,
+          "placeholder": "Enter company name"
+        },
+        {
+          "fieldId": "officer-designation",
+          "fieldType": "text-input",
+          "inputType": "text",
+          "fieldName": "officerDesignation",
+          "label": "Designation",
+          "required": true,
+          "placeholder": "Enter designation"
+        },
+        {
+          "fieldId": "officer-contact",
+          "fieldType": "text-input",
+          "inputType": "tel",
+          "fieldName": "officerContact",
+          "label": "Contact No.",
+          "required": true,
+          "placeholder": "Enter contact number"
+        },
+        {
+          "fieldId": "officer-email",
+          "fieldType": "text-input",
+          "inputType": "email",
+          "fieldName": "officerEmail",
+          "label": "Email",
+          "required": true,
+          "placeholder": "Enter email address"
+        }
+      ]
+    },
+    {
+      "stepId": "step-2-shareholder-type",
+      "stepName": "Type of Shareholder",
+      "stepOrder": 2,
+      "stepDescription": "Select the type of shareholder being changed",
+      "fields": [
+        {
+          "fieldId": "shareholder-type",
+          "fieldType": "radio",
+          "fieldName": "shareholderType",
+          "label": "Type of Shareholder",
+          "required": true,
+          "options": [
+            {
+              "value": "corporate",
+              "label": "Corporate Shareholder"
+            },
+            {
+              "value": "individual",
+              "label": "Individual Shareholder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stepId": "step-3-shareholder-details",
+      "stepName": "Shareholder Details & Change Information",
+      "stepOrder": 3,
+      "stepDescription": "Details of the shareholder change",
+      "fields": [
+        {
+          "fieldId": "change-description",
+          "fieldType": "textarea",
+          "fieldName": "changeDescription",
+          "label": "Description of Change",
+          "required": true,
+          "placeholder": "Describe the change in shareholding structure",
+          "rows": 4
+        },
+        {
+          "fieldId": "diagram-before-after",
+          "fieldType": "file-upload",
+          "fieldName": "diagramBeforeAfter",
+          "label": "Diagram structure before & after change of shareholder",
+          "required": true,
+          "multiple": false,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".jpg", ".jpeg", ".png"]
+        },
+        {
+          "fieldId": "rationale-changes",
+          "fieldType": "textarea",
+          "fieldName": "rationaleChanges",
+          "label": "Rationale for changes, purchase consideration of shares and source of funds to acquire the shares",
+          "required": true,
+          "placeholder": "Provide rationale and details",
+          "rows": 5
+        }
+      ]
+    },
+    {
+      "stepId": "step-4-supporting-documents",
+      "stepName": "Supporting Documents",
+      "stepOrder": 4,
+      "stepDescription": "Upload all required supporting documents",
+      "fields": [
+        {
+          "fieldId": "document-checklist",
+          "fieldType": "document-checklist",
+          "fieldName": "documentChecklist",
+          "label": "Required Documents Checklist",
+          "required": true,
+          "documents": [
+            {
+              "id": "application-form",
+              "label": "Duly completed application form",
+              "required": true
+            },
+            {
+              "id": "certificate-incorporation",
+              "label": "Certified copy of Certificate of Incorporation (Corporate Shareholder)",
+              "required": false
+            },
+            {
+              "id": "memorandum-articles",
+              "label": "Certified copy of Memorandum & Articles of Association (Corporate Shareholder)",
+              "required": false
+            },
+            {
+              "id": "audited-financial-statements",
+              "label": "Latest two (2) years Audited Financial Statements/Annual Report (Corporate Shareholder)",
+              "required": false
+            },
+            {
+              "id": "board-resolution",
+              "label": "Board Resolution or extract of minutes of General Meeting which approved the change",
+              "required": true
+            },
+            {
+              "id": "nric-passport",
+              "label": "Certified copy of IC (Malaysian)/passport (non-Malaysian) (Individual Shareholder)",
+              "required": false
+            },
+            {
+              "id": "referral-letters",
+              "label": "Two (2) referral letters from institutions and/or professional bodies (Individual Shareholder)",
+              "required": false
+            },
+            {
+              "id": "net-worth-statement",
+              "label": "Proof of net worth of assets (Individual Shareholder)",
+              "required": false
+            },
+            {
+              "id": "statutory-declaration",
+              "label": "Duly completed Statutory Declaration of true and correct information submitted",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration-shareholder",
+              "label": "Duly completed Statutory Declaration by Shareholder on fit and proper person",
+              "required": true
+            },
+            {
+              "id": "statutory-declaration-service-provider",
+              "label": "Statutory Declaration by Service Provider Responsible for Submission",
+              "required": false
+            }
+          ]
+        },
+        {
+          "fieldId": "supporting-documents",
+          "fieldType": "file-upload",
+          "fieldName": "supportingDocuments",
+          "label": "Upload Supporting Documents",
+          "required": false,
+          "multiple": true,
+          "maxFileSize": 10485760,
+          "allowedExtensions": [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"],
+          "helpText": "Upload all required documents. Maximum file size: 10MB per file."
+        }
+      ]
+    }
+  ]
+}
+
