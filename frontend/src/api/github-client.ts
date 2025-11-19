@@ -169,10 +169,7 @@ export class GitHubClient {
       })
 
       if (!metaResponse.ok) {
-        if (metaResponse.status === 404) {
-          // File doesn't exist, return empty structure
-          return { data: {} as T, sha: '' }
-        }
+        // Always throw 404 errors so readJsonFile can catch and check for split files
         await this.handleError(metaResponse)
       }
 
