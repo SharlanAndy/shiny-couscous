@@ -1139,6 +1139,31 @@ def _load_settings() -> dict:
         "sessionTimeout": 30,
     }
 
+@router.get("/roles", response_model=dict)
+async def get_admin_roles():
+    """
+    Get admin roles configuration.
+    
+    Returns admin_roles.json content for role checking.
+    """
+    import json
+    from pathlib import Path
+    
+    roles_path = Path(__file__).parent.parent.parent.parent / "data" / "admin_roles.json"
+    
+    if not roles_path.exists():
+        return {
+            "version": "1.0.0",
+            "lastUpdated": datetime.now().isoformat(),
+            "roles": []
+        }
+    
+    try:
+        with open(roles_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read admin roles: {str(e)}")
+
 def _save_settings(settings: dict) -> None:
     """Save settings to JSON file."""
     settings["updatedAt"] = datetime.utcnow().isoformat() + "Z"
