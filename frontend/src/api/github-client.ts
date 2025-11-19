@@ -172,7 +172,33 @@ export class GitHubClient {
 
       // Decode base64 content from metadata
       let data: T
-      if (meta.content && meta.encoding === 'base64') {
+      
+      // GitHub API doesn't return content for files > 1MB
+      // Check if content is missing or if file is too large
+      if (!meta.content || meta.encoding === 'none' || (meta.size && meta.size > 1000000)) {
+        // File is too large or content not in metadata - use raw content URL
+        const rawUrl = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${meta.sha ? `HEAD` : 'main'}/${path}`
+        const contentResponse = await fetch(rawUrl, {
+          headers: this.getHeaders(true),
+        })
+        
+        if (!contentResponse.ok) {
+          throw new GitHubAPIError(contentResponse.status, `Failed to get file content: ${path}`)
+        }
+
+        const text = await contentResponse.text()
+        
+        if (text.trim() === '') {
+          data = {} as T
+        } else {
+          try {
+            data = JSON.parse(text) as T
+          } catch (parseError) {
+            console.error(`Failed to parse JSON from ${path}:`, parseError)
+            throw new GitHubAPIError(422, `Invalid JSON in file: ${path}`)
+          }
+        }
+      } else if (meta.content && meta.encoding === 'base64') {
         try {
           const decodedContent = atob(meta.content.replace(/\s/g, ''))
           data = JSON.parse(decodedContent) as T
