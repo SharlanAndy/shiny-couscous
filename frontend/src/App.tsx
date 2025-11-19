@@ -19,6 +19,7 @@ import { AdminAnalyticsPage } from './pages/admin/AdminAnalyticsPage'
 import { AdminSettingsPage } from './pages/admin/AdminSettingsPage'
 import { AdminUsersPage } from './pages/admin/AdminUsersPage'
 import { AdminAdminsPage } from './pages/admin/AdminAdminsPage'
+import { AdminRolesPage } from './pages/admin/AdminRolesPage'
 import { ProfilePage } from './pages/ProfilePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { SupabaseTestPage } from './pages/SupabaseTestPage'
@@ -49,6 +50,7 @@ function App() {
       <Route path="/admin/settings" element={<Layout><ProtectedRoute requireAdmin><AdminSettingsPage /></ProtectedRoute></Layout>} />
       <Route path="/admin/users" element={<Layout><ProtectedRoute requireAdmin><AdminUsersPage /></ProtectedRoute></Layout>} />
       <Route path="/admin/admins" element={<Layout><ProtectedRoute requireAdmin><AdminAdminsPage /></ProtectedRoute></Layout>} />
+      <Route path="/admin/roles" element={<Layout><ProtectedRoute requireAdmin><AdminRolesPage /></ProtectedRoute></Layout>} />
       <Route path="/test/supabase" element={<Layout><SupabaseTestPage /></Layout>} />
       {/* Catch-all route for 404 - must be last */}
       <Route path="*" element={<Layout><NotFoundPage /></Layout>} />

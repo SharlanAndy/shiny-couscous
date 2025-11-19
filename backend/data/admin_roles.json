@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-19T12:00:00.000Z",
+  "roles": [
+    {
+      "id": "role-admin",
+      "name": "admin",
+      "displayName": "Admin",
+      "description": "Standard administrator with full access to manage forms, submissions, and users",
+      "permissions": [
+        "view_dashboard",
+        "manage_forms",
+        "review_submissions",
+        "manage_users",
+        "view_analytics",
+        "manage_settings"
+      ],
+      "isSystem": true,
+      "isActive": true,
+      "createdAt": "2025-11-18T10:00:00.000Z"
+    },
+    {
+      "id": "role-superadmin",
+      "name": "superAdmin",
+      "displayName": "Super Admin",
+      "description": "Super administrator with full system access including admin management",
+      "permissions": [
+        "view_dashboard",
+        "manage_forms",
+        "review_submissions",
+        "manage_users",
+        "manage_admins",
+        "manage_roles",
+        "view_analytics",
+        "manage_settings"
+      ],
+      "isSystem": true,
+      "isActive": true,
+      "createdAt": "2025-11-18T10:00:00.000Z"
+    }
+  ]
+}
+

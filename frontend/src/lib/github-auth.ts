@@ -148,7 +148,7 @@ export async function registerUser(
   email: string,
   password: string,
   name?: string,
-  role: 'user' | 'admin' = 'user'
+  role: string = 'user'
 ): Promise<LoginResponse> {
   let github
   try {
@@ -165,26 +165,27 @@ export async function registerUser(
   const passwordHash = hashPassword(password)
 
   try {
-    // Read appropriate auth file
-    const authFile = role === 'admin' ? 'backend/data/admins_auth.json' : 'backend/data/users_auth.json'
+    // Read appropriate auth file (any role other than 'user' goes to admins_auth.json)
+    const isAdminRole = role !== 'user'
+    const authFile = isAdminRole ? 'backend/data/admins_auth.json' : 'backend/data/users_auth.json'
     let { data, sha } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
 
     // Initialize empty structure if file doesn't exist
     if (!data || Object.keys(data).length === 0) {
-      data = role === 'admin' ? { admins: [] } : { users: [] }
+      data = isAdminRole ? { admins: [] } : { users: [] }
       sha = '' // No SHA for new files
     }
 
     // Ensure arrays exist
-    if (role === 'admin' && !data.admins) {
+    if (isAdminRole && !data.admins) {
       data.admins = []
     }
-    if (role === 'user' && !data.users) {
+    if (!isAdminRole && !data.users) {
       data.users = []
     }
 
     // Check if user already exists
-    const users = role === 'admin' ? data.admins || [] : data.users || []
+    const users = isAdminRole ? data.admins || [] : data.users || []
     const existingUser = users.find((u: AuthUser) => u.email.toLowerCase() === email.toLowerCase())
 
     if (existingUser) {
@@ -206,7 +207,7 @@ export async function registerUser(
     }
 
     // Add user to array
-    if (role === 'admin') {
+    if (isAdminRole) {
       data.admins = [...(data.admins || []), newUser]
     } else {
       data.users = [...(data.users || []), newUser]

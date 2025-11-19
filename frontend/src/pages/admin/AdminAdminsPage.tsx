@@ -23,7 +23,7 @@ export function AdminAdminsPage() {
   const [editingAdmin, setEditingAdmin] = useState<Admin | null>(null)
   const [editForm, setEditForm] = useState({ name: '', email: '', isActive: true, password: '' })
   const [showCreateForm, setShowCreateForm] = useState(false)
-  const [createForm, setCreateForm] = useState({ name: '', email: '', password: '' })
+  const [createForm, setCreateForm] = useState({ name: '', email: '', password: '', role: 'admin' })
   const [showPasswordField, setShowPasswordField] = useState(false)
   const [isSuperAdmin, setIsSuperAdmin] = useState(false)
 
@@ -44,15 +44,21 @@ export function AdminAdminsPage() {
     queryFn: () => apiClient.getAdminAdmins(),
   })
 
+  // Fetch roles for role selection
+  const { data: roles = [] } = useQuery({
+    queryKey: ['admin-roles'],
+    queryFn: () => apiClient.getAdminRoles(),
+  })
+
   // Create admin mutation
   const createMutation = useMutation({
-    mutationFn: (data: { email: string; password: string; name?: string }) =>
+    mutationFn: (data: { email: string; password: string; name?: string; role?: string }) =>
       apiClient.createAdmin(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['admin-admins'] })
       showSuccess('Admin created successfully', 'Admin Created')
       setShowCreateForm(false)
-      setCreateForm({ name: '', email: '', password: '' })
+      setCreateForm({ name: '', email: '', password: '', role: 'admin' })
     },
     onError: (error: any) => {
       showError(error.response?.data?.detail || error.message || 'Failed to create admin', 'Create Failed')
@@ -162,6 +168,7 @@ export function AdminAdminsPage() {
       email: createForm.email,
       password: createForm.password,
       name: createForm.name || undefined,
+      role: createForm.role || 'admin',
     })
   }
 
@@ -234,7 +241,7 @@ export function AdminAdminsPage() {
       {showCreateForm && (
         <div className="bg-white shadow rounded-lg p-6 mb-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Create New Admin</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Name <span className="text-red-500">*</span>
@@ -273,12 +280,31 @@ export function AdminAdminsPage() {
                 required
               />
             </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Role <span className="text-red-500">*</span>
+              </label>
+              <select
+                value={createForm.role}
+                onChange={(e) => setCreateForm({ ...createForm, role: e.target.value })}
+                className="input w-full"
+                required
+              >
+                {roles
+                  .filter((role) => role.isActive)
+                  .map((role) => (
+                    <option key={role.id} value={role.name}>
+                      {role.displayName}
+                    </option>
+                  ))}
+              </select>
+            </div>
           </div>
           <div className="flex justify-end space-x-3 mt-4">
             <button
               onClick={() => {
                 setShowCreateForm(false)
-                setCreateForm({ name: '', email: '', password: '' })
+                setCreateForm({ name: '', email: '', password: '', role: 'admin' })
               }}
               className="btn btn-secondary"
               disabled={createMutation.isPending}

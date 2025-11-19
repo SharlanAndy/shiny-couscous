@@ -105,6 +105,7 @@ export function Layout({ children }: LayoutProps) {
     { to: '/admin/forms', label: 'Forms' },
     { to: '/admin/users', label: 'Users' },
     { to: '/admin/admins', label: 'Admins' },
+    { to: '/admin/roles', label: 'Roles' },
     { to: '/admin/analytics', label: 'Analytics' },
     { to: '/admin/settings', label: 'Settings' },
   ]

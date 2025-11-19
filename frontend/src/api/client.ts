@@ -1068,7 +1068,7 @@ class APIClient {
     }
   }
 
-  async createAdmin(data: { email: string; password: string; name?: string }): Promise<{
+  async createAdmin(data: { email: string; password: string; name?: string; role?: string }): Promise<{
     id: string
     email: string
     name: string
@@ -1081,7 +1081,9 @@ class APIClient {
       throw new Error('Admin access required')
     }
 
-    const result = await registerUser(data.email, data.password, data.name, 'admin')
+    // Use provided role or default to 'admin'
+    const role = data.role || 'admin'
+    const result = await registerUser(data.email, data.password, data.name, role)
     const user = await getUserById(result.user.id, 'admin')
     
     if (!user) {
@@ -1187,6 +1189,182 @@ class APIClient {
     await github.writeJsonFile('backend/data/settings.json', updated, 'Update admin settings')
 
     return updated
+  }
+
+  // Admin Roles Management API
+  async getAdminRoles(): Promise<Array<{
+    id: string
+    name: string
+    displayName: string
+    description: string
+    permissions: string[]
+    isSystem: boolean
+    isActive: boolean
+    createdAt: string
+  }>> {
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: any[] }>(
+      'backend/data/admin_roles.json'
+    )
+
+    return data.roles || []
+  }
+
+  async createAdminRole(data: {
+    name: string
+    displayName: string
+    description: string
+    permissions: string[]
+    isActive: boolean
+  }): Promise<{
+    id: string
+    name: string
+    displayName: string
+    description: string
+    permissions: string[]
+    isSystem: boolean
+    isActive: boolean
+    createdAt: string
+  }> {
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data: rolesData, sha } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: any[] }>(
+      'backend/data/admin_roles.json'
+    )
+
+    const roles = rolesData.roles || []
+
+    // Check if role name already exists
+    if (roles.some((r: any) => r.name === data.name)) {
+      throw new Error('Role with this name already exists')
+    }
+
+    // Generate role ID
+    const roleId = `role-${data.name}`
+    const newRole = {
+      id: roleId,
+      name: data.name,
+      displayName: data.displayName,
+      description: data.description || '',
+      permissions: data.permissions || [],
+      isSystem: false,
+      isActive: data.isActive,
+      createdAt: new Date().toISOString(),
+    }
+
+    roles.push(newRole)
+    rolesData.roles = roles
+    rolesData.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/admin_roles.json',
+      rolesData,
+      `Create admin role: ${data.name}`,
+      sha
+    )
+
+    return newRole
+  }
+
+  async updateAdminRole(
+    roleId: string,
+    data: { displayName?: string; description?: string; permissions?: string[]; isActive?: boolean }
+  ): Promise<{
+    id: string
+    name: string
+    displayName: string
+    description: string
+    permissions: string[]
+    isSystem: boolean
+    isActive: boolean
+    createdAt: string
+  }> {
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data: rolesData, sha } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: any[] }>(
+      'backend/data/admin_roles.json'
+    )
+
+    const roles = rolesData.roles || []
+    const index = roles.findIndex((r: any) => r.id === roleId)
+
+    if (index === -1) {
+      throw new Error('Role not found')
+    }
+
+    const role = roles[index]
+    if (role.isSystem) {
+      throw new Error('System roles cannot be fully edited')
+    }
+
+    const updated = {
+      ...role,
+      ...(data.displayName && { displayName: data.displayName }),
+      ...(data.description !== undefined && { description: data.description }),
+      ...(data.permissions && { permissions: data.permissions }),
+      ...(data.isActive !== undefined && { isActive: data.isActive }),
+    }
+
+    roles[index] = updated
+    rolesData.roles = roles
+    rolesData.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/admin_roles.json',
+      rolesData,
+      `Update admin role: ${role.name}`,
+      sha
+    )
+
+    return updated
+  }
+
+  async deleteAdminRole(roleId: string): Promise<void> {
+    const auth = this.verifyAuth()
+    if (auth.role !== 'admin') {
+      throw new Error('Admin access required')
+    }
+
+    const github = getGitHubClient()
+    const { data: rolesData, sha } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: any[] }>(
+      'backend/data/admin_roles.json'
+    )
+
+    const roles = rolesData.roles || []
+    const index = roles.findIndex((r: any) => r.id === roleId)
+
+    if (index === -1) {
+      throw new Error('Role not found')
+    }
+
+    const role = roles[index]
+    if (role.isSystem) {
+      throw new Error('System roles cannot be deleted')
+    }
+
+    roles.splice(index, 1)
+    rolesData.roles = roles
+    rolesData.lastUpdated = new Date().toISOString()
+
+    await github.writeJsonFile(
+      'backend/data/admin_roles.json',
+      rolesData,
+      `Delete admin role: ${role.name}`,
+      sha
+    )
   }
 }
 
