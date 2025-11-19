@@ -40,17 +40,17 @@ export function RegisterPage() {
     setLoading(true)
 
     try {
-      const response = await apiClient.client.post('/api/auth/register', {
-        email: formData.email,
-        password: formData.password,
-        full_name: formData.fullName,
-        phone_number: formData.phoneNumber,
-      })
+      const response = await apiClient.register(
+        formData.email,
+        formData.password,
+        formData.fullName,
+        'user'
+      )
 
       // Registration successful, redirect to login
       navigate('/login?registered=true')
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Registration failed. Please try again.')
+      setError(err.message || 'Registration failed. Please try again.')
     } finally {
       setLoading(false)
     }

@@ -19,13 +19,13 @@ export function LoginPage() {
     setLoading(true)
 
     try {
-      const response = await apiClient.client.post('/api/auth/login', {
-        email: formData.email,
-        password: formData.password,
-        role: 'user', // User login
-      })
+      const response = await apiClient.login(
+        formData.email,
+        formData.password,
+        'user'
+      )
 
-      const { token, user, role } = response.data
+      const { token, user, role } = response
 
       // Clear any admin session first
       if (localStorage.getItem('userRole') === 'admin') {
@@ -34,8 +34,7 @@ export function LoginPage() {
         localStorage.removeItem('userRole')
       }
 
-      // Store token
-      apiClient.setToken(token)
+      // Store token (already set by apiClient.login)
       localStorage.setItem('user', JSON.stringify(user))
       localStorage.setItem('userRole', role)
       
@@ -46,7 +45,7 @@ export function LoginPage() {
       // Redirect to dashboard or home
       navigate('/submissions')
     } catch (err: any) {
-      setError(err.response?.data?.detail || 'Login failed. Please check your credentials.')
+      setError(err.message || 'Login failed. Please check your credentials.')
     } finally {
       setLoading(false)
     }
