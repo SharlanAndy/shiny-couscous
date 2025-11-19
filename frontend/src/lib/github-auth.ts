@@ -167,11 +167,12 @@ export async function registerUser(
   try {
     // Read appropriate auth file
     const authFile = role === 'admin' ? 'backend/data/admins_auth.json' : 'backend/data/users_auth.json'
-    let { data } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
+    let { data, sha } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
 
     // Initialize empty structure if file doesn't exist
     if (!data || Object.keys(data).length === 0) {
       data = role === 'admin' ? { admins: [] } : { users: [] }
+      sha = '' // No SHA for new files
     }
 
     // Ensure arrays exist
@@ -211,11 +212,12 @@ export async function registerUser(
       data.users = [...(data.users || []), newUser]
     }
 
-    // Write back to GitHub
+    // Write back to GitHub - pass SHA if file exists (for updates)
     await github.writeJsonFile(
       authFile,
       data,
-      `Add new ${role}: ${email}`
+      `Add new ${role}: ${email}`,
+      sha || undefined // Pass SHA only if it exists (for updates)
     )
 
     // Generate JWT token
