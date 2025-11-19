@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T02:22:07.593Z",
+  "lastUpdated": "2025-11-19T02:25:32.922Z",
   "items": [
     {
       "id": "SUB-20251118-960173",
@@ -728,6 +728,189 @@
             ]
           ],
           "projectionBasis": "<p>Basis: Market research and industry benchmarks for Labuan company management services.</p>"
+        }
+      }
+    },
+    {
+      "id": "SUB-20251119-847442",
+      "formId": "labuan-company-management-license",
+      "submissionId": "SUB-20251119-847442",
+      "status": "submitted",
+      "submittedBy": "user-1763518430250-288x1p3ly",
+      "submittedAt": "2025-11-19T02:25:32.922Z",
+      "createdAt": "2025-11-19T02:25:32.922Z",
+      "updatedAt": "2025-11-19T02:25:32.922Z",
+      "data": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "John Doe",
+          "officerCompany": "Test Company Ltd",
+          "officerDesignation": "Managing Director",
+          "officerContact": "+60123456789",
+          "officerEmail": "john.doe@testcompany.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        },
+        "step-2-applicant-profile": {
+          "applicantName": "Test Labuan Company Sdn Bhd",
+          "licenseType": [
+            "conventional"
+          ],
+          "legalEntity": "labuan-company-subsidiary",
+          "marketingOffice": "yes",
+          "paidUpCapital": 100000,
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": "Test Shareholder Ltd",
+              "shareholderCountry": "Malaysia",
+              "shareholderPercentage": 100
+            }
+          ],
+          "directors": [
+            {
+              "directorName": "John Director",
+              "directorNationality": "Malaysian",
+              "directorPosition": "Managing Director"
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "<p>To establish a Labuan company management business providing comprehensive corporate services.</p>",
+          "typeProductsServices": "<p>Company management services, corporate secretarial services, and treasury processing services.</p>",
+          "targetMarket": [
+            [
+              "Corporate",
+              "100"
+            ]
+          ],
+          "territorialScope": [
+            [
+              "Malaysia",
+              "100"
+            ]
+          ],
+          "businessOperationalPlan": "<p>Comprehensive business plan for Labuan company management services.</p>",
+          "internalPolicies": "<p>Internal controls and risk management policies in place.</p>",
+          "marketingStrategy": "<p>Digital marketing and business referral strategy.</p>",
+          "functionalStructureLabuan": "<p>Management office structure with key personnel.</p>",
+          "functionalStructureMarketing": "<p>Basis: Market research and industry benchmarks.</p>",
+          "manpowerPlanning": [
+            [
+              "Management",
+              "2",
+              "1",
+              "",
+              "50000"
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "Revenue",
+              "100000",
+              "150000",
+              "200000"
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "Assets",
+              "500000",
+              "600000",
+              "700000"
+            ]
+          ],
+          "projectionBasis": "<p>Basis: Market research and industry benchmarks for Labuan company management services.</p>"
+        },
+        "step-4-documents": {
+          "documentChecklist": {
+            "corporate-shareholding-structure": {
+              "uploaded": true,
+              "fileId": "file-1763519040285-test-document-1.pdf"
+            },
+            "certificate-incorporation": {
+              "uploaded": true,
+              "fileId": "file-1763519040287-test-document-2.pdf"
+            },
+            "certificate-license": {
+              "uploaded": true,
+              "fileId": "file-1763519040287-test-document-3.pdf"
+            },
+            "letter-awareness": {
+              "uploaded": true,
+              "fileId": "file-1763519040288-test-document-4.pdf"
+            },
+            "board-resolution": {
+              "uploaded": true,
+              "fileId": "file-1763519040288-test-document-5.pdf"
+            },
+            "memorandum-articles": {
+              "uploaded": true,
+              "fileId": "file-1763519040289-test-document-6.pdf"
+            },
+            "audited-financial-statements": {
+              "uploaded": true,
+              "fileId": "file-1763519040289-test-document-7.pdf"
+            },
+            "letter-guarantee": {
+              "uploaded": true,
+              "fileId": "file-1763519040289-test-document-8.pdf"
+            },
+            "nric-passport": {
+              "uploaded": true,
+              "fileId": "file-1763519040290-test-document-9.pdf"
+            },
+            "academic-certificates": {
+              "uploaded": true,
+              "fileId": "file-1763519040290-test-document-10.pdf"
+            },
+            "referral-letters": {
+              "uploaded": true,
+              "fileId": "file-1763519040291-test-document-11.pdf"
+            },
+            "net-worth-statement": {
+              "uploaded": true,
+              "fileId": "file-1763519040291-test-document-12.pdf"
+            },
+            "organisation-chart": {
+              "uploaded": true,
+              "fileId": "file-1763519040292-test-document-13.pdf"
+            },
+            "declaration-true-correct": {
+              "uploaded": true,
+              "fileId": "file-1763519040292-test-document-14.pdf"
+            },
+            "statutory-declaration-service-provider": {
+              "uploaded": true,
+              "fileId": "file-1763519040293-test-document-15.pdf"
+            },
+            "kyc-policy": {
+              "uploaded": true,
+              "fileId": "file-1763519109825-test-document-final.pdf"
+            }
+          },
+          "supportingDocuments": [
+            {
+              "fileId": "file-1763519056977-7bzh0rfmr",
+              "fileName": "test-document-16.pdf",
+              "fileSize": 551
+            }
+          ]
+        },
+        "step-5-declaration": {
+          "declarationAccurate": [
+            "yes"
+          ],
+          "declarationUnderstand": [
+            "yes"
+          ],
+          "declarationConsent": [
+            "yes"
+          ],
+          "signatureDate": "2025-11-19"
         }
       }
     }
