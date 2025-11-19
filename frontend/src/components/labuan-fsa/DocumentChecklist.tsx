@@ -103,14 +103,6 @@ export function DocumentChecklist({
       fileInputRefs.current.delete(documentId)
     }
   }
-  
-  const handleUploadClick = (documentId: string, e: React.MouseEvent<HTMLLabelElement>) => {
-    e.preventDefault()
-    const fileInput = fileInputRefs.current.get(documentId)
-    if (fileInput && !disabled) {
-      fileInput.click()
-    }
-  }
 
   // Update document status
   const updateDocumentStatus = (documentId: string, uploaded: boolean, fileId?: string) => {
@@ -303,16 +295,24 @@ export function DocumentChecklist({
                           Remove
                         </button>
                       ) : (
-                        <label
-                          htmlFor={`${fieldId}-${document.id}`}
-                          onClick={(e) => handleUploadClick(document.id, e)}
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            const fileInput = fileInputRefs.current.get(document.id)
+                            if (fileInput && !disabled) {
+                              fileInput.click()
+                            }
+                          }}
+                          disabled={disabled}
                           className={cn(
                             'btn btn-secondary btn-sm cursor-pointer text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 whitespace-nowrap',
                             disabled && 'opacity-50 cursor-not-allowed'
                           )}
                         >
                           Upload
-                        </label>
+                        </button>
                       )}
                       <input
                         ref={(el) => setFileInputRef(document.id, el)}
