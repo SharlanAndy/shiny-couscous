@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T04:24:01.019Z",
+  "lastUpdated": "2025-11-19T04:24:01.503Z",
   "items": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
@@ -5845,7 +5845,7 @@
       "description": "Application for Licence to Carry on Labuan Insurance Related Business",
       "category": "Insurance",
       "version": "1.0.0",
-      "isActive": true,
+      "isActive": false,
       "schemaData": {
         "formId": "form-lib-labuan-insurance-related-business",
         "formName": "Form LIB - Labuan Insurance Related Business",
@@ -5994,7 +5994,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T11:16:38.593741Z",
-      "updatedAt": "2025-11-19T04:24:01.019Z",
+      "updatedAt": "2025-11-19T11:16:38.593742Z",
       "createdBy": null,
       "updatedBy": null
     },
@@ -6005,7 +6005,7 @@
       "description": "Application for Licence to Carry on Labuan Money Broking Business",
       "category": "Money Broking",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "form-lmb-labuan-money-broking-business",
         "formName": "Form LMB - Labuan Money Broking Business",
@@ -6154,7 +6154,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T11:16:38.593914Z",
-      "updatedAt": "2025-11-19T11:16:38.593915Z",
+      "updatedAt": "2025-11-19T04:24:01.020Z",
       "createdBy": null,
       "updatedBy": null
     },
@@ -6165,7 +6165,7 @@
       "description": "Application for Licence to Carry on Labuan Trust Company Business",
       "category": "Trust Company",
       "version": "1.0.0",
-      "isActive": false,
+      "isActive": true,
       "schemaData": {
         "formId": "form-ltc-labuan-trust-company",
         "formName": "Form LTC - Labuan Trust Company",
@@ -6314,7 +6314,7 @@
       "requiresAuth": true,
       "estimatedTime": "2-3 hours",
       "createdAt": "2025-11-19T11:16:38.594076Z",
-      "updatedAt": "2025-11-19T11:16:38.594077Z",
+      "updatedAt": "2025-11-19T04:24:01.503Z",
       "createdBy": null,
       "updatedBy": null
     },
