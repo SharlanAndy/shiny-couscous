@@ -108,15 +108,33 @@ export class GitHubClient {
       }
 
       // Parse metadata response
-      const meta: GitHubFileResponse = await metaResponse.json()
+      // GitHub API with application/vnd.github.v3+json returns:
+      // { sha, content (base64), encoding, size, name, path, url, ... }
+      const metaText = await metaResponse.text()
+      let meta: GitHubFileResponse
+      
+      try {
+        meta = JSON.parse(metaText)
+      } catch (parseError) {
+        console.error(`Failed to parse metadata response for ${path}:`, parseError)
+        console.error('Raw response:', metaText.substring(0, 500))
+        throw new GitHubAPIError(500, `Invalid metadata response format for: ${path}`)
+      }
+      
+      // Log response structure for debugging
+      console.log(`[GitHub Client] Metadata response for ${path}:`, {
+        hasSha: 'sha' in meta,
+        sha: meta.sha,
+        keys: Object.keys(meta),
+        isArray: Array.isArray(meta),
+      })
       
       // GitHub API returns metadata with 'sha' field when using JSON accept header
-      // If 'sha' is missing, log the full response for debugging
       const sha = meta.sha || ''
       
       if (!sha) {
         console.error(`File exists but SHA is missing in metadata for ${path}`)
-        console.error('Metadata response:', JSON.stringify(meta, null, 2))
+        console.error('Full metadata response:', JSON.stringify(meta, null, 2))
         // Check if response has 'sha' in a different location or if it's an array
         if (Array.isArray(meta)) {
           throw new GitHubAPIError(500, `Unexpected array response for file: ${path}`)
