@@ -177,7 +177,8 @@ export class GitHubClient {
       // Check if content is missing or if file is too large
       if (!meta.content || meta.encoding === 'none' || (meta.size && meta.size > 1000000)) {
         // File is too large or content not in metadata - use raw content URL
-        const rawUrl = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${meta.sha ? `HEAD` : 'main'}/${path}`
+        // Use 'main' branch (or default branch) for raw content
+        const rawUrl = `https://raw.githubusercontent.com/${this.owner}/${this.repo}/main/${path}`
         const contentResponse = await fetch(rawUrl, {
           headers: this.getHeaders(true),
         })
