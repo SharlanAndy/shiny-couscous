@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T02:19:53.824Z",
+  "lastUpdated": "2025-11-19T02:22:07.593Z",
   "items": [
     {
       "id": "SUB-20251118-960173",
@@ -643,7 +643,7 @@
       "status": "draft",
       "submittedBy": "user-1763518430250-288x1p3ly",
       "createdAt": "2025-11-19T02:14:56.967Z",
-      "updatedAt": "2025-11-19T02:19:53.824Z",
+      "updatedAt": "2025-11-19T02:22:07.593Z",
       "data": {
         "step-1-general-info": {
           "partyResponsible": "applicant-shareholder",
@@ -682,7 +682,52 @@
           ]
         },
         "step-3-business-plan": {
-          "financialProjectionCurrency": "USD"
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "<p>To establish a Labuan company management business providing comprehensive corporate services.</p>",
+          "typeProductsServices": "<p>Company management services, corporate secretarial services, and treasury processing services.</p>",
+          "targetMarket": [
+            [
+              "Corporate",
+              "100"
+            ]
+          ],
+          "territorialScope": [
+            [
+              "Malaysia",
+              "100"
+            ]
+          ],
+          "businessOperationalPlan": "<p>Comprehensive business plan for Labuan company management services.</p>",
+          "internalPolicies": "<p>Internal controls and risk management policies in place.</p>",
+          "marketingStrategy": "<p>Digital marketing and business referral strategy.</p>",
+          "functionalStructureLabuan": "<p>Management office structure with key personnel.</p>",
+          "functionalStructureMarketing": "<p>Basis: Market research and industry benchmarks.</p>",
+          "manpowerPlanning": [
+            [
+              "Management",
+              "2",
+              "1",
+              "",
+              "50000"
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "Revenue",
+              "100000",
+              "150000",
+              "200000"
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "Assets",
+              "500000",
+              "600000",
+              "700000"
+            ]
+          ],
+          "projectionBasis": "<p>Basis: Market research and industry benchmarks for Labuan company management services.</p>"
         }
       }
     }
