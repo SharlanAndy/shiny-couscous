@@ -197,7 +197,7 @@ export function AdminFormsPage() {
                   Edit Schema
                 </Link>
                 <Link
-                  to={`/forms/${form.formId}`}
+                  to={`/admin/forms/${form.formId}/schema?tab=preview`}
                   className="btn btn-primary btn-sm flex-1 text-center"
                 >
                   Preview

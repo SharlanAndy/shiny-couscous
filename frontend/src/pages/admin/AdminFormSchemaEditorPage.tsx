@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import apiClient from '@/api/client'
 import type { FormResponse, FormSchemaResponse } from '@/types'
@@ -11,8 +11,14 @@ import { VisualFormBuilder } from '@/components/admin/VisualFormBuilder'
 export function AdminFormSchemaEditorPage() {
   const { formId } = useParams<{ formId: string }>()
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { showSuccess, showError } = useToast()
-  const [activeTab, setActiveTab] = useState<'visual' | 'json' | 'preview'>('visual')
+  
+  // Initialize activeTab from URL query parameter, default to 'visual'
+  const tabParam = searchParams.get('tab') as 'visual' | 'json' | 'preview' | null
+  const [activeTab, setActiveTab] = useState<'visual' | 'json' | 'preview'>(
+    tabParam && ['visual', 'json', 'preview'].includes(tabParam) ? tabParam : 'visual'
+  )
   const [jsonSchema, setJsonSchema] = useState<string>('')
   const [isValidJson, setIsValidJson] = useState(true)
   const [previewSchema, setPreviewSchema] = useState<FormSchemaResponse | null>(null)
@@ -38,6 +44,20 @@ export function AdminFormSchemaEditorPage() {
     },
     enabled: !!formId,
   })
+
+  // Update activeTab when URL query parameter changes
+  useEffect(() => {
+    const tabParam = searchParams.get('tab') as 'visual' | 'json' | 'preview' | null
+    if (tabParam && ['visual', 'json', 'preview'].includes(tabParam)) {
+      setActiveTab(tabParam)
+    }
+  }, [searchParams])
+
+  // Handler to change tab and update URL
+  const handleTabChange = (tab: 'visual' | 'json' | 'preview') => {
+    setActiveTab(tab)
+    navigate(`/admin/forms/${formId}/schema?tab=${tab}`, { replace: true })
+  }
 
   // Update JSON schema when schema loads
   useEffect(() => {
@@ -158,7 +178,7 @@ export function AdminFormSchemaEditorPage() {
       <div className="border-b border-gray-200">
         <nav className="-mb-px flex space-x-8">
           <button
-            onClick={() => setActiveTab('visual')}
+            onClick={() => handleTabChange('visual')}
             className={cn(
               'py-4 px-1 border-b-2 font-medium text-sm',
               activeTab === 'visual'
@@ -169,7 +189,7 @@ export function AdminFormSchemaEditorPage() {
             Visual Editor
           </button>
           <button
-            onClick={() => setActiveTab('json')}
+            onClick={() => handleTabChange('json')}
             className={cn(
               'py-4 px-1 border-b-2 font-medium text-sm',
               activeTab === 'json'
@@ -180,7 +200,7 @@ export function AdminFormSchemaEditorPage() {
             JSON Editor
           </button>
           <button
-            onClick={() => setActiveTab('preview')}
+            onClick={() => handleTabChange('preview')}
             className={cn(
               'py-4 px-1 border-b-2 font-medium text-sm',
               activeTab === 'preview'

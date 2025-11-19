@@ -17,6 +17,7 @@ export interface AuthUser {
   isActive: boolean
   createdAt: string
   updatedAt?: string
+  passwordHash?: string // Internal use only, not exposed in API responses
 }
 
 export interface LoginResponse {
@@ -308,12 +309,12 @@ export async function updateUserPassword(
 
   try {
     // Determine which file to check
-    let authFile: string
+    let authFile: string = ''
     let user: AuthUser | null = null
 
     if (role) {
       authFile = role === 'admin' ? 'backend/data/admins_auth.json' : 'backend/data/users_auth.json'
-      const { data } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
+      const { data, sha } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
       const users = role === 'admin' ? data.admins || [] : data.users || []
       user = users.find((u: AuthUser) => u.id === userId) || null
     } else {
@@ -323,17 +324,19 @@ export async function updateUserPassword(
         github.readJsonFile<{ admins?: AuthUser[] }>('backend/data/admins_auth.json'),
       ])
 
-      user = usersData.data.users?.find((u: AuthUser) => u.id === userId) ||
-             adminsData.data.admins?.find((u: AuthUser) => u.id === userId) || null
-
-      if (user) {
-        authFile = usersData.data.users?.some((u: AuthUser) => u.id === userId)
-          ? 'backend/data/users_auth.json'
-          : 'backend/data/admins_auth.json'
+      const foundUser = usersData.data.users?.find((u: AuthUser) => u.id === userId)
+      const foundAdmin = adminsData.data.admins?.find((u: AuthUser) => u.id === userId)
+      
+      if (foundUser) {
+        user = foundUser
+        authFile = 'backend/data/users_auth.json'
+      } else if (foundAdmin) {
+        user = foundAdmin
+        authFile = 'backend/data/admins_auth.json'
       }
     }
 
-    if (!user) {
+    if (!user || !authFile) {
       throw new Error('User not found')
     }
 
@@ -347,8 +350,8 @@ export async function updateUserPassword(
     user.updatedAt = new Date().toISOString()
 
     // Write back to GitHub
-    const { data } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
-    if (role === 'admin' || authFile.includes('admins')) {
+    const { data, sha } = await github.readJsonFile<{ users?: AuthUser[]; admins?: AuthUser[] }>(authFile)
+    if (authFile.includes('admins')) {
       const admins = data.admins || []
       const index = admins.findIndex((u: AuthUser) => u.id === userId)
       if (index >= 0) {
@@ -364,7 +367,7 @@ export async function updateUserPassword(
       }
     }
 
-    await github.writeJsonFile(authFile, data, `Update password for user: ${user.email}`)
+    await github.writeJsonFile(authFile, data, `Update password for user: ${user.email}`, sha)
   } catch (error) {
     if (error instanceof Error) {
       throw error
