@@ -45,6 +45,10 @@ jobs:
           VITE_BASE_PATH: '/shiny-couscous/'
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || '' }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || '' }}
+          VITE_GITHUB_OWNER: ${{ github.repository_owner }}
+          VITE_GITHUB_REPO: ${{ github.event.repository.name }}
+          VITE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VITE_JWT_SECRET: ${{ secrets.JWT_SECRET || 'default-jwt-secret-change-in-production' }}
         run: npm run build
 
       - name: Create 404.html for SPA routing
