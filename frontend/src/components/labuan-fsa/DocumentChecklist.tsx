@@ -313,16 +313,18 @@ export function DocumentChecklist({
                             
                             if (fileInput && !disabled && !fileInput.disabled) {
                               console.log('[DocumentChecklist] Attempting to click file input...')
-                              // Don't prevent default - let the click propagate naturally
-                              // Use setTimeout to ensure it's in the next event loop tick
-                              setTimeout(() => {
-                                try {
+                              // Click must happen synchronously within user interaction event
+                              try {
+                                // Ensure file input is in the DOM and accessible
+                                if (fileInput.isConnected) {
                                   fileInput.click()
                                   console.log('[DocumentChecklist] File input click() called successfully')
-                                } catch (error) {
-                                  console.error('[DocumentChecklist] Error clicking file input:', error)
+                                } else {
+                                  console.error('[DocumentChecklist] File input is not connected to DOM')
                                 }
-                              }, 0)
+                              } catch (error) {
+                                console.error('[DocumentChecklist] Error clicking file input:', error)
+                              }
                             } else {
                               console.warn('[DocumentChecklist] Cannot click file input - missing ref, disabled, or fileInput.disabled')
                             }

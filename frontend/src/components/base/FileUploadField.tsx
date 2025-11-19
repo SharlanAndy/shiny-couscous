@@ -191,15 +191,18 @@ export function FileUploadField({
     
     if (!disabled && !readonly && fileInputRef.current && !fileInputRef.current.disabled) {
       console.log('[FileUploadField] Attempting to click file input...')
-      // Use setTimeout to ensure it's in the next event loop tick
-      setTimeout(() => {
-        try {
-          fileInputRef.current?.click()
+      // Click must happen synchronously within user interaction event
+      try {
+        // Ensure file input is in the DOM and accessible
+        if (fileInputRef.current.isConnected) {
+          fileInputRef.current.click()
           console.log('[FileUploadField] File input click() called successfully')
-        } catch (error) {
-          console.error('[FileUploadField] Error clicking file input:', error)
+        } else {
+          console.error('[FileUploadField] File input is not connected to DOM')
         }
-      }, 0)
+      } catch (error) {
+        console.error('[FileUploadField] Error clicking file input:', error)
+      }
     } else {
       console.warn('[FileUploadField] Cannot click file input - conditions not met')
     }
