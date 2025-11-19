@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2025-11-19T07:48:37.478Z",
+  "lastUpdated": "2025-11-19T08:19:39.944Z",
   "items": [
     {
       "id": "SUB-20251119-808395",
@@ -1249,6 +1249,205 @@
       "submittedBy": null,
       "createdAt": "2025-11-18T10:09:33.960187Z",
       "updatedAt": "2025-11-18T10:09:33.960190Z"
+    },
+    {
+      "id": "SUB-20251119-937772",
+      "formId": "labuan-company-management-license",
+      "submissionId": "SUB-20251119-937772",
+      "status": "draft",
+      "submittedBy": "user-1763537494718-e9n3nxddd",
+      "submittedData": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "Test Officer Manual Upload",
+          "officerCompany": "Test Company Manual Upload",
+          "officerDesignation": "Manager",
+          "officerContact": "+601234567890",
+          "officerEmail": "testofficer@example.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        },
+        "step-2-applicant-profile": {
+          "applicantName": "Test Company Manual Upload Ltd",
+          "licenseType": [
+            "conventional"
+          ],
+          "legalEntity": "labuan-company-subsidiary",
+          "marketingOffice": "no",
+          "paidUpCapital": 100000,
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": "Test Shareholder",
+              "shareholderCountry": "Malaysia",
+              "shareholderPercentage": 100
+            }
+          ],
+          "directors": [
+            {
+              "directorName": null,
+              "directorNationality": null,
+              "directorPosition": null
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "Test content for manual upload testing",
+          "typeProductsServices": "Test content for manual upload testing",
+          "businessOperationalPlan": "Test content for manual upload testing",
+          "internalPolicies": "Test content for manual upload testing",
+          "marketingStrategy": "Test content for manual upload testing",
+          "functionalStructureLabuan": "Test content for manual upload testing",
+          "functionalStructureMarketing": "Test content for manual upload testing",
+          "projectionBasis": "Test content for manual upload testing",
+          "targetMarket": [
+            [
+              "",
+              ""
+            ]
+          ],
+          "territorialScope": [
+            [
+              "",
+              ""
+            ]
+          ],
+          "manpowerPlanning": [
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        "step-4-documents": {
+          "supportingDocuments": [
+            {
+              "fileId": "file-1763540091930-v93r85gx3",
+              "fileName": "42a99b07-1666-440a-8dc9-2ab8208c44cb.jpeg",
+              "fileSize": 273294
+            }
+          ]
+        }
+      },
+      "data": {
+        "step-1-general-info": {
+          "partyResponsible": "applicant-shareholder",
+          "officerName": "Test Officer Manual Upload",
+          "officerCompany": "Test Company Manual Upload",
+          "officerDesignation": "Manager",
+          "officerContact": "+601234567890",
+          "officerEmail": "testofficer@example.com",
+          "howKnowLabuan": [
+            "website"
+          ],
+          "consentDisclosure": "yes"
+        },
+        "step-2-applicant-profile": {
+          "applicantName": "Test Company Manual Upload Ltd",
+          "licenseType": [
+            "conventional"
+          ],
+          "legalEntity": "labuan-company-subsidiary",
+          "marketingOffice": "no",
+          "paidUpCapital": 100000,
+          "processingType": "normal",
+          "shareholders": [
+            {
+              "shareholderName": "Test Shareholder",
+              "shareholderCountry": "Malaysia",
+              "shareholderPercentage": 100
+            }
+          ],
+          "directors": [
+            {
+              "directorName": null,
+              "directorNationality": null,
+              "directorPosition": null
+            }
+          ]
+        },
+        "step-3-business-plan": {
+          "financialProjectionCurrency": "USD",
+          "objectiveEstablishment": "Test content for manual upload testing",
+          "typeProductsServices": "Test content for manual upload testing",
+          "businessOperationalPlan": "Test content for manual upload testing",
+          "internalPolicies": "Test content for manual upload testing",
+          "marketingStrategy": "Test content for manual upload testing",
+          "functionalStructureLabuan": "Test content for manual upload testing",
+          "functionalStructureMarketing": "Test content for manual upload testing",
+          "projectionBasis": "Test content for manual upload testing",
+          "targetMarket": [
+            [
+              "",
+              ""
+            ]
+          ],
+          "territorialScope": [
+            [
+              "",
+              ""
+            ]
+          ],
+          "manpowerPlanning": [
+            [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionIncome": [
+            [
+              "",
+              "",
+              "",
+              ""
+            ]
+          ],
+          "financialProjectionBalance": [
+            [
+              "",
+              "",
+              "",
+              ""
+            ]
+          ]
+        },
+        "step-4-documents": {
+          "supportingDocuments": [
+            {
+              "fileId": "file-1763540091930-v93r85gx3",
+              "fileName": "42a99b07-1666-440a-8dc9-2ab8208c44cb.jpeg",
+              "fileSize": 273294
+            }
+          ]
+        }
+      },
+      "createdAt": "2025-11-19T08:19:39.944Z",
+      "updatedAt": "2025-11-19T08:19:39.944Z"
     }
   ]
 }
