@@ -92,7 +92,30 @@ export async function loginUser(
   password: string,
   role: 'user' | 'admin' = 'user'
 ): Promise<LoginResponse> {
+  // Use backend API if GitHub is not configured
+  if (!isGitHubConfigured()) {
+    try {
+      const apiURL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+      const response = await axios.post(`${apiURL}/api/auth/login`, {
+        email,
+        password,
+        role,
+      })
+      return response.data
+    } catch (error: any) {
+      if (error.response?.data?.detail) {
+        throw new Error(error.response.data.detail)
+      }
+      throw new Error('Authentication failed')
+    }
+  }
+
+  // Use GitHub API
   const github = getGitHubClient()
+  if (!github) {
+    throw new Error('No API client available. Please configure GitHub API or start backend server.')
+  }
+  
   const passwordHash = hashPassword(password)
 
   try {
