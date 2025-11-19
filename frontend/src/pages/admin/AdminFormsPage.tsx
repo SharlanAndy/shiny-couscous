@@ -6,6 +6,7 @@ import type { FormResponse } from '@/types'
 import { cn } from '@/lib/utils'
 import { useToast } from '@/components/ui/ToastProvider'
 import { useConfirmDialog } from '@/components/ui/ConfirmDialog'
+import { Loading, LoadingSpinner } from '@/components/ui/Loading'
 
 export function AdminFormsPage() {
   const navigate = useNavigate()
@@ -155,7 +156,7 @@ export function AdminFormsPage() {
 
       {/* Forms Grid */}
       {loading ? (
-        <div className="text-center py-12 text-gray-500">Loading forms...</div>
+        <Loading message="Loading forms..." />
       ) : filteredForms.length === 0 ? (
         <div className="text-center py-12 text-gray-500">No forms found</div>
       ) : (
@@ -168,32 +169,38 @@ export function AdminFormsPage() {
                   <p className="text-sm text-gray-500 mt-1">ID: {form.formId}</p>
                 </div>
                 <div className="flex items-center space-x-2 ml-4">
-                  <label className="flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={form.isActive}
-                      onChange={() => handleToggleActive(form)}
-                      disabled={togglingFormId === form.formId}
-                      className="sr-only"
-                    />
-                    <div
-                      className={cn(
-                        'relative inline-flex h-6 w-11 items-center rounded-full transition-colors',
-                        form.isActive ? 'bg-green-500' : 'bg-gray-300',
-                        togglingFormId === form.formId && 'opacity-50 cursor-not-allowed'
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          'inline-block h-4 w-4 transform rounded-full bg-white transition-transform',
-                          form.isActive ? 'translate-x-6' : 'translate-x-1'
-                        )}
-                      />
+                  {togglingFormId === form.formId ? (
+                    <div className="flex items-center gap-2">
+                      <LoadingSpinner size="sm" />
+                      <span className="text-xs text-gray-500">Saving...</span>
                     </div>
-                    <span className="ml-2 text-xs text-gray-600">
-                      {form.isActive ? 'Active' : 'Inactive'}
-                    </span>
-                  </label>
+                  ) : (
+                    <label className="flex items-center cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={form.isActive}
+                        onChange={() => handleToggleActive(form)}
+                        disabled={togglingFormId === form.formId}
+                        className="sr-only"
+                      />
+                      <div
+                        className={cn(
+                          'relative inline-flex h-6 w-11 items-center rounded-full transition-colors',
+                          form.isActive ? 'bg-green-500' : 'bg-gray-300'
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            'inline-block h-4 w-4 transform rounded-full bg-white transition-transform',
+                            form.isActive ? 'translate-x-6' : 'translate-x-1'
+                          )}
+                        />
+                      </div>
+                      <span className="ml-2 text-xs text-gray-600">
+                        {form.isActive ? 'Active' : 'Inactive'}
+                      </span>
+                    </label>
+                  )}
                 </div>
               </div>
 
