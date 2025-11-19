@@ -380,31 +380,25 @@ export class GitHubClient {
       const chunks = splitDataIntoChunks(content, path)
       
       if (chunks.length > 1) {
-        // First, read SHAs for all existing chunks to avoid conflicts
-        const chunkShas = await Promise.all(
-          chunks.map(async (chunk: { path: string; data: T; chunkIndex?: number }) => {
-            try {
-              const existing = await this.readSingleFile(chunk.path, false)
-              return { path: chunk.path, sha: existing.sha }
-            } catch (error) {
-              // Chunk doesn't exist yet, that's fine
-              return { path: chunk.path, sha: undefined }
-            }
-          })
-        )
-        
-        // Create a map of path to SHA
-        const shaMap = new Map<string, string | undefined>()
-        chunkShas.forEach(({ path, sha }) => shaMap.set(path, sha))
-        
-        // Write all chunks with their respective SHAs
-        await Promise.all(
-          chunks.map((chunk: { path: string; data: T; chunkIndex?: number }, index: number) => {
-            const chunkMessage = `${message} (chunk ${(chunk.chunkIndex ?? index) + 1}/${chunks.length})`
-            const chunkSha = shaMap.get(chunk.path)
-            return this.writeSingleFile(chunk.path, chunk.data, chunkMessage, chunkSha, retries)
-          })
-        )
+        // Write chunks sequentially to avoid SHA conflicts
+        // When writing in parallel, SHAs can change between read and write
+        for (let i = 0; i < chunks.length; i++) {
+          const chunk = chunks[i]
+          const chunkMessage = `${message} (chunk ${(chunk.chunkIndex ?? i) + 1}/${chunks.length})`
+          
+          // Read current SHA right before writing (don't cache, use fresh SHA)
+          let chunkSha: string | undefined
+          try {
+            const existing = await this.readSingleFile(chunk.path, false)
+            chunkSha = existing.sha
+          } catch (error) {
+            // Chunk doesn't exist yet, that's fine - will create new file
+            chunkSha = undefined
+          }
+          
+          // Write chunk with current SHA
+          await this.writeSingleFile(chunk.path, chunk.data, chunkMessage, chunkSha, retries)
+        }
 
         // Delete old main file if it exists (to avoid confusion)
         try {
