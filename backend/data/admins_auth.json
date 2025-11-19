@@ -2,12 +2,13 @@
   "admins": [
     {
       "id": "dEURhlvKi__fN0PosOzKzQ",
-      "email": "admin@example.com",
-      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "email": "admin-updated@example.com",
+      "passwordHash": "af6539f526fcfdd032aefc09ee8a9dc595584722c89f1f0a12f9c8d2300419f0",
       "name": "Test Admin",
-      "role": "admin",
+      "role": "superAdmin",
       "createdAt": "2025-11-18T10:31:05.782636Z",
-      "isActive": true
+      "isActive": true,
+      "updatedAt": "2025-11-19T12:00:00.000000Z"
     }
   ]
 }
