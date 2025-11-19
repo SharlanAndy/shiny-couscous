@@ -80,7 +80,7 @@ export async function preloadAdminRoles(): Promise<void> {
 
   try {
     const github = getGitHubClient()
-    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean }> }>(
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean; permissions?: string[] }> }>(
       'backend/data/admin_roles.json'
     )
 
@@ -90,6 +90,37 @@ export async function preloadAdminRoles(): Promise<void> {
     }
   } catch (error) {
     console.error('Error preloading admin roles:', error)
+  }
+}
+
+/**
+ * Get permissions for a specific role
+ */
+export async function getRolePermissions(roleName: string | null | undefined): Promise<string[]> {
+  if (!roleName || roleName === 'user') {
+    return []
+  }
+
+  try {
+    // Ensure cache is loaded
+    await preloadAdminRoles()
+
+    if (adminRolesCache) {
+      const role = adminRolesCache.roles.find((r) => r.name === roleName && r.isActive)
+      return (role as any)?.permissions || []
+    }
+
+    // If cache not available, fetch directly
+    const github = getGitHubClient()
+    const { data } = await github.readJsonFile<{ version: string; lastUpdated: string; roles: Array<{ name: string; isActive: boolean; permissions?: string[] }> }>(
+      'backend/data/admin_roles.json'
+    )
+
+    const role = data.roles?.find((r) => r.name === roleName && r.isActive)
+    return role?.permissions || []
+  } catch (error) {
+    console.error('Error getting role permissions:', error)
+    return []
   }
 }
 

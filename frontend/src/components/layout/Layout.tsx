@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import apiClient from '@/api/client'
-import { isAdminRole, preloadAdminRoles, isAdminRoleSync } from '@/lib/role-utils'
+import { isAdminRole, preloadAdminRoles, isAdminRoleSync, getRolePermissions } from '@/lib/role-utils'
 
 interface LayoutProps {
   children: ReactNode
@@ -18,6 +18,7 @@ export function Layout({ children }: LayoutProps) {
   const [user, setUser] = useState<{id: string; email: string; name: string} | null>(null)
   const [userRole, setUserRole] = useState<string | null>(null)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [userPermissions, setUserPermissions] = useState<string[]>([])
 
   // Check if current route is an admin route
   const isAdminRoute = location.pathname.startsWith('/admin')
@@ -40,17 +41,21 @@ export function Layout({ children }: LayoutProps) {
                 setUser(JSON.parse(storedUser))
                 setUserRole(storedRole)
                 setIsAuthenticated(true)
+                // Load permissions for this role
+                getRolePermissions(storedRole).then(setUserPermissions)
               } catch (e) {
                 console.error('Error parsing user data:', e)
                 setUser(null)
                 setUserRole(null)
                 setIsAuthenticated(false)
+                setUserPermissions([])
               }
             } else {
               // Not an admin role, clear session
               setUser(null)
               setUserRole(null)
               setIsAuthenticated(false)
+              setUserPermissions([])
             }
           })
         })
@@ -121,20 +126,25 @@ export function Layout({ children }: LayoutProps) {
     { to: '/profile', label: 'Profile' },
   ]
 
-  // Admin navigation links
+  // Admin navigation links with required permissions
   const adminNavLinks = [
-    { to: '/admin', label: 'Dashboard' },
-    { to: '/admin/submissions', label: 'Submissions' },
-    { to: '/admin/forms', label: 'Forms' },
-    { to: '/admin/users', label: 'Users' },
-    { to: '/admin/admins', label: 'Admins' },
-    { to: '/admin/roles', label: 'Roles' },
-    { to: '/admin/analytics', label: 'Analytics' },
-    { to: '/admin/settings', label: 'Settings' },
+    { to: '/admin', label: 'Dashboard', permission: 'view_dashboard' },
+    { to: '/admin/submissions', label: 'Submissions', permission: 'review_submissions' },
+    { to: '/admin/forms', label: 'Forms', permission: 'manage_forms' },
+    { to: '/admin/users', label: 'Users', permission: 'manage_users' },
+    { to: '/admin/admins', label: 'Admins', permission: 'manage_admins' },
+    { to: '/admin/roles', label: 'Roles', permission: 'manage_roles' },
+    { to: '/admin/analytics', label: 'Analytics', permission: 'view_analytics' },
+    { to: '/admin/settings', label: 'Settings', permission: 'manage_settings' },
   ]
 
+  // Filter admin nav links based on user permissions
+  const filteredAdminNavLinks = isAdminRoute && userPermissions.length > 0
+    ? adminNavLinks.filter(link => !link.permission || userPermissions.includes(link.permission))
+    : adminNavLinks
+
   // Use appropriate navigation links based on route
-  const navLinks = isAdminRoute ? adminNavLinks : userNavLinks
+  const navLinks = isAdminRoute ? filteredAdminNavLinks : userNavLinks
 
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === path
