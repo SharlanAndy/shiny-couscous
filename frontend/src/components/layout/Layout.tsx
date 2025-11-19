@@ -142,8 +142,8 @@ export function Layout({ children }: LayoutProps) {
   // Show all links if:
   // 1. Not on admin route
   // 2. Permissions haven't loaded yet (empty array means still loading)
-  // 3. User is superAdmin (has all permissions)
-  const isSuperAdmin = userRole === 'superAdmin'
+  // 3. User is superAdmin (has all permissions) - check by role name OR by having manage_admins permission
+  const isSuperAdmin = userRole === 'superAdmin' || userPermissions.includes('manage_admins')
   const filteredAdminNavLinks = isAdminRoute && userPermissions.length > 0 && !isSuperAdmin
     ? adminNavLinks.filter(link => !link.permission || userPermissions.includes(link.permission))
     : adminNavLinks
