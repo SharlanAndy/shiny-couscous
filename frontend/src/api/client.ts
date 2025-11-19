@@ -168,12 +168,13 @@ class APIClient {
   async getFormSchema(formId: string): Promise<FormSchemaResponse> {
     const form = await this.getForm(formId)
     
-    // Extract schema from form's schemaData
-    if (!form.schemaData) {
+    // Extract schema from form's schemaData (stored in JSON but not in type definition)
+    const formWithSchema = form as FormResponse & { schemaData?: FormSchemaResponse }
+    if (!formWithSchema.schemaData) {
       throw new Error(`Schema not found for form: ${formId}`)
     }
 
-    return form.schemaData as FormSchemaResponse
+    return formWithSchema.schemaData
   }
 
   async createForm(formData: {
@@ -625,7 +626,9 @@ class APIClient {
     const submission = data.items![index]
     const updated: SubmissionResponse = {
       ...submission,
-      ...updateData,
+      ...(updateData.status && { status: updateData.status as SubmissionResponse['status'] }),
+      ...(updateData.reviewNotes && { reviewNotes: updateData.reviewNotes }),
+      ...(updateData.requestedInfo && { requestedInfo: updateData.requestedInfo }),
       reviewedBy: auth.id,
       reviewedAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -814,7 +817,7 @@ class APIClient {
     }
 
     const user = users[index]
-    const emailChanged = data.email && data.email !== user.email
+    const emailChanged = !!(data.email && data.email !== user.email)
 
     // Check if email already exists
     if (data.email && data.email !== user.email) {
