@@ -138,10 +138,19 @@ export function AdminFormsPage() {
         <input
           type="text"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            const value = e.target.value
+            setSearchTerm(value)
+          }}
           placeholder="Search forms..."
           className="input w-full"
+          autoComplete="off"
         />
+        {searchTerm && (
+          <div className="mt-2 text-sm text-gray-500">
+            Showing {filteredForms.length} of {forms.length} forms
+          </div>
+        )}
       </div>
 
       {/* Forms Grid */}
