@@ -256,18 +256,15 @@ export function FileUploadField({
       {/* Upload area - only show if not readonly or no files */}
       {!readonly && (fileList.length === 0 || (multiple && fileList.length < maxFiles)) && (
         dragDrop ? (
-          <div
+          <label
+            htmlFor={fieldId}
             className={uploadAreaClassName}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
             onDrop={handleDrop}
             onClick={(e) => {
-              console.log('[FileUploadField] Div onClick triggered (before handleClick)')
-              handleClick()
-            }}
-            onMouseDown={(e) => {
-              console.log('[FileUploadField] Div onMouseDown triggered')
+              console.log('[FileUploadField] Label onClick triggered')
             }}
           >
             <div className="space-y-2">
@@ -281,19 +278,17 @@ export function FileUploadField({
                 {multiple && maxFiles > 1 && ` • Max files: ${maxFiles}`}
               </div>
             </div>
-          </div>
+          </label>
         ) : (
-          <button
-            type="button"
-            onClick={handleClick}
-            disabled={disabled || readonly}
+          <label
+            htmlFor={fieldId}
             className={cn(
-              'btn btn-secondary',
-              disabled && 'opacity-50 cursor-not-allowed'
+              'btn btn-secondary cursor-pointer inline-block',
+              (disabled || readonly) && 'opacity-50 cursor-not-allowed pointer-events-none'
             )}
           >
             Choose File{multiple ? 's' : ''}
-          </button>
+          </label>
         )
       )}
 
