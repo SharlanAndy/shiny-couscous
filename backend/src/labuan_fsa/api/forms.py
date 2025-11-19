@@ -80,8 +80,21 @@ async def list_forms(
                 # Handle both isActive (camelCase) and is_active (snake_case) for backward compatibility
                 is_active = f.get("isActive") if "isActive" in f else f.get("is_active", True)
                 
+                # Handle ID - try to parse as UUID, generate new one if invalid
+                form_id_str = f.get("id", "")
+                try:
+                    form_uuid = UUID(form_id_str) if form_id_str else uuid.uuid4()
+                except (ValueError, AttributeError):
+                    # Invalid UUID format, generate a new one based on formId for consistency
+                    form_id_for_uuid = f.get("formId", "")
+                    if form_id_for_uuid:
+                        # Generate deterministic UUID from formId string
+                        form_uuid = uuid.uuid5(uuid.NAMESPACE_DNS, form_id_for_uuid)
+                    else:
+                        form_uuid = uuid.uuid4()
+                
                 form_response = FormResponse(
-                    id=UUID(f.get("id", str(uuid.uuid4()))),
+                    id=form_uuid,
                     form_id=f.get("formId", ""),
                     name=f.get("name", ""),
                     description=f.get("description"),
@@ -98,6 +111,8 @@ async def list_forms(
                 result_forms.append(form_response)
             except Exception as e:
                 print(f"⚠️  Error converting form {f.get('formId')}: {e}")
+                import traceback
+                traceback.print_exc()
                 continue
         return result_forms
     
