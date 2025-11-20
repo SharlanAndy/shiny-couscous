@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
+import { CorporatePage } from './pages/CorporatePage'
+import { BankingPage } from './pages/BankingPage'
 import { HomePage } from './pages/HomePage'
 import { FormListPage } from './pages/FormListPage'
 import { FormPage } from './pages/FormPage'
@@ -23,17 +25,33 @@ import { AdminRolesPage } from './pages/admin/AdminRolesPage'
 import { ProfilePage } from './pages/ProfilePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { SupabaseTestPage } from './pages/SupabaseTestPage'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import { Layout } from './components/layout/Layout'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
 
 function App() {
   return (
     <Routes>
+      {/* Corporate Website */}
+      <Route path="/" element={<CorporatePage />} />
+      <Route path="/corporate" element={<CorporatePage />} />
+      <Route path="/banking" element={<BankingPage />} />
+      
+      {/* E-Submission System - Uses same Header/Footer as corporate site */}
+      <Route path="/e-submission" element={
+        <>
+          <Header />
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <HomePage />
+          </main>
+          <Footer />
+        </>
+      } />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/admin/login" element={<AdminLoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/" element={<Layout><HomePage /></Layout>} />
       <Route path="/dashboard" element={<Layout><ProtectedRoute><UserDashboardPage /></ProtectedRoute></Layout>} />
       <Route path="/forms" element={<Layout><ProtectedRoute><FormListPage /></ProtectedRoute></Layout>} />
       <Route path="/forms/:formId" element={<Layout><ProtectedRoute><FormPage /></ProtectedRoute></Layout>} />
