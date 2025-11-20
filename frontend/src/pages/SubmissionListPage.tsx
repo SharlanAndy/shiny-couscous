@@ -122,86 +122,94 @@ export function SubmissionListPage() {
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
-        <div className="flex items-center justify-between flex-wrap gap-4">
+    <div className="space-y-6 -m-6 p-6 lg:p-8 min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      {/* Header Section - Enhanced */}
+      <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden p-8 sm:p-10">
+        {/* Decorative Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 flex items-center justify-between flex-wrap gap-6">
           <div>
-            <h1 className="text-white text-3xl sm:text-4xl font-bold mb-2">My Submissions</h1>
-            <p className="text-blue-100 text-sm sm:text-base">Track and manage all your form submissions in one place</p>
+            <h1 className="text-white text-4xl sm:text-5xl font-black mb-3 tracking-tight">My Submissions</h1>
+            <p className="text-blue-100 text-base sm:text-lg font-medium">Track and manage all your form submissions in one place</p>
           </div>
-          <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-white/20">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
+          <div className="flex items-center gap-4 bg-white/20 backdrop-blur-xl rounded-2xl px-6 py-4 border-2 border-white/30 shadow-xl">
+            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+              <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
             <div>
-              <p className="text-2xl font-bold">{submissions?.length || 0}</p>
-              <p className="text-xs text-blue-100">Total Submissions</p>
+              <p className="text-3xl font-black text-white">{submissions?.length || 0}</p>
+              <p className="text-sm text-blue-100 font-bold">Total Submissions</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Status Filter Tabs + Search (row on desktop, stacked on mobile) */}
-      <div className="flex flex-col lg:flex-row gap-4">
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 overflow-x-auto lg:flex-1">
-          <div className="flex gap-2 min-w-max">
+      <div className="flex flex-col lg:flex-row gap-5">
+        <div className="bg-white rounded-2xl shadow-lg border-2 border-gray-100 p-5 overflow-x-auto lg:flex-1">
+          <div className="flex gap-2.5 min-w-max">
             <button
               onClick={() => setFilterStatus('all')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'all'
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md'
               }`}
             >
               All ({statusCounts.all})
             </button>
             <button
               onClick={() => setFilterStatus('submitted')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'submitted'
-                  ? 'bg-blue-500 text-white shadow-lg'
-                  : 'bg-blue-50 text-blue-700 hover:bg-blue-100'
+                  ? 'bg-blue-500 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 hover:from-blue-100 hover:to-blue-200 hover:shadow-md'
               }`}
             >
               Submitted ({statusCounts.submitted})
             </button>
             <button
               onClick={() => setFilterStatus('reviewing')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'reviewing'
-                  ? 'bg-yellow-500 text-white shadow-lg'
-                  : 'bg-yellow-50 text-yellow-700 hover:bg-yellow-100'
+                  ? 'bg-yellow-500 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-yellow-50 to-yellow-100 text-yellow-700 hover:from-yellow-100 hover:to-yellow-200 hover:shadow-md'
               }`}
             >
               Reviewing ({statusCounts.reviewing})
             </button>
             <button
               onClick={() => setFilterStatus('approved')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'approved'
-                  ? 'bg-green-500 text-white shadow-lg'
-                  : 'bg-green-50 text-green-700 hover:bg-green-100'
+                  ? 'bg-green-500 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-green-50 to-green-100 text-green-700 hover:from-green-100 hover:to-green-200 hover:shadow-md'
               }`}
             >
               Approved ({statusCounts.approved})
             </button>
             <button
               onClick={() => setFilterStatus('rejected')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'rejected'
-                  ? 'bg-red-500 text-white shadow-lg'
-                  : 'bg-red-50 text-red-700 hover:bg-red-100'
+                  ? 'bg-red-500 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-red-50 to-red-100 text-red-700 hover:from-red-100 hover:to-red-200 hover:shadow-md'
               }`}
             >
               Rejected ({statusCounts.rejected})
             </button>
             <button
               onClick={() => setFilterStatus('draft')}
-              className={`px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 whitespace-nowrap ${
+              className={`px-5 py-3 rounded-xl font-bold text-sm transition-all duration-300 whitespace-nowrap ${
                 filterStatus === 'draft'
-                  ? 'bg-gray-500 text-white shadow-lg'
-                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                  ? 'bg-gray-500 text-white shadow-xl scale-105'
+                  : 'bg-gradient-to-r from-gray-50 to-gray-100 text-gray-700 hover:from-gray-100 hover:to-gray-200 hover:shadow-md'
               }`}
             >
               Draft ({statusCounts.draft})
@@ -209,10 +217,10 @@ export function SubmissionListPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 lg:w-1/3">
+        <div className="bg-white rounded-2xl shadow-lg border-2 border-gray-100 p-5 lg:w-1/3">
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+              <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
@@ -221,7 +229,7 @@ export function SubmissionListPage() {
               placeholder="Search by Submission ID or Form ID..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              className="w-full pl-14 pr-5 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm font-semibold transition-all"
             />
           </div>
         </div>
@@ -229,40 +237,40 @@ export function SubmissionListPage() {
 
       {/* Submissions Grid/List */}
       {filteredSubmissions.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-5">
           {filteredSubmissions.map((submission) => {
             const statusConfig = getStatusConfig(submission.status)
             return (
               <Link
                 key={submission.id}
                 to={`/submissions/${submission.submissionId}`}
-                className="group bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300 overflow-hidden"
+                className="group bg-white rounded-2xl shadow-lg border-2 border-gray-100 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 overflow-hidden hover:-translate-y-1"
               >
-                <div className="p-5 sm:p-6">
-                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div className="p-6 sm:p-7">
+                  <div className="flex items-start justify-between gap-5 flex-wrap">
                     {/* Left Section */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-bold text-gray-900 truncate group-hover:text-blue-600 transition-colors">
+                          <h3 className="text-xl font-black text-gray-900 truncate group-hover:text-blue-600 transition-colors">
                             {submission.submissionId}
                           </h3>
-                          <p className="text-sm text-gray-500 truncate">Form ID: {submission.formId}</p>
+                          <p className="text-sm text-gray-600 truncate mt-1 font-semibold">Form ID: {submission.formId}</p>
                         </div>
                       </div>
 
                       {/* Meta Info */}
-                      <div className="flex flex-wrap gap-4 text-sm">
-                        <div className="flex items-center gap-2 text-gray-600">
-                          <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex flex-wrap gap-5 text-sm">
+                        <div className="flex items-center gap-2 text-gray-700 bg-gray-50 px-3 py-2 rounded-lg">
+                          <svg className="w-5 h-5 flex-shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
-                          <span>
+                          <span className="font-semibold">
                             {submission.submittedAt
                               ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
                                   year: 'numeric',
@@ -276,15 +284,15 @@ export function SubmissionListPage() {
                     </div>
 
                     {/* Right Section - Status & Action */}
-                    <div className="flex flex-col items-end gap-3">
-                      <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold border ${statusConfig.color}`}>
+                    <div className="flex flex-col items-end gap-4">
+                      <span className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-black border-2 shadow-md ${statusConfig.color}`}>
                         {statusConfig.icon}
                         {statusConfig.label}
                       </span>
-                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-2 text-base font-bold text-blue-600 group-hover:gap-3 transition-all">
                         View Details
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                         </svg>
                       </span>
                     </div>
@@ -292,14 +300,14 @@ export function SubmissionListPage() {
                 </div>
 
                 {/* Progress Bar (Optional - based on status) */}
-                <div className="h-1 bg-gray-100">
+                <div className="h-2 bg-gray-100">
                   <div
-                    className={`h-full transition-all duration-300 ${
-                      submission.status === 'approved' ? 'bg-green-500 w-full' :
-                      submission.status === 'rejected' ? 'bg-red-500 w-full' :
-                      submission.status === 'reviewing' ? 'bg-yellow-500 w-2/3' :
-                      submission.status === 'submitted' ? 'bg-blue-500 w-1/3' :
-                      'bg-gray-300 w-1/6'
+                    className={`h-full transition-all duration-500 ${
+                      submission.status === 'approved' ? 'bg-gradient-to-r from-green-500 to-emerald-500 w-full' :
+                      submission.status === 'rejected' ? 'bg-gradient-to-r from-red-500 to-rose-500 w-full' :
+                      submission.status === 'reviewing' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 w-2/3' :
+                      submission.status === 'submitted' ? 'bg-gradient-to-r from-blue-500 to-indigo-500 w-1/3' :
+                      'bg-gradient-to-r from-gray-400 to-gray-500 w-1/6'
                     }`}
                   />
                 </div>
