@@ -132,22 +132,28 @@ export function FormListPage() {
 
   return (
     <div className="space-y-6 -m-6 p-6 lg:p-8 min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Header */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      {/* Header Section - Enhanced */}
+      <div className="relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden p-8 sm:p-10">
+        {/* Decorative Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 flex items-center justify-between flex-wrap gap-6">
           <div>
-            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">Available Forms</h1>
-            <p className="text-base text-gray-600">Select a form to begin your submission</p>
+            <h1 className="text-white text-4xl sm:text-5xl font-black mb-3 tracking-tight">Available Forms</h1>
+            <p className="text-blue-100 text-base sm:text-lg font-medium">Select a form to begin your submission</p>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-xl">
-              <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-4 bg-white/20 backdrop-blur-xl rounded-2xl px-6 py-4 border-2 border-white/30 shadow-xl">
+            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+              <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <div>
-                <p className="text-2xl font-bold text-blue-600">{activeForms.length}</p>
-                <p className="text-xs text-blue-600">Total Forms</p>
-              </div>
+            </div>
+            <div>
+              <p className="text-3xl font-black text-white">{activeForms.length}</p>
+              <p className="text-sm text-blue-100 font-bold">Total Forms</p>
             </div>
           </div>
         </div>
