@@ -152,7 +152,7 @@ export function FormPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto w-full px-2 sm:px-4">
+    <div className="w-full">
       {draftId && (
         <div className="mb-3 sm:mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3 sm:p-4">
           <p className="text-xs sm:text-sm text-blue-800">
